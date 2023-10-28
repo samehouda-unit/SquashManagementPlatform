@@ -27,10 +27,26 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   FocusNode? txtPlayerNameFocusNode;
   TextEditingController? txtPlayerNameController;
   String? Function(BuildContext, String?)? txtPlayerNameControllerValidator;
+  String? _txtPlayerNameControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
   // State field(s) for txtRank widget.
   FocusNode? txtRankFocusNode;
   TextEditingController? txtRankController;
   String? Function(BuildContext, String?)? txtRankControllerValidator;
+  String? _txtRankControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
   // State field(s) for lstStages widget.
   String? lstStagesValue;
   FormFieldController<String>? lstStagesValueController;
@@ -39,6 +55,15 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   TextEditingController? txtDateOfBirthController;
   final txtDateOfBirthMask = MaskTextInputFormatter(mask: '##/##/####');
   String? Function(BuildContext, String?)? txtDateOfBirthControllerValidator;
+  String? _txtDateOfBirthControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
   // State field(s) for txtPlayerBio widget.
   FocusNode? txtPlayerBioFocusNode;
   TextEditingController? txtPlayerBioController;
@@ -48,7 +73,11 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtPlayerNameControllerValidator = _txtPlayerNameControllerValidator;
+    txtRankControllerValidator = _txtRankControllerValidator;
+    txtDateOfBirthControllerValidator = _txtDateOfBirthControllerValidator;
+  }
 
   void dispose() {
     txtPlayerNameFocusNode?.dispose();
