@@ -13,6 +13,10 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
 class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
+  ///  Local state fields for this page.
+
+  int actionsPlayerHeight = 80;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

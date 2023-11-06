@@ -657,22 +657,54 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                               ].addToEnd(SizedBox(height: 24.0)),
                             ),
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x33000000),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                            ),
-                            child: wrapWithModel(
-                              model: _model.actionsPlayerModel,
-                              updateCallback: () => setState(() {}),
-                              child: ActionsPlayerWidget(),
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              if (_model.actionsPlayerHeight == 80) {
+                                // set to 335
+                                setState(() {
+                                  _model.actionsPlayerHeight = 335;
+                                });
+                              } else if (_model.actionsPlayerHeight == 335) {
+                                // set to 80
+                                setState(() {
+                                  _model.actionsPlayerHeight = 80;
+                                });
+                              }
+                            },
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 200),
+                              curve: Curves.easeInOut,
+                              height: valueOrDefault<double>(
+                                _model.actionsPlayerHeight.toDouble(),
+                                80.0,
+                              ),
+                              constraints: BoxConstraints(
+                                minHeight: valueOrDefault<double>(
+                                  _model.actionsPlayerHeight.toDouble(),
+                                  80.0,
+                                ),
+                                maxHeight: 335.0,
+                              ),
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 4.0,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0.0, 2.0),
+                                  )
+                                ],
+                              ),
+                              child: wrapWithModel(
+                                model: _model.actionsPlayerModel,
+                                updateCallback: () => setState(() {}),
+                                child: ActionsPlayerWidget(),
+                              ),
                             ),
                           ),
                           Container(

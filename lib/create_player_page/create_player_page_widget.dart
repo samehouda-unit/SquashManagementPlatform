@@ -35,12 +35,16 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget> {
 
     _model.txtPlayerNameController ??= TextEditingController();
     _model.txtPlayerNameFocusNode ??= FocusNode();
+
     _model.txtRankController ??= TextEditingController();
     _model.txtRankFocusNode ??= FocusNode();
+
     _model.txtDateOfBirthController ??= TextEditingController();
     _model.txtDateOfBirthFocusNode ??= FocusNode();
+
     _model.txtPlayerBioController ??= TextEditingController();
     _model.txtPlayerBioFocusNode ??= FocusNode();
+
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
