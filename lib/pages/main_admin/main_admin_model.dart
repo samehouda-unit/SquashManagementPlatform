@@ -1,4 +1,5 @@
 import '/components/actions_clubs_widget.dart';
+import '/components/actions_others_widget.dart';
 import '/components/actions_player_widget.dart';
 import '/components/actions_tournaments_widget.dart';
 import '/components/side_nav_widget.dart';
@@ -8,6 +9,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'main_admin_widget.dart' show MainAdminWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +18,10 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
   ///  Local state fields for this page.
 
   int actionsPlayerHeight = 80;
+
+  int actionsClubHeight = 80;
+
+  int actionsTournamentHeight = 80;
 
   ///  State fields for stateful widgets in this page.
 
@@ -28,6 +34,8 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
   late ActionsClubsModel actionsClubsModel;
   // Model for ActionsTournaments component.
   late ActionsTournamentsModel actionsTournamentsModel;
+  // Model for ActionsOthers component.
+  late ActionsOthersModel actionsOthersModel;
 
   /// Initialization and disposal methods.
 
@@ -37,6 +45,7 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
     actionsClubsModel = createModel(context, () => ActionsClubsModel());
     actionsTournamentsModel =
         createModel(context, () => ActionsTournamentsModel());
+    actionsOthersModel = createModel(context, () => ActionsOthersModel());
   }
 
   void dispose() {
@@ -45,6 +54,7 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
     actionsPlayerModel.dispose();
     actionsClubsModel.dispose();
     actionsTournamentsModel.dispose();
+    actionsOthersModel.dispose();
   }
 
   /// Action blocks are added here.
