@@ -381,7 +381,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           color: FlutterFlowTheme.of(context)
                                               .accent1,
                                           borderRadius:
-                                              BorderRadius.circular(12.0),
+                                              BorderRadius.circular(10.0),
                                           border: Border.all(
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,

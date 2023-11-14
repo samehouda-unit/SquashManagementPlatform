@@ -5,6 +5,8 @@ import 'package:from_css_color/from_css_color.dart';
 
 import '/backend/schema/structs/index.dart';
 
+import '/backend/supabase/supabase.dart';
+
 import '../../flutter_flow/lat_lng.dart';
 import '../../flutter_flow/place.dart';
 import '../../flutter_flow/uploaded_file.dart';
@@ -73,6 +75,9 @@ String? serializeParam(
 
       case ParamType.DataStruct:
         return param is BaseStruct ? param.serialize() : null;
+
+      case ParamType.SupabaseRow:
+        return json.encode((param as SupabaseDataRow).data);
 
       default:
         return null;
@@ -149,6 +154,7 @@ enum ParamType {
   FFUploadedFile,
   JSON,
   DataStruct,
+  SupabaseRow,
 }
 
 dynamic deserializeParam<T>(
@@ -205,6 +211,41 @@ dynamic deserializeParam<T>(
         return uploadedFileFromString(param);
       case ParamType.JSON:
         return json.decode(param);
+
+      case ParamType.SupabaseRow:
+        final data = json.decode(param) as Map<String, dynamic>;
+        switch (T) {
+          case AcademyRow:
+            return AcademyRow(data);
+          case TournamentRow:
+            return TournamentRow(data);
+          case TrainingRow:
+            return TrainingRow(data);
+          case TrainingScheduleDayRow:
+            return TrainingScheduleDayRow(data);
+          case TrainingScheduleRow:
+            return TrainingScheduleRow(data);
+          case ClubRow:
+            return ClubRow(data);
+          case TournamentPlanRow:
+            return TournamentPlanRow(data);
+          case PlayerStageLkpRow:
+            return PlayerStageLkpRow(data);
+          case TrainingSubscriptionRow:
+            return TrainingSubscriptionRow(data);
+          case TournamentPlayerRow:
+            return TournamentPlayerRow(data);
+          case TrainerTrainingScheduleRow:
+            return TrainerTrainingScheduleRow(data);
+          case PlayerRow:
+            return PlayerRow(data);
+          case PlayerRankLkpRow:
+            return PlayerRankLkpRow(data);
+          case PlayerClubRow:
+            return PlayerClubRow(data);
+          default:
+            return null;
+        }
 
       case ParamType.DataStruct:
         final data = json.decode(param) as Map<String, dynamic>? ?? {};
