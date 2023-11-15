@@ -37,12 +37,6 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
     return null;
   }
 
-  // State field(s) for lstStages widget.
-  int? lstStagesValue;
-  FormFieldController<int>? lstStagesValueController;
-  // State field(s) for lstRanks widget.
-  int? lstRanksValue;
-  FormFieldController<int>? lstRanksValueController;
   // State field(s) for txtDateOfBirth widget.
   FocusNode? txtDateOfBirthFocusNode;
   TextEditingController? txtDateOfBirthController;
@@ -58,6 +52,15 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   }
 
   DateTime? datePicked;
+  // State field(s) for lsGender widget.
+  String? lsGenderValue;
+  FormFieldController<String>? lsGenderValueController;
+  // State field(s) for lstStages widget.
+  int? lstStagesValue;
+  FormFieldController<int>? lstStagesValueController;
+  // State field(s) for lstRanks widget.
+  int? lstRanksValue;
+  FormFieldController<int>? lstRanksValueController;
   // State field(s) for txtPlayerBio widget.
   FocusNode? txtPlayerBioFocusNode;
   TextEditingController? txtPlayerBioController;

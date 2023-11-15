@@ -115,13 +115,17 @@ class CreatePlayerAPICall {
     String? dateOfBirth = '',
     int? rank,
     int? stage,
+    String? gender = '',
+    String? playerBio = '',
   }) async {
     final ffApiRequestBody = '''
 {
   "name": "${playerName}",
   "date_of_birth": "${dateOfBirth} 00:00:00.00000+00",
   "rank": ${rank},
-  "stage": ${stage}
+  "stage": ${stage},
+  "gender" :"${gender}",
+"player_bio" : "${playerBio}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createPlayerAPI',
