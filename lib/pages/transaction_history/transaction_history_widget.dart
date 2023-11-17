@@ -58,7 +58,12 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        appBar: MediaQuery.sizeOf(context).width <= 991.0
+        appBar: responsiveVisibility(
+                  context: context,
+                  tabletLandscape: false,
+                  desktop: false,
+                ) &&
+                (MediaQuery.sizeOf(context).width <= 991.0)
             ? AppBar(
                 backgroundColor:
                     FlutterFlowTheme.of(context).secondaryBackground,

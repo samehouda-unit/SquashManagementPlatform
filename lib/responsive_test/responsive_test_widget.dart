@@ -791,8 +791,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              child: MasonryGridView.count(
-                                crossAxisCount: 3,
+                              child: MasonryGridView.builder(
+                                gridDelegate:
+                                    const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 3,
+                                ),
                                 crossAxisSpacing: 12.0,
                                 mainAxisSpacing: 12.0,
                                 itemCount: 4,
