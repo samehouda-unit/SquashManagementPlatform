@@ -1,4 +1,5 @@
 import '/components/actions_clubs_widget.dart';
+import '/components/actions_others_widget.dart';
 import '/components/actions_player_widget.dart';
 import '/components/actions_tournaments_widget.dart';
 import '/components/side_nav_widget.dart';
@@ -7,6 +8,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -63,13 +65,14 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
         body: SafeArea(
           top: true,
           child: Row(
-            mainAxisSize: MainAxisSize.max,
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               wrapWithModel(
                 model: _model.sideNavModel,
                 updateCallback: () => setState(() {}),
                 child: SideNavWidget(
-                  selectedNav: 1,
+                  selectedNav: 6,
                 ),
               ),
               Expanded(
@@ -654,61 +657,202 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                       .addToStart(SizedBox(width: 16.0))
                                       .addToEnd(SizedBox(width: 16.0)),
                                 ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        if (_model.actionsPlayerHeight == 80) {
+                                          // set to 335
+                                          setState(() {
+                                            _model.actionsPlayerHeight = 335;
+                                          });
+                                        } else if (_model.actionsPlayerHeight ==
+                                            335) {
+                                          // set to 80
+                                          setState(() {
+                                            _model.actionsPlayerHeight = 80;
+                                          });
+                                        }
+                                      },
+                                      child: AnimatedContainer(
+                                        duration: Duration(milliseconds: 200),
+                                        curve: Curves.easeInOut,
+                                        height: valueOrDefault<double>(
+                                          _model.actionsPlayerHeight.toDouble(),
+                                          80.0,
+                                        ),
+                                        constraints: BoxConstraints(
+                                          minHeight: valueOrDefault<double>(
+                                            _model.actionsPlayerHeight
+                                                .toDouble(),
+                                            80.0,
+                                          ),
+                                          maxHeight: 335.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.actionsPlayerModel,
+                                          updateCallback: () => setState(() {}),
+                                          child: ActionsPlayerWidget(),
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        if (_model.actionsClubHeight == 80) {
+                                          // set to 335
+                                          setState(() {
+                                            _model.actionsClubHeight = 335;
+                                          });
+                                        } else if (_model.actionsClubHeight ==
+                                            335) {
+                                          // set to 80
+                                          setState(() {
+                                            _model.actionsClubHeight = 80;
+                                          });
+                                        }
+                                      },
+                                      child: AnimatedContainer(
+                                        duration: Duration(milliseconds: 200),
+                                        curve: Curves.easeInOut,
+                                        height: valueOrDefault<double>(
+                                          _model.actionsClubHeight.toDouble(),
+                                          80.0,
+                                        ),
+                                        constraints: BoxConstraints(
+                                          minHeight: valueOrDefault<double>(
+                                            _model.actionsClubHeight.toDouble(),
+                                            80.0,
+                                          ),
+                                          maxHeight: 335.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.actionsClubsModel,
+                                          updateCallback: () => setState(() {}),
+                                          child: ActionsClubsWidget(),
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        if (_model.actionsTournamentHeight ==
+                                            80) {
+                                          // set Torurnament to 335
+                                          setState(() {
+                                            _model.actionsTournamentHeight =
+                                                335;
+                                          });
+                                        } else if (_model
+                                                .actionsTournamentHeight ==
+                                            335) {
+                                          // set Torurnament to 80
+                                          setState(() {
+                                            _model.actionsTournamentHeight = 80;
+                                          });
+                                        }
+                                      },
+                                      child: AnimatedContainer(
+                                        duration: Duration(milliseconds: 200),
+                                        curve: Curves.easeInOut,
+                                        height: valueOrDefault<double>(
+                                          _model.actionsTournamentHeight
+                                              .toDouble(),
+                                          80.0,
+                                        ),
+                                        constraints: BoxConstraints(
+                                          minHeight: valueOrDefault<double>(
+                                            _model.actionsTournamentHeight
+                                                .toDouble(),
+                                            80.0,
+                                          ),
+                                          maxHeight: 335.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.actionsTournamentsModel,
+                                          updateCallback: () => setState(() {}),
+                                          child: ActionsTournamentsWidget(),
+                                        ),
+                                      ),
+                                    ),
+                                    AnimatedContainer(
+                                      duration: Duration(milliseconds: 200),
+                                      curve: Curves.easeInOut,
+                                      decoration: BoxDecoration(),
+                                      child: wrapWithModel(
+                                        model: _model.actionsOthersModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: ActionsOthersWidget(),
+                                      ),
+                                    ),
+                                    if (responsiveVisibility(
+                                      context: context,
+                                      tabletLandscape: false,
+                                      desktop: false,
+                                    ))
+                                      Card(
+                                        clipBehavior:
+                                            Clip.antiAliasWithSaveLayer,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        elevation: 0.0,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(40.0),
+                                        ),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  8.0, 8.0, 8.0, 8.0),
+                                          child: FaIcon(
+                                            FontAwesomeIcons.robot,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 25.0,
+                                          ),
+                                        ),
+                                      ),
+                                  ],
+                                ),
                               ].addToEnd(SizedBox(height: 24.0)),
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x33000000),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                            ),
-                            child: wrapWithModel(
-                              model: _model.actionsPlayerModel,
-                              updateCallback: () => setState(() {}),
-                              child: ActionsPlayerWidget(),
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x33000000),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                            ),
-                            child: wrapWithModel(
-                              model: _model.actionsClubsModel,
-                              updateCallback: () => setState(() {}),
-                              child: ActionsClubsWidget(),
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x33000000),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                            ),
-                            child: wrapWithModel(
-                              model: _model.actionsTournamentsModel,
-                              updateCallback: () => setState(() {}),
-                              child: ActionsTournamentsWidget(),
                             ),
                           ),
                         ].addToEnd(SizedBox(height: 32.0)),

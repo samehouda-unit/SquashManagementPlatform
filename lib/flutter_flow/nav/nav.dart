@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 
 import '/backend/schema/structs/index.dart';
 
+import '/backend/supabase/supabase.dart';
+
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -126,6 +128,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CreatePlayerPage',
           path: '/createPlayerPage',
           builder: (context, params) => CreatePlayerPageWidget(),
+        ),
+        FFRoute(
+          name: 'CreateTournamentPage',
+          path: '/createTournamentPage',
+          builder: (context, params) => CreateTournamentPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

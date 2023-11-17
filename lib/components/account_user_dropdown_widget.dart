@@ -192,6 +192,7 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                   width: 36.0,
                                   height: 36.0,
                                   fit: BoxFit.cover,
+                                  alignment: Alignment(1.00, 1.00),
                                 ),
                               ),
                             ),

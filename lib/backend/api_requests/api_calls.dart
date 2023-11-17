@@ -11,7 +11,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start SquashManagementAPIGroup Group Code
 
 class SquashManagementAPIGroupGroup {
-  static String baseUrl = 'https://xhohsggtqcqazqvokuat.supabase.co';
+  static String baseUrl = 'https://xhohsggtqcqazqvokuat.supabase.co/rest/v1/';
   static Map<String, String> headers = {
     'Content-Type': 'application/json',
     'apikey':
@@ -23,6 +23,10 @@ class SquashManagementAPIGroupGroup {
   static CreateTournamentAPICall createTournamentAPICall =
       CreateTournamentAPICall();
   static CreatePlayerAPICall createPlayerAPICall = CreatePlayerAPICall();
+  static PopulatePlayerStagesCall populatePlayerStagesCall =
+      PopulatePlayerStagesCall();
+  static PopulatePlayerRanksCall populatePlayerRanksCall =
+      PopulatePlayerRanksCall();
 }
 
 class CreateClubAPICall {
@@ -35,7 +39,7 @@ class CreateClubAPICall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createClubAPI',
-      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}/rest/v1/club',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}club',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +79,7 @@ class CreateTournamentAPICall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createTournamentAPI',
-      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}/rest/v1/tournament',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}tournament',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
@@ -108,14 +112,24 @@ class CreateTournamentAPICall {
 class CreatePlayerAPICall {
   Future<ApiCallResponse> call({
     String? playerName = '',
+    String? dateOfBirth = '',
+    int? rank,
+    int? stage,
+    String? gender = '',
+    String? playerBio = '',
   }) async {
     final ffApiRequestBody = '''
 {
-"name":"${playerName}"
+  "name": "${playerName}",
+  "date_of_birth": "${dateOfBirth} 00:00:00.00000+00",
+  "rank": ${rank},
+  "stage": ${stage},
+  "gender" :"${gender}",
+"player_bio" : "${playerBio}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createPlayerAPI',
-      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}/rest/v1/player',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}player',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',
@@ -142,6 +156,74 @@ class CreatePlayerAPICall {
   dynamic name(dynamic response) => getJsonField(
         response,
         r'''$[0].name''',
+      );
+}
+
+class PopulatePlayerStagesCall {
+  Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populatePlayerStages',
+      apiUrl:
+          '${SquashManagementAPIGroupGroup.baseUrl}player_stage_lkp?select=*',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      );
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      );
+}
+
+class PopulatePlayerRanksCall {
+  Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populatePlayerRanks',
+      apiUrl:
+          '${SquashManagementAPIGroupGroup.baseUrl}player_rank_lkp?select=*',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      );
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
       );
 }
 

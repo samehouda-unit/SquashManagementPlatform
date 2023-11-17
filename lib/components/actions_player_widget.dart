@@ -44,15 +44,27 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
 
     return Container(
       width: double.infinity,
+      height: 335.0,
+      constraints: BoxConstraints(
+        minHeight: 80.0,
+        maxHeight: 335.0,
+      ),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 24.0),
-            child: Column(
+      child: Padding(
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 24.0),
+        child: Wrap(
+          spacing: 0.0,
+          runSpacing: 0.0,
+          alignment: WrapAlignment.start,
+          crossAxisAlignment: WrapCrossAlignment.start,
+          direction: Axis.horizontal,
+          runAlignment: WrapAlignment.start,
+          verticalDirection: VerticalDirection.down,
+          clipBehavior: Clip.none,
+          children: [
+            Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -66,10 +78,15 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Select the action needed for Players',
+                    'Tap to select the needed action for Players',
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
                 Container(
                   width: double.infinity,
                   height: 60.0,
@@ -276,8 +293,8 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                 ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
