@@ -86,7 +86,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
       child: AnimatedContainer(
         duration: Duration(milliseconds: 200),
         curve: Curves.easeInOut,
-        width: FFAppState().navOpen == true ? 270.0 : 72.0,
+        width: FFAppState().navOpen == true ? 270.0 : 74.0,
         height: double.infinity,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
@@ -108,7 +108,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Icon(
-                      Icons.add_task_rounded,
+                      Icons.sports_tennis,
                       color: FlutterFlowTheme.of(context).primary,
                       size: 32.0,
                     ),
@@ -117,7 +117,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                         padding:
                             EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'check.io',
+                          'Squash Platform',
                           style: FlutterFlowTheme.of(context).headlineMedium,
                         ),
                       ),
@@ -291,6 +291,11 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 ),
                               },
                             );
+
+                            // update selectedNav
+                            setState(() {
+                              _model.selectedNav = 1;
+                            });
                           },
                           child: AnimatedContainer(
                             duration: Duration(milliseconds: 200),
@@ -374,6 +379,11 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 ),
                               },
                             );
+
+                            // update selectedNav
+                            setState(() {
+                              _model.selectedNav = 2;
+                            });
                           },
                           child: AnimatedContainer(
                             duration: Duration(milliseconds: 200),
@@ -588,7 +598,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 if (_model.mouseRegionHovered4!) {
                                   return FlutterFlowTheme.of(context)
                                       .secondaryBackground;
-                                } else if (widget.selectedNav == 4) {
+                                } else if (_model.selectedNav == 4) {
                                   return FlutterFlowTheme.of(context).accent1;
                                 } else {
                                   return FlutterFlowTheme.of(context)
@@ -768,7 +778,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 if (_model.mouseRegionHovered6!) {
                                   return FlutterFlowTheme.of(context)
                                       .secondaryBackground;
-                                } else if (widget.selectedNav == 5) {
+                                } else if (widget.selectedNav == 6) {
                                   return FlutterFlowTheme.of(context).accent1;
                                 } else {
                                   return FlutterFlowTheme.of(context)

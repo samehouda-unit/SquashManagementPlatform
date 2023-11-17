@@ -118,7 +118,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                 model: _model.sideNavModel,
                 updateCallback: () => setState(() {}),
                 child: SideNavWidget(
-                  selectedNav: 0,
+                  selectedNav: 5,
                 ),
               ),
               Expanded(

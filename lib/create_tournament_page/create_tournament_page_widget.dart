@@ -1,4 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/create_tournament_plan_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -30,8 +31,8 @@ class _CreateTournamentPageWidgetState
     super.initState();
     _model = createModel(context, () => CreateTournamentPageModel());
 
-    _model.txtPlayerNameController ??= TextEditingController();
-    _model.txtPlayerNameFocusNode ??= FocusNode();
+    _model.txtTournamentNameController ??= TextEditingController();
+    _model.txtTournamentNameFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -126,12 +127,12 @@ class _CreateTournamentPageWidgetState
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 16.0),
+                        EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 15.0),
                     child: TextFormField(
-                      controller: _model.txtPlayerNameController,
-                      focusNode: _model.txtPlayerNameFocusNode,
+                      controller: _model.txtTournamentNameController,
+                      focusNode: _model.txtTournamentNameFocusNode,
                       onChanged: (_) => EasyDebounce.debounce(
-                        '_model.txtPlayerNameController',
+                        '_model.txtTournamentNameController',
                         Duration(milliseconds: 2000),
                         () => setState(() {}),
                       ),
@@ -174,113 +175,140 @@ class _CreateTournamentPageWidgetState
                             FlutterFlowTheme.of(context).secondaryBackground,
                         contentPadding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 0.0, 0.0, 24.0),
-                        suffixIcon:
-                            _model.txtPlayerNameController!.text.isNotEmpty
-                                ? InkWell(
-                                    onTap: () async {
-                                      _model.txtPlayerNameController?.clear();
-                                      setState(() {});
-                                    },
-                                    child: Icon(
-                                      Icons.clear,
-                                      color: Color(0xFF757575),
-                                      size: 22.0,
-                                    ),
-                                  )
-                                : null,
+                        suffixIcon: _model
+                                .txtTournamentNameController!.text.isNotEmpty
+                            ? InkWell(
+                                onTap: () async {
+                                  _model.txtTournamentNameController?.clear();
+                                  setState(() {});
+                                },
+                                child: Icon(
+                                  Icons.clear,
+                                  color: Color(0xFF757575),
+                                  size: 22.0,
+                                ),
+                              )
+                            : null,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
-                      validator: _model.txtPlayerNameControllerValidator
+                      validator: _model.txtTournamentNameControllerValidator
                           .asValidator(context),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.00, 0.05),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          if (_model.formKey.currentState == null ||
+                              !_model.formKey.currentState!.validate()) {
+                            return;
+                          }
+                          _model.apiResultp5y =
+                              await SquashManagementAPIGroupGroup
+                                  .createTournamentAPICall
+                                  .call(
+                            name: _model.txtTournamentNameController.text,
+                          );
+                          if ((_model.apiResultp5y?.succeeded ?? true)) {
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  content: Text(
+                                      'Tournament has been added successfully'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: Text('Ok'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                            setState(() {
+                              _model.tournamentCreated = true;
+                            });
+                          } else {
+                            await showDialog(
+                              context: context,
+                              builder: (alertDialogContext) {
+                                return AlertDialog(
+                                  content:
+                                      Text('Error while adding Tournament'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(alertDialogContext),
+                                      child: Text('Ok'),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          }
+
+                          setState(() {});
+                        },
+                        text: 'Submit',
+                        icon: Icon(
+                          Icons.add_moderator,
+                          size: 15.0,
+                        ),
+                        options: FFButtonOptions(
+                          width: 270.0,
+                          height: 50.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleMedium.override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: Colors.white,
+                                  ),
+                          elevation: 2.0,
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(12.0),
+                          hoverColor: FlutterFlowTheme.of(context).secondary,
+                          hoverBorderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primary,
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            Align(
-              alignment: AlignmentDirectional(0.00, 0.05),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    if (_model.formKey.currentState == null ||
-                        !_model.formKey.currentState!.validate()) {
-                      return;
-                    }
-                    _model.apiResultp5y = await SquashManagementAPIGroupGroup
-                        .createTournamentAPICall
-                        .call(
-                      name: _model.txtPlayerNameController.text,
-                    );
-                    if ((_model.apiResultp5y?.succeeded ?? true)) {
-                      await showDialog(
-                        context: context,
-                        builder: (alertDialogContext) {
-                          return AlertDialog(
-                            content:
-                                Text('Tournament has been added successfully'),
-                            actions: [
-                              TextButton(
-                                onPressed: () =>
-                                    Navigator.pop(alertDialogContext),
-                                child: Text('Ok'),
-                              ),
-                            ],
-                          );
-                        },
-                      );
-                    } else {
-                      await showDialog(
-                        context: context,
-                        builder: (alertDialogContext) {
-                          return AlertDialog(
-                            content: Text('Error while adding Tournament'),
-                            actions: [
-                              TextButton(
-                                onPressed: () =>
-                                    Navigator.pop(alertDialogContext),
-                                child: Text('Ok'),
-                              ),
-                            ],
-                          );
-                        },
-                      );
-                    }
-
-                    setState(() {});
-                  },
-                  text: 'Submit',
-                  icon: Icon(
-                    Icons.add_moderator,
-                    size: 15.0,
-                  ),
-                  options: FFButtonOptions(
-                    width: 270.0,
-                    height: 50.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle:
-                        FlutterFlowTheme.of(context).titleMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              color: Colors.white,
-                            ),
-                    elevation: 2.0,
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1.0,
+            if (_model.tournamentCreated == true)
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 501.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
-                    borderRadius: BorderRadius.circular(12.0),
-                    hoverColor: FlutterFlowTheme.of(context).secondary,
-                    hoverBorderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).primary,
-                      width: 1.0,
+                    child: wrapWithModel(
+                      model: _model.createTournamentPlanModel,
+                      updateCallback: () => setState(() {}),
+                      child: CreateTournamentPlanWidget(),
                     ),
                   ),
-                ),
+                ],
               ),
-            ),
           ],
         ),
       ),

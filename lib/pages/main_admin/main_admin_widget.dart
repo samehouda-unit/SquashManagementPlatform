@@ -72,7 +72,7 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                 model: _model.sideNavModel,
                 updateCallback: () => setState(() {}),
                 child: SideNavWidget(
-                  selectedNav: 1,
+                  selectedNav: 6,
                 ),
               ),
               Expanded(

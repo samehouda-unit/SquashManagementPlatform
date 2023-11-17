@@ -1,5 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -10,7 +11,9 @@ import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
@@ -24,10 +27,26 @@ class CreatePlayerPageWidget extends StatefulWidget {
   _CreatePlayerPageWidgetState createState() => _CreatePlayerPageWidgetState();
 }
 
-class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget> {
+class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
+    with TickerProviderStateMixin {
   late CreatePlayerPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = {
+    'circleImageOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        RotateEffect(
+          curve: Curves.easeInOut,
+          delay: 10.ms,
+          duration: 800.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+      ],
+    ),
+  };
 
   @override
   void initState() {
@@ -226,7 +245,8 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget> {
                                   ),
                                   fit: BoxFit.fitWidth,
                                 ),
-                              ),
+                              ).animateOnPageLoad(animationsMap[
+                                  'circleImageOnPageLoadAnimation']!),
                             ),
                           ),
                         ),
@@ -515,7 +535,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget> {
                               height: 56.0,
                               textStyle:
                                   FlutterFlowTheme.of(context).bodyMedium,
-                              hintText: 'Gender',
+                              hintText: '      Gender',
                               icon: Icon(
                                 Icons.keyboard_arrow_down_rounded,
                                 color:
@@ -811,6 +831,18 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget> {
                             );
                           },
                         );
+                        // resetText
+                        setState(() {
+                          _model.txtPlayerNameController?.clear();
+                          _model.txtDateOfBirthController?.clear();
+                          _model.txtPlayerBioController?.clear();
+                        });
+                        // resetDropdowns
+                        setState(() {
+                          _model.lsGenderValueController?.reset();
+                          _model.lstStagesValueController?.reset();
+                          _model.lstRanksValueController?.reset();
+                        });
                       } else {
                         await showDialog(
                           context: context,
