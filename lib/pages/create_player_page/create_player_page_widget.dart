@@ -273,6 +273,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                   child: Container(
                     decoration: BoxDecoration(),
                     child: SingleChildScrollView(
+                      primary: false,
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
