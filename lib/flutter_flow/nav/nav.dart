@@ -68,42 +68,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : NavBarPage(),
         ),
         FFRoute(
-          name: 'main_notifications',
+          name: 'Main_Notifications',
           path: '/mainNotifications',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_notifications')
+              ? NavBarPage(initialPage: 'Main_Notifications')
               : MainNotificationsWidget(),
         ),
         FFRoute(
-          name: 'main_users',
+          name: 'Main_Users',
           path: '/mainUsers',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_users')
+              ? NavBarPage(initialPage: 'Main_Users')
               : MainUsersWidget(),
         ),
         FFRoute(
-          name: 'main_recent',
+          name: 'Main_Recent',
           path: '/mainRecent',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_recent')
+              ? NavBarPage(initialPage: 'Main_Recent')
               : MainRecentWidget(),
         ),
         FFRoute(
-          name: 'main_Profile',
+          name: 'Main_Profile',
           path: '/mainProfile',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_Profile')
+              ? NavBarPage(initialPage: 'Main_Profile')
               : MainProfileWidget(),
         ),
         FFRoute(
-          name: 'main_Dashboard',
+          name: 'Main_Dashboard',
           path: '/mainDashboard',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_Dashboard')
+              ? NavBarPage(initialPage: 'Main_Dashboard')
               : MainDashboardWidget(),
         ),
         FFRoute(
-          name: 'transactionHistory',
+          name: 'TransactionHistory',
           path: '/transactionHistory',
           builder: (context, params) => TransactionHistoryWidget(),
         ),
@@ -118,10 +118,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ResponsiveTestWidget(),
         ),
         FFRoute(
-          name: 'main_Admin',
+          name: 'Main_Admin',
           path: '/mainAdmin',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'main_Admin')
+              ? NavBarPage(initialPage: 'Main_Admin')
               : MainAdminWidget(),
         ),
         FFRoute(

@@ -1,7 +1,7 @@
-import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/template_components/side_nav/side_nav_widget.dart';
 import 'main_notifications_widget.dart' show MainNotificationsWidget;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

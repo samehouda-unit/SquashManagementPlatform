@@ -1,7 +1,7 @@
-import '/components/account_user_dropdown_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/template_components/account_user_dropdown/account_user_dropdown_widget.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -131,7 +131,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                 highlightColor: Colors.transparent,
                 onTap: () async {
                   context.pushNamed(
-                    'main_Profile',
+                    'Main_Profile',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
@@ -282,7 +282,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'main_Dashboard',
+                              'Main_Dashboard',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -370,7 +370,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'main_users',
+                              'Main_Users',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -458,7 +458,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'main_notifications',
+                              'Main_Notifications',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -578,7 +578,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'main_recent',
+                              'Main_Recent',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -675,7 +675,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'main_Profile',
+                              'Main_Profile',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -758,7 +758,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'main_Admin',
+                              'Main_Admin',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,

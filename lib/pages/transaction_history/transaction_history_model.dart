@@ -1,8 +1,8 @@
-import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/template_components/side_nav/side_nav_widget.dart';
 import 'transaction_history_widget.dart' show TransactionHistoryWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

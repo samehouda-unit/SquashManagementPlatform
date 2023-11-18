@@ -1,9 +1,9 @@
-import '/components/account_user_dropdown_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/template_components/account_user_dropdown/account_user_dropdown_widget.dart';
 import 'responsive_profile_widget.dart' show ResponsiveProfileWidget;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:cached_network_image/cached_network_image.dart';

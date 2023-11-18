@@ -1,11 +1,11 @@
-import '/components/actions_clubs_widget.dart';
-import '/components/actions_others_widget.dart';
-import '/components/actions_player_widget.dart';
-import '/components/actions_tournaments_widget.dart';
-import '/components/side_nav_widget.dart';
+import '/components/actions_clubs/actions_clubs_widget.dart';
+import '/components/actions_others/actions_others_widget.dart';
+import '/components/actions_player/actions_player_widget.dart';
+import '/components/actions_tournaments/actions_tournaments_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/template_components/side_nav/side_nav_widget.dart';
 import 'main_admin_widget.dart' show MainAdminWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

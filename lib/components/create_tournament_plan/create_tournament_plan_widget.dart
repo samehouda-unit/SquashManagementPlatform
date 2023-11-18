@@ -185,7 +185,6 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                   .txtTournamentPlanNameController,
                                               focusNode: _model
                                                   .txtTournamentPlanNameFocusNode,
-                                              autofocus: true,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 hintText:

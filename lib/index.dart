@@ -8,11 +8,12 @@ export '/pages/main_dashboard/main_dashboard_widget.dart'
     show MainDashboardWidget;
 export '/pages/transaction_history/transaction_history_widget.dart'
     show TransactionHistoryWidget;
-export '/responsive_profile/responsive_profile_widget.dart'
+export '/template_pages/responsive_profile/responsive_profile_widget.dart'
     show ResponsiveProfileWidget;
-export '/responsive_test/responsive_test_widget.dart' show ResponsiveTestWidget;
+export '/template_pages/responsive_test/responsive_test_widget.dart'
+    show ResponsiveTestWidget;
 export '/pages/main_admin/main_admin_widget.dart' show MainAdminWidget;
-export '/create_player_page/create_player_page_widget.dart'
+export '/pages/create_player_page/create_player_page_widget.dart'
     show CreatePlayerPageWidget;
-export '/create_tournament_page/create_tournament_page_widget.dart'
+export '/pages/create_tournament_page/create_tournament_page_widget.dart'
     show CreateTournamentPageWidget;

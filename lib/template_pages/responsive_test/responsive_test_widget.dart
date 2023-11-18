@@ -162,7 +162,7 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
                                       context.pushNamed(
-                                        'main_Dashboard',
+                                        'Main_Dashboard',
                                         extra: <String, dynamic>{
                                           kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
@@ -793,7 +793,7 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                   16.0, 0.0, 16.0, 0.0),
                               child: MasonryGridView.builder(
                                 gridDelegate:
-                                    const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                    SliverSimpleGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 3,
                                 ),
                                 crossAxisSpacing: 12.0,
