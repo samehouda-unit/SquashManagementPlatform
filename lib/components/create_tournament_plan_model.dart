@@ -1,9 +1,12 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:ui';
 import 'create_tournament_plan_widget.dart' show CreateTournamentPlanWidget;
@@ -28,51 +31,79 @@ class CreateTournamentPlanModel
   TextEditingController? txtTournamentPlanNameController;
   String? Function(BuildContext, String?)?
       txtTournamentPlanNameControllerValidator;
+  String? _txtTournamentPlanNameControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl = '';
 
-  // State field(s) for txtLocation widget.
-  FocusNode? txtLocationFocusNode;
-  TextEditingController? txtLocationController;
-  String? Function(BuildContext, String?)? txtLocationControllerValidator;
-  // State field(s) for txtSponsors widget.
-  FocusNode? txtSponsorsFocusNode;
-  TextEditingController? txtSponsorsController;
-  String? Function(BuildContext, String?)? txtSponsorsControllerValidator;
+  // State field(s) for lsClubsLocation widget.
+  int? lsClubsLocationValue;
+  FormFieldController<int>? lsClubsLocationValueController;
   // State field(s) for txtFromDate widget.
   FocusNode? txtFromDateFocusNode;
   TextEditingController? txtFromDateController;
   final txtFromDateMask = MaskTextInputFormatter(mask: '##/##/####');
   String? Function(BuildContext, String?)? txtFromDateControllerValidator;
+  String? _txtFromDateControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
   DateTime? datePicked1;
   // State field(s) for txtToDate widget.
   FocusNode? txtToDateFocusNode;
   TextEditingController? txtToDateController;
   final txtToDateMask = MaskTextInputFormatter(mask: '##/##/####');
   String? Function(BuildContext, String?)? txtToDateControllerValidator;
+  String? _txtToDateControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
   DateTime? datePicked2;
+  // State field(s) for txtSponsors widget.
+  FocusNode? txtSponsorsFocusNode;
+  TextEditingController? txtSponsorsController;
+  String? Function(BuildContext, String?)? txtSponsorsControllerValidator;
+  // Stores action output result for [Backend Call - API (createTournamentPlanAPI)] action in Button widget.
+  ApiCallResponse? apiResultp5y;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtTournamentPlanNameControllerValidator =
+        _txtTournamentPlanNameControllerValidator;
+    txtFromDateControllerValidator = _txtFromDateControllerValidator;
+    txtToDateControllerValidator = _txtToDateControllerValidator;
+  }
 
   void dispose() {
     txtTournamentPlanNameFocusNode?.dispose();
     txtTournamentPlanNameController?.dispose();
-
-    txtLocationFocusNode?.dispose();
-    txtLocationController?.dispose();
-
-    txtSponsorsFocusNode?.dispose();
-    txtSponsorsController?.dispose();
 
     txtFromDateFocusNode?.dispose();
     txtFromDateController?.dispose();
 
     txtToDateFocusNode?.dispose();
     txtToDateController?.dispose();
+
+    txtSponsorsFocusNode?.dispose();
+    txtSponsorsController?.dispose();
   }
 
   /// Action blocks are added here.

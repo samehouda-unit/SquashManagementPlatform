@@ -327,7 +327,7 @@ class _CreateTournamentPageWidgetState
                     children: [
                       Container(
                         width: double.infinity,
-                        height: 501.0,
+                        height: 520.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -335,7 +335,13 @@ class _CreateTournamentPageWidgetState
                         child: wrapWithModel(
                           model: _model.createTournamentPlanModel,
                           updateCallback: () => setState(() {}),
-                          child: CreateTournamentPlanWidget(),
+                          child: CreateTournamentPlanWidget(
+                            paramTournamentId: SquashManagementAPIGroupGroup
+                                .createTournamentAPICall
+                                .id(
+                              (_model.apiResultp5y?.jsonBody ?? ''),
+                            ),
+                          ),
                         ),
                       ),
                     ],

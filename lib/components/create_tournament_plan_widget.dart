@@ -1,9 +1,12 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:ui';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -20,7 +23,12 @@ import 'create_tournament_plan_model.dart';
 export 'create_tournament_plan_model.dart';
 
 class CreateTournamentPlanWidget extends StatefulWidget {
-  const CreateTournamentPlanWidget({Key? key}) : super(key: key);
+  const CreateTournamentPlanWidget({
+    Key? key,
+    required this.paramTournamentId,
+  }) : super(key: key);
+
+  final int? paramTournamentId;
 
   @override
   _CreateTournamentPlanWidgetState createState() =>
@@ -74,17 +82,14 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
     _model.txtTournamentPlanNameController ??= TextEditingController();
     _model.txtTournamentPlanNameFocusNode ??= FocusNode();
 
-    _model.txtLocationController ??= TextEditingController();
-    _model.txtLocationFocusNode ??= FocusNode();
-
-    _model.txtSponsorsController ??= TextEditingController();
-    _model.txtSponsorsFocusNode ??= FocusNode();
-
     _model.txtFromDateController ??= TextEditingController();
     _model.txtFromDateFocusNode ??= FocusNode();
 
     _model.txtToDateController ??= TextEditingController();
     _model.txtToDateFocusNode ??= FocusNode();
+
+    _model.txtSponsorsController ??= TextEditingController();
+    _model.txtSponsorsFocusNode ??= FocusNode();
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -153,7 +158,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                       children: [
                         Form(
                           key: _model.formKey,
-                          autovalidateMode: AutovalidateMode.always,
+                          autovalidateMode: AutovalidateMode.disabled,
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
@@ -174,7 +179,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 5.0),
+                                                    0.0, 0.0, 0.0, 10.0),
                                             child: TextFormField(
                                               controller: _model
                                                   .txtTournamentPlanNameController,
@@ -256,6 +261,10 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                     EdgeInsetsDirectional
                                                         .fromSTEB(0.0, 10.0,
                                                             0.0, 0.0),
+                                                prefixIcon: Icon(
+                                                  Icons
+                                                      .drive_file_rename_outline_sharp,
+                                                ),
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -355,7 +364,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .alternate,
                                               borderRadius:
-                                                  BorderRadius.circular(25.0),
+                                                  BorderRadius.circular(0.0),
                                               shape: BoxShape.rectangle,
                                             ),
                                             child: Stack(
@@ -418,169 +427,100 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      TextFormField(
-                                        controller:
-                                            _model.txtLocationController,
-                                        focusNode: _model.txtLocationFocusNode,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelLarge,
-                                          hintText: 'Location',
-                                          hintStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelLarge,
-                                          enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 5.0, 0.0, 3.0),
+                                        child: FutureBuilder<ApiCallResponse>(
+                                          future: SquashManagementAPIGroupGroup
+                                              .populateClubsCall
+                                              .call(),
+                                          builder: (context, snapshot) {
+                                            // Customize what your widget looks like when it's loading.
+                                            if (!snapshot.hasData) {
+                                              return Center(
+                                                child: SizedBox(
+                                                  width: 50.0,
+                                                  height: 50.0,
+                                                  child:
+                                                      CircularProgressIndicator(
+                                                    valueColor:
+                                                        AlwaysStoppedAnimation<
+                                                            Color>(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primary,
+                                                    ),
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            final lsClubsLocationPopulateClubsResponse =
+                                                snapshot.data!;
+                                            return FlutterFlowDropDown<int>(
+                                              controller: _model
+                                                      .lsClubsLocationValueController ??=
+                                                  FormFieldController<int>(
+                                                _model.lsClubsLocationValue ??=
+                                                    -1,
+                                              ),
+                                              options: List<int>.from(
+                                                  SquashManagementAPIGroupGroup
+                                                      .populateClubsCall
+                                                      .id(
+                                                lsClubsLocationPopulateClubsResponse
+                                                    .jsonBody,
+                                              )!),
+                                              optionLabels:
+                                                  (SquashManagementAPIGroupGroup
+                                                          .populateClubsCall
+                                                          .name(
+                                                lsClubsLocationPopulateClubsResponse
+                                                    .jsonBody,
+                                              ) as List)
+                                                      .map<String>(
+                                                          (s) => s.toString())
+                                                      .toList()!,
+                                              onChanged: (val) => setState(() =>
+                                                  _model.lsClubsLocationValue =
+                                                      val),
+                                              width: double.infinity,
+                                              height: 56.0,
+                                              searchHintTextStyle: TextStyle(),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
+                                              hintText: 'Location',
+                                              searchHintText:
+                                                  'Select player rank',
+                                              icon: Icon(
+                                                Icons.sports_tennis_sharp,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 15.0,
+                                              ),
+                                              fillColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              elevation: 2.0,
+                                              borderColor:
                                                   FlutterFlowTheme.of(context)
                                                       .alternate,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                const BorderRadius.only(
-                                              topLeft: Radius.circular(4.0),
-                                              topRight: Radius.circular(4.0),
-                                            ),
-                                          ),
-                                          focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                const BorderRadius.only(
-                                              topLeft: Radius.circular(4.0),
-                                              topRight: Radius.circular(4.0),
-                                            ),
-                                          ),
-                                          errorBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                const BorderRadius.only(
-                                              topLeft: Radius.circular(4.0),
-                                              topRight: Radius.circular(4.0),
-                                            ),
-                                          ),
-                                          focusedErrorBorder:
-                                              UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .error,
-                                              width: 2.0,
-                                            ),
-                                            borderRadius:
-                                                const BorderRadius.only(
-                                              topLeft: Radius.circular(4.0),
-                                              topRight: Radius.circular(4.0),
-                                            ),
-                                          ),
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 8.0),
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyLarge,
-                                        validator: _model
-                                            .txtLocationControllerValidator
-                                            .asValidator(context),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 5.0),
-                                        child: TextFormField(
-                                          controller:
-                                              _model.txtSponsorsController,
-                                          focusNode:
-                                              _model.txtSponsorsFocusNode,
-                                          autofocus: true,
-                                          obscureText: false,
-                                          decoration: InputDecoration(
-                                            labelStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelLarge,
-                                            hintText:
-                                                'Sponsors here (ex: Nike , Vodafone , ...)',
-                                            hintStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelLarge,
-                                            enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .alternate,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            errorBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .error,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .error,
-                                                width: 2.0,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 8.0),
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyLarge,
-                                          validator: _model
-                                              .txtSponsorsControllerValidator
-                                              .asValidator(context),
+                                              borderWidth: 2.0,
+                                              borderRadius: 8.0,
+                                              margin: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      20.0, 4.0, 12.0, 4.0),
+                                              hidesUnderline: true,
+                                              isSearchable: true,
+                                              isMultiSelect: false,
+                                            );
+                                          },
                                         ),
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 15.0, 0.0, 0.0),
+                                            0.0, 12.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -836,7 +776,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      20.0, 0.0, 20.0, 16.0),
+                                                      20.0, 0.0, 20.0, 5.0),
                                               child: TextFormField(
                                                 controller:
                                                     _model.txtToDateController,
@@ -1064,6 +1004,89 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                           ),
                                         ],
                                       ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 20.0),
+                                        child: TextFormField(
+                                          controller:
+                                              _model.txtSponsorsController,
+                                          focusNode:
+                                              _model.txtSponsorsFocusNode,
+                                          autofocus: true,
+                                          obscureText: false,
+                                          decoration: InputDecoration(
+                                            labelStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLarge,
+                                            hintText:
+                                                'Sponsors here (ex: Nike , Vodafone , ...)',
+                                            hintStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLarge,
+                                            enabledBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                topLeft: Radius.circular(4.0),
+                                                topRight: Radius.circular(4.0),
+                                              ),
+                                            ),
+                                            focusedBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                topLeft: Radius.circular(4.0),
+                                                topRight: Radius.circular(4.0),
+                                              ),
+                                            ),
+                                            errorBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                topLeft: Radius.circular(4.0),
+                                                topRight: Radius.circular(4.0),
+                                              ),
+                                            ),
+                                            focusedErrorBorder:
+                                                UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .error,
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                topLeft: Radius.circular(4.0),
+                                                topRight: Radius.circular(4.0),
+                                              ),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 8.0, 0.0, 8.0),
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyLarge,
+                                          validator: _model
+                                              .txtSponsorsControllerValidator
+                                              .asValidator(context),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                   Row(
@@ -1074,8 +1097,95 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 10.0, 0.0),
                                         child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
+                                          onPressed: () async {
+                                            if (_model.formKey.currentState ==
+                                                    null ||
+                                                !_model.formKey.currentState!
+                                                    .validate()) {
+                                              return;
+                                            }
+                                            if (_model.lsClubsLocationValue ==
+                                                null) {
+                                              return;
+                                            }
+                                            _model.apiResultp5y =
+                                                await SquashManagementAPIGroupGroup
+                                                    .createTournamentPlanAPICall
+                                                    .call(
+                                              tournamentId:
+                                                  widget.paramTournamentId,
+                                              tournamentPlanName: _model
+                                                  .txtTournamentPlanNameController
+                                                  .text,
+                                              clubId:
+                                                  _model.lsClubsLocationValue,
+                                              dateFrom: _model
+                                                  .txtFromDateController.text,
+                                              dateTo: _model
+                                                  .txtToDateController.text,
+                                              sponsors: _model
+                                                  .txtSponsorsController.text,
+                                            );
+                                            if ((_model
+                                                    .apiResultp5y?.succeeded ??
+                                                true)) {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    content: Text(
+                                                        'Tournament Plan has been added successfully'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext),
+                                                        child: Text('Ok'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                              // resetText
+                                              setState(() {
+                                                _model
+                                                    .txtTournamentPlanNameController
+                                                    ?.clear();
+                                                _model.txtFromDateController
+                                                    ?.clear();
+                                                _model.txtToDateController
+                                                    ?.clear();
+                                                _model.txtSponsorsController
+                                                    ?.clear();
+                                              });
+                                              // resetDropdowns
+                                              setState(() {
+                                                _model
+                                                    .lsClubsLocationValueController
+                                                    ?.reset();
+                                              });
+                                              Navigator.pop(context);
+                                            } else {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    content: Text(
+                                                        'Error while adding Tournament Plan'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext),
+                                                        child: Text('Ok'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                            }
+
+                                            setState(() {});
                                           },
                                           text: 'Submit',
                                           icon: Icon(
