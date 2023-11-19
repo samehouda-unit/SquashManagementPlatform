@@ -177,7 +177,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                             final selectedMedia =
                                 await selectMediaWithSourceBottomSheet(
                               context: context,
-                              storageFolderPath: 'PlayerPhoto',
+                              storageFolderPath: 'TournamentPlan',
                               allowPhoto: true,
                             );
                             if (selectedMedia != null &&
@@ -861,6 +861,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                     gender: _model.lsGenderValue,
                                     playerBio:
                                         _model.txtPlayerBioController.text,
+                                    photoUrl: _model.uploadedFileUrl,
                                   );
                                   if ((_model.apiResultp5y?.succeeded ??
                                       true)) {

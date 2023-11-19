@@ -18,7 +18,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 
 class CreateTournamentPlanModel
@@ -26,6 +25,11 @@ class CreateTournamentPlanModel
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
+
   // State field(s) for txtTournamentPlanName widget.
   FocusNode? txtTournamentPlanNameFocusNode;
   TextEditingController? txtTournamentPlanNameController;
@@ -39,11 +43,6 @@ class CreateTournamentPlanModel
 
     return null;
   }
-
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl = '';
 
   // State field(s) for lsClubsLocation widget.
   int? lsClubsLocationValue;

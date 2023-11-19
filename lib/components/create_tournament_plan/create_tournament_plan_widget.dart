@@ -17,7 +17,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'create_tournament_plan_model.dart';
 export 'create_tournament_plan_model.dart';
@@ -66,6 +65,18 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
         ),
       ],
     ),
+    'circleImageOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        RotateEffect(
+          curve: Curves.easeInOut,
+          delay: 10.ms,
+          duration: 800.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+      ],
+    ),
   };
 
   @override
@@ -90,13 +101,6 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
 
     _model.txtSponsorsController ??= TextEditingController();
     _model.txtSponsorsFocusNode ??= FocusNode();
-
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -167,6 +171,137 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Flexible(
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                final selectedMedia =
+                                                    await selectMediaWithSourceBottomSheet(
+                                                  context: context,
+                                                  storageFolderPath:
+                                                      'TournamentPlan',
+                                                  allowPhoto: true,
+                                                );
+                                                if (selectedMedia != null &&
+                                                    selectedMedia.every((m) =>
+                                                        validateFileFormat(
+                                                            m.storagePath,
+                                                            context))) {
+                                                  setState(() => _model
+                                                      .isDataUploading = true);
+                                                  var selectedUploadedFiles =
+                                                      <FFUploadedFile>[];
+
+                                                  var downloadUrls = <String>[];
+                                                  try {
+                                                    selectedUploadedFiles =
+                                                        selectedMedia
+                                                            .map((m) =>
+                                                                FFUploadedFile(
+                                                                  name: m
+                                                                      .storagePath
+                                                                      .split(
+                                                                          '/')
+                                                                      .last,
+                                                                  bytes:
+                                                                      m.bytes,
+                                                                  height: m
+                                                                      .dimensions
+                                                                      ?.height,
+                                                                  width: m
+                                                                      .dimensions
+                                                                      ?.width,
+                                                                  blurHash: m
+                                                                      .blurHash,
+                                                                ))
+                                                            .toList();
+
+                                                    downloadUrls =
+                                                        await uploadSupabaseStorageFiles(
+                                                      bucketName:
+                                                          'SquashManagementPlatformBucket',
+                                                      selectedFiles:
+                                                          selectedMedia,
+                                                    );
+                                                  } finally {
+                                                    _model.isDataUploading =
+                                                        false;
+                                                  }
+                                                  if (selectedUploadedFiles
+                                                              .length ==
+                                                          selectedMedia
+                                                              .length &&
+                                                      downloadUrls.length ==
+                                                          selectedMedia
+                                                              .length) {
+                                                    setState(() {
+                                                      _model.uploadedLocalFile =
+                                                          selectedUploadedFiles
+                                                              .first;
+                                                      _model.uploadedFileUrl =
+                                                          downloadUrls.first;
+                                                    });
+                                                  } else {
+                                                    setState(() {});
+                                                    return;
+                                                  }
+                                                }
+                                              },
+                                              child: AnimatedContainer(
+                                                duration:
+                                                    Duration(milliseconds: 350),
+                                                curve: Curves.bounceOut,
+                                                width: 100.0,
+                                                height: 100.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate,
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          2.0, 2.0, 2.0, 2.0),
+                                                  child: Container(
+                                                    width: 90.0,
+                                                    height: 90.0,
+                                                    clipBehavior:
+                                                        Clip.antiAlias,
+                                                    decoration: BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                    ),
+                                                    child: Image.network(
+                                                      valueOrDefault<String>(
+                                                        _model.uploadedFileUrl,
+                                                        'https://xhohsggtqcqazqvokuat.supabase.co/storage/v1/object/public/SquashManagementPlatformBucket/PlayerPhoto/Default-Master.jpeg',
+                                                      ),
+                                                      fit: BoxFit.fitWidth,
+                                                    ),
+                                                  ).animateOnPageLoad(animationsMap[
+                                                      'circleImageOnPageLoadAnimation']!),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         2.0, 2.0, 2.0, 2.0),
@@ -276,152 +411,6 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                         ),
                                       ],
                                     ),
-                                  ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            final selectedMedia =
-                                                await selectMediaWithSourceBottomSheet(
-                                              context: context,
-                                              storageFolderPath:
-                                                  'TournamentPlan',
-                                              allowPhoto: true,
-                                            );
-                                            if (selectedMedia != null &&
-                                                selectedMedia.every((m) =>
-                                                    validateFileFormat(
-                                                        m.storagePath,
-                                                        context))) {
-                                              setState(() => _model
-                                                  .isDataUploading = true);
-                                              var selectedUploadedFiles =
-                                                  <FFUploadedFile>[];
-
-                                              var downloadUrls = <String>[];
-                                              try {
-                                                selectedUploadedFiles =
-                                                    selectedMedia
-                                                        .map((m) =>
-                                                            FFUploadedFile(
-                                                              name: m
-                                                                  .storagePath
-                                                                  .split('/')
-                                                                  .last,
-                                                              bytes: m.bytes,
-                                                              height: m
-                                                                  .dimensions
-                                                                  ?.height,
-                                                              width: m
-                                                                  .dimensions
-                                                                  ?.width,
-                                                              blurHash:
-                                                                  m.blurHash,
-                                                            ))
-                                                        .toList();
-
-                                                downloadUrls =
-                                                    await uploadSupabaseStorageFiles(
-                                                  bucketName:
-                                                      'SquashManagementPlatformBucket',
-                                                  selectedFiles: selectedMedia,
-                                                );
-                                              } finally {
-                                                _model.isDataUploading = false;
-                                              }
-                                              if (selectedUploadedFiles
-                                                          .length ==
-                                                      selectedMedia.length &&
-                                                  downloadUrls.length ==
-                                                      selectedMedia.length) {
-                                                setState(() {
-                                                  _model.uploadedLocalFile =
-                                                      selectedUploadedFiles
-                                                          .first;
-                                                  _model.uploadedFileUrl =
-                                                      downloadUrls.first;
-                                                });
-                                              } else {
-                                                setState(() {});
-                                                return;
-                                              }
-                                            }
-                                          },
-                                          child: Container(
-                                            width: 50.0,
-                                            height: 70.0,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              borderRadius:
-                                                  BorderRadius.circular(0.0),
-                                              shape: BoxShape.rectangle,
-                                            ),
-                                            child: Stack(
-                                              alignment: AlignmentDirectional(
-                                                  0.0, 0.0),
-                                              children: [
-                                                Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
-                                                  children: [
-                                                    Icon(
-                                                      Icons
-                                                          .add_a_photo_outlined,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 32.0,
-                                                    ),
-                                                    Text(
-                                                      'Add Tournament Logo',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleLarge
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                fontSize: 14.0,
-                                                              ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                if (_model.uploadedFileUrl !=
-                                                        null &&
-                                                    _model.uploadedFileUrl !=
-                                                        '')
-                                                  ClipRRect(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10.0),
-                                                    child: Image.network(
-                                                      _model.uploadedFileUrl,
-                                                      width: double.infinity,
-                                                      height: double.infinity,
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                  ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
                                   ),
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -1124,6 +1113,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                   .txtToDateController.text,
                                               sponsors: _model
                                                   .txtSponsorsController.text,
+                                              photoUrl: _model.uploadedFileUrl,
                                             );
                                             if ((_model
                                                     .apiResultp5y?.succeeded ??

@@ -120,6 +120,7 @@ class CreatePlayerAPICall {
     int? stage,
     String? gender = '',
     String? playerBio = '',
+    String? photoUrl = '',
   }) async {
     final ffApiRequestBody = '''
 {
@@ -127,8 +128,9 @@ class CreatePlayerAPICall {
   "date_of_birth": "${dateOfBirth} 00:00:00.00000+00",
   "rank": ${rank},
   "stage": ${stage},
-  "gender" :"${gender}",
-"player_bio" : "${playerBio}"
+  "gender": "${gender}",
+  "player_bio": "${playerBio}",
+  "photo_url": "${photoUrl}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createPlayerAPI',
@@ -170,6 +172,7 @@ class CreateTournamentPlanAPICall {
     String? dateTo = '',
     String? sponsors = '',
     int? clubId,
+    String? photoUrl = '',
   }) async {
     final ffApiRequestBody = '''
 {
@@ -178,7 +181,8 @@ class CreateTournamentPlanAPICall {
   "date_from": "${dateFrom} 00:00:00.00000+00",
   "date_to": "${dateTo} 00:00:00.00000+00",
   "sponsors": "${sponsors}",
-  "club_id": ${clubId}
+  "club_id": ${clubId},
+  "photo_url": "${photoUrl}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createTournamentPlanAPI',
