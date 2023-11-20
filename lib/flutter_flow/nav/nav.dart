@@ -133,6 +133,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CreateTournamentPage',
           path: '/createTournamentPage',
           builder: (context, params) => CreateTournamentPageWidget(),
+        ),
+        FFRoute(
+          name: 'LinkPlayersToTournamentP',
+          path: '/linkPlayersToTournamentP',
+          builder: (context, params) => LinkPlayersToTournamentPWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
