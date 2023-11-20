@@ -19,3 +19,5 @@ export '/pages/create_tournament_page/create_tournament_page_widget.dart'
     show CreateTournamentPageWidget;
 export '/pages/link_players_to_tournament_p/link_players_to_tournament_p_widget.dart'
     show LinkPlayersToTournamentPWidget;
+export '/pages/create_club/create_club_widget.dart' show CreateClubWidget;
+export '/pages/list_clubs/list_clubs_widget.dart' show ListClubsWidget;

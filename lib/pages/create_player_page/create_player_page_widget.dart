@@ -177,7 +177,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                             final selectedMedia =
                                 await selectMediaWithSourceBottomSheet(
                               context: context,
-                              storageFolderPath: 'TournamentPlan',
+                              storageFolderPath: 'Clubs',
                               allowPhoto: true,
                             );
                             if (selectedMedia != null &&

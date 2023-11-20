@@ -105,7 +105,7 @@ class _CreateTournamentPageWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Create Tournament Profile',
+                          'Create Tournament ',
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(

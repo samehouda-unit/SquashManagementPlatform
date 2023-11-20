@@ -35,10 +35,18 @@ class SquashManagementAPIGroupGroup {
 class CreateClubAPICall {
   Future<ApiCallResponse> call({
     String? name = '',
+    String? location = '',
+    String? contactPerson = '',
+    String? contactEmail = '',
+    String? photoUrl = '',
   }) async {
     final ffApiRequestBody = '''
 {
-  "name": "${name}"
+  "name": "${name}",
+  "location": "${location}",
+  "contact_person": "${contactPerson}",
+  "contact_email": "${contactEmail}",
+  "photo_url": "${photoUrl}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createClubAPI',
@@ -313,6 +321,11 @@ class PopulateClubsCall {
   dynamic name(dynamic response) => getJsonField(
         response,
         r'''$[:].name''',
+        true,
+      );
+  dynamic uuid(dynamic response) => getJsonField(
+        response,
+        r'''$[:].uuid''',
         true,
       );
 }
