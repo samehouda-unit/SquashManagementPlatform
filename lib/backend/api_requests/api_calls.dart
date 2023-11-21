@@ -27,9 +27,12 @@ class SquashManagementAPIGroupGroup {
       CreateTournamentPlanAPICall();
   static PopulatePlayerStagesCall populatePlayerStagesCall =
       PopulatePlayerStagesCall();
+  static PopulateClubAsLocationsCall populateClubAsLocationsCall =
+      PopulateClubAsLocationsCall();
   static PopulatePlayerRanksCall populatePlayerRanksCall =
       PopulatePlayerRanksCall();
   static PopulateClubsCall populateClubsCall = PopulateClubsCall();
+  static PopulatePlayersCall populatePlayersCall = PopulatePlayersCall();
 }
 
 class CreateClubAPICall {
@@ -258,6 +261,39 @@ class PopulatePlayerStagesCall {
       );
 }
 
+class PopulateClubAsLocationsCall {
+  Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populateClubAsLocations',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}club?select=*',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      );
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      );
+}
+
 class PopulatePlayerRanksCall {
   Future<ApiCallResponse> call() async {
     return ApiManager.instance.makeApiCall(
@@ -313,7 +349,48 @@ class PopulateClubsCall {
     );
   }
 
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      );
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      );
   dynamic clubs(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      );
+}
+
+class PopulatePlayersCall {
+  Future<ApiCallResponse> call({
+    int? stage,
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populatePlayers',
+      apiUrl:
+          '${SquashManagementAPIGroupGroup.baseUrl}player?select=*&stage=eq.${stage}',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  dynamic players(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,

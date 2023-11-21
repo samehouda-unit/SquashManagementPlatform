@@ -440,6 +440,8 @@ class _ListClubsWidgetState extends State<ListClubsWidget> {
                                                               listViewPopulateClubsResponse
                                                                   .jsonBody,
                                                             )
+                                                            ?.map((e) => e)
+                                                            .toList()
                                                             ?.toList() ??
                                                         [];
                                                 return ListView.separated(
@@ -574,7 +576,10 @@ class _ListClubsWidgetState extends State<ListClubsWidget> {
                                                                           0.0),
                                                                       child:
                                                                           Text(
-                                                                        'randy@domainname.com',
+                                                                        getJsonField(
+                                                                          clubsItem,
+                                                                          r'''$.contact_email''',
+                                                                        ).toString(),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .labelSmall
                                                                             .override(
