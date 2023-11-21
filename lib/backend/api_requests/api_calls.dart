@@ -313,19 +313,9 @@ class PopulateClubsCall {
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  dynamic clubs(dynamic response) => getJsonField(
         response,
-        r'''$[:].id''',
-        true,
-      );
-  dynamic name(dynamic response) => getJsonField(
-        response,
-        r'''$[:].name''',
-        true,
-      );
-  dynamic uuid(dynamic response) => getJsonField(
-        response,
-        r'''$[:].uuid''',
+        r'''$''',
         true,
       );
 }

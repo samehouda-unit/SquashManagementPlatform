@@ -45,8 +45,8 @@ class CreateTournamentPlanModel
   }
 
   // State field(s) for lsClubsLocation widget.
-  int? lsClubsLocationValue;
-  FormFieldController<int>? lsClubsLocationValueController;
+  String? lsClubsLocationValue;
+  FormFieldController<String>? lsClubsLocationValueController;
   // State field(s) for txtFromDate widget.
   FocusNode? txtFromDateFocusNode;
   TextEditingController? txtFromDateController;

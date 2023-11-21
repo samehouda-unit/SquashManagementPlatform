@@ -538,61 +538,36 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 5.0),
-                            child: FutureBuilder<ApiCallResponse>(
-                              future: SquashManagementAPIGroupGroup
-                                  .populatePlayerStagesCall
-                                  .call(),
-                              builder: (context, snapshot) {
-                                // Customize what your widget looks like when it's loading.
-                                if (!snapshot.hasData) {
-                                  return Center(
-                                    child: SizedBox(
-                                      width: 50.0,
-                                      height: 50.0,
-                                      child: CircularProgressIndicator(
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(
-                                          FlutterFlowTheme.of(context).primary,
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                }
-                                final lsGenderPopulatePlayerStagesResponse =
-                                    snapshot.data!;
-                                return FlutterFlowDropDown<String>(
-                                  controller: _model.lsGenderValueController ??=
-                                      FormFieldController<String>(null),
-                                  options:
-                                      List<String>.from(['Male', 'Female']),
-                                  optionLabels: ['Male', 'Female'],
-                                  onChanged: (val) => setState(
-                                      () => _model.lsGenderValue = val),
-                                  width: double.infinity,
-                                  height: 56.0,
-                                  textStyle:
-                                      FlutterFlowTheme.of(context).bodyMedium,
-                                  hintText: '      Gender',
-                                  icon: Icon(
-                                    Icons.keyboard_arrow_down_rounded,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 15.0,
-                                  ),
-                                  fillColor: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  elevation: 2.0,
-                                  borderColor:
-                                      FlutterFlowTheme.of(context).alternate,
-                                  borderWidth: 2.0,
-                                  borderRadius: 8.0,
-                                  margin: EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 4.0, 12.0, 4.0),
-                                  hidesUnderline: true,
-                                  isSearchable: false,
-                                  isMultiSelect: false,
-                                );
-                              },
+                            child: FlutterFlowDropDown<String>(
+                              controller: _model.lsGenderValueController ??=
+                                  FormFieldController<String>(null),
+                              options: List<String>.from(['Male', 'Female']),
+                              optionLabels: ['Male', 'Female'],
+                              onChanged: (val) =>
+                                  setState(() => _model.lsGenderValue = val),
+                              width: double.infinity,
+                              height: 56.0,
+                              textStyle:
+                                  FlutterFlowTheme.of(context).bodyMedium,
+                              hintText: '      Gender',
+                              icon: Icon(
+                                Icons.keyboard_arrow_down_rounded,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 15.0,
+                              ),
+                              fillColor: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              elevation: 2.0,
+                              borderColor:
+                                  FlutterFlowTheme.of(context).alternate,
+                              borderWidth: 2.0,
+                              borderRadius: 8.0,
+                              margin: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 4.0, 12.0, 4.0),
+                              hidesUnderline: true,
+                              isSearchable: false,
+                              isMultiSelect: false,
                             ),
                           ),
                           Padding(

@@ -1,9 +1,8 @@
-import '/flutter_flow/flutter_flow_choice_chips.dart';
+import '/components/list_players/list_players_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'link_players_to_tournament_p_widget.dart'
     show LinkPlayersToTournamentPWidget;
 import 'package:flutter/material.dart';
@@ -20,22 +19,18 @@ class LinkPlayersToTournamentPModel
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
-  // State field(s) for ChoiceChips widget.
-  List<String>? choiceChipsValues;
-  FormFieldController<List<String>>? choiceChipsValueController;
+  // Model for ListPlayers component.
+  late ListPlayersModel listPlayersModel;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    listPlayersModel = createModel(context, () => ListPlayersModel());
+  }
 
   void dispose() {
     unfocusNode.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    listPlayersModel.dispose();
   }
 
   /// Action blocks are added here.

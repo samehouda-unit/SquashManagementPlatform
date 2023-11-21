@@ -418,92 +418,47 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 3.0),
-                                        child: FutureBuilder<ApiCallResponse>(
-                                          future: SquashManagementAPIGroupGroup
-                                              .populateClubsCall
-                                              .call(),
-                                          builder: (context, snapshot) {
-                                            // Customize what your widget looks like when it's loading.
-                                            if (!snapshot.hasData) {
-                                              return Center(
-                                                child: SizedBox(
-                                                  width: 50.0,
-                                                  height: 50.0,
-                                                  child:
-                                                      CircularProgressIndicator(
-                                                    valueColor:
-                                                        AlwaysStoppedAnimation<
-                                                            Color>(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primary,
-                                                    ),
-                                                  ),
-                                                ),
-                                              );
-                                            }
-                                            final lsClubsLocationPopulateClubsResponse =
-                                                snapshot.data!;
-                                            return FlutterFlowDropDown<int>(
-                                              controller: _model
-                                                      .lsClubsLocationValueController ??=
-                                                  FormFieldController<int>(
-                                                _model.lsClubsLocationValue ??=
-                                                    -1,
-                                              ),
-                                              options: List<int>.from(
-                                                  SquashManagementAPIGroupGroup
-                                                      .populateClubsCall
-                                                      .id(
-                                                lsClubsLocationPopulateClubsResponse
-                                                    .jsonBody,
-                                              )!),
-                                              optionLabels:
-                                                  (SquashManagementAPIGroupGroup
-                                                          .populateClubsCall
-                                                          .name(
-                                                lsClubsLocationPopulateClubsResponse
-                                                    .jsonBody,
-                                              ) as List)
-                                                      .map<String>(
-                                                          (s) => s.toString())
-                                                      .toList()!,
-                                              onChanged: (val) => setState(() =>
-                                                  _model.lsClubsLocationValue =
-                                                      val),
-                                              width: double.infinity,
-                                              height: 56.0,
-                                              searchHintTextStyle: TextStyle(),
-                                              textStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
-                                              hintText: 'Location',
-                                              searchHintText:
-                                                  'Select player rank',
-                                              icon: Icon(
-                                                Icons.sports_tennis_sharp,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 15.0,
-                                              ),
-                                              fillColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              elevation: 2.0,
-                                              borderColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              borderWidth: 2.0,
-                                              borderRadius: 8.0,
-                                              margin: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      20.0, 4.0, 12.0, 4.0),
-                                              hidesUnderline: true,
-                                              isSearchable: true,
-                                              isMultiSelect: false,
-                                            );
-                                          },
+                                        child: FlutterFlowDropDown<String>(
+                                          controller: _model
+                                                  .lsClubsLocationValueController ??=
+                                              FormFieldController<String>(
+                                            _model.lsClubsLocationValue ??=
+                                                widget.paramTournamentId
+                                                    ?.toString(),
+                                          ),
+                                          options: [''],
+                                          onChanged: (val) => setState(() =>
+                                              _model.lsClubsLocationValue =
+                                                  val),
+                                          width: double.infinity,
+                                          height: 56.0,
+                                          searchHintTextStyle: TextStyle(),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium,
+                                          hintText: 'Location',
+                                          searchHintText: 'Select player rank',
+                                          icon: Icon(
+                                            Icons.sports_tennis_sharp,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 15.0,
+                                          ),
+                                          fillColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          elevation: 2.0,
+                                          borderColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .alternate,
+                                          borderWidth: 2.0,
+                                          borderRadius: 8.0,
+                                          margin:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  20.0, 4.0, 12.0, 4.0),
+                                          hidesUnderline: true,
+                                          isSearchable: true,
+                                          isMultiSelect: false,
                                         ),
                                       ),
                                       Padding(
@@ -1105,8 +1060,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                               tournamentPlanName: _model
                                                   .txtTournamentPlanNameController
                                                   .text,
-                                              clubId:
-                                                  _model.lsClubsLocationValue,
+                                              clubId: widget.paramTournamentId,
                                               dateFrom: _model
                                                   .txtFromDateController.text,
                                               dateTo: _model
