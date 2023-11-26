@@ -3,15 +3,13 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'link_players_to_tournament_p_widget.dart'
-    show LinkPlayersToTournamentPWidget;
+import 'players_plan_page_widget.dart' show PlayersPlanPageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class LinkPlayersToTournamentPModel
-    extends FlutterFlowModel<LinkPlayersToTournamentPWidget> {
+class PlayersPlanPageModel extends FlutterFlowModel<PlayersPlanPageWidget> {
   ///  Local state fields for this page.
 
   int selectedPage = 2;

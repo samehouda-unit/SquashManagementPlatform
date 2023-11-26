@@ -3,13 +3,13 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'list_clubs_widget.dart' show ListClubsWidget;
+import 'list_players_page_widget.dart' show ListPlayersPageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ListClubsModel extends FlutterFlowModel<ListClubsWidget> {
+class ListPlayersPageModel extends FlutterFlowModel<ListPlayersPageWidget> {
   ///  Local state fields for this page.
 
   int selectedPage = 2;

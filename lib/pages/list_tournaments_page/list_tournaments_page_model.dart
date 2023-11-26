@@ -2,19 +2,22 @@ import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'list_players_widget.dart' show ListPlayersWidget;
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'list_tournaments_page_widget.dart' show ListTournamentsPageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ListPlayersModel extends FlutterFlowModel<ListPlayersWidget> {
-  ///  Local state fields for this component.
+class ListTournamentsPageModel
+    extends FlutterFlowModel<ListTournamentsPageWidget> {
+  ///  Local state fields for this page.
 
-  int? selectedStage;
+  int selectedPage = 2;
 
-  ///  State fields for stateful widgets in this component.
+  ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -25,6 +28,7 @@ class ListPlayersModel extends FlutterFlowModel<ListPlayersWidget> {
   void initState(BuildContext context) {}
 
   void dispose() {
+    unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
   }

@@ -7,27 +7,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'link_players_to_tournament_p_model.dart';
-export 'link_players_to_tournament_p_model.dart';
+import 'players_plan_page_model.dart';
+export 'players_plan_page_model.dart';
 
-class LinkPlayersToTournamentPWidget extends StatefulWidget {
-  const LinkPlayersToTournamentPWidget({Key? key}) : super(key: key);
+class PlayersPlanPageWidget extends StatefulWidget {
+  const PlayersPlanPageWidget({Key? key}) : super(key: key);
 
   @override
-  _LinkPlayersToTournamentPWidgetState createState() =>
-      _LinkPlayersToTournamentPWidgetState();
+  _PlayersPlanPageWidgetState createState() => _PlayersPlanPageWidgetState();
 }
 
-class _LinkPlayersToTournamentPWidgetState
-    extends State<LinkPlayersToTournamentPWidget> {
-  late LinkPlayersToTournamentPModel _model;
+class _PlayersPlanPageWidgetState extends State<PlayersPlanPageWidget> {
+  late PlayersPlanPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LinkPlayersToTournamentPModel());
+    _model = createModel(context, () => PlayersPlanPageModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -302,10 +300,15 @@ class _LinkPlayersToTournamentPWidgetState
                                 maxWidth: 1370.0,
                               ),
                               decoration: BoxDecoration(),
-                              child: wrapWithModel(
-                                model: _model.listPlayersModel,
-                                updateCallback: () => setState(() {}),
-                                child: ListPlayersWidget(),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  wrapWithModel(
+                                    model: _model.listPlayersModel,
+                                    updateCallback: () => setState(() {}),
+                                    child: ListPlayersWidget(),
+                                  ),
+                                ],
                               ),
                             ),
                           ),

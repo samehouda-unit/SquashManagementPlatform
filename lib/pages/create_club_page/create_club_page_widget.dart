@@ -13,19 +13,19 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'create_club_model.dart';
-export 'create_club_model.dart';
+import 'create_club_page_model.dart';
+export 'create_club_page_model.dart';
 
-class CreateClubWidget extends StatefulWidget {
-  const CreateClubWidget({Key? key}) : super(key: key);
+class CreateClubPageWidget extends StatefulWidget {
+  const CreateClubPageWidget({Key? key}) : super(key: key);
 
   @override
-  _CreateClubWidgetState createState() => _CreateClubWidgetState();
+  _CreateClubPageWidgetState createState() => _CreateClubPageWidgetState();
 }
 
-class _CreateClubWidgetState extends State<CreateClubWidget>
+class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
     with TickerProviderStateMixin {
-  late CreateClubModel _model;
+  late CreateClubPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -47,7 +47,7 @@ class _CreateClubWidgetState extends State<CreateClubWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CreateClubModel());
+    _model = createModel(context, () => CreateClubPageModel());
 
     _model.txtClubNameController ??= TextEditingController();
     _model.txtClubNameFocusNode ??= FocusNode();

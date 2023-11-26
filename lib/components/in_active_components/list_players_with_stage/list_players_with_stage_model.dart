@@ -1,14 +1,17 @@
 import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'list_players_widget.dart' show ListPlayersWidget;
+import '/flutter_flow/form_field_controller.dart';
+import 'list_players_with_stage_widget.dart' show ListPlayersWithStageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ListPlayersModel extends FlutterFlowModel<ListPlayersWidget> {
+class ListPlayersWithStageModel
+    extends FlutterFlowModel<ListPlayersWithStageWidget> {
   ///  Local state fields for this component.
 
   int? selectedStage;
@@ -19,6 +22,9 @@ class ListPlayersModel extends FlutterFlowModel<ListPlayersWidget> {
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for ChoiceChips widget.
+  List<String>? choiceChipsValues;
+  FormFieldController<List<String>>? choiceChipsValueController;
 
   /// Initialization and disposal methods.
 

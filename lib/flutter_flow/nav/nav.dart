@@ -126,28 +126,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'CreatePlayerPage',
-          path: '/createPlayerPage',
+          path: '/createPlayer',
           builder: (context, params) => CreatePlayerPageWidget(),
         ),
         FFRoute(
           name: 'CreateTournamentPage',
-          path: '/createTournamentPage',
+          path: '/createTournament',
           builder: (context, params) => CreateTournamentPageWidget(),
         ),
         FFRoute(
-          name: 'LinkPlayersToTournamentP',
-          path: '/linkPlayersToTournamentP',
-          builder: (context, params) => LinkPlayersToTournamentPWidget(),
+          name: 'PlayersPlanPage',
+          path: '/playersPlan',
+          builder: (context, params) => PlayersPlanPageWidget(),
         ),
         FFRoute(
-          name: 'CreateClub',
+          name: 'CreateClubPage',
           path: '/createClub',
-          builder: (context, params) => CreateClubWidget(),
+          builder: (context, params) => CreateClubPageWidget(),
         ),
         FFRoute(
-          name: 'ListClubs',
+          name: 'ListClubsPage',
           path: '/listClubs',
-          builder: (context, params) => ListClubsWidget(),
+          builder: (context, params) => ListClubsPageWidget(),
+        ),
+        FFRoute(
+          name: 'ListPlayersPage',
+          path: '/listPlayers',
+          builder: (context, params) => ListPlayersPageWidget(),
+        ),
+        FFRoute(
+          name: 'ListTournamentsPage',
+          path: '/listTournaments',
+          builder: (context, params) => ListTournamentsPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

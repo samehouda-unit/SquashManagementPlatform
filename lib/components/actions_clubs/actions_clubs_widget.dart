@@ -96,7 +96,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('CreateClub');
+                    context.pushNamed('CreateClubPage');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
@@ -197,7 +197,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('ListClubs');
+                    context.pushNamed('ListClubsPage');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
