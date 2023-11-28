@@ -25,5 +25,7 @@ export '/pages/list_clubs_page/list_clubs_page_widget.dart'
     show ListClubsPageWidget;
 export '/pages/list_players_page/list_players_page_widget.dart'
     show ListPlayersPageWidget;
+export '/pages/list_tournament_plans_page/list_tournament_plans_page_widget.dart'
+    show ListTournamentPlansPageWidget;
 export '/pages/list_tournaments_page/list_tournaments_page_widget.dart'
     show ListTournamentsPageWidget;

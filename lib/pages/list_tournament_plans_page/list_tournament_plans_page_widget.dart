@@ -1,32 +1,35 @@
 import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'list_tournaments_page_model.dart';
-export 'list_tournaments_page_model.dart';
+import 'list_tournament_plans_page_model.dart';
+export 'list_tournament_plans_page_model.dart';
 
-class ListTournamentsPageWidget extends StatefulWidget {
-  const ListTournamentsPageWidget({Key? key}) : super(key: key);
+class ListTournamentPlansPageWidget extends StatefulWidget {
+  const ListTournamentPlansPageWidget({Key? key}) : super(key: key);
 
   @override
-  _ListTournamentsPageWidgetState createState() =>
-      _ListTournamentsPageWidgetState();
+  _ListTournamentPlansPageWidgetState createState() =>
+      _ListTournamentPlansPageWidgetState();
 }
 
-class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
-  late ListTournamentsPageModel _model;
+class _ListTournamentPlansPageWidgetState
+    extends State<ListTournamentPlansPageWidget> {
+  late ListTournamentPlansPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ListTournamentsPageModel());
+    _model = createModel(context, () => ListTournamentPlansPageModel());
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
@@ -107,7 +110,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'List tournaments',
+                            'List tournament plans',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -141,14 +144,89 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
-                        decoration: BoxDecoration(
-                          color: Color(0x1839D2C0),
-                          borderRadius: BorderRadius.circular(230.0),
-                          shape: BoxShape.rectangle,
-                          border: Border.all(
-                            color: FlutterFlowTheme.of(context).primary,
-                            width: 1.0,
-                          ),
+                        decoration: BoxDecoration(),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 0.0, 20.0, 5.0),
+                              child: FutureBuilder<ApiCallResponse>(
+                                future: SquashManagementAPIGroupGroup
+                                    .populateTournamentsCall
+                                    .call(),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        child: CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  final lstTournamentsPopulateTournamentsResponse =
+                                      snapshot.data!;
+                                  return FlutterFlowDropDown<int>(
+                                    controller:
+                                        _model.lstTournamentsValueController ??=
+                                            FormFieldController<int>(
+                                      _model.lstTournamentsValue ??= -1,
+                                    ),
+                                    options: List<int>.from(
+                                        SquashManagementAPIGroupGroup
+                                            .populateTournamentsCall
+                                            .id(
+                                      lstTournamentsPopulateTournamentsResponse
+                                          .jsonBody,
+                                    )!),
+                                    optionLabels: (SquashManagementAPIGroupGroup
+                                            .populateTournamentsCall
+                                            .name(
+                                      lstTournamentsPopulateTournamentsResponse
+                                          .jsonBody,
+                                    ) as List)
+                                        .map<String>((s) => s.toString())
+                                        .toList()!,
+                                    onChanged: (val) => setState(
+                                        () => _model.lstTournamentsValue = val),
+                                    width: double.infinity,
+                                    height: 56.0,
+                                    searchHintTextStyle: TextStyle(),
+                                    textStyle:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    hintText: 'Select Tournament',
+                                    searchHintText: 'Select Tournament',
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_down_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 15.0,
+                                    ),
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    elevation: 2.0,
+                                    borderColor:
+                                        FlutterFlowTheme.of(context).alternate,
+                                    borderWidth: 2.0,
+                                    borderRadius: 8.0,
+                                    margin: EdgeInsetsDirectional.fromSTEB(
+                                        20.0, 4.0, 12.0, 4.0),
+                                    hidesUnderline: true,
+                                    isSearchable: true,
+                                    isMultiSelect: false,
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
@@ -192,7 +270,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'Tournaments',
+                                              'Tournament plans',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -211,7 +289,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all clubs...',
+                                                    'Search all tournament plans...',
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -461,7 +539,10 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                 FutureBuilder<ApiCallResponse>(
                                                   future: SquashManagementAPIGroupGroup
                                                       .populateTournamentPlansCall
-                                                      .call(),
+                                                      .call(
+                                                    selectedTournament:
+                                                        'eq.${_model.lstTournamentsValue?.toString()}',
+                                                  ),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
                                                     if (!snapshot.hasData) {

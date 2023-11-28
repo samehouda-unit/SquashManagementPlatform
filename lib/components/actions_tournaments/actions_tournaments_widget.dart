@@ -152,7 +152,7 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('PlayersPlanPage');
+                    context.pushNamed('ListTournamentPlansPage');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
