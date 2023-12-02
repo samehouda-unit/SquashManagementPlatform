@@ -29,3 +29,5 @@ export '/pages/list_tournament_plans_page/list_tournament_plans_page_widget.dart
     show ListTournamentPlansPageWidget;
 export '/pages/list_tournaments_page/list_tournaments_page_widget.dart'
     show ListTournamentsPageWidget;
+export '/pages/edit_club_page/edit_club_page_widget.dart'
+    show EditClubPageWidget;

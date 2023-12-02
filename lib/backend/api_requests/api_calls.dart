@@ -20,6 +20,7 @@ class SquashManagementAPIGroupGroup {
         'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
   };
   static CreateClubAPICall createClubAPICall = CreateClubAPICall();
+  static EditClubAPICall editClubAPICall = EditClubAPICall();
   static CreateTournamentAPICall createTournamentAPICall =
       CreateTournamentAPICall();
   static CreatePlayerAPICall createPlayerAPICall = CreatePlayerAPICall();
@@ -32,6 +33,8 @@ class SquashManagementAPIGroupGroup {
   static PopulatePlayerRanksCall populatePlayerRanksCall =
       PopulatePlayerRanksCall();
   static PopulateClubsCall populateClubsCall = PopulateClubsCall();
+  static PopulateClubByUuidCall populateClubByUuidCall =
+      PopulateClubByUuidCall();
   static PopulateTournamentsCall populateTournamentsCall =
       PopulateTournamentsCall();
   static PopulatePlayersCall populatePlayersCall = PopulatePlayersCall();
@@ -61,6 +64,55 @@ class CreateClubAPICall {
       callName: 'createClubAPI',
       apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}club',
       callType: ApiCallType.POST,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$[0].id''',
+      );
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$[0].name''',
+      );
+}
+
+class EditClubAPICall {
+  Future<ApiCallResponse> call({
+    String? name = '',
+    String? location = '',
+    String? contactPerson = '',
+    String? contactEmail = '',
+    String? photoUrl = '',
+    String? uuid = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "name": "${name}",
+  "location": "${location}",
+  "contact_person": "${contactPerson}",
+  "contact_email": "${contactEmail}",
+  "photo_url": "${photoUrl}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'editClubAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}club?uuid=eq.${uuid}',
+      callType: ApiCallType.PATCH,
       headers: {
         'Content-Type': 'application/json',
         'apikey':
@@ -369,6 +421,53 @@ class PopulateClubsCall {
         response,
         r'''$''',
         true,
+      );
+}
+
+class PopulateClubByUuidCall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populateClubByUuid',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}club?select=*',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {
+        'uuid': uuid,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+      );
+  dynamic location(dynamic response) => getJsonField(
+        response,
+        r'''$[:].location''',
+      );
+  dynamic contact(dynamic response) => getJsonField(
+        response,
+        r'''$[:].contact_person''',
+      );
+  dynamic email(dynamic response) => getJsonField(
+        response,
+        r'''$[:].contact_email''',
+      );
+  dynamic photo(dynamic response) => getJsonField(
+        response,
+        r'''$[:].photo_url''',
       );
 }
 

@@ -163,6 +163,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'ListTournamentsPage',
           path: '/listTournaments',
           builder: (context, params) => ListTournamentsPageWidget(),
+        ),
+        FFRoute(
+          name: 'EditClubPage',
+          path: '/editClub',
+          builder: (context, params) => EditClubPageWidget(
+            clubUuid: params.getParam('clubUuid', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

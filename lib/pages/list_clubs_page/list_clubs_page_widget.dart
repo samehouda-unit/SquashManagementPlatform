@@ -713,8 +713,19 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                                 color: FlutterFlowTheme.of(context).primaryText,
                                                                                 size: 24.0,
                                                                               ),
-                                                                              onPressed: () {
-                                                                                print('IconButton pressed ...');
+                                                                              onPressed: () async {
+                                                                                context.pushNamed(
+                                                                                  'EditClubPage',
+                                                                                  queryParameters: {
+                                                                                    'clubUuid': serializeParam(
+                                                                                      getJsonField(
+                                                                                        clubsItem,
+                                                                                        r'''$.uuid''',
+                                                                                      ).toString(),
+                                                                                      ParamType.String,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
                                                                               },
                                                                             ),
                                                                           ),
