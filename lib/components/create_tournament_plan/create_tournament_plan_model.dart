@@ -75,10 +75,6 @@ class CreateTournamentPlanModel
   }
 
   DateTime? datePicked2;
-  // State field(s) for txtSponsors widget.
-  FocusNode? txtSponsorsFocusNode;
-  TextEditingController? txtSponsorsController;
-  String? Function(BuildContext, String?)? txtSponsorsControllerValidator;
   // Stores action output result for [Backend Call - API (createTournamentPlanAPI)] action in Button widget.
   ApiCallResponse? apiResultp5y;
 
@@ -100,9 +96,6 @@ class CreateTournamentPlanModel
 
     txtToDateFocusNode?.dispose();
     txtToDateController?.dispose();
-
-    txtSponsorsFocusNode?.dispose();
-    txtSponsorsController?.dispose();
   }
 
   /// Action blocks are added here.
