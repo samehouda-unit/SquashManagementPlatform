@@ -334,7 +334,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
 
                                         setState(() {});
                                       },
-                                      text: 'Submit',
+                                      text: 'Update',
                                       icon: Icon(
                                         Icons.add_moderator,
                                         size: 15.0,

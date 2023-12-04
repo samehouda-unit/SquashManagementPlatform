@@ -707,7 +707,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
                                               content: Text(
-                                                  'Club has been added successfully'),
+                                                  'Club has been updated successfully'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
@@ -764,7 +764,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
                                               content: Text(
-                                                  'Error while adding Club'),
+                                                  'Error while updating Club'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
@@ -780,7 +780,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
 
                                       setState(() {});
                                     },
-                                    text: 'Submit',
+                                    text: 'Update',
                                     icon: Icon(
                                       Icons.add_moderator,
                                       size: 15.0,

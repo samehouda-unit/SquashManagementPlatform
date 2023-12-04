@@ -274,9 +274,11 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.network(
-                                      valueOrDefault<String>(
-                                        _model.uploadedFileUrl,
-                                        'https://xhohsggtqcqazqvokuat.supabase.co/storage/v1/object/public/SquashManagementPlatformBucket/PlayerPhoto/Default-Master.jpeg',
+                                      SquashManagementAPIGroupGroup
+                                          .populatePlayerByUuidCall
+                                          .photo(
+                                        editPlayerPagePopulatePlayerByUuidResponse
+                                            .jsonBody,
                                       ),
                                       fit: BoxFit.fitWidth,
                                     ),
@@ -931,17 +933,18 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       }
                                       _model.apiResultp5y =
                                           await SquashManagementAPIGroupGroup
-                                              .createPlayerAPICall
+                                              .editPlayerAPICall
                                               .call(
                                         playerName:
                                             _model.txtPlayerNameController.text,
                                         dateOfBirth: _model
                                             .txtDateOfBirthController.text,
-                                        stage: _model.lstStagesValue,
                                         rank: _model.lstRanksValue,
+                                        stage: _model.lstStagesValue,
                                         gender: _model.lsGenderValue,
                                         playerBio:
                                             _model.txtPlayerBioController.text,
+                                        uuid: widget.playerUuid,
                                         photoUrl: _model.uploadedFileUrl,
                                       );
                                       if ((_model.apiResultp5y?.succeeded ??
@@ -951,7 +954,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
                                               content: Text(
-                                                  'Player has been added successfully'),
+                                                  'Player has been updated successfully'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
@@ -1006,7 +1009,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
                                               content: Text(
-                                                  'Error while adding Player'),
+                                                  'Error while updating Player'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
@@ -1022,7 +1025,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
 
                                       setState(() {});
                                     },
-                                    text: 'Submit',
+                                    text: 'Update',
                                     icon: Icon(
                                       Icons.add_moderator,
                                       size: 15.0,

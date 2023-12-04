@@ -199,7 +199,7 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all clubs...',
+                                                    'Search all players...',
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
