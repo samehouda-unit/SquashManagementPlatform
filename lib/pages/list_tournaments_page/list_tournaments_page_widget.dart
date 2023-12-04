@@ -61,74 +61,63 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        appBar: responsiveVisibility(
-          context: context,
-          tabletLandscape: false,
-          desktop: false,
-        )
-            ? PreferredSize(
-                preferredSize: Size.fromHeight(100.0),
-                child: AppBar(
-                  backgroundColor:
-                      FlutterFlowTheme.of(context).secondaryBackground,
-                  automaticallyImplyLeading: false,
-                  actions: [],
-                  flexibleSpace: FlexibleSpaceBar(
-                    title: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 30.0,
-                                borderWidth: 1.0,
-                                buttonSize: 50.0,
-                                icon: Icon(
-                                  Icons.arrow_back_rounded,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 30.0,
-                                ),
-                                onPressed: () async {
-                                  context.pop();
-                                },
-                              ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 0.0, 0.0),
-                          child: Text(
-                            'List tournaments',
-                            style: FlutterFlowTheme.of(context)
-                                .headlineMedium
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 22.0,
-                                ),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(100.0),
+          child: AppBar(
+            backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+            automaticallyImplyLeading: false,
+            actions: [],
+            flexibleSpace: FlexibleSpaceBar(
+              title: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30.0,
+                          borderWidth: 1.0,
+                          buttonSize: 50.0,
+                          icon: Icon(
+                            Icons.arrow_back_rounded,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 30.0,
                           ),
+                          onPressed: () async {
+                            context.pop();
+                          },
                         ),
-                      ],
-                    ),
-                    centerTitle: true,
-                    expandedTitleScale: 1.0,
-                    titlePadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                      ),
+                    ],
                   ),
-                  elevation: 0.0,
-                ),
-              )
-            : null,
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      'List tournaments',
+                      style:
+                          FlutterFlowTheme.of(context).headlineMedium.override(
+                                fontFamily: 'Outfit',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                fontSize: 22.0,
+                              ),
+                    ),
+                  ),
+                ],
+              ),
+              centerTitle: true,
+              expandedTitleScale: 1.0,
+              titlePadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+            ),
+            elevation: 0.0,
+          ),
+        ),
         body: SafeArea(
           top: true,
           child: SingleChildScrollView(
@@ -211,7 +200,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all clubs...',
+                                                    'Search all tournaments...',
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -459,9 +448,10 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 FutureBuilder<ApiCallResponse>(
-                                                  future: SquashManagementAPIGroupGroup
-                                                      .populateTournamentPlansCall
-                                                      .call(),
+                                                  future:
+                                                      SquashManagementAPIGroupGroup
+                                                          .populateTournamentsCall
+                                                          .call(),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
                                                     if (!snapshot.hasData) {
@@ -482,20 +472,17 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                         ),
                                                       );
                                                     }
-                                                    final clubsListViewPopulateTournamentPlansResponse =
+                                                    final clubsListViewPopulateTournamentsResponse =
                                                         snapshot.data!;
                                                     return Builder(
                                                       builder: (context) {
-                                                        final tournamentPlans =
+                                                        final tournaments =
                                                             SquashManagementAPIGroupGroup
-                                                                    .populateTournamentPlansCall
-                                                                    .tournamentPlans(
-                                                                      clubsListViewPopulateTournamentPlansResponse
+                                                                    .populateTournamentsCall
+                                                                    .tournaments(
+                                                                      clubsListViewPopulateTournamentsResponse
                                                                           .jsonBody,
                                                                     )
-                                                                    ?.map((e) =>
-                                                                        e)
-                                                                    .toList()
                                                                     ?.toList() ??
                                                                 [];
                                                         return ListView
@@ -511,18 +498,17 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                           shrinkWrap: true,
                                                           scrollDirection:
                                                               Axis.vertical,
-                                                          itemCount:
-                                                              tournamentPlans
-                                                                  .length,
+                                                          itemCount: tournaments
+                                                              .length,
                                                           separatorBuilder: (_,
                                                                   __) =>
                                                               SizedBox(
                                                                   height: 1.0),
                                                           itemBuilder: (context,
-                                                              tournamentPlansIndex) {
-                                                            final tournamentPlansItem =
-                                                                tournamentPlans[
-                                                                    tournamentPlansIndex];
+                                                              tournamentsIndex) {
+                                                            final tournamentsItem =
+                                                                tournaments[
+                                                                    tournamentsIndex];
                                                             return Container(
                                                               width: double
                                                                   .infinity,
@@ -621,23 +607,10 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                               [
                                                                             Text(
                                                                               getJsonField(
-                                                                                tournamentPlansItem,
-                                                                                r'''$.tournament_plan_name''',
+                                                                                tournamentsItem,
+                                                                                r'''$.name''',
                                                                               ).toString(),
                                                                               style: FlutterFlowTheme.of(context).bodyLarge,
-                                                                            ),
-                                                                            Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                                                                              child: Text(
-                                                                                getJsonField(
-                                                                                  tournamentPlansItem,
-                                                                                  r'''$.tournament.name''',
-                                                                                ).toString(),
-                                                                                style: FlutterFlowTheme.of(context).labelSmall.override(
-                                                                                      fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                    ),
-                                                                              ),
                                                                             ),
                                                                           ].divide(SizedBox(height: 4.0)),
                                                                         ),
@@ -714,8 +687,19 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                                 color: FlutterFlowTheme.of(context).primaryText,
                                                                                 size: 24.0,
                                                                               ),
-                                                                              onPressed: () {
-                                                                                print('IconButton pressed ...');
+                                                                              onPressed: () async {
+                                                                                context.pushNamed(
+                                                                                  'EditTournamentPage',
+                                                                                  queryParameters: {
+                                                                                    'tournamentUuid': serializeParam(
+                                                                                      getJsonField(
+                                                                                        tournamentsItem,
+                                                                                        r'''$.uuid''',
+                                                                                      ).toString(),
+                                                                                      ParamType.String,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
                                                                               },
                                                                             ),
                                                                           ),

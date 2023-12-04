@@ -161,79 +161,72 @@ class _NavBarPageState extends State<NavBarPage> {
 
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: Visibility(
-        visible: responsiveVisibility(
-          context: context,
-          tabletLandscape: false,
-          desktop: false,
-        ),
-        child: BottomNavigationBar(
-          currentIndex: currentIndex,
-          onTap: (i) => setState(() {
-            _currentPage = null;
-            _currentPageName = tabs.keys.toList()[i];
-          }),
-          backgroundColor: FlutterFlowTheme.of(context).primaryText,
-          selectedItemColor: FlutterFlowTheme.of(context).primary,
-          unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.notifications_rounded,
-                size: 24.0,
-              ),
-              label: '--',
-              tooltip: '',
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
+        onTap: (i) => setState(() {
+          _currentPage = null;
+          _currentPageName = tabs.keys.toList()[i];
+        }),
+        backgroundColor: FlutterFlowTheme.of(context).primaryText,
+        selectedItemColor: FlutterFlowTheme.of(context).primary,
+        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.notifications_rounded,
+              size: 24.0,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.space_dashboard,
-                size: 24.0,
-              ),
-              label: '__',
-              tooltip: '',
+            label: '--',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.space_dashboard,
+              size: 24.0,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.groups_sharp,
-                size: 24.0,
-              ),
-              label: '__',
-              tooltip: '',
+            label: '__',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.groups_sharp,
+              size: 24.0,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.receipt_outlined,
-                size: 24.0,
-              ),
-              label: '__',
-              tooltip: '',
+            label: '__',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.receipt_outlined,
+              size: 24.0,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.account_circle_outlined,
-                size: 24.0,
-              ),
-              label: '__',
-              tooltip: '',
+            label: '__',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.account_circle_outlined,
+              size: 24.0,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.admin_panel_settings_rounded,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.admin_panel_settings_outlined,
-                size: 24.0,
-              ),
-              label: '__',
-              tooltip: '',
-            )
-          ],
-        ),
+            label: '__',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.admin_panel_settings_rounded,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.admin_panel_settings_outlined,
+              size: 24.0,
+            ),
+            label: '__',
+            tooltip: '',
+          )
+        ],
       ),
     );
   }

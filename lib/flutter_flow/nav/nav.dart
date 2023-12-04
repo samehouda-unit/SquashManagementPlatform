@@ -155,9 +155,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ListPlayersPageWidget(),
         ),
         FFRoute(
-          name: 'ListTournamentPlansPage',
-          path: '/listTournamentPlans',
-          builder: (context, params) => ListTournamentPlansPageWidget(),
+          name: 'EditTournamentPage',
+          path: '/editTournament',
+          builder: (context, params) => EditTournamentPageWidget(
+            tournamentUuid: params.getParam('tournamentUuid', ParamType.String),
+          ),
         ),
         FFRoute(
           name: 'ListTournamentsPage',
@@ -169,6 +171,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/editClub',
           builder: (context, params) => EditClubPageWidget(
             clubUuid: params.getParam('clubUuid', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'EditPlayerPage',
+          path: '/editPlayer',
+          builder: (context, params) => EditPlayerPageWidget(
+            playerUuid: params.getParam('playerUuid', ParamType.String),
           ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
