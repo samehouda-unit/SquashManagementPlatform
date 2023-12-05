@@ -88,7 +88,7 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
               ],
             ),
             FutureBuilder<ApiCallResponse>(
-              future: SquashManagementAPIGroupGroup.populatePlayersCall.call(),
+              future: SquashManagementAPIGroupGroup.playerPdfApiCall.call(),
               builder: (context, snapshot) {
                 // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
@@ -104,7 +104,7 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                     ),
                   );
                 }
-                final containerPopulatePlayersResponse = snapshot.data!;
+                final containerPlayerPdfApiResponse = snapshot.data!;
                 return InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -113,12 +113,10 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                   onTap: () async {
                     await actions.pdfDynamicInvoiceDownload(
                       context,
-                      (SquashManagementAPIGroupGroup.populatePlayersCall.name(
-                        containerPopulatePlayersResponse.jsonBody,
-                      ) as List)
-                          .map<String>((s) => s.toString())
-                          .toList()!
-                          .map((e) => e.toString())
+                      SquashManagementAPIGroupGroup.playerPdfApiCall
+                          .records(
+                            containerPlayerPdfApiResponse.jsonBody,
+                          )!
                           .toList(),
                     );
                   },

@@ -22,7 +22,7 @@ import '../../flutter_flow/upload_data.dart';
 
 Future pdfDynamicInvoiceDownload(
   BuildContext context,
-  List<String> names,
+  List<dynamic> records,
 ) async {
   final pdf = pw.Document();
   final font = await PdfGoogleFonts.iBMPlexSansArabicRegular();
@@ -35,32 +35,61 @@ Future pdfDynamicInvoiceDownload(
         return pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
-            pw.Text('The Unit Invoice', style: pw.TextStyle(fontSize: 24)),
-            pw.Text('Test List ' + names[0],
-                textDirection: pw.TextDirection.rtl,
-                style: pw.TextStyle(font: font, fontSize: 12)),
             pw.SizedBox(height: 20),
-            pw.Text('Invoice No.: 00123'),
-            pw.Text('Date: 2023-03-14'),
+            pw.Text('Date: 05-12-2023'),
             pw.SizedBox(height: 20),
-            pw.Text('Bill To Bahaa & Sameh:',
-                style: pw.TextStyle(fontSize: 18)),
-            pw.Text('John Doe'),
-            pw.Text('123 Main Street'),
-            pw.Text('City, State 12345'),
             pw.SizedBox(height: 20),
-            pw.Text('Items:', style: pw.TextStyle(fontSize: 18)),
             pw.Container(
               child: pw.Table(
                 children: [
-                  for (var i = 0; i < names.length; i++)
+                  pw.TableRow(
+                    children: [
+                      pw.Column(
+                          crossAxisAlignment: pw.CrossAxisAlignment.center,
+                          mainAxisAlignment: pw.MainAxisAlignment.center,
+                          children: [
+                            pw.Text('Player Name',
+                                textDirection: pw.TextDirection.ltr,
+                                style: pw.TextStyle(font: font, fontSize: 12)),
+                            pw.Divider(thickness: 1)
+                          ]),
+                      pw.Column(
+                          crossAxisAlignment: pw.CrossAxisAlignment.center,
+                          mainAxisAlignment: pw.MainAxisAlignment.center,
+                          children: [
+                            pw.Text('Club Name',
+                                textDirection: pw.TextDirection.rtl,
+                                style: pw.TextStyle(font: font, fontSize: 12)),
+                            pw.Divider(thickness: 1)
+                          ]),
+                      pw.Column(
+                          crossAxisAlignment: pw.CrossAxisAlignment.center,
+                          mainAxisAlignment: pw.MainAxisAlignment.center,
+                          children: [
+                            pw.Text('Player Rank',
+                                textDirection: pw.TextDirection.rtl,
+                                style: pw.TextStyle(font: font, fontSize: 12)),
+                            pw.Divider(thickness: 1)
+                          ]),
+                      pw.Column(
+                          crossAxisAlignment: pw.CrossAxisAlignment.center,
+                          mainAxisAlignment: pw.MainAxisAlignment.center,
+                          children: [
+                            pw.Text('Player Stage',
+                                textDirection: pw.TextDirection.rtl,
+                                style: pw.TextStyle(font: font, fontSize: 12)),
+                            pw.Divider(thickness: 1)
+                          ]),
+                    ],
+                  ),
+                  for (var record in records)
                     pw.TableRow(
                       children: [
                         pw.Column(
                             crossAxisAlignment: pw.CrossAxisAlignment.center,
                             mainAxisAlignment: pw.MainAxisAlignment.center,
                             children: [
-                              pw.Text(names[i],
+                              pw.Text(record['player_name'],
                                   textDirection: pw.TextDirection.rtl,
                                   style:
                                       pw.TextStyle(font: font, fontSize: 12)),
@@ -70,7 +99,27 @@ Future pdfDynamicInvoiceDownload(
                             crossAxisAlignment: pw.CrossAxisAlignment.center,
                             mainAxisAlignment: pw.MainAxisAlignment.center,
                             children: [
-                              pw.Text('تجربة الخط',
+                              pw.Text(record['club_name'],
+                                  textDirection: pw.TextDirection.rtl,
+                                  style:
+                                      pw.TextStyle(font: font, fontSize: 12)),
+                              pw.Divider(thickness: 1)
+                            ]),
+                        pw.Column(
+                            crossAxisAlignment: pw.CrossAxisAlignment.center,
+                            mainAxisAlignment: pw.MainAxisAlignment.center,
+                            children: [
+                              pw.Text(record['player_rank'],
+                                  textDirection: pw.TextDirection.rtl,
+                                  style:
+                                      pw.TextStyle(font: font, fontSize: 12)),
+                              pw.Divider(thickness: 1)
+                            ]),
+                        pw.Column(
+                            crossAxisAlignment: pw.CrossAxisAlignment.center,
+                            mainAxisAlignment: pw.MainAxisAlignment.center,
+                            children: [
+                              pw.Text(record['player_stage'],
                                   textDirection: pw.TextDirection.rtl,
                                   style:
                                       pw.TextStyle(font: font, fontSize: 12)),
@@ -82,27 +131,6 @@ Future pdfDynamicInvoiceDownload(
               ),
             ),
             pw.SizedBox(height: 20),
-            pw.Row(
-              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-              children: [
-                pw.Text('Subtotal:'),
-                pw.Text('120'),
-              ],
-            ),
-            pw.Row(
-              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-              children: [
-                pw.Text('Tax (5%):'),
-                pw.Text('6'),
-              ],
-            ),
-            pw.Row(
-              mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-              children: [
-                pw.Text('Total:'),
-                pw.Text('126'),
-              ],
-            ),
           ],
         );
       },
@@ -112,5 +140,7 @@ Future pdfDynamicInvoiceDownload(
   final pdfSaved = await pdf.save();
 
   // PRINT IT
-  await Printing.layoutPdf(onLayout: (PdfPageFormat format) async => pdfSaved);
+  //await Printing.layoutPdf(onLayout: (PdfPageFormat format) async => pdfSaved);
+  await Printing.sharePdf(bytes: await pdfSaved, filename: 'test-document.pdf');
+  //PdfPreview(build: (PdfPageFormat format) async => pdfSaved);
 }

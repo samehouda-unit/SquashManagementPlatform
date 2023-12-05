@@ -750,9 +750,7 @@ class PopulatePlayersCall {
 }
 
 class PlayerPdfApiCall {
-  Future<ApiCallResponse> call({
-    String? tournamentPlanName = '',
-  }) async {
+  Future<ApiCallResponse> call() async {
     return ApiManager.instance.makeApiCall(
       callName: 'playerPdfApi',
       apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}pdf_report?select=*',
@@ -764,9 +762,7 @@ class PlayerPdfApiCall {
         'Authorization':
             'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
       },
-      params: {
-        'tournament_plan_name': tournamentPlanName,
-      },
+      params: {},
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -779,14 +775,34 @@ class PlayerPdfApiCall {
         r'''$''',
         true,
       );
-  dynamic id(dynamic response) => getJsonField(
+  dynamic playerName(dynamic response) => getJsonField(
         response,
-        r'''$[:].id''',
+        r'''$[:].player_name''',
         true,
       );
-  dynamic name(dynamic response) => getJsonField(
+  dynamic clubName(dynamic response) => getJsonField(
         response,
-        r'''$[:].name''',
+        r'''$[:].club_name''',
+        true,
+      );
+  dynamic playerRank(dynamic response) => getJsonField(
+        response,
+        r'''$[:].player_rank''',
+        true,
+      );
+  dynamic playerStage(dynamic response) => getJsonField(
+        response,
+        r'''$[:].player_stage''',
+        true,
+      );
+  dynamic tournamentPlanName(dynamic response) => getJsonField(
+        response,
+        r'''$[:].tournament_plan_name''',
+        true,
+      );
+  dynamic tournamentName(dynamic response) => getJsonField(
+        response,
+        r'''$[:].tournament_name''',
         true,
       );
 }
