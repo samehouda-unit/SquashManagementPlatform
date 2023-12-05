@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'create_tournament_page_widget.dart' show CreateTournamentPageWidget;
 import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,6 +25,32 @@ class CreateTournamentPageModel
   FocusNode? txtTournamentNameFocusNode;
   TextEditingController? txtTournamentNameController;
   String? Function(BuildContext, String?)? txtTournamentNameControllerValidator;
+  String? _txtTournamentNameControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
+  // State field(s) for txtYear widget.
+  FocusNode? txtYearFocusNode;
+  TextEditingController? txtYearController;
+  String? Function(BuildContext, String?)? txtYearControllerValidator;
+  String? _txtYearControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Field is required';
+    }
+
+    return null;
+  }
+
+  DateTime? datePicked;
+  // State field(s) for txtSponsors widget.
+  FocusNode? txtSponsorsFocusNode;
+  TextEditingController? txtSponsorsController;
+  String? Function(BuildContext, String?)? txtSponsorsControllerValidator;
   // Stores action output result for [Backend Call - API (createTournamentAPI)] action in Button widget.
   ApiCallResponse? apiResultp5y;
   // Model for CreateTournamentPlan component.
@@ -32,6 +59,9 @@ class CreateTournamentPageModel
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
+    txtTournamentNameControllerValidator =
+        _txtTournamentNameControllerValidator;
+    txtYearControllerValidator = _txtYearControllerValidator;
     createTournamentPlanModel =
         createModel(context, () => CreateTournamentPlanModel());
   }
@@ -39,6 +69,12 @@ class CreateTournamentPageModel
   void dispose() {
     txtTournamentNameFocusNode?.dispose();
     txtTournamentNameController?.dispose();
+
+    txtYearFocusNode?.dispose();
+    txtYearController?.dispose();
+
+    txtSponsorsFocusNode?.dispose();
+    txtSponsorsController?.dispose();
 
     createTournamentPlanModel.dispose();
   }

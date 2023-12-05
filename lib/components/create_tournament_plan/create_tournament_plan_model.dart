@@ -75,6 +75,12 @@ class CreateTournamentPlanModel
   }
 
   DateTime? datePicked2;
+  // State field(s) for lsGender widget.
+  String? lsGenderValue;
+  FormFieldController<String>? lsGenderValueController;
+  // State field(s) for lstStages widget.
+  int? lstStagesValue;
+  FormFieldController<int>? lstStagesValueController;
   // Stores action output result for [Backend Call - API (createTournamentPlanAPI)] action in Button widget.
   ApiCallResponse? apiResultp5y;
 

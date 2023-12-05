@@ -670,9 +670,9 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                       context: context,
                                                       initialDate:
                                                           getCurrentTimestamp,
-                                                      firstDate: DateTime(1900),
-                                                      lastDate:
+                                                      firstDate:
                                                           getCurrentTimestamp,
+                                                      lastDate: DateTime(2050),
                                                       builder:
                                                           (context, child) {
                                                         return wrapInMaterialDatePickerTheme(
@@ -911,9 +911,9 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                     context: context,
                                                     initialDate:
                                                         getCurrentTimestamp,
-                                                    firstDate: DateTime(1900),
-                                                    lastDate:
+                                                    firstDate:
                                                         getCurrentTimestamp,
+                                                    lastDate: DateTime(2050),
                                                     builder: (context, child) {
                                                       return wrapInMaterialDatePickerTheme(
                                                         context,
@@ -988,106 +988,285 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                           ),
                                         ],
                                       ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 0.0, 10.0, 0.0),
-                                        child: FFButtonWidget(
-                                          onPressed: () async {
-                                            if (_model.formKey.currentState ==
-                                                    null ||
-                                                !_model.formKey.currentState!
-                                                    .validate()) {
-                                              return;
-                                            }
-                                            if (_model.lsClubsLocationValue ==
-                                                null) {
-                                              return;
-                                            }
-                                            _model.apiResultp5y =
-                                                await SquashManagementAPIGroupGroup
-                                                    .createTournamentPlanAPICall
-                                                    .call(
-                                              tournamentId:
-                                                  widget.paramTournamentId,
-                                              tournamentPlanName: _model
-                                                  .txtTournamentPlanNameController
-                                                  .text,
-                                              clubId:
-                                                  _model.lsClubsLocationValue,
-                                              dateFrom: _model
-                                                  .txtFromDateController.text,
-                                              dateTo: _model
-                                                  .txtToDateController.text,
-                                              photoUrl: _model.uploadedFileUrl,
-                                            );
-                                            if ((_model
-                                                    .apiResultp5y?.succeeded ??
-                                                true)) {
-                                              await showDialog(
-                                                context: context,
-                                                builder: (alertDialogContext) {
-                                                  return AlertDialog(
-                                                    content: Text(
-                                                        'Tournament Plan has been added successfully'),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                alertDialogContext),
-                                                        child: Text('Ok'),
-                                                      ),
-                                                    ],
-                                                  );
-                                                },
-                                              );
-                                              // resetText
-                                              setState(() {
-                                                _model
-                                                    .txtTournamentPlanNameController
-                                                    ?.clear();
-                                                _model.txtFromDateController
-                                                    ?.clear();
-                                                _model.txtToDateController
-                                                    ?.clear();
-                                              });
-                                              // resetDropdowns
-                                              setState(() {
-                                                _model
-                                                    .lsClubsLocationValueController
-                                                    ?.reset();
-                                              });
-                                              Navigator.pop(context);
-                                            } else {
-                                              await showDialog(
-                                                context: context,
-                                                builder: (alertDialogContext) {
-                                                  return AlertDialog(
-                                                    content: Text(
-                                                        'Error while adding Tournament Plan'),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                alertDialogContext),
-                                                        child: Text('Ok'),
-                                                      ),
-                                                    ],
-                                                  );
-                                                },
-                                              );
-                                            }
-
-                                            setState(() {});
-                                          },
-                                          text: 'Submit',
+                                            20.0, 0.0, 20.0, 5.0),
+                                        child: FlutterFlowDropDown<String>(
+                                          controller: _model
+                                                  .lsGenderValueController ??=
+                                              FormFieldController<String>(null),
+                                          options: List<String>.from(
+                                              ['Male', 'Female']),
+                                          optionLabels: ['Male', 'Female'],
+                                          onChanged: (val) => setState(
+                                              () => _model.lsGenderValue = val),
+                                          width: double.infinity,
+                                          height: 56.0,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium,
+                                          hintText: '      Gender',
                                           icon: Icon(
-                                            Icons.add_moderator,
+                                            Icons.keyboard_arrow_down_rounded,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 15.0,
+                                          ),
+                                          fillColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          elevation: 2.0,
+                                          borderColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .alternate,
+                                          borderWidth: 2.0,
+                                          borderRadius: 8.0,
+                                          margin:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  20.0, 4.0, 12.0, 4.0),
+                                          hidesUnderline: true,
+                                          isSearchable: false,
+                                          isMultiSelect: false,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 0.0, 20.0, 5.0),
+                                        child: FutureBuilder<ApiCallResponse>(
+                                          future: SquashManagementAPIGroupGroup
+                                              .populatePlayerStagesCall
+                                              .call(),
+                                          builder: (context, snapshot) {
+                                            // Customize what your widget looks like when it's loading.
+                                            if (!snapshot.hasData) {
+                                              return Center(
+                                                child: SizedBox(
+                                                  width: 50.0,
+                                                  height: 50.0,
+                                                  child:
+                                                      CircularProgressIndicator(
+                                                    valueColor:
+                                                        AlwaysStoppedAnimation<
+                                                            Color>(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primary,
+                                                    ),
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            final lstStagesPopulatePlayerStagesResponse =
+                                                snapshot.data!;
+                                            return FlutterFlowDropDown<int>(
+                                              controller: _model
+                                                      .lstStagesValueController ??=
+                                                  FormFieldController<int>(
+                                                _model.lstStagesValue ??= -1,
+                                              ),
+                                              options: List<int>.from(
+                                                  SquashManagementAPIGroupGroup
+                                                      .populatePlayerStagesCall
+                                                      .id(
+                                                lstStagesPopulatePlayerStagesResponse
+                                                    .jsonBody,
+                                              )!),
+                                              optionLabels:
+                                                  (SquashManagementAPIGroupGroup
+                                                          .populatePlayerStagesCall
+                                                          .name(
+                                                lstStagesPopulatePlayerStagesResponse
+                                                    .jsonBody,
+                                              ) as List)
+                                                      .map<String>(
+                                                          (s) => s.toString())
+                                                      .toList()!,
+                                              onChanged: (val) => setState(() =>
+                                                  _model.lstStagesValue = val),
+                                              width: double.infinity,
+                                              height: 56.0,
+                                              searchHintTextStyle: TextStyle(),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
+                                              hintText: 'Player Stage',
+                                              searchHintText:
+                                                  'Select player stage',
+                                              icon: Icon(
+                                                Icons
+                                                    .keyboard_arrow_down_rounded,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 15.0,
+                                              ),
+                                              fillColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              elevation: 2.0,
+                                              borderColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
+                                              borderWidth: 2.0,
+                                              borderRadius: 8.0,
+                                              margin: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      20.0, 4.0, 12.0, 4.0),
+                                              hidesUnderline: true,
+                                              isSearchable: true,
+                                              isMultiSelect: false,
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 0.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 0.0, 10.0, 0.0),
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
+                                              if (_model.formKey.currentState ==
+                                                      null ||
+                                                  !_model.formKey.currentState!
+                                                      .validate()) {
+                                                return;
+                                              }
+                                              if (_model.lsClubsLocationValue ==
+                                                  null) {
+                                                return;
+                                              }
+                                              _model.apiResultp5y =
+                                                  await SquashManagementAPIGroupGroup
+                                                      .createTournamentPlanAPICall
+                                                      .call(
+                                                tournamentId:
+                                                    widget.paramTournamentId,
+                                                tournamentPlanName: _model
+                                                    .txtTournamentPlanNameController
+                                                    .text,
+                                                clubId:
+                                                    _model.lsClubsLocationValue,
+                                                dateFrom: _model
+                                                    .txtFromDateController.text,
+                                                dateTo: _model
+                                                    .txtToDateController.text,
+                                                photoUrl:
+                                                    _model.uploadedFileUrl,
+                                                gender: _model.lsGenderValue,
+                                                planStage:
+                                                    _model.lstStagesValue,
+                                              );
+                                              if ((_model.apiResultp5y
+                                                      ?.succeeded ??
+                                                  true)) {
+                                                await showDialog(
+                                                  context: context,
+                                                  builder:
+                                                      (alertDialogContext) {
+                                                    return AlertDialog(
+                                                      content: Text(
+                                                          'Tournament Plan has been added successfully'),
+                                                      actions: [
+                                                        TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  alertDialogContext),
+                                                          child: Text('Ok'),
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
+                                                );
+                                                // resetText
+                                                setState(() {
+                                                  _model
+                                                      .txtTournamentPlanNameController
+                                                      ?.clear();
+                                                  _model.txtFromDateController
+                                                      ?.clear();
+                                                  _model.txtToDateController
+                                                      ?.clear();
+                                                });
+                                                // resetDropdowns
+                                                setState(() {
+                                                  _model
+                                                      .lsClubsLocationValueController
+                                                      ?.reset();
+                                                });
+                                                Navigator.pop(context);
+                                              } else {
+                                                await showDialog(
+                                                  context: context,
+                                                  builder:
+                                                      (alertDialogContext) {
+                                                    return AlertDialog(
+                                                      content: Text(
+                                                          'Error while adding Tournament Plan'),
+                                                      actions: [
+                                                        TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  alertDialogContext),
+                                                          child: Text('Ok'),
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
+                                                );
+                                              }
+
+                                              setState(() {});
+                                            },
+                                            text: 'Submit',
+                                            icon: Icon(
+                                              Icons.add_moderator,
+                                              size: 15.0,
+                                            ),
+                                            options: FFButtonOptions(
+                                              height: 50.0,
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      20.0, 0.0, 20.0, 0.0),
+                                              iconPadding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        color: Colors.white,
+                                                      ),
+                                              elevation: 2.0,
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
+                                            ),
+                                          ),
+                                        ),
+                                        FFButtonWidget(
+                                          onPressed: () async {
+                                            Navigator.pop(context);
+                                          },
+                                          text: 'Later',
+                                          icon: Icon(
+                                            Icons.no_sim,
                                             size: 15.0,
                                           ),
                                           options: FFButtonOptions(
@@ -1099,7 +1278,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                                .tertiary,
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -1117,44 +1296,8 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                 BorderRadius.circular(20.0),
                                           ),
                                         ),
-                                      ),
-                                      FFButtonWidget(
-                                        onPressed: () async {
-                                          Navigator.pop(context);
-                                        },
-                                        text: 'Later',
-                                        icon: Icon(
-                                          Icons.no_sim,
-                                          size: 15.0,
-                                        ),
-                                        options: FFButtonOptions(
-                                          height: 50.0,
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 0.0, 20.0, 0.0),
-                                          iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiary,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
-                                                    color: Colors.white,
-                                                  ),
-                                          elevation: 2.0,
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(20.0),
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),

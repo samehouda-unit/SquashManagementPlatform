@@ -351,6 +351,8 @@ class CreateTournamentPlanAPICall {
     String? dateTo = '',
     int? clubId,
     String? photoUrl = '',
+    int? planStage,
+    String? gender = '',
   }) async {
     final ffApiRequestBody = '''
 {
@@ -359,7 +361,9 @@ class CreateTournamentPlanAPICall {
   "date_from": "${dateFrom} 00:00:00.00000+00",
   "date_to": "${dateTo} 00:00:00.00000+00",
   "club_id": ${clubId},
-  "photo_url": "${photoUrl}"
+  "photo_url": "${photoUrl}",
+  "plan_stage": ${planStage},
+  "gender": "${gender}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createTournamentPlanAPI',
