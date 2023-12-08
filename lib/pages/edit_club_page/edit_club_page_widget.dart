@@ -272,10 +272,31 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.network(
-                                      valueOrDefault<String>(
-                                        _model.uploadedFileUrl,
-                                        'https://xhohsggtqcqazqvokuat.supabase.co/storage/v1/object/public/SquashManagementPlatformBucket/PlayerPhoto/Default-Master.jpeg',
-                                      ),
+                                      () {
+                                        if (_model.uploadedFileUrl != null &&
+                                            _model.uploadedFileUrl != '') {
+                                          return _model.uploadedFileUrl;
+                                        } else if (SquashManagementAPIGroupGroup
+                                                .populateClubByUuidCall
+                                                .photo(
+                                              editClubPagePopulateClubByUuidResponse
+                                                  .jsonBody,
+                                            ) !=
+                                            null) {
+                                          return SquashManagementAPIGroupGroup
+                                              .populateClubByUuidCall
+                                              .photo(
+                                            editClubPagePopulateClubByUuidResponse
+                                                .jsonBody,
+                                          );
+                                        } else {
+                                          return valueOrDefault<String>(
+                                            FFAppConstants
+                                                .PlayerPhotoPlaceholder,
+                                            'https://xhohsggtqcqazqvokuat.supabase.co/storage/v1/object/public/SquashManagementPlatformBucket/PlayerPhoto/Default-Master.jpeg',
+                                          );
+                                        }
+                                      }(),
                                       fit: BoxFit.fitWidth,
                                     ),
                                   ).animateOnPageLoad(animationsMap[
@@ -699,6 +720,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                             .text,
                                         contactEmail: _model
                                             .txtClubContactEmailController.text,
+                                        photoUrl: _model.uploadedFileUrl,
                                       );
                                       if ((_model.apiResultp5y?.succeeded ??
                                           true)) {
@@ -758,6 +780,8 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                                   .toString();
                                         });
                                         Navigator.pop(context);
+
+                                        context.pushNamed('ListClubsPage');
                                       } else {
                                         await showDialog(
                                           context: context,

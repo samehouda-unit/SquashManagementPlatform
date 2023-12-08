@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
+import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -195,7 +196,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                 final selectedMedia =
                                     await selectMediaWithSourceBottomSheet(
                                   context: context,
-                                  storageFolderPath: 'Clubs',
+                                  storageFolderPath: 'PlayerPhoto',
                                   allowPhoto: true,
                                 );
                                 if (selectedMedia != null &&
@@ -274,12 +275,40 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.network(
-                                      SquashManagementAPIGroupGroup
-                                          .populatePlayerByUuidCall
-                                          .photo(
-                                        editPlayerPagePopulatePlayerByUuidResponse
-                                            .jsonBody,
-                                      ),
+                                      () {
+                                        if (_model.uploadedFileUrl != null &&
+                                            _model.uploadedFileUrl != '') {
+                                          return _model.uploadedFileUrl;
+                                        } else if (SquashManagementAPIGroupGroup
+                                                    .populatePlayerByUuidCall
+                                                    .photo(
+                                                      editPlayerPagePopulatePlayerByUuidResponse
+                                                          .jsonBody,
+                                                    )
+                                                    .toString() !=
+                                                null &&
+                                            SquashManagementAPIGroupGroup
+                                                    .populatePlayerByUuidCall
+                                                    .photo(
+                                                      editPlayerPagePopulatePlayerByUuidResponse
+                                                          .jsonBody,
+                                                    )
+                                                    .toString() !=
+                                                '') {
+                                          return SquashManagementAPIGroupGroup
+                                              .populatePlayerByUuidCall
+                                              .photo(
+                                            editPlayerPagePopulatePlayerByUuidResponse
+                                                .jsonBody,
+                                          );
+                                        } else {
+                                          return valueOrDefault<String>(
+                                            FFAppConstants
+                                                .PlayerPhotoPlaceholder,
+                                            'https://xhohsggtqcqazqvokuat.supabase.co/storage/v1/object/public/SquashManagementPlatformBucket/PlayerPhoto/Default-Master.jpeg',
+                                          );
+                                        }
+                                      }(),
                                       fit: BoxFit.fitWidth,
                                     ),
                                   ).animateOnPageLoad(animationsMap[
@@ -949,22 +978,26 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       );
                                       if ((_model.apiResultp5y?.succeeded ??
                                           true)) {
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              content: Text(
-                                                  'Player has been updated successfully'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
-                                                      Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('Ok'),
-                                                ),
-                                              ],
+                                        unawaited(
+                                          () async {
+                                            await showDialog(
+                                              context: context,
+                                              builder: (alertDialogContext) {
+                                                return AlertDialog(
+                                                  content: Text(
+                                                      'Club has been updated successfully'),
+                                                  actions: [
+                                                    TextButton(
+                                                      onPressed: () =>
+                                                          Navigator.pop(
+                                                              alertDialogContext),
+                                                      child: Text('Ok'),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
                                             );
-                                          },
+                                          }(),
                                         );
                                         // resetText
                                         setState(() {
@@ -1003,6 +1036,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           _model.lstRanksValueController
                                               ?.reset();
                                         });
+                                        Navigator.pop(context);
                                       } else {
                                         await showDialog(
                                           context: context,

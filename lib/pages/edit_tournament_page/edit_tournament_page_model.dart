@@ -1,4 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/edit_tournament_plan/edit_tournament_plan_widget.dart';
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -8,6 +10,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class EditTournamentPageModel
@@ -15,6 +18,12 @@ class EditTournamentPageModel
   ///  Local state fields for this page.
 
   int selectedPage = 2;
+
+  int? selectedTournamentPlan;
+
+  String? selectedTournamentPlanPhoto = 'false';
+
+  String? selectedPlanUuid = '';
 
   ///  State fields for stateful widgets in this page.
 
@@ -30,10 +39,17 @@ class EditTournamentPageModel
   FocusNode? textFieldFocusNode;
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;
+  // Stores action output result for [Backend Call - API (populateTournamentPlanByUuid)] action in IconButton widget.
+  ApiCallResponse? tournamentPlanByUUID;
+  // Model for EditTournamentPlan component.
+  late EditTournamentPlanModel editTournamentPlanModel;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    editTournamentPlanModel =
+        createModel(context, () => EditTournamentPlanModel());
+  }
 
   void dispose() {
     unfocusNode.dispose();
@@ -42,6 +58,8 @@ class EditTournamentPageModel
 
     textFieldFocusNode?.dispose();
     textController2?.dispose();
+
+    editTournamentPlanModel.dispose();
   }
 
   /// Action blocks are added here.

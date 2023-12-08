@@ -1,11 +1,14 @@
 import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'list_clubs_page_model.dart';
 export 'list_clubs_page_model.dart';
@@ -572,18 +575,84 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                             2.0,
                                                                             2.0),
                                                                         child:
-                                                                            ClipRRect(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
+                                                                            InkWell(
+                                                                          splashColor:
+                                                                              Colors.transparent,
+                                                                          focusColor:
+                                                                              Colors.transparent,
+                                                                          hoverColor:
+                                                                              Colors.transparent,
+                                                                          highlightColor:
+                                                                              Colors.transparent,
+                                                                          onTap:
+                                                                              () async {
+                                                                            await Navigator.push(
+                                                                              context,
+                                                                              PageTransition(
+                                                                                type: PageTransitionType.fade,
+                                                                                child: FlutterFlowExpandedImageView(
+                                                                                  image: Image.network(
+                                                                                    getJsonField(
+                                                                                              clubsItem,
+                                                                                              r'''$.photo_url''',
+                                                                                            ) !=
+                                                                                            null
+                                                                                        ? getJsonField(
+                                                                                            clubsItem,
+                                                                                            r'''$.photo_url''',
+                                                                                          )
+                                                                                        : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                                    fit: BoxFit.contain,
+                                                                                  ),
+                                                                                  allowRotation: false,
+                                                                                  tag: getJsonField(
+                                                                                            clubsItem,
+                                                                                            r'''$.photo_url''',
+                                                                                          ) !=
+                                                                                          null
+                                                                                      ? getJsonField(
+                                                                                          clubsItem,
+                                                                                          r'''$.photo_url''',
+                                                                                        )
+                                                                                      : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                                  useHeroAnimation: true,
+                                                                                ),
+                                                                              ),
+                                                                            );
+                                                                          },
                                                                           child:
-                                                                              Image.network(
-                                                                            'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
-                                                                            width:
-                                                                                120.0,
-                                                                            height:
-                                                                                120.0,
-                                                                            fit:
-                                                                                BoxFit.cover,
+                                                                              Hero(
+                                                                            tag: getJsonField(
+                                                                                      clubsItem,
+                                                                                      r'''$.photo_url''',
+                                                                                    ) !=
+                                                                                    null
+                                                                                ? getJsonField(
+                                                                                    clubsItem,
+                                                                                    r'''$.photo_url''',
+                                                                                  )
+                                                                                : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                            transitionOnUserGestures:
+                                                                                true,
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                              child: Image.network(
+                                                                                getJsonField(
+                                                                                          clubsItem,
+                                                                                          r'''$.photo_url''',
+                                                                                        ) !=
+                                                                                        null
+                                                                                    ? getJsonField(
+                                                                                        clubsItem,
+                                                                                        r'''$.photo_url''',
+                                                                                      )
+                                                                                    : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                                width: 120.0,
+                                                                                height: 120.0,
+                                                                                fit: BoxFit.cover,
+                                                                              ),
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       ),
@@ -614,18 +683,35 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                               ).toString(),
                                                                               style: FlutterFlowTheme.of(context).bodyLarge,
                                                                             ),
-                                                                            Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                                                                              child: Text(
-                                                                                getJsonField(
-                                                                                  clubsItem,
-                                                                                  r'''$.contact_email''',
-                                                                                ).toString(),
-                                                                                style: FlutterFlowTheme.of(context).labelSmall.override(
-                                                                                      fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                    ),
-                                                                              ),
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
+                                                                                  child: Icon(
+                                                                                    Icons.mail,
+                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                    size: 12.0,
+                                                                                  ),
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                  child: AutoSizeText(
+                                                                                    getJsonField(
+                                                                                      clubsItem,
+                                                                                      r'''$.contact_email''',
+                                                                                    ).toString().maybeHandleOverflow(
+                                                                                          maxChars: 13,
+                                                                                          replacement: '…',
+                                                                                        ),
+                                                                                    style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                          fontFamily: 'Plus Jakarta Sans',
+                                                                                          color: FlutterFlowTheme.of(context).primary,
+                                                                                          fontSize: 10.0,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                              ],
                                                                             ),
                                                                           ].divide(SizedBox(height: 4.0)),
                                                                         ),

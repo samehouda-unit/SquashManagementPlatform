@@ -1,4 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -6,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'list_players_page_model.dart';
 export 'list_players_page_model.dart';
@@ -572,18 +574,84 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                             2.0,
                                                                             2.0),
                                                                         child:
-                                                                            ClipRRect(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(8.0),
+                                                                            InkWell(
+                                                                          splashColor:
+                                                                              Colors.transparent,
+                                                                          focusColor:
+                                                                              Colors.transparent,
+                                                                          hoverColor:
+                                                                              Colors.transparent,
+                                                                          highlightColor:
+                                                                              Colors.transparent,
+                                                                          onTap:
+                                                                              () async {
+                                                                            await Navigator.push(
+                                                                              context,
+                                                                              PageTransition(
+                                                                                type: PageTransitionType.fade,
+                                                                                child: FlutterFlowExpandedImageView(
+                                                                                  image: Image.network(
+                                                                                    getJsonField(
+                                                                                              playersItem,
+                                                                                              r'''$.photo_url''',
+                                                                                            ) !=
+                                                                                            null
+                                                                                        ? getJsonField(
+                                                                                            playersItem,
+                                                                                            r'''$.photo_url''',
+                                                                                          )
+                                                                                        : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                                    fit: BoxFit.contain,
+                                                                                  ),
+                                                                                  allowRotation: false,
+                                                                                  tag: getJsonField(
+                                                                                            playersItem,
+                                                                                            r'''$.photo_url''',
+                                                                                          ) !=
+                                                                                          null
+                                                                                      ? getJsonField(
+                                                                                          playersItem,
+                                                                                          r'''$.photo_url''',
+                                                                                        )
+                                                                                      : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                                  useHeroAnimation: true,
+                                                                                ),
+                                                                              ),
+                                                                            );
+                                                                          },
                                                                           child:
-                                                                              Image.network(
-                                                                            'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
-                                                                            width:
-                                                                                120.0,
-                                                                            height:
-                                                                                120.0,
-                                                                            fit:
-                                                                                BoxFit.cover,
+                                                                              Hero(
+                                                                            tag: getJsonField(
+                                                                                      playersItem,
+                                                                                      r'''$.photo_url''',
+                                                                                    ) !=
+                                                                                    null
+                                                                                ? getJsonField(
+                                                                                    playersItem,
+                                                                                    r'''$.photo_url''',
+                                                                                  )
+                                                                                : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                            transitionOnUserGestures:
+                                                                                true,
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                              child: Image.network(
+                                                                                getJsonField(
+                                                                                          playersItem,
+                                                                                          r'''$.photo_url''',
+                                                                                        ) !=
+                                                                                        null
+                                                                                    ? getJsonField(
+                                                                                        playersItem,
+                                                                                        r'''$.photo_url''',
+                                                                                      )
+                                                                                    : FFAppConstants.PlayerPhotoPlaceholder,
+                                                                                width: 120.0,
+                                                                                height: 120.0,
+                                                                                fit: BoxFit.cover,
+                                                                              ),
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       ),
@@ -614,18 +682,34 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                               ).toString(),
                                                                               style: FlutterFlowTheme.of(context).bodyLarge,
                                                                             ),
-                                                                            Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                                                                              child: Text(
-                                                                                getJsonField(
-                                                                                  playersItem,
-                                                                                  r'''$.email''',
-                                                                                ).toString(),
-                                                                                style: FlutterFlowTheme.of(context).labelSmall.override(
-                                                                                      fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                    ),
-                                                                              ),
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
+                                                                                  child: Text(
+                                                                                    'Rank:',
+                                                                                    style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                          fontFamily: 'Plus Jakarta Sans',
+                                                                                          color: FlutterFlowTheme.of(context).primaryText,
+                                                                                          fontSize: 13.0,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                  child: Text(
+                                                                                    getJsonField(
+                                                                                      playersItem,
+                                                                                      r'''$.rank''',
+                                                                                    ).toString(),
+                                                                                    style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                          fontFamily: 'Plus Jakarta Sans',
+                                                                                          color: FlutterFlowTheme.of(context).primary,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                              ],
                                                                             ),
                                                                           ].divide(SizedBox(height: 4.0)),
                                                                         ),
