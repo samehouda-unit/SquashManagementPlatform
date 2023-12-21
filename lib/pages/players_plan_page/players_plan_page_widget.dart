@@ -140,8 +140,7 @@ class _PlayersPlanPageWidgetState extends State<PlayersPlanPageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                2.0, 2.0, 2.0, 2.0),
+                            padding: EdgeInsets.all(2.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(40.0),
                               child: Image.asset(
@@ -190,7 +189,7 @@ class _PlayersPlanPageWidgetState extends State<PlayersPlanPageWidget> {
                             alignment: AlignmentDirectional(0.0, 0.0),
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.00, 0.00),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Container(
                                   width: 120.0,
                                   height: 4.0,
@@ -208,7 +207,7 @@ class _PlayersPlanPageWidgetState extends State<PlayersPlanPageWidget> {
                                   color: FlutterFlowTheme.of(context).alternate,
                                   shape: BoxShape.circle,
                                 ),
-                                alignment: AlignmentDirectional(0.00, 0.00),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   Icons.keyboard_double_arrow_right_rounded,
                                   color: FlutterFlowTheme.of(context)
@@ -224,8 +223,7 @@ class _PlayersPlanPageWidgetState extends State<PlayersPlanPageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                2.0, 2.0, 2.0, 2.0),
+                            padding: EdgeInsets.all(2.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(40.0),
                               child: Image.asset(
@@ -280,7 +278,7 @@ class _PlayersPlanPageWidgetState extends State<PlayersPlanPageWidget> {
                         Expanded(
                           flex: 8,
                           child: Align(
-                            alignment: AlignmentDirectional(0.00, -1.00),
+                            alignment: AlignmentDirectional(0.0, -1.0),
                             child: AnimatedContainer(
                               duration: Duration(milliseconds: 300),
                               curve: Curves.easeInOut,

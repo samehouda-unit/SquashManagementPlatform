@@ -101,7 +101,7 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
               ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.00, -1.00),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
                     constraints: BoxConstraints(
@@ -184,7 +184,7 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  0.00, 0.00),
+                                                  0.0, 0.0),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -232,10 +232,9 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.00, -1.00),
+                            alignment: AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 16.0, 16.0, 16.0),
+                              padding: EdgeInsets.all(16.0),
                               child: Container(
                                 width: double.infinity,
                                 constraints: BoxConstraints(
@@ -621,12 +620,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                     .start,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        12.0,
-                                                                        12.0,
-                                                                        12.0,
-                                                                        12.0),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .all(
+                                                                            12.0),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -651,11 +648,8 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            2.0,
-                                                                            2.0,
-                                                                            2.0,
-                                                                            2.0),
+                                                                        padding:
+                                                                            EdgeInsets.all(2.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -932,12 +926,8 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      12.0,
-                                                                      12.0,
-                                                                      12.0),
+                                                              EdgeInsets.all(
+                                                                  12.0),
                                                           child: Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
@@ -963,12 +953,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                   ),
                                                                 ),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          2.0,
-                                                                          2.0,
-                                                                          2.0,
-                                                                          2.0),
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .all(
+                                                                              2.0),
                                                                   child:
                                                                       ClipRRect(
                                                                     borderRadius:
@@ -1072,7 +1060,7 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                               ),
                                               Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -1118,7 +1106,7 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                               ),
                                               Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(

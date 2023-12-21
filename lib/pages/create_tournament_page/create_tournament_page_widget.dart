@@ -335,7 +335,7 @@ class _CreateTournamentPageWidgetState
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 1.00),
+                                    alignment: AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 25.0, 15.0),
@@ -512,7 +512,7 @@ class _CreateTournamentPageWidgetState
                     children: [
                       if (_model.tournamentCreated == false)
                         Align(
-                          alignment: AlignmentDirectional(0.00, 0.05),
+                          alignment: AlignmentDirectional(0.0, 0.05),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 0.0),
@@ -627,7 +627,7 @@ class _CreateTournamentPageWidgetState
                                 .createTournamentAPICall
                                 .id(
                               (_model.apiResultp5y?.jsonBody ?? ''),
-                            ),
+                            )!,
                           ),
                         ),
                       ),

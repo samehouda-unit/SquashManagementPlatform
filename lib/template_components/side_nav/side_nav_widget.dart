@@ -192,8 +192,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    2.0, 2.0, 2.0, 2.0),
+                                padding: EdgeInsets.all(2.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: CachedNetworkImage(
@@ -318,8 +317,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               shape: BoxShape.rectangle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 4.0, 4.0, 4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -406,8 +404,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               shape: BoxShape.rectangle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 4.0, 4.0, 4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -489,8 +486,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               shape: BoxShape.rectangle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 4.0, 4.0, 4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -529,7 +525,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.00, 0.00),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -609,8 +605,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               shape: BoxShape.rectangle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 4.0, 4.0, 4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -706,8 +701,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               shape: BoxShape.rectangle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 4.0, 4.0, 4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -789,8 +783,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               shape: BoxShape.rectangle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  4.0, 4.0, 4.0, 4.0),
+                              padding: EdgeInsets.all(4.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -833,8 +826,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
               ),
               Expanded(
                 child: Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -842,7 +834,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                     children: [
                       if (FFAppState().navOpen == true)
                         Align(
-                          alignment: AlignmentDirectional(0.00, -1.00),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 16.0),
@@ -861,8 +853,7 @@ class _SideNavWidgetState extends State<SideNavWidget>
                               child: Visibility(
                                 visible: FFAppState().navOpen == true,
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,

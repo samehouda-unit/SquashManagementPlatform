@@ -31,6 +31,9 @@ class EditTournamentPlanWidget extends StatefulWidget {
     required this.paramPlanGender,
     required this.paramPlanStage,
     required this.paramPlanPhotoString,
+    required this.paramTournamentPlanName,
+    required this.paramTournamentPlanFrom,
+    required this.paramTournamentPlanTo,
   }) : super(key: key);
 
   final int? paramTournamentId;
@@ -40,6 +43,9 @@ class EditTournamentPlanWidget extends StatefulWidget {
   final String? paramPlanGender;
   final int? paramPlanStage;
   final String? paramPlanPhotoString;
+  final String? paramTournamentPlanName;
+  final String? paramTournamentPlanFrom;
+  final String? paramTournamentPlanTo;
 
   @override
   _EditTournamentPlanWidgetState createState() =>
@@ -102,13 +108,16 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
     super.initState();
     _model = createModel(context, () => EditTournamentPlanModel());
 
-    _model.txtTournamentPlanNameController ??= TextEditingController();
+    _model.txtTournamentPlanNameController ??=
+        TextEditingController(text: widget.paramTournamentPlanName);
     _model.txtTournamentPlanNameFocusNode ??= FocusNode();
 
-    _model.txtFromDateController ??= TextEditingController();
+    _model.txtFromDateController ??=
+        TextEditingController(text: widget.paramTournamentPlanFrom);
     _model.txtFromDateFocusNode ??= FocusNode();
 
-    _model.txtToDateController ??= TextEditingController();
+    _model.txtToDateController ??=
+        TextEditingController(text: widget.paramTournamentPlanTo);
     _model.txtToDateFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -142,7 +151,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
                   constraints: BoxConstraints(
@@ -173,8 +182,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                           key: _model.formKey,
                           autovalidateMode: AutovalidateMode.disabled,
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            padding: EdgeInsets.all(24.0),
                             child: SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -295,9 +303,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          2.0, 2.0, 2.0, 2.0),
+                                                  padding: EdgeInsets.all(2.0),
                                                   child: Container(
                                                     width: 90.0,
                                                     height: 90.0,
@@ -343,8 +349,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        2.0, 2.0, 2.0, 2.0),
+                                    padding: EdgeInsets.all(2.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -683,7 +688,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                             ),
                                             Align(
                                               alignment: AlignmentDirectional(
-                                                  0.00, 1.00),
+                                                  0.0, 1.0),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -925,8 +930,8 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                             ),
                                           ),
                                           Align(
-                                            alignment: AlignmentDirectional(
-                                                0.00, 1.00),
+                                            alignment:
+                                                AlignmentDirectional(0.0, 1.0),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
@@ -1247,13 +1252,18 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                 );
                                                 // resetText
                                                 setState(() {
-                                                  _model
-                                                      .txtTournamentPlanNameController
-                                                      ?.clear();
+                                                  _model.txtTournamentPlanNameController
+                                                          ?.text =
+                                                      widget
+                                                          .paramTournamentPlanName!;
                                                   _model.txtFromDateController
-                                                      ?.clear();
+                                                          ?.text =
+                                                      widget
+                                                          .paramTournamentPlanFrom!;
                                                   _model.txtToDateController
-                                                      ?.clear();
+                                                          ?.text =
+                                                      widget
+                                                          .paramTournamentPlanTo!;
                                                 });
                                                 // resetDropdowns
                                                 setState(() {

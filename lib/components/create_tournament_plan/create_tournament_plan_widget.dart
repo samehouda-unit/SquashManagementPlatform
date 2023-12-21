@@ -130,7 +130,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
                   constraints: BoxConstraints(
@@ -161,8 +161,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                           key: _model.formKey,
                           autovalidateMode: AutovalidateMode.disabled,
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
+                            padding: EdgeInsets.all(24.0),
                             child: SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -271,9 +270,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          2.0, 2.0, 2.0, 2.0),
+                                                  padding: EdgeInsets.all(2.0),
                                                   child: Container(
                                                     width: 90.0,
                                                     height: 90.0,
@@ -300,8 +297,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                     ],
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        2.0, 2.0, 2.0, 2.0),
+                                    padding: EdgeInsets.all(2.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -640,7 +636,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                             ),
                                             Align(
                                               alignment: AlignmentDirectional(
-                                                  0.00, 1.00),
+                                                  0.0, 1.0),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -882,8 +878,8 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                             ),
                                           ),
                                           Align(
-                                            alignment: AlignmentDirectional(
-                                                0.00, 1.00),
+                                            alignment:
+                                                AlignmentDirectional(0.0, 1.0),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(

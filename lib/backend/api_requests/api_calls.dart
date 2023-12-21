@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:typed_data';
+import '../schema/structs/index.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
@@ -90,17 +91,18 @@ class CreateClubAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class EditClubAPICall {
@@ -139,17 +141,18 @@ class EditClubAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class EditTournamentAPICall {
@@ -185,17 +188,18 @@ class EditTournamentAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class EditTournamentPlanAPICall {
@@ -239,17 +243,18 @@ class EditTournamentPlanAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class CreateTournamentAPICall {
@@ -283,17 +288,18 @@ class CreateTournamentAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class CreatePlayerAPICall {
@@ -335,17 +341,18 @@ class CreatePlayerAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class EditPlayerAPICall {
@@ -388,17 +395,18 @@ class EditPlayerAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class CreateTournamentPlanAPICall {
@@ -442,17 +450,18 @@ class CreateTournamentPlanAPICall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  int? id(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[0].id''',
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[0].name''',
-      );
+      ));
 }
 
 class PopulatePlayerStagesCall {
@@ -474,19 +483,28 @@ class PopulatePlayerStagesCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  List<int>? id(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? name(dynamic response) => (getJsonField(
         response,
         r'''$[:].name''',
         true,
-      );
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class PopulateClubAsLocationsCall {
@@ -507,19 +525,28 @@ class PopulateClubAsLocationsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  List<int>? id(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? name(dynamic response) => (getJsonField(
         response,
         r'''$[:].name''',
         true,
-      );
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class PopulatePlayerRanksCall {
@@ -541,19 +568,20 @@ class PopulatePlayerRanksCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  List? id(dynamic response) => getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ) as List?;
+  List? name(dynamic response) => getJsonField(
         response,
         r'''$[:].name''',
         true,
-      );
+      ) as List?;
 }
 
 class PopulateClubsCall {
@@ -574,24 +602,33 @@ class PopulateClubsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  List<int>? id(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? name(dynamic response) => (getJsonField(
         response,
         r'''$[:].name''',
         true,
-      );
-  dynamic clubs(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List? clubs(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
-      );
+      ) as List?;
 }
 
 class PopulateClubByUuidCall {
@@ -616,26 +653,27 @@ class PopulateClubByUuidCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic name(dynamic response) => getJsonField(
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].name''',
-      );
-  dynamic location(dynamic response) => getJsonField(
+      ));
+  dynamic? location(dynamic response) => getJsonField(
         response,
         r'''$[:].location''',
       );
-  dynamic contact(dynamic response) => getJsonField(
+  dynamic? contact(dynamic response) => getJsonField(
         response,
         r'''$[:].contact_person''',
       );
-  dynamic email(dynamic response) => getJsonField(
+  dynamic? email(dynamic response) => getJsonField(
         response,
         r'''$[:].contact_email''',
       );
-  dynamic photo(dynamic response) => getJsonField(
+  dynamic? photo(dynamic response) => getJsonField(
         response,
         r'''$[:].photo_url''',
       );
@@ -663,17 +701,26 @@ class PopulateTournamentByUuidCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic name(dynamic response) => getJsonField(
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].name''',
-      );
-  dynamic tournamentId(dynamic response) => getJsonField(
+      ));
+  int? tournamentId(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[:].id''',
-      );
+      ));
+  String? year(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].year''',
+      ));
+  String? sponsors(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].sponsors''',
+      ));
 }
 
 class PopulateTournamentPlanByUuidCall {
@@ -699,46 +746,55 @@ class PopulateTournamentPlanByUuidCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic name(dynamic response) => getJsonField(
-        response,
-        r'''$[:].name''',
-      );
-  dynamic tournamentPlanId(dynamic response) => getJsonField(
+  List<int>? tournamentPlanId(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic tournamentPlanName(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  String? tournamentPlanName(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$[:].tournament_plan_name''',
-      );
-  dynamic tournamentPlanLocation(dynamic response) => getJsonField(
+      ));
+  int? tournamentPlanLocation(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[:].club_id''',
-      );
-  dynamic tournamentPlanPhoto(dynamic response) => getJsonField(
+      ));
+  String? tournamentPlanPhoto(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$[:].photo_url''',
-      );
-  dynamic tournamentPlanFrom(dynamic response) => getJsonField(
+      ));
+  String? tournamentPlanFrom(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$[:].date_from''',
-      );
-  dynamic tournamentPlanTo(dynamic response) => getJsonField(
+      ));
+  String? tournamentPlanTo(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].date_to''',
-      );
-  dynamic tournamentPlanStage(dynamic response) => getJsonField(
+      ));
+  int? tournamentPlanStage(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[:].plan_stage''',
-      );
-  dynamic tournamentPlanGender(dynamic response) => getJsonField(
+      ));
+  String? tournamentPlanGender(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$[:].gender''',
-      );
+      ));
+  String? selectedPlanUuid(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].uuid''',
+      ));
 }
 
 class PopulatePlayerByUuidCall {
@@ -763,37 +819,38 @@ class PopulatePlayerByUuidCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic name(dynamic response) => getJsonField(
+  String? name(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].name''',
-      );
-  dynamic birthDate(dynamic response) => getJsonField(
+      ));
+  String? birthDate(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].date_of_birth''',
-      );
-  dynamic rank(dynamic response) => getJsonField(
+      ));
+  int? rank(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[:].rank''',
-      );
-  dynamic stage(dynamic response) => getJsonField(
+      ));
+  int? stage(dynamic response) => castToType<int>(getJsonField(
         response,
         r'''$[:].stage''',
-      );
-  dynamic bio(dynamic response) => getJsonField(
+      ));
+  String? bio(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].player_bio''',
-      );
-  dynamic gender(dynamic response) => getJsonField(
+      ));
+  String? gender(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].gender''',
-      );
-  dynamic photo(dynamic response) => getJsonField(
+      ));
+  String? photo(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].photo_url''',
-      );
+      ));
 }
 
 class PopulateTournamentsCall {
@@ -814,24 +871,33 @@ class PopulateTournamentsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic id(dynamic response) => getJsonField(
+  List<int>? id(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? name(dynamic response) => (getJsonField(
         response,
         r'''$[:].name''',
         true,
-      );
-  dynamic tournaments(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List? tournaments(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
-      );
+      ) as List?;
 }
 
 class PopulatePlayersCall {
@@ -852,24 +918,33 @@ class PopulatePlayersCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic players(dynamic response) => getJsonField(
+  List? players(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
-      );
-  dynamic id(dynamic response) => getJsonField(
+      ) as List?;
+  List<int>? id(dynamic response) => (getJsonField(
         response,
         r'''$[:].id''',
         true,
-      );
-  dynamic name(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? name(dynamic response) => (getJsonField(
         response,
         r'''$[:].name''',
         true,
-      );
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class PlayerPdfApiCall {
@@ -890,44 +965,69 @@ class PlayerPdfApiCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic records(dynamic response) => getJsonField(
+  List? records(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
-      );
-  dynamic playerName(dynamic response) => getJsonField(
+      ) as List?;
+  List<String>? playerName(dynamic response) => (getJsonField(
         response,
         r'''$[:].player_name''',
         true,
-      );
-  dynamic clubName(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? clubName(dynamic response) => (getJsonField(
         response,
         r'''$[:].club_name''',
         true,
-      );
-  dynamic playerRank(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? playerRank(dynamic response) => (getJsonField(
         response,
         r'''$[:].player_rank''',
         true,
-      );
-  dynamic playerStage(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? playerStage(dynamic response) => (getJsonField(
         response,
         r'''$[:].player_stage''',
         true,
-      );
-  dynamic tournamentPlanName(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? tournamentPlanName(dynamic response) => (getJsonField(
         response,
         r'''$[:].tournament_plan_name''',
         true,
-      );
-  dynamic tournamentName(dynamic response) => getJsonField(
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? tournamentName(dynamic response) => (getJsonField(
         response,
         r'''$[:].tournament_name''',
         true,
-      );
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class PopulatePlayersByStageCall {
@@ -951,14 +1051,15 @@ class PopulatePlayersByStageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic players(dynamic response) => getJsonField(
+  List? players(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
-      );
+      ) as List?;
 }
 
 class PopulateTournamentPlansCall {
@@ -984,14 +1085,15 @@ class PopulateTournamentPlansCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      alwaysAllowBody: false,
     );
   }
 
-  dynamic tournamentPlans(dynamic response) => getJsonField(
+  List? tournamentPlans(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
-      );
+      ) as List?;
 }
 
 /// End SquashManagementAPIGroup Group Code

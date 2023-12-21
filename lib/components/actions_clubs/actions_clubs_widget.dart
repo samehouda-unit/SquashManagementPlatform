@@ -109,8 +109,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                           borderRadius: BorderRadius.circular(40.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.group_add_sharp,
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -156,8 +155,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                         borderRadius: BorderRadius.circular(40.0),
                       ),
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Icon(
                           Icons.insert_link,
                           color: FlutterFlowTheme.of(context).secondaryText,
@@ -210,8 +208,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                           borderRadius: BorderRadius.circular(40.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.mode_edit,
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -257,8 +254,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                         borderRadius: BorderRadius.circular(40.0),
                       ),
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Icon(
                           Icons.delete_outline,
                           color: FlutterFlowTheme.of(context).secondaryText,

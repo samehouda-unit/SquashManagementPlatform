@@ -265,8 +265,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                   shape: BoxShape.circle,
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      2.0, 2.0, 2.0, 2.0),
+                                  padding: EdgeInsets.all(2.0),
                                   child: Container(
                                     width: 90.0,
                                     height: 90.0,
@@ -300,7 +299,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                               .photo(
                                             editPlayerPagePopulatePlayerByUuidResponse
                                                 .jsonBody,
-                                          );
+                                          )!;
                                         } else {
                                           return valueOrDefault<String>(
                                             FFAppConstants
@@ -543,7 +542,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 1.00),
+                                    alignment: AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 25.0, 10.0),
@@ -940,7 +939,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.00, 0.05),
+                                alignment: AlignmentDirectional(0.0, 0.05),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 15.0, 0.0, 0.0),
@@ -1008,7 +1007,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                                     editPlayerPagePopulatePlayerByUuidResponse
                                                         .jsonBody,
                                                   )
-                                                  .toString();
+                                                  .toString()!;
                                           _model.txtDateOfBirthController
                                                   ?.text =
                                               SquashManagementAPIGroupGroup
@@ -1017,7 +1016,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                                     editPlayerPagePopulatePlayerByUuidResponse
                                                         .jsonBody,
                                                   )
-                                                  .toString();
+                                                  .toString()!;
                                           _model.txtPlayerBioController?.text =
                                               SquashManagementAPIGroupGroup
                                                   .populatePlayerByUuidCall
@@ -1025,7 +1024,7 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                                     editPlayerPagePopulatePlayerByUuidResponse
                                                         .jsonBody,
                                                   )
-                                                  .toString();
+                                                  .toString()!;
                                         });
                                         // resetDropdowns
                                         setState(() {

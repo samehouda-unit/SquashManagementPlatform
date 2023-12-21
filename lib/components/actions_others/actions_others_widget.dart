@@ -139,8 +139,7 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                               borderRadius: BorderRadius.circular(40.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 8.0, 8.0, 8.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.print,
                                 color:
@@ -191,8 +190,7 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                         borderRadius: BorderRadius.circular(40.0),
                       ),
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: FaIcon(
                           FontAwesomeIcons.bookOpen,
                           color: FlutterFlowTheme.of(context).secondaryText,

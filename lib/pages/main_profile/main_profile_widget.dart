@@ -123,7 +123,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
               ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.00, -1.00),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -139,7 +139,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                             decoration: BoxDecoration(),
                           ),
                         Align(
-                          alignment: AlignmentDirectional(0.00, -1.00),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 0.0),
@@ -172,8 +172,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 16.0, 16.0, 16.0),
+                                        padding: EdgeInsets.all(16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -194,9 +193,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        2.0, 2.0, 2.0, 2.0),
+                                                padding: EdgeInsets.all(2.0),
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -486,7 +483,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Icon(
                                                           Icons
                                                               .chevron_right_rounded,
@@ -555,7 +552,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Icon(
                                                           Icons
                                                               .chevron_right_rounded,
@@ -653,7 +650,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Icon(
                                                           Icons
                                                               .chevron_right_rounded,
@@ -722,7 +719,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Icon(
                                                           Icons
                                                               .chevron_right_rounded,
@@ -784,7 +781,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Icon(
                                                           Icons
                                                               .chevron_right_rounded,
@@ -804,11 +801,9 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.00, -1.00),
+                                            AlignmentDirectional(0.0, -1.0),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  16.0, 16.0, 16.0, 16.0),
+                                          padding: EdgeInsets.all(16.0),
                                           child: Container(
                                             width: double.infinity,
                                             height: 50.0,
@@ -829,8 +824,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(4.0, 4.0, 4.0, 4.0),
+                                              padding: EdgeInsets.all(4.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -1055,7 +1049,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.00, -1.00),
+                                            AlignmentDirectional(0.0, -1.0),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(

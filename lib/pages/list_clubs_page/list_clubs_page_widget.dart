@@ -153,7 +153,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                               Expanded(
                                 flex: 8,
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.00, -1.00),
+                                  alignment: AlignmentDirectional(0.0, -1.0),
                                   child: AnimatedContainer(
                                     duration: Duration(milliseconds: 300),
                                     curve: Curves.easeInOut,
@@ -293,7 +293,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                     BorderRadius.circular(2.0),
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  -1.00, 0.00),
+                                                  -1.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -314,7 +314,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                     child: Align(
                                                       alignment:
                                                           AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
@@ -341,7 +341,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                -1.00, 0.00),
+                                                                -1.0, 0.0),
                                                         child: Text(
                                                           'Last Active',
                                                           style: FlutterFlowTheme
@@ -360,7 +360,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                -1.00, 0.00),
+                                                                -1.0, 0.0),
                                                         child: Text(
                                                           'Title',
                                                           style: FlutterFlowTheme
@@ -389,7 +389,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Text(
                                                               'Edit',
                                                               textAlign:
@@ -424,7 +424,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Text(
                                                               'Delete',
                                                               textAlign:
@@ -569,11 +569,8 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            2.0,
-                                                                            2.0,
-                                                                            2.0,
-                                                                            2.0),
+                                                                        padding:
+                                                                            EdgeInsets.all(2.0),
                                                                         child:
                                                                             InkWell(
                                                                           splashColor:
@@ -600,7 +597,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                                         ? getJsonField(
                                                                                             clubsItem,
                                                                                             r'''$.photo_url''',
-                                                                                          )
+                                                                                          ).toString()
                                                                                         : FFAppConstants.PlayerPhotoPlaceholder,
                                                                                     fit: BoxFit.contain,
                                                                                   ),
@@ -613,7 +610,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                                       ? getJsonField(
                                                                                           clubsItem,
                                                                                           r'''$.photo_url''',
-                                                                                        )
+                                                                                        ).toString()
                                                                                       : FFAppConstants.PlayerPhotoPlaceholder,
                                                                                   useHeroAnimation: true,
                                                                                 ),
@@ -630,7 +627,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                                 ? getJsonField(
                                                                                     clubsItem,
                                                                                     r'''$.photo_url''',
-                                                                                  )
+                                                                                  ).toString()
                                                                                 : FFAppConstants.PlayerPhotoPlaceholder,
                                                                             transitionOnUserGestures:
                                                                                 true,
@@ -646,7 +643,7 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                                     ? getJsonField(
                                                                                         clubsItem,
                                                                                         r'''$.photo_url''',
-                                                                                      )
+                                                                                      ).toString()
                                                                                     : FFAppConstants.PlayerPhotoPlaceholder,
                                                                                 width: 120.0,
                                                                                 height: 120.0,
@@ -753,8 +750,8 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                         child:
                                                                             Align(
                                                                           alignment: AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Text(
                                                                             'Head of Design',

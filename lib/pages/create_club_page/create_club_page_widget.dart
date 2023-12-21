@@ -228,8 +228,7 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                               shape: BoxShape.circle,
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  2.0, 2.0, 2.0, 2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: Container(
                                 width: 90.0,
                                 height: 90.0,
@@ -570,7 +569,7 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.00, 0.05),
+                            alignment: AlignmentDirectional(0.0, 0.05),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 15.0, 0.0, 0.0),

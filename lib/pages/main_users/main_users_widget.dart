@@ -76,7 +76,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
               Expanded(
                 flex: 8,
                 child: Align(
-                  alignment: AlignmentDirectional(0.00, -1.00),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
                     constraints: BoxConstraints(
@@ -258,7 +258,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
-                              alignment: AlignmentDirectional(-1.00, 0.00),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -275,7 +275,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                     flex: 4,
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(-1.00, 0.00),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
@@ -295,7 +295,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                       flex: 2,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.00, 0.00),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
                                           'Last Active',
                                           style: FlutterFlowTheme.of(context)
@@ -312,7 +312,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                       flex: 3,
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.00, 0.00),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
                                           'Title',
                                           style: FlutterFlowTheme.of(context)
@@ -329,7 +329,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.00, 0.00),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Text(
                                             'Status',
                                             style: FlutterFlowTheme.of(context)
@@ -389,9 +389,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 2.0, 2.0, 2.0),
+                                          padding: EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -472,8 +470,8 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         Expanded(
                                           flex: 3,
                                           child: Align(
-                                            alignment: AlignmentDirectional(
-                                                -1.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               'Head of Design',
                                               style:
@@ -502,7 +500,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                               ),
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -558,9 +556,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 2.0, 2.0, 2.0),
+                                          padding: EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -641,8 +637,8 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         Expanded(
                                           flex: 3,
                                           child: Align(
-                                            alignment: AlignmentDirectional(
-                                                -1.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               'Head of Design',
                                               style:
@@ -671,7 +667,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                               ),
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -727,9 +723,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 2.0, 2.0, 2.0),
+                                          padding: EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -810,8 +804,8 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         Expanded(
                                           flex: 3,
                                           child: Align(
-                                            alignment: AlignmentDirectional(
-                                                -1.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               'Head of Design',
                                               style:
@@ -840,7 +834,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                               ),
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -896,9 +890,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 2.0, 2.0, 2.0),
+                                          padding: EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
@@ -979,8 +971,8 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         Expanded(
                                           flex: 3,
                                           child: Align(
-                                            alignment: AlignmentDirectional(
-                                                -1.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               'Head of Design',
                                               style:
@@ -1009,7 +1001,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                               ),
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -1065,9 +1057,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           ),
                                         ),
                                         child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  2.0, 2.0, 2.0, 2.0),
+                                          padding: EdgeInsets.all(2.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -1148,8 +1138,8 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         Expanded(
                                           flex: 3,
                                           child: Align(
-                                            alignment: AlignmentDirectional(
-                                                -1.00, 0.00),
+                                            alignment:
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               'Head of Design',
                                               style:
@@ -1178,7 +1168,7 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                               ),
                                               child: Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(

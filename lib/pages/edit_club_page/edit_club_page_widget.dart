@@ -262,8 +262,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                   shape: BoxShape.circle,
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      2.0, 2.0, 2.0, 2.0),
+                                  padding: EdgeInsets.all(2.0),
                                   child: Container(
                                     width: 90.0,
                                     height: 90.0,
@@ -286,9 +285,10 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                           return SquashManagementAPIGroupGroup
                                               .populateClubByUuidCall
                                               .photo(
-                                            editClubPagePopulateClubByUuidResponse
-                                                .jsonBody,
-                                          );
+                                                editClubPagePopulateClubByUuidResponse
+                                                    .jsonBody,
+                                              )
+                                              .toString();
                                         } else {
                                           return valueOrDefault<String>(
                                             FFAppConstants
@@ -693,7 +693,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.00, 0.05),
+                                alignment: AlignmentDirectional(0.0, 0.05),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 15.0, 0.0, 0.0),
@@ -750,7 +750,7 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                                     editClubPagePopulateClubByUuidResponse
                                                         .jsonBody,
                                                   )
-                                                  .toString();
+                                                  .toString()!;
                                           _model.txtClubLocationController
                                                   ?.text =
                                               SquashManagementAPIGroupGroup

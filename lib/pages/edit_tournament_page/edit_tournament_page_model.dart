@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'edit_tournament_page_widget.dart' show EditTournamentPageWidget;
 import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,12 +34,21 @@ class EditTournamentPageModel
   FocusNode? txtTournamentNameFocusNode;
   TextEditingController? txtTournamentNameController;
   String? Function(BuildContext, String?)? txtTournamentNameControllerValidator;
+  // State field(s) for txtYear widget.
+  FocusNode? txtYearFocusNode;
+  TextEditingController? txtYearController;
+  String? Function(BuildContext, String?)? txtYearControllerValidator;
+  DateTime? datePicked;
+  // State field(s) for txtSponsors widget.
+  FocusNode? txtSponsorsFocusNode;
+  TextEditingController? txtSponsorsController;
+  String? Function(BuildContext, String?)? txtSponsorsControllerValidator;
   // Stores action output result for [Backend Call - API (editTournamentAPI)] action in Button widget.
   ApiCallResponse? apiResultp5y;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  TextEditingController? textController4;
+  String? Function(BuildContext, String?)? textController4Validator;
   // Stores action output result for [Backend Call - API (populateTournamentPlanByUuid)] action in IconButton widget.
   ApiCallResponse? tournamentPlanByUUID;
   // Model for EditTournamentPlan component.
@@ -56,8 +66,14 @@ class EditTournamentPageModel
     txtTournamentNameFocusNode?.dispose();
     txtTournamentNameController?.dispose();
 
+    txtYearFocusNode?.dispose();
+    txtYearController?.dispose();
+
+    txtSponsorsFocusNode?.dispose();
+    txtSponsorsController?.dispose();
+
     textFieldFocusNode?.dispose();
-    textController2?.dispose();
+    textController4?.dispose();
 
     editTournamentPlanModel.dispose();
   }

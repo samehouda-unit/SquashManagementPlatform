@@ -101,7 +101,7 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
       mainAxisSize: MainAxisSize.min,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+          padding: EdgeInsets.all(16.0),
           child: Container(
             width: 320.0,
             decoration: BoxDecoration(
@@ -183,8 +183,7 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  2.0, 2.0, 2.0, 2.0),
+                              padding: EdgeInsets.all(2.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.network(
@@ -192,7 +191,7 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                   width: 36.0,
                                   height: 36.0,
                                   fit: BoxFit.cover,
-                                  alignment: Alignment(1.00, 1.00),
+                                  alignment: Alignment(1.0, 1.0),
                                 ),
                               ),
                             ),
@@ -403,7 +402,7 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.00, 0.00),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
@@ -415,8 +414,7 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              4.0, 4.0, 4.0, 4.0),
+                          padding: EdgeInsets.all(4.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,

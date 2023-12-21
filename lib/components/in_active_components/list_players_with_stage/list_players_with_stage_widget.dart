@@ -230,7 +230,7 @@ class _ListPlayersWithStageWidgetState
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     borderRadius: BorderRadius.circular(2.0),
                   ),
-                  alignment: AlignmentDirectional(-1.00, 0.00),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -242,7 +242,7 @@ class _ListPlayersWithStageWidgetState
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Name',
                                 style: FlutterFlowTheme.of(context).labelSmall,
@@ -258,7 +258,7 @@ class _ListPlayersWithStageWidgetState
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Status',
                                 textAlign: TextAlign.center,
@@ -335,8 +335,7 @@ class _ListPlayersWithStageWidgetState
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(2.0, 2.0, 2.0, 2.0),
+                                              padding: EdgeInsets.all(2.0),
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),

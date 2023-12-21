@@ -72,7 +72,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
               ),
               Expanded(
                 child: Align(
-                  alignment: AlignmentDirectional(0.00, -1.00),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
                     constraints: BoxConstraints(
@@ -139,7 +139,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.00, 0.00),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 4.0),
@@ -711,12 +711,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                16.0,
-                                                                16.0,
-                                                                16.0,
-                                                                16.0),
+                                                        EdgeInsets.all(16.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 170.0,
@@ -773,13 +768,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                         ),
                                                       ),
                                                       child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    16.0,
-                                                                    16.0,
-                                                                    16.0,
-                                                                    16.0),
+                                                        padding: EdgeInsets.all(
+                                                            16.0),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -941,9 +931,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      16.0, 16.0, 16.0, 16.0),
+                                              padding: EdgeInsets.all(16.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 crossAxisAlignment:
@@ -1327,8 +1315,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           ),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -1553,8 +1541,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           ),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -1779,8 +1767,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           ),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -2005,8 +1993,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           ),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -2226,8 +2214,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               BorderRadius.circular(40.0),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -2447,8 +2435,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               BorderRadius.circular(40.0),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -2668,8 +2656,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               BorderRadius.circular(40.0),
                                                                         ),
                                                                         alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -2764,8 +2752,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 16.0, 16.0, 16.0),
+                                        padding: EdgeInsets.all(16.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -3090,8 +3077,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -3326,8 +3313,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -3562,8 +3549,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -3798,8 +3785,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -4027,8 +4014,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -4256,8 +4243,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -4485,8 +4472,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   ),
                                                                   alignment:
                                                                       AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
+                                                                          0.0,
+                                                                          0.0),
                                                                   child:
                                                                       Padding(
                                                                     padding: EdgeInsetsDirectional
@@ -4556,7 +4543,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                     ),
                                   ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         10.0, 14.0, 10.0, 0.0),
@@ -4590,7 +4577,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                             children: [
                                               Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, -1.00),
+                                                    0.0, -1.0),
                                                 child: ClipRRect(
                                                   borderRadius:
                                                       BorderRadius.only(
@@ -4613,7 +4600,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                               ),
                                               Align(
                                                 alignment: AlignmentDirectional(
-                                                    0.00, 1.00),
+                                                    0.0, 1.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -4708,12 +4695,8 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        2.0,
-                                                                        2.0,
-                                                                        2.0,
-                                                                        2.0),
+                                                                EdgeInsets.all(
+                                                                    2.0),
                                                             child: Container(
                                                               width: 40.0,
                                                               height: 40.0,
@@ -4792,9 +4775,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                           40.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          2.0, 2.0, 2.0, 2.0),
+                                                  padding: EdgeInsets.all(2.0),
                                                   child: ClipRRect(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -4818,9 +4799,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                           40.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          2.0, 2.0, 2.0, 2.0),
+                                                  padding: EdgeInsets.all(2.0),
                                                   child: ClipRRect(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -4844,9 +4823,7 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                           40.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          2.0, 2.0, 2.0, 2.0),
+                                                  padding: EdgeInsets.all(2.0),
                                                   child: ClipRRect(
                                                     borderRadius:
                                                         BorderRadius.circular(

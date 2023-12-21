@@ -151,7 +151,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                               Expanded(
                                 flex: 8,
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.00, -1.00),
+                                  alignment: AlignmentDirectional(0.0, -1.0),
                                   child: AnimatedContainer(
                                     duration: Duration(milliseconds: 300),
                                     curve: Curves.easeInOut,
@@ -291,7 +291,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                     BorderRadius.circular(2.0),
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  -1.00, 0.00),
+                                                  -1.0, 0.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -312,7 +312,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                     child: Align(
                                                       alignment:
                                                           AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
@@ -339,7 +339,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                -1.00, 0.00),
+                                                                -1.0, 0.0),
                                                         child: Text(
                                                           'Last Active',
                                                           style: FlutterFlowTheme
@@ -358,7 +358,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                       child: Align(
                                                         alignment:
                                                             AlignmentDirectional(
-                                                                -1.00, 0.00),
+                                                                -1.0, 0.0),
                                                         child: Text(
                                                           'Title',
                                                           style: FlutterFlowTheme
@@ -387,7 +387,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Text(
                                                               'Edit',
                                                               textAlign:
@@ -422,7 +422,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Text(
                                                               'Delete',
                                                               textAlign:
@@ -564,11 +564,8 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            2.0,
-                                                                            2.0,
-                                                                            2.0,
-                                                                            2.0),
+                                                                        padding:
+                                                                            EdgeInsets.all(2.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -652,8 +649,8 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                         child:
                                                                             Align(
                                                                           alignment: AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Text(
                                                                             'Head of Design',

@@ -140,7 +140,7 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     borderRadius: BorderRadius.circular(2.0),
                   ),
-                  alignment: AlignmentDirectional(-1.00, 0.00),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -152,7 +152,7 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Name',
                                 style: FlutterFlowTheme.of(context).labelSmall,
@@ -168,7 +168,7 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Status',
                                 textAlign: TextAlign.center,
@@ -285,12 +285,7 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  2.0,
-                                                                  2.0,
-                                                                  2.0,
-                                                                  2.0),
+                                                          EdgeInsets.all(2.0),
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -301,7 +296,7 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                                                             getJsonField(
                                                               playersItem,
                                                               r'''$.photo_url''',
-                                                            ),
+                                                            ).toString(),
                                                             'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60',
                                                           ),
                                                           width: 120.0,

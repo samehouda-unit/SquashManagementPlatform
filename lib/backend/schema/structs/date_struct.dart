@@ -21,7 +21,7 @@ class DateStruct extends BaseStruct {
       );
 
   static DateStruct? maybeFromMap(dynamic data) =>
-      data is Map<String, dynamic> ? DateStruct.fromMap(data) : null;
+      data is Map ? DateStruct.fromMap(data.cast<String, dynamic>()) : null;
 
   Map<String, dynamic> toMap() => {
         'DateType': _dateType,
