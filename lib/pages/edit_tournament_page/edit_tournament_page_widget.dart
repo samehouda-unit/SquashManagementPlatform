@@ -170,116 +170,115 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                   children: [
                     Container(
                       decoration: BoxDecoration(),
-                      child: Visibility(
-                        visible: _model.selectedTournamentPlan == null,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Form(
-                              key: _model.formKey,
-                              autovalidateMode: AutovalidateMode.disabled,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 30.0, 20.0, 15.0),
-                                    child: TextFormField(
-                                      controller:
-                                          _model.txtTournamentNameController ??=
-                                              TextEditingController(
-                                        text: SquashManagementAPIGroupGroup
-                                            .populateTournamentByUuidCall
-                                            .name(
-                                              editTournamentPagePopulateTournamentByUuidResponse
-                                                  .jsonBody,
-                                            )
-                                            .toString(),
-                                      ),
-                                      focusNode:
-                                          _model.txtTournamentNameFocusNode,
-                                      onChanged: (_) => EasyDebounce.debounce(
-                                        '_model.txtTournamentNameController',
-                                        Duration(milliseconds: 2000),
-                                        () => setState(() {}),
-                                      ),
-                                      textCapitalization:
-                                          TextCapitalization.words,
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        labelText: 'Tournament Name',
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium,
-                                        hintStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium,
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .alternate,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        filled: true,
-                                        fillColor: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 0.0, 0.0, 24.0),
-                                        suffixIcon: _model
-                                                .txtTournamentNameController!
-                                                .text
-                                                .isNotEmpty
-                                            ? InkWell(
-                                                onTap: () async {
-                                                  _model
-                                                      .txtTournamentNameController
-                                                      ?.clear();
-                                                  setState(() {});
-                                                },
-                                                child: Icon(
-                                                  Icons.clear,
-                                                  color: Color(0xFF757575),
-                                                  size: 22.0,
-                                                ),
-                                              )
-                                            : null,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                      validator: _model
-                                          .txtTournamentNameControllerValidator
-                                          .asValidator(context),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Form(
+                            key: _model.formKey,
+                            autovalidateMode: AutovalidateMode.disabled,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20.0, 30.0, 20.0, 15.0),
+                                  child: TextFormField(
+                                    controller:
+                                        _model.txtTournamentNameController ??=
+                                            TextEditingController(
+                                      text: SquashManagementAPIGroupGroup
+                                          .populateTournamentByUuidCall
+                                          .name(
+                                            editTournamentPagePopulateTournamentByUuidResponse
+                                                .jsonBody,
+                                          )
+                                          .toString(),
                                     ),
+                                    focusNode:
+                                        _model.txtTournamentNameFocusNode,
+                                    onChanged: (_) => EasyDebounce.debounce(
+                                      '_model.txtTournamentNameController',
+                                      Duration(milliseconds: 2000),
+                                      () => setState(() {}),
+                                    ),
+                                    textCapitalization:
+                                        TextCapitalization.words,
+                                    obscureText: false,
+                                    decoration: InputDecoration(
+                                      labelText: 'Tournament Name',
+                                      labelStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium,
+                                      hintStyle: FlutterFlowTheme.of(context)
+                                          .labelMedium,
+                                      enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .alternate,
+                                          width: 2.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          width: 2.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      errorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 2.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      focusedErrorBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          width: 2.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      filled: true,
+                                      fillColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      contentPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              20.0, 0.0, 0.0, 24.0),
+                                      suffixIcon: _model
+                                              .txtTournamentNameController!
+                                              .text
+                                              .isNotEmpty
+                                          ? InkWell(
+                                              onTap: () async {
+                                                _model
+                                                    .txtTournamentNameController
+                                                    ?.clear();
+                                                setState(() {});
+                                              },
+                                              child: Icon(
+                                                Icons.clear,
+                                                color: Color(0xFF757575),
+                                                size: 22.0,
+                                              ),
+                                            )
+                                          : null,
+                                    ),
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    validator: _model
+                                        .txtTournamentNameControllerValidator
+                                        .asValidator(context),
                                   ),
+                                ),
+                                if (_model.selectedTournamentPlan == null)
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
@@ -524,6 +523,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                       ],
                                     ),
                                   ),
+                                if (_model.selectedTournamentPlan == null)
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 5.0, 20.0, 15.0),
@@ -624,9 +624,10 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                           .asValidator(context),
                                     ),
                                   ),
-                                ],
-                              ),
+                              ],
                             ),
+                          ),
+                          if (_model.selectedTournamentPlan == null)
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.05),
                               child: Padding(
@@ -725,33 +726,30 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                      child: Container(
-                        decoration: BoxDecoration(),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              flex: 8,
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, -1.0),
-                                child: AnimatedContainer(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.easeInOut,
-                                  width: double.infinity,
-                                  constraints: BoxConstraints(
-                                    maxWidth: 1370.0,
-                                  ),
-                                  decoration: BoxDecoration(),
-                                  child: Visibility(
-                                    visible:
-                                        _model.selectedTournamentPlan == null,
+                    if (_model.selectedTournamentPlan == null)
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        child: Container(
+                          decoration: BoxDecoration(),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Expanded(
+                                flex: 8,
+                                child: Align(
+                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  child: AnimatedContainer(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.easeInOut,
+                                    width: double.infinity,
+                                    constraints: BoxConstraints(
+                                      maxWidth: 1370.0,
+                                    ),
+                                    decoration: BoxDecoration(),
                                     child: SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -885,152 +883,158 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                               ),
                                               alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                children: [
-                                                  if (responsiveVisibility(
-                                                    context: context,
-                                                    phone: false,
-                                                  ))
-                                                    Container(
-                                                      width: 40.0,
-                                                      height: 100.0,
-                                                      decoration:
-                                                          BoxDecoration(),
+                                              child: Visibility(
+                                                visible: _model
+                                                        .selectedTournamentPlan ==
+                                                    null,
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  children: [
+                                                    if (responsiveVisibility(
+                                                      context: context,
+                                                      phone: false,
+                                                    ))
+                                                      Container(
+                                                        width: 40.0,
+                                                        height: 100.0,
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                      ),
+                                                    Expanded(
+                                                      flex: 4,
+                                                      child: Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      16.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            'Name',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelSmall,
+                                                          ),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  Expanded(
-                                                    flex: 4,
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
+                                                    if (responsiveVisibility(
+                                                      context: context,
+                                                      phone: false,
+                                                    ))
+                                                      Expanded(
+                                                        flex: 2,
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  -1.0, 0.0),
+                                                          child: Text(
+                                                            'Last Active',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelSmall,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    if (responsiveVisibility(
+                                                      context: context,
+                                                      phone: false,
+                                                      tablet: false,
+                                                    ))
+                                                      Expanded(
+                                                        flex: 3,
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  -1.0, 0.0),
+                                                          child: Text(
+                                                            'Title',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelSmall,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    Expanded(
+                                                      flex: 2,
                                                       child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(
-                                                                    16.0,
+                                                                    50.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
-                                                        child: Text(
-                                                          'Name',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelSmall,
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0.0, 0.0),
+                                                              child: Text(
+                                                                'Edit',
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .start,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmall,
+                                                              ),
+                                                            ),
+                                                          ],
                                                         ),
                                                       ),
                                                     ),
-                                                  ),
-                                                  if (responsiveVisibility(
-                                                    context: context,
-                                                    phone: false,
-                                                  ))
                                                     Expanded(
                                                       flex: 2,
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1.0, 0.0),
-                                                        child: Text(
-                                                          'Last Active',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelSmall,
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    20.0,
+                                                                    0.0,
+                                                                    20.0,
+                                                                    0.0),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0.0, 0.0),
+                                                              child: Text(
+                                                                'Delete',
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .start,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelSmall,
+                                                              ),
+                                                            ),
+                                                          ],
                                                         ),
                                                       ),
                                                     ),
-                                                  if (responsiveVisibility(
-                                                    context: context,
-                                                    phone: false,
-                                                    tablet: false,
-                                                  ))
-                                                    Expanded(
-                                                      flex: 3,
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                -1.0, 0.0),
-                                                        child: Text(
-                                                          'Title',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelSmall,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  50.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        children: [
-                                                          Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Text(
-                                                              'Edit',
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .start,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelSmall,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  20.0,
-                                                                  0.0,
-                                                                  20.0,
-                                                                  0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        children: [
-                                                          Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Text(
-                                                              'Delete',
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .start,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelSmall,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                                  ],
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -1366,73 +1370,19 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                                 size: 24.0,
                                                                               ),
                                                                               onPressed: () async {
-                                                                                setState(() {
-                                                                                  _model.selectedTournamentPlan = getJsonField(
-                                                                                    tournamentPlansItem,
-                                                                                    r'''$.id''',
-                                                                                  );
-                                                                                });
-                                                                                _model.tournamentPlanByUUID = await SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall.call(
+                                                                                _model.selectedTournamentPlan = getJsonField(
+                                                                                  tournamentPlansItem,
+                                                                                  r'''$.id''',
+                                                                                );
+                                                                                _model.tournamentPlanByUuid = await SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall.call(
                                                                                   id: 'eq.${_model.selectedTournamentPlan?.toString()}',
                                                                                 );
-                                                                                if ((_model.tournamentPlanByUUID?.succeeded ?? true)) {
-                                                                                  // setPlanName
-                                                                                  setState(() {
-                                                                                    _model.editTournamentPlanModel.txtTournamentPlanNameController?.text = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall
-                                                                                        .tournamentPlanName(
-                                                                                          (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                        )
-                                                                                        .toString()!;
-                                                                                  });
-                                                                                  // setPlanLocation
-                                                                                  setState(() {
-                                                                                    _model.editTournamentPlanModel.lsClubsLocationValueController?.value = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall.tournamentPlanLocation(
-                                                                                      (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                    )!;
-                                                                                  });
-                                                                                  // setPlanFrom
-                                                                                  setState(() {
-                                                                                    _model.editTournamentPlanModel.txtFromDateController?.text = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall
-                                                                                        .tournamentPlanFrom(
-                                                                                          (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                        )
-                                                                                        .toString()!;
-                                                                                  });
-                                                                                  // setPlanTo
-                                                                                  setState(() {
-                                                                                    _model.editTournamentPlanModel.txtToDateController?.text = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall
-                                                                                        .tournamentPlanTo(
-                                                                                          (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                        )
-                                                                                        .toString()!;
-                                                                                  });
-                                                                                  // setPlanStage
-                                                                                  setState(() {
-                                                                                    _model.editTournamentPlanModel.lstStagesValueController?.value = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall.tournamentPlanStage(
-                                                                                      (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                    )!;
-                                                                                  });
-                                                                                  // setPlaGender
-                                                                                  setState(() {
-                                                                                    _model.editTournamentPlanModel.lsGenderValueController?.value = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall
-                                                                                        .tournamentPlanGender(
-                                                                                          (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                        )
-                                                                                        .toString()!;
-                                                                                  });
+                                                                                if ((_model.tournamentPlanByUuid?.succeeded ?? true)) {
                                                                                   // setPlanPhoto
                                                                                   setState(() {
                                                                                     _model.selectedTournamentPlanPhoto = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall.tournamentPlanPhoto(
-                                                                                      (_model.tournamentPlanByUUID?.jsonBody ?? ''),
+                                                                                      (_model.tournamentPlanByUuid?.jsonBody ?? ''),
                                                                                     );
-                                                                                  });
-                                                                                  // setSelectedPlanUuid
-                                                                                  setState(() {
-                                                                                    _model.selectedPlanUuid = SquashManagementAPIGroupGroup.populateTournamentPlanByUuidCall
-                                                                                        .selectedPlanUuid(
-                                                                                          (_model.tournamentPlanByUUID?.jsonBody ?? ''),
-                                                                                        )
-                                                                                        .toString();
                                                                                   });
                                                                                 }
 
@@ -1495,11 +1445,10 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
                     if (_model.selectedTournamentPlan != null)
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -1517,12 +1466,13 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                               model: _model.editTournamentPlanModel,
                               updateCallback: () => setState(() {}),
                               child: EditTournamentPlanWidget(
-                                paramTournamentId: getJsonField(
-                                  editTournamentPagePopulateTournamentByUuidResponse
-                                      .jsonBody,
-                                  r'''$.tournament_id''',
-                                ),
-                                paramPlanUuid: _model.selectedPlanUuid!,
+                                paramPlanUuid: SquashManagementAPIGroupGroup
+                                    .populateTournamentPlanByUuidCall
+                                    .selectedPlanUuid(
+                                      (_model.tournamentPlanByUuid?.jsonBody ??
+                                          ''),
+                                    )
+                                    .toString()!,
                                 paramPlanPhoto: valueOrDefault<String>(
                                   _model.selectedTournamentPlanPhoto,
                                   'Plan Photo',
@@ -1530,25 +1480,25 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                 paramPlanLocation: SquashManagementAPIGroupGroup
                                     .populateTournamentPlanByUuidCall
                                     .tournamentPlanLocation(
-                                  (_model.tournamentPlanByUUID?.jsonBody ?? ''),
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
                                 )!,
                                 paramPlanGender: SquashManagementAPIGroupGroup
                                     .populateTournamentPlanByUuidCall
                                     .tournamentPlanGender(
-                                      (_model.tournamentPlanByUUID?.jsonBody ??
+                                      (_model.tournamentPlanByUuid?.jsonBody ??
                                           ''),
                                     )
                                     .toString()!,
                                 paramPlanStage: SquashManagementAPIGroupGroup
                                     .populateTournamentPlanByUuidCall
                                     .tournamentPlanStage(
-                                  (_model.tournamentPlanByUUID?.jsonBody ?? ''),
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
                                 )!,
                                 paramPlanPhotoString:
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanPhoto(
-                                          (_model.tournamentPlanByUUID
+                                          (_model.tournamentPlanByUuid
                                                   ?.jsonBody ??
                                               ''),
                                         )
@@ -1557,7 +1507,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanName(
-                                          (_model.tournamentPlanByUUID
+                                          (_model.tournamentPlanByUuid
                                                   ?.jsonBody ??
                                               ''),
                                         )
@@ -1566,7 +1516,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanFrom(
-                                          (_model.tournamentPlanByUUID
+                                          (_model.tournamentPlanByUuid
                                                   ?.jsonBody ??
                                               ''),
                                         )
@@ -1575,7 +1525,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanTo(
-                                          (_model.tournamentPlanByUUID
+                                          (_model.tournamentPlanByUuid
                                                   ?.jsonBody ??
                                               ''),
                                         )

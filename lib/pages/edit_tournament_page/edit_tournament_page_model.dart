@@ -50,7 +50,7 @@ class EditTournamentPageModel
   TextEditingController? textController4;
   String? Function(BuildContext, String?)? textController4Validator;
   // Stores action output result for [Backend Call - API (populateTournamentPlanByUuid)] action in IconButton widget.
-  ApiCallResponse? tournamentPlanByUUID;
+  ApiCallResponse? tournamentPlanByUuid;
   // Model for EditTournamentPlan component.
   late EditTournamentPlanModel editTournamentPlanModel;
 

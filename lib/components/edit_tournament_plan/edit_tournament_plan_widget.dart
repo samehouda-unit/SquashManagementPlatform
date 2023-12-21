@@ -24,7 +24,6 @@ export 'edit_tournament_plan_model.dart';
 class EditTournamentPlanWidget extends StatefulWidget {
   const EditTournamentPlanWidget({
     Key? key,
-    required this.paramTournamentId,
     required this.paramPlanUuid,
     required this.paramPlanPhoto,
     required this.paramPlanLocation,
@@ -36,7 +35,6 @@ class EditTournamentPlanWidget extends StatefulWidget {
     required this.paramTournamentPlanTo,
   }) : super(key: key);
 
-  final int? paramTournamentId;
   final String? paramPlanUuid;
   final String? paramPlanPhoto;
   final int? paramPlanLocation;
