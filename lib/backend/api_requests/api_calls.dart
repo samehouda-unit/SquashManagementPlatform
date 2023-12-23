@@ -37,6 +37,10 @@ class SquashManagementAPIGroupGroup {
       PopulatePlanPlayersAPICall();
   static DeletePlanPlayerAPICall deletePlanPlayerAPICall =
       DeletePlanPlayerAPICall();
+  static DeleteTournamentAPICall deleteTournamentAPICall =
+      DeleteTournamentAPICall();
+  static DeleteTournamentPlanAPICall deleteTournamentPlanAPICall =
+      DeleteTournamentPlanAPICall();
   static PopulatePlayerStagesCall populatePlayerStagesCall =
       PopulatePlayerStagesCall();
   static PopulateClubAsLocationsCall populateClubAsLocationsCall =
@@ -582,6 +586,90 @@ class DeletePlanPlayerAPICall {
       params: {
         'tournament_plan_id': tournamentPlanId,
         'player_id': playerId,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+  List? planPlayers(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+}
+
+class DeleteTournamentAPICall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'deleteTournamentAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}tournament',
+      callType: ApiCallType.DELETE,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {
+        'uuid': uuid,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+  List? planPlayers(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+}
+
+class DeleteTournamentPlanAPICall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'deleteTournamentPlanAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}tournament_plan',
+      callType: ApiCallType.DELETE,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {
+        'uuid': uuid,
       },
       returnBody: true,
       encodeBodyUtf8: false,

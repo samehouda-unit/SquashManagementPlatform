@@ -843,13 +843,13 @@ class _LinkPlayersToTournament4thWidgetState
                                                                         buttonSize:
                                                                             40.0,
                                                                         fillColor:
-                                                                            FlutterFlowTheme.of(context).accent1,
+                                                                            FlutterFlowTheme.of(context).error,
                                                                         icon:
                                                                             Icon(
                                                                           Icons
                                                                               .person_remove_alt_1,
                                                                           color:
-                                                                              FlutterFlowTheme.of(context).primaryText,
+                                                                              FlutterFlowTheme.of(context).secondaryBackground,
                                                                           size:
                                                                               24.0,
                                                                         ),

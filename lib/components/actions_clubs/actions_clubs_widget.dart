@@ -44,7 +44,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
 
     return Container(
       width: double.infinity,
-      height: 335.0,
+      height: 260.0,
       constraints: BoxConstraints(
         minHeight: 80.0,
         maxHeight: 335.0,
@@ -225,7 +225,7 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Edit club information',
+                                'Edit/Delete club information',
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -234,51 +234,6 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                       ),
                     ],
                   ),
-                ),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 60.0,
-              decoration: BoxDecoration(),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      elevation: 0.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.delete_outline,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 20.0,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Delete club',
-                              style: FlutterFlowTheme.of(context).labelMedium,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
             ),

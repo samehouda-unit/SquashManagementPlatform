@@ -777,7 +777,7 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                               borderRadius: 20.0,
                                                                               borderWidth: 1.0,
                                                                               buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
+                                                                              fillColor: FlutterFlowTheme.of(context).secondary,
                                                                               icon: Icon(
                                                                                 Icons.edit,
                                                                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -821,10 +821,10 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                               borderRadius: 20.0,
                                                                               borderWidth: 1.0,
                                                                               buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
+                                                                              fillColor: FlutterFlowTheme.of(context).error,
                                                                               icon: Icon(
                                                                                 Icons.remove_circle_outline_sharp,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 size: 24.0,
                                                                               ),
                                                                               onPressed: () {

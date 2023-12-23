@@ -1,10 +1,12 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/create_tournament_plan/create_tournament_plan_widget.dart';
 import '/components/edit_tournament_plan/edit_tournament_plan_widget.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -278,7 +280,8 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                         .asValidator(context),
                                   ),
                                 ),
-                                if (_model.selectedTournamentPlan == null)
+                                if ((_model.selectedTournamentPlan == null) &&
+                                    (_model.addPlanButtonClicked == false))
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
@@ -523,10 +526,11 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                       ],
                                     ),
                                   ),
-                                if (_model.selectedTournamentPlan == null)
+                                if ((_model.selectedTournamentPlan == null) &&
+                                    (_model.addPlanButtonClicked == false))
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 5.0, 20.0, 15.0),
+                                        20.0, 5.0, 20.0, 5.0),
                                     child: TextFormField(
                                       controller:
                                           _model.txtSponsorsController ??=
@@ -627,101 +631,96 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                               ],
                             ),
                           ),
-                          if (_model.selectedTournamentPlan == null)
+                          if ((_model.selectedTournamentPlan == null) &&
+                              (_model.addPlanButtonClicked == false))
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.05),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 15.0, 0.0, 0.0),
-                                child: FFButtonWidget(
-                                  onPressed: () async {
-                                    if (_model.formKey.currentState == null ||
-                                        !_model.formKey.currentState!
-                                            .validate()) {
-                                      return;
-                                    }
-                                    _model.apiResultp5y =
-                                        await SquashManagementAPIGroupGroup
-                                            .editTournamentAPICall
-                                            .call(
-                                      uuid: widget.tournamentUuid,
-                                      year: _model.txtYearController.text,
-                                      name: _model
-                                          .txtTournamentNameController.text,
-                                      sponsors:
-                                          _model.txtSponsorsController.text,
+                              child: FFButtonWidget(
+                                onPressed: () async {
+                                  if (_model.formKey.currentState == null ||
+                                      !_model.formKey.currentState!
+                                          .validate()) {
+                                    return;
+                                  }
+                                  _model.apiResultp5y =
+                                      await SquashManagementAPIGroupGroup
+                                          .editTournamentAPICall
+                                          .call(
+                                    uuid: widget.tournamentUuid,
+                                    year: _model.txtYearController.text,
+                                    name:
+                                        _model.txtTournamentNameController.text,
+                                    sponsors: _model.txtSponsorsController.text,
+                                  );
+                                  if ((_model.apiResultp5y?.succeeded ??
+                                      true)) {
+                                    await showDialog(
+                                      context: context,
+                                      builder: (alertDialogContext) {
+                                        return AlertDialog(
+                                          content: Text(
+                                              'Tournament has been updated successfully'),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () => Navigator.pop(
+                                                  alertDialogContext),
+                                              child: Text('Ok'),
+                                            ),
+                                          ],
+                                        );
+                                      },
                                     );
-                                    if ((_model.apiResultp5y?.succeeded ??
-                                        true)) {
-                                      await showDialog(
-                                        context: context,
-                                        builder: (alertDialogContext) {
-                                          return AlertDialog(
-                                            content: Text(
-                                                'Tournament has been updated successfully'),
-                                            actions: [
-                                              TextButton(
-                                                onPressed: () => Navigator.pop(
-                                                    alertDialogContext),
-                                                child: Text('Ok'),
-                                              ),
-                                            ],
-                                          );
-                                        },
-                                      );
-                                    } else {
-                                      await showDialog(
-                                        context: context,
-                                        builder: (alertDialogContext) {
-                                          return AlertDialog(
-                                            content: Text(
-                                                'Error while editing Tournament'),
-                                            actions: [
-                                              TextButton(
-                                                onPressed: () => Navigator.pop(
-                                                    alertDialogContext),
-                                                child: Text('Ok'),
-                                              ),
-                                            ],
-                                          );
-                                        },
-                                      );
-                                    }
+                                  } else {
+                                    await showDialog(
+                                      context: context,
+                                      builder: (alertDialogContext) {
+                                        return AlertDialog(
+                                          content: Text(
+                                              'Error while editing Tournament'),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () => Navigator.pop(
+                                                  alertDialogContext),
+                                              child: Text('Ok'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
 
-                                    setState(() {});
-                                  },
-                                  text: 'Update',
-                                  icon: Icon(
-                                    Icons.add_moderator,
-                                    size: 15.0,
+                                  setState(() {});
+                                },
+                                text: 'Update',
+                                icon: Icon(
+                                  Icons.edit_note,
+                                  size: 15.0,
+                                ),
+                                options: FFButtonOptions(
+                                  width: 270.0,
+                                  height: 50.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Colors.white,
+                                      ),
+                                  elevation: 2.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
                                   ),
-                                  options: FFButtonOptions(
-                                    width: 270.0,
-                                    height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  hoverColor:
+                                      FlutterFlowTheme.of(context).secondary,
+                                  hoverBorderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).primary,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .override(
-                                          fontFamily: 'Plus Jakarta Sans',
-                                          color: Colors.white,
-                                        ),
-                                    elevation: 2.0,
-                                    borderSide: BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(12.0),
-                                    hoverColor:
-                                        FlutterFlowTheme.of(context).secondary,
-                                    hoverBorderSide: BorderSide(
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 1.0,
-                                    ),
+                                    width: 1.0,
                                   ),
                                 ),
                               ),
@@ -729,7 +728,8 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                         ],
                       ),
                     ),
-                    if (_model.selectedTournamentPlan == null)
+                    if ((_model.selectedTournamentPlan == null) &&
+                        (_model.addPlanButtonClicked == false))
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
@@ -1045,15 +1045,21 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 FutureBuilder<ApiCallResponse>(
-                                                  future: SquashManagementAPIGroupGroup
-                                                      .populateTournamentPlansCall
-                                                      .call(
-                                                    tournamentId:
-                                                        'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
-                                                              editTournamentPagePopulateTournamentByUuidResponse
-                                                                  .jsonBody,
-                                                            ).toString()?.toString()}',
-                                                  ),
+                                                  future: (_model
+                                                              .apiRequestCompleter ??=
+                                                          Completer<
+                                                              ApiCallResponse>()
+                                                            ..complete(
+                                                                SquashManagementAPIGroupGroup
+                                                                    .populateTournamentPlansCall
+                                                                    .call(
+                                                              tournamentId:
+                                                                  'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
+                                                                        editTournamentPagePopulateTournamentByUuidResponse
+                                                                            .jsonBody,
+                                                                      ).toString()?.toString()}',
+                                                            )))
+                                                      .future,
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
                                                     if (!snapshot.hasData) {
@@ -1074,7 +1080,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                         ),
                                                       );
                                                     }
-                                                    final clubsListViewPopulateTournamentPlansResponse =
+                                                    final tournamentPlanListViewPopulateTournamentPlansResponse =
                                                         snapshot.data!;
                                                     return Builder(
                                                       builder: (context) {
@@ -1082,7 +1088,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                             SquashManagementAPIGroupGroup
                                                                     .populateTournamentPlansCall
                                                                     .tournamentPlans(
-                                                                      clubsListViewPopulateTournamentPlansResponse
+                                                                      tournamentPlanListViewPopulateTournamentPlansResponse
                                                                           .jsonBody,
                                                                     )
                                                                     ?.map((e) =>
@@ -1363,7 +1369,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                               borderRadius: 20.0,
                                                                               borderWidth: 1.0,
                                                                               buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
+                                                                              fillColor: FlutterFlowTheme.of(context).secondary,
                                                                               icon: Icon(
                                                                                 Icons.edit,
                                                                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -1412,14 +1418,56 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                               borderRadius: 20.0,
                                                                               borderWidth: 1.0,
                                                                               buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
+                                                                              fillColor: FlutterFlowTheme.of(context).error,
                                                                               icon: Icon(
                                                                                 Icons.remove_circle_outline_sharp,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 size: 24.0,
                                                                               ),
-                                                                              onPressed: () {
-                                                                                print('IconButton pressed ...');
+                                                                              onPressed: () async {
+                                                                                _model.apiResulth78 = await SquashManagementAPIGroupGroup.deleteTournamentPlanAPICall.call(
+                                                                                  uuid: 'eq.${getJsonField(
+                                                                                    tournamentPlansItem,
+                                                                                    r'''$.uuid''',
+                                                                                  ).toString()}',
+                                                                                );
+                                                                                if ((_model.apiResulth78?.succeeded ?? true)) {
+                                                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                                                    SnackBar(
+                                                                                      content: Text(
+                                                                                        '${getJsonField(
+                                                                                          tournamentPlansItem,
+                                                                                          r'''$.tournament_plan_name''',
+                                                                                        ).toString()} is removed completely',
+                                                                                        style: TextStyle(
+                                                                                          color: FlutterFlowTheme.of(context).primaryText,
+                                                                                        ),
+                                                                                      ),
+                                                                                      duration: Duration(milliseconds: 3000),
+                                                                                      backgroundColor: FlutterFlowTheme.of(context).accent2,
+                                                                                    ),
+                                                                                  );
+                                                                                  setState(() => _model.apiRequestCompleter = null);
+                                                                                  await _model.waitForApiRequestCompleted();
+                                                                                } else {
+                                                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                                                    SnackBar(
+                                                                                      content: Text(
+                                                                                        '${getJsonField(
+                                                                                          tournamentPlansItem,
+                                                                                          r'''$.tournament_plan_name''',
+                                                                                        ).toString()} couldn\'t be removed. Remove related plans firstly',
+                                                                                        style: TextStyle(
+                                                                                          color: FlutterFlowTheme.of(context).accent4,
+                                                                                        ),
+                                                                                      ),
+                                                                                      duration: Duration(milliseconds: 4000),
+                                                                                      backgroundColor: FlutterFlowTheme.of(context).error,
+                                                                                    ),
+                                                                                  );
+                                                                                }
+
+                                                                                setState(() {});
                                                                               },
                                                                             ),
                                                                           ),
@@ -1439,6 +1487,69 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                               ],
                                             ),
                                           ),
+                                          if ((_model.selectedTournamentPlan ==
+                                                  null) ||
+                                              (_model.addPlanButtonClicked ==
+                                                  false))
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.05),
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  // addPlanClicked
+                                                  setState(() {
+                                                    _model.addPlanButtonClicked =
+                                                        true;
+                                                  });
+                                                },
+                                                text: 'Add Plan',
+                                                icon: Icon(
+                                                  Icons.add_box,
+                                                  size: 15.0,
+                                                ),
+                                                options: FFButtonOptions(
+                                                  width: 270.0,
+                                                  height: 50.0,
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 0.0),
+                                                  iconPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .tertiary,
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Plus Jakarta Sans',
+                                                            color: Colors.white,
+                                                          ),
+                                                  elevation: 2.0,
+                                                  borderSide: BorderSide(
+                                                    color: Colors.transparent,
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          12.0),
+                                                  hoverColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .secondary,
+                                                  hoverBorderSide: BorderSide(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary,
+                                                    width: 1.0,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
                                         ],
                                       ),
                                     ),
@@ -1530,6 +1641,34 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                               ''),
                                         )
                                         .toString()!,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    if (_model.addPlanButtonClicked == true)
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: double.infinity,
+                            height: 700.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                            ),
+                            child: wrapWithModel(
+                              model: _model.createTournamentPlanModel,
+                              updateCallback: () => setState(() {}),
+                              child: CreateTournamentPlanWidget(
+                                paramTournamentId: SquashManagementAPIGroupGroup
+                                    .populateTournamentByUuidCall
+                                    .tournamentId(
+                                  editTournamentPagePopulateTournamentByUuidResponse
+                                      .jsonBody,
+                                )!,
                               ),
                             ),
                           ),

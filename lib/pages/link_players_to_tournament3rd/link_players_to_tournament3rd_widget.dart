@@ -957,7 +957,7 @@ class _LinkPlayersToTournament3rdWidgetState
                                                                         buttonSize:
                                                                             40.0,
                                                                         fillColor:
-                                                                            FlutterFlowTheme.of(context).accent1,
+                                                                            FlutterFlowTheme.of(context).secondary,
                                                                         icon:
                                                                             Icon(
                                                                           Icons

@@ -1,10 +1,12 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/create_tournament_plan/create_tournament_plan_widget.dart';
 import '/components/edit_tournament_plan/edit_tournament_plan_widget.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'edit_tournament_page_widget.dart' show EditTournamentPageWidget;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
@@ -25,6 +27,8 @@ class EditTournamentPageModel
   String? selectedTournamentPlanPhoto = 'false';
 
   String? selectedPlanUuid = '';
+
+  bool addPlanButtonClicked = false;
 
   ///  State fields for stateful widgets in this page.
 
@@ -51,14 +55,21 @@ class EditTournamentPageModel
   String? Function(BuildContext, String?)? textController4Validator;
   // Stores action output result for [Backend Call - API (populateTournamentPlanByUuid)] action in IconButton widget.
   ApiCallResponse? tournamentPlanByUuid;
+  // Stores action output result for [Backend Call - API (deleteTournamentPlanAPI)] action in IconButton widget.
+  ApiCallResponse? apiResulth78;
+  Completer<ApiCallResponse>? apiRequestCompleter;
   // Model for EditTournamentPlan component.
   late EditTournamentPlanModel editTournamentPlanModel;
+  // Model for CreateTournamentPlan component.
+  late CreateTournamentPlanModel createTournamentPlanModel;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
     editTournamentPlanModel =
         createModel(context, () => EditTournamentPlanModel());
+    createTournamentPlanModel =
+        createModel(context, () => CreateTournamentPlanModel());
   }
 
   void dispose() {
@@ -76,9 +87,25 @@ class EditTournamentPageModel
     textController4?.dispose();
 
     editTournamentPlanModel.dispose();
+    createTournamentPlanModel.dispose();
   }
 
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
+
+  Future waitForApiRequestCompleted({
+    double minWait = 0,
+    double maxWait = double.infinity,
+  }) async {
+    final stopwatch = Stopwatch()..start();
+    while (true) {
+      await Future.delayed(Duration(milliseconds: 50));
+      final timeElapsed = stopwatch.elapsedMilliseconds;
+      final requestComplete = apiRequestCompleter?.isCompleted ?? false;
+      if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
+        break;
+      }
+    }
+  }
 }

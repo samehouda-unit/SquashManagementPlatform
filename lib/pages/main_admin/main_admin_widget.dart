@@ -1,4 +1,5 @@
 import '/components/actions_clubs/actions_clubs_widget.dart';
+import '/components/actions_events/actions_events_widget.dart';
 import '/components/actions_others/actions_others_widget.dart';
 import '/components/actions_player/actions_player_widget.dart';
 import '/components/actions_tournaments/actions_tournaments_widget.dart';
@@ -669,10 +670,10 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                         if (_model.actionsPlayerHeight == 80) {
                                           // set to 335
                                           setState(() {
-                                            _model.actionsPlayerHeight = 335;
+                                            _model.actionsPlayerHeight = 200;
                                           });
                                         } else if (_model.actionsPlayerHeight ==
-                                            335) {
+                                            200) {
                                           // set to 80
                                           setState(() {
                                             _model.actionsPlayerHeight = 80;
@@ -719,10 +720,10 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                         if (_model.actionsClubHeight == 80) {
                                           // set to 335
                                           setState(() {
-                                            _model.actionsClubHeight = 335;
+                                            _model.actionsClubHeight = 260;
                                           });
                                         } else if (_model.actionsClubHeight ==
-                                            335) {
+                                            260) {
                                           // set to 80
                                           setState(() {
                                             _model.actionsClubHeight = 80;
@@ -767,14 +768,14 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                       onTap: () async {
                                         if (_model.actionsTournamentHeight ==
                                             80) {
-                                          // set Torurnament to 335
+                                          // set Torurnament to 260
                                           setState(() {
                                             _model.actionsTournamentHeight =
-                                                335;
+                                                260;
                                           });
                                         } else if (_model
                                                 .actionsTournamentHeight ==
-                                            335) {
+                                            260) {
                                           // set Torurnament to 80
                                           setState(() {
                                             _model.actionsTournamentHeight = 80;
@@ -795,7 +796,7 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                 .toDouble(),
                                             80.0,
                                           ),
-                                          maxHeight: 335.0,
+                                          maxHeight: 260.0,
                                         ),
                                         decoration: BoxDecoration(
                                           boxShadow: [
@@ -810,6 +811,57 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                           model: _model.actionsTournamentsModel,
                                           updateCallback: () => setState(() {}),
                                           child: ActionsTournamentsWidget(),
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        if (_model.actionsEventsHeight == 80) {
+                                          // set Event to 200
+                                          setState(() {
+                                            _model.actionsEventsHeight = 200;
+                                          });
+                                        } else if (_model.actionsEventsHeight ==
+                                            200) {
+                                          // set Event to 80
+                                          setState(() {
+                                            _model.actionsEventsHeight = 80;
+                                          });
+                                        }
+                                      },
+                                      child: AnimatedContainer(
+                                        duration: Duration(milliseconds: 200),
+                                        curve: Curves.easeInOut,
+                                        height: valueOrDefault<double>(
+                                          _model.actionsEventsHeight
+                                              ?.toDouble(),
+                                          80.0,
+                                        ),
+                                        constraints: BoxConstraints(
+                                          minHeight: valueOrDefault<double>(
+                                            _model.actionsEventsHeight
+                                                ?.toDouble(),
+                                            80.0,
+                                          ),
+                                          maxHeight: 200.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.actionsEventsModel,
+                                          updateCallback: () => setState(() {}),
+                                          child: ActionsEventsWidget(),
                                         ),
                                       ),
                                     ),

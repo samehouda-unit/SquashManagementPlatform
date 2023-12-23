@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'list_tournaments_page_widget.dart' show ListTournamentsPageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,6 +23,9 @@ class ListTournamentsPageModel
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // Stores action output result for [Backend Call - API (deleteTournamentAPI)] action in IconButton widget.
+  ApiCallResponse? apiResultl0l;
+  Completer<ApiCallResponse>? apiRequestCompleter;
 
   /// Initialization and disposal methods.
 
@@ -36,4 +40,19 @@ class ListTournamentsPageModel
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
+
+  Future waitForApiRequestCompleted({
+    double minWait = 0,
+    double maxWait = double.infinity,
+  }) async {
+    final stopwatch = Stopwatch()..start();
+    while (true) {
+      await Future.delayed(Duration(milliseconds: 50));
+      final timeElapsed = stopwatch.elapsedMilliseconds;
+      final requestComplete = apiRequestCompleter?.isCompleted ?? false;
+      if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
+        break;
+      }
+    }
+  }
 }

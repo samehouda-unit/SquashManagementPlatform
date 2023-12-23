@@ -4,19 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'actions_tournaments_model.dart';
-export 'actions_tournaments_model.dart';
+import 'actions_events_model.dart';
+export 'actions_events_model.dart';
 
-class ActionsTournamentsWidget extends StatefulWidget {
-  const ActionsTournamentsWidget({Key? key}) : super(key: key);
+class ActionsEventsWidget extends StatefulWidget {
+  const ActionsEventsWidget({Key? key}) : super(key: key);
 
   @override
-  _ActionsTournamentsWidgetState createState() =>
-      _ActionsTournamentsWidgetState();
+  _ActionsEventsWidgetState createState() => _ActionsEventsWidgetState();
 }
 
-class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
-  late ActionsTournamentsModel _model;
+class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {
+  late ActionsEventsModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +26,7 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ActionsTournamentsModel());
+    _model = createModel(context, () => ActionsEventsModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -45,7 +44,7 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
 
     return Container(
       width: double.infinity,
-      height: 260.0,
+      height: 200.0,
       constraints: BoxConstraints(
         minHeight: 80.0,
         maxHeight: 335.0,
@@ -72,14 +71,14 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Tournaments',
+                    'Tournament Events',
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Tap to select the needed action for Tournament',
+                    'Tap to select the needed action for Tournament Event',
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -127,61 +126,7 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Add new tournament/plan',
-                                style: FlutterFlowTheme.of(context).labelMedium,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 60.0,
-              decoration: BoxDecoration(),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed('LinkPlayersToTournament1st');
-                  },
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Card(
-                        clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                        elevation: 0.0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.insert_link,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 20.0,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Link players to tournament',
+                                'Add new tournament event',
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -235,7 +180,7 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Edit/Delete tournament information',
+                                'Edit/Delete tournament event',
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],

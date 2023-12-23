@@ -44,10 +44,10 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
 
     return Container(
       width: double.infinity,
-      height: 335.0,
+      height: 200.0,
       constraints: BoxConstraints(
         minHeight: 80.0,
-        maxHeight: 335.0,
+        maxHeight: 260.0,
       ),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -153,53 +153,6 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          elevation: 0.0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40.0),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.insert_link,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 20.0,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Link player to tournament',
-                                  style:
-                                      FlutterFlowTheme.of(context).labelMedium,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 60.0,
-                  decoration: BoxDecoration(),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -239,7 +192,7 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Edit player information',
+                                    'Edit/Delete player information',
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                   ),
@@ -249,53 +202,6 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                           ),
                         ],
                       ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 60.0,
-                  decoration: BoxDecoration(),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          elevation: 0.0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40.0),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.delete_outline,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 20.0,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Delete player',
-                                  style:
-                                      FlutterFlowTheme.of(context).labelMedium,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
                     ),
                   ),
                 ),

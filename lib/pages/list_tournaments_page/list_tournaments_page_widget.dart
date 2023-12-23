@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -434,10 +435,15 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 FutureBuilder<ApiCallResponse>(
-                                                  future:
-                                                      SquashManagementAPIGroupGroup
-                                                          .populateTournamentsCall
-                                                          .call(),
+                                                  future: (_model
+                                                              .apiRequestCompleter ??=
+                                                          Completer<
+                                                              ApiCallResponse>()
+                                                            ..complete(
+                                                                SquashManagementAPIGroupGroup
+                                                                    .populateTournamentsCall
+                                                                    .call()))
+                                                      .future,
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
                                                     if (!snapshot.hasData) {
@@ -458,7 +464,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                         ),
                                                       );
                                                     }
-                                                    final clubsListViewPopulateTournamentsResponse =
+                                                    final tournamentListViewPopulateTournamentsResponse =
                                                         snapshot.data!;
                                                     return Builder(
                                                       builder: (context) {
@@ -466,7 +472,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                             SquashManagementAPIGroupGroup
                                                                     .populateTournamentsCall
                                                                     .tournaments(
-                                                                      clubsListViewPopulateTournamentsResponse
+                                                                      tournamentListViewPopulateTournamentsResponse
                                                                           .jsonBody,
                                                                     )
                                                                     ?.toList() ??
@@ -663,7 +669,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                               borderRadius: 20.0,
                                                                               borderWidth: 1.0,
                                                                               buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
+                                                                              fillColor: FlutterFlowTheme.of(context).secondary,
                                                                               icon: Icon(
                                                                                 Icons.edit,
                                                                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -707,14 +713,56 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                               borderRadius: 20.0,
                                                                               borderWidth: 1.0,
                                                                               buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
+                                                                              fillColor: FlutterFlowTheme.of(context).error,
                                                                               icon: Icon(
                                                                                 Icons.remove_circle_outline_sharp,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 size: 24.0,
                                                                               ),
-                                                                              onPressed: () {
-                                                                                print('IconButton pressed ...');
+                                                                              onPressed: () async {
+                                                                                _model.apiResultl0l = await SquashManagementAPIGroupGroup.deleteTournamentAPICall.call(
+                                                                                  uuid: 'eq.${getJsonField(
+                                                                                    tournamentsItem,
+                                                                                    r'''$.uuid''',
+                                                                                  ).toString()}',
+                                                                                );
+                                                                                if ((_model.apiResultl0l?.succeeded ?? true)) {
+                                                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                                                    SnackBar(
+                                                                                      content: Text(
+                                                                                        '${getJsonField(
+                                                                                          tournamentsItem,
+                                                                                          r'''$.name''',
+                                                                                        ).toString()} is removed completely',
+                                                                                        style: TextStyle(
+                                                                                          color: FlutterFlowTheme.of(context).primaryText,
+                                                                                        ),
+                                                                                      ),
+                                                                                      duration: Duration(milliseconds: 3000),
+                                                                                      backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                    ),
+                                                                                  );
+                                                                                  setState(() => _model.apiRequestCompleter = null);
+                                                                                  await _model.waitForApiRequestCompleted();
+                                                                                } else {
+                                                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                                                    SnackBar(
+                                                                                      content: Text(
+                                                                                        '${getJsonField(
+                                                                                          tournamentsItem,
+                                                                                          r'''$.name''',
+                                                                                        ).toString()} couldn\'t be removed. Remove related plans firstly',
+                                                                                        style: TextStyle(
+                                                                                          color: FlutterFlowTheme.of(context).accent4,
+                                                                                        ),
+                                                                                      ),
+                                                                                      duration: Duration(milliseconds: 4000),
+                                                                                      backgroundColor: FlutterFlowTheme.of(context).error,
+                                                                                    ),
+                                                                                  );
+                                                                                }
+
+                                                                                setState(() {});
                                                                               },
                                                                             ),
                                                                           ),
