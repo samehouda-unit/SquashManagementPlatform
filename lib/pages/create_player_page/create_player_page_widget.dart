@@ -829,21 +829,20 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                   );
                                   if ((_model.apiResultp5y?.succeeded ??
                                       true)) {
-                                    await showDialog(
-                                      context: context,
-                                      builder: (alertDialogContext) {
-                                        return AlertDialog(
-                                          content: Text(
-                                              'Player has been added successfully'),
-                                          actions: [
-                                            TextButton(
-                                              onPressed: () => Navigator.pop(
-                                                  alertDialogContext),
-                                              child: Text('Ok'),
-                                            ),
-                                          ],
-                                        );
-                                      },
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Player has been added successfully',
+                                          style: TextStyle(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                          ),
+                                        ),
+                                        duration: Duration(milliseconds: 3000),
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .secondary,
+                                      ),
                                     );
                                     // resetText
                                     setState(() {
@@ -858,21 +857,19 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                       _model.lstRanksValueController?.reset();
                                     });
                                   } else {
-                                    await showDialog(
-                                      context: context,
-                                      builder: (alertDialogContext) {
-                                        return AlertDialog(
-                                          content:
-                                              Text('Error while adding Player'),
-                                          actions: [
-                                            TextButton(
-                                              onPressed: () => Navigator.pop(
-                                                  alertDialogContext),
-                                              child: Text('Ok'),
-                                            ),
-                                          ],
-                                        );
-                                      },
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Error while adding Player',
+                                          style: TextStyle(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                          ),
+                                        ),
+                                        duration: Duration(milliseconds: 3000),
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context).error,
+                                      ),
                                     );
                                   }
 
