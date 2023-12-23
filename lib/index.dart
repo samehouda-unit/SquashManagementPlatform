@@ -17,8 +17,8 @@ export '/pages/create_player_page/create_player_page_widget.dart'
     show CreatePlayerPageWidget;
 export '/pages/create_tournament_page/create_tournament_page_widget.dart'
     show CreateTournamentPageWidget;
-export '/pages/players_plan_page/players_plan_page_widget.dart'
-    show PlayersPlanPageWidget;
+export '/pages/link_players_to_tournament3rd/link_players_to_tournament3rd_widget.dart'
+    show LinkPlayersToTournament3rdWidget;
 export '/pages/create_club_page/create_club_page_widget.dart'
     show CreateClubPageWidget;
 export '/pages/list_clubs_page/list_clubs_page_widget.dart'
@@ -33,3 +33,9 @@ export '/pages/edit_club_page/edit_club_page_widget.dart'
     show EditClubPageWidget;
 export '/pages/edit_player_page/edit_player_page_widget.dart'
     show EditPlayerPageWidget;
+export '/pages/link_players_to_tournament1st/link_players_to_tournament1st_widget.dart'
+    show LinkPlayersToTournament1stWidget;
+export '/pages/link_players_to_tournament2nd/link_players_to_tournament2nd_widget.dart'
+    show LinkPlayersToTournament2ndWidget;
+export '/pages/link_players_to_tournament4th/link_players_to_tournament4th_widget.dart'
+    show LinkPlayersToTournament4thWidget;

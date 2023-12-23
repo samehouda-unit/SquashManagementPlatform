@@ -135,9 +135,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CreateTournamentPageWidget(),
         ),
         FFRoute(
-          name: 'PlayersPlanPage',
-          path: '/playersPlan',
-          builder: (context, params) => PlayersPlanPageWidget(),
+          name: 'LinkPlayersToTournament3rd',
+          path: '/LinkPlayersToTournament3rd',
+          builder: (context, params) => LinkPlayersToTournament3rdWidget(
+            paramTournamentPlanUuid:
+                params.getParam('paramTournamentPlanUuid', ParamType.String),
+            paramTournamentName:
+                params.getParam('paramTournamentName', ParamType.String),
+            paramTournamentPlanName:
+                params.getParam('paramTournamentPlanName', ParamType.String),
+            paramTournamentPlanPhoto:
+                params.getParam('paramTournamentPlanPhoto', ParamType.String),
+            paramTournamentPlanStage:
+                params.getParam('paramTournamentPlanStage', ParamType.int),
+            paramTournamentPlanGender:
+                params.getParam('paramTournamentPlanGender', ParamType.String),
+            paramTournamentPlanId:
+                params.getParam('paramTournamentPlanId', ParamType.int),
+          ),
         ),
         FFRoute(
           name: 'CreateClubPage',
@@ -178,6 +193,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/editPlayer',
           builder: (context, params) => EditPlayerPageWidget(
             playerUuid: params.getParam('playerUuid', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'LinkPlayersToTournament1st',
+          path: '/linkPlayerToTournament1st',
+          builder: (context, params) => LinkPlayersToTournament1stWidget(),
+        ),
+        FFRoute(
+          name: 'LinkPlayersToTournament2nd',
+          path: '/LinkPlayersToTournament2nd',
+          builder: (context, params) => LinkPlayersToTournament2ndWidget(
+            tournamentUuid: params.getParam('tournamentUuid', ParamType.String),
+            tournamentName: params.getParam('tournamentName', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'LinkPlayersToTournament4th',
+          path: '/LinkPlayersToTournament4th',
+          builder: (context, params) => LinkPlayersToTournament4thWidget(
+            paramTournamentPlanName:
+                params.getParam('paramTournamentPlanName', ParamType.String),
+            paramTournamentPlanPhoto:
+                params.getParam('paramTournamentPlanPhoto', ParamType.String),
+            paramTournamentPlanId:
+                params.getParam('paramTournamentPlanId', ParamType.int),
           ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),

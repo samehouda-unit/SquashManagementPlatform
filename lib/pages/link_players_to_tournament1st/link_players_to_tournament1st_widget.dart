@@ -7,26 +7,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'list_tournaments_page_model.dart';
-export 'list_tournaments_page_model.dart';
+import 'link_players_to_tournament1st_model.dart';
+export 'link_players_to_tournament1st_model.dart';
 
-class ListTournamentsPageWidget extends StatefulWidget {
-  const ListTournamentsPageWidget({Key? key}) : super(key: key);
+class LinkPlayersToTournament1stWidget extends StatefulWidget {
+  const LinkPlayersToTournament1stWidget({Key? key}) : super(key: key);
 
   @override
-  _ListTournamentsPageWidgetState createState() =>
-      _ListTournamentsPageWidgetState();
+  _LinkPlayersToTournament1stWidgetState createState() =>
+      _LinkPlayersToTournament1stWidgetState();
 }
 
-class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
-  late ListTournamentsPageModel _model;
+class _LinkPlayersToTournament1stWidgetState
+    extends State<LinkPlayersToTournament1stWidget> {
+  late LinkPlayersToTournament1stModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ListTournamentsPageModel());
+    _model = createModel(context, () => LinkPlayersToTournament1stModel());
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
@@ -100,7 +101,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      'List tournaments',
+                      '1. Select Tournament',
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -322,7 +323,7 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Name',
+                                                          'Tournament Information',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -367,62 +368,6 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                         ),
                                                       ),
                                                     ),
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      children: [
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.0, 0.0),
-                                                          child: Text(
-                                                            'Edit',
-                                                            textAlign:
-                                                                TextAlign.start,
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .labelSmall,
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Text(
-                                                              'Delete',
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .start,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .labelSmall,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
                                                 ],
                                               ),
                                             ),
@@ -495,233 +440,160 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                             final tournamentsItem =
                                                                 tournaments[
                                                                     tournamentsIndex];
-                                                            return Container(
-                                                              width: double
-                                                                  .infinity,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryBackground,
-                                                                boxShadow: [
-                                                                  BoxShadow(
-                                                                    blurRadius:
-                                                                        0.0,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .alternate,
-                                                                    offset:
-                                                                        Offset(
-                                                                            0.0,
-                                                                            1.0),
-                                                                  )
-                                                                ],
-                                                              ),
-                                                              child: Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        16.0,
-                                                                        12.0,
-                                                                        16.0,
-                                                                        12.0),
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Container(
-                                                                      width:
-                                                                          44.0,
-                                                                      height:
-                                                                          44.0,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .accent1,
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(10.0),
-                                                                        border:
-                                                                            Border.all(
+                                                            return InkWell(
+                                                              splashColor: Colors
+                                                                  .transparent,
+                                                              focusColor: Colors
+                                                                  .transparent,
+                                                              hoverColor: Colors
+                                                                  .transparent,
+                                                              highlightColor:
+                                                                  Colors
+                                                                      .transparent,
+                                                              onTap: () async {
+                                                                context
+                                                                    .pushNamed(
+                                                                  'LinkPlayersToTournament2nd',
+                                                                  queryParameters:
+                                                                      {
+                                                                    'tournamentUuid':
+                                                                        serializeParam(
+                                                                      getJsonField(
+                                                                        tournamentsItem,
+                                                                        r'''$.uuid''',
+                                                                      ).toString(),
+                                                                      ParamType
+                                                                          .String,
+                                                                    ),
+                                                                    'tournamentName':
+                                                                        serializeParam(
+                                                                      getJsonField(
+                                                                        tournamentsItem,
+                                                                        r'''$.name''',
+                                                                      ).toString(),
+                                                                      ParamType
+                                                                          .String,
+                                                                    ),
+                                                                  }.withoutNulls,
+                                                                );
+                                                              },
+                                                              child: Container(
+                                                                width: double
+                                                                    .infinity,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryBackground,
+                                                                  boxShadow: [
+                                                                    BoxShadow(
+                                                                      blurRadius:
+                                                                          0.0,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate,
+                                                                      offset: Offset(
+                                                                          0.0,
+                                                                          1.0),
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          12.0,
+                                                                          16.0,
+                                                                          12.0),
+                                                                  child: Row(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Container(
+                                                                        width:
+                                                                            44.0,
+                                                                        height:
+                                                                            44.0,
+                                                                        decoration:
+                                                                            BoxDecoration(
                                                                           color:
-                                                                              FlutterFlowTheme.of(context).primary,
-                                                                          width:
-                                                                              2.0,
+                                                                              FlutterFlowTheme.of(context).accent1,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(10.0),
+                                                                          border:
+                                                                              Border.all(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primary,
+                                                                            width:
+                                                                                2.0,
+                                                                          ),
                                                                         ),
-                                                                      ),
-                                                                      child:
-                                                                          Icon(
-                                                                        Icons
-                                                                            .tour,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .secondaryText,
-                                                                        size:
-                                                                            28.0,
-                                                                      ),
-                                                                    ),
-                                                                    Expanded(
-                                                                      flex: 4,
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            12.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
                                                                         child:
-                                                                            Column(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.center,
-                                                                          crossAxisAlignment:
-                                                                              CrossAxisAlignment.start,
-                                                                          children:
-                                                                              [
-                                                                            Text(
-                                                                              getJsonField(
-                                                                                tournamentsItem,
-                                                                                r'''$.name''',
-                                                                              ).toString(),
-                                                                              style: FlutterFlowTheme.of(context).bodyLarge,
-                                                                            ),
-                                                                            Text(
-                                                                              getJsonField(
-                                                                                tournamentsItem,
-                                                                                r'''$.year''',
-                                                                              ).toString(),
-                                                                              style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
-                                                                                    color: FlutterFlowTheme.of(context).success,
-                                                                                  ),
-                                                                            ),
-                                                                          ].divide(SizedBox(height: 4.0)),
+                                                                            Icon(
+                                                                          Icons
+                                                                              .tour,
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).secondaryText,
+                                                                          size:
+                                                                              28.0,
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                    if (responsiveVisibility(
-                                                                      context:
-                                                                          context,
-                                                                      phone:
-                                                                          false,
-                                                                    ))
                                                                       Expanded(
-                                                                        flex: 2,
+                                                                        flex: 4,
                                                                         child:
                                                                             Padding(
                                                                           padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
                                                                               12.0,
+                                                                              0.0,
+                                                                              0.0,
                                                                               0.0),
                                                                           child:
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.center,
+                                                                            crossAxisAlignment:
+                                                                                CrossAxisAlignment.start,
+                                                                            children:
+                                                                                [
                                                                               Text(
-                                                                            '5 mins ago',
-                                                                            style:
-                                                                                FlutterFlowTheme.of(context).bodyMedium,
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    if (responsiveVisibility(
-                                                                      context:
-                                                                          context,
-                                                                      phone:
-                                                                          false,
-                                                                      tablet:
-                                                                          false,
-                                                                    ))
-                                                                      Expanded(
-                                                                        flex: 3,
-                                                                        child:
-                                                                            Align(
-                                                                          alignment: AlignmentDirectional(
-                                                                              -1.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            'Head of Design',
-                                                                            style:
-                                                                                FlutterFlowTheme.of(context).bodyMedium,
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    Expanded(
-                                                                      flex: 2,
-                                                                      child:
-                                                                          Row(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        children: [
-                                                                          Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                25.0,
-                                                                                0.0,
-                                                                                10.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                FlutterFlowIconButton(
-                                                                              borderColor: FlutterFlowTheme.of(context).primary,
-                                                                              borderRadius: 20.0,
-                                                                              borderWidth: 1.0,
-                                                                              buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
-                                                                              icon: Icon(
-                                                                                Icons.edit,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
-                                                                                size: 24.0,
+                                                                                getJsonField(
+                                                                                  tournamentsItem,
+                                                                                  r'''$.name''',
+                                                                                ).toString(),
+                                                                                style: FlutterFlowTheme.of(context).bodyLarge,
                                                                               ),
-                                                                              onPressed: () async {
-                                                                                context.pushNamed(
-                                                                                  'EditTournamentPage',
-                                                                                  queryParameters: {
-                                                                                    'tournamentUuid': serializeParam(
-                                                                                      getJsonField(
-                                                                                        tournamentsItem,
-                                                                                        r'''$.uuid''',
-                                                                                      ).toString(),
-                                                                                      ParamType.String,
+                                                                              Text(
+                                                                                getJsonField(
+                                                                                  tournamentsItem,
+                                                                                  r'''$.year''',
+                                                                                ).toString(),
+                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                      fontFamily: 'Plus Jakarta Sans',
+                                                                                      color: FlutterFlowTheme.of(context).success,
                                                                                     ),
-                                                                                  }.withoutNulls,
-                                                                                );
-                                                                              },
-                                                                            ),
+                                                                              ),
+                                                                            ].divide(SizedBox(height: 4.0)),
                                                                           ),
-                                                                        ],
+                                                                        ),
                                                                       ),
-                                                                    ),
-                                                                    Expanded(
-                                                                      flex: 2,
-                                                                      child:
-                                                                          Row(
+                                                                      Column(
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                25.0,
-                                                                                0.0,
-                                                                                10.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                FlutterFlowIconButton(
-                                                                              borderColor: FlutterFlowTheme.of(context).primary,
-                                                                              borderRadius: 20.0,
-                                                                              borderWidth: 1.0,
-                                                                              buttonSize: 40.0,
-                                                                              fillColor: FlutterFlowTheme.of(context).accent1,
-                                                                              icon: Icon(
-                                                                                Icons.remove_circle_outline_sharp,
-                                                                                color: FlutterFlowTheme.of(context).primaryText,
-                                                                                size: 24.0,
-                                                                              ),
-                                                                              onPressed: () {
-                                                                                print('IconButton pressed ...');
-                                                                              },
-                                                                            ),
+                                                                          Icon(
+                                                                            Icons.arrow_circle_right,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).secondaryText,
+                                                                            size:
+                                                                                24.0,
                                                                           ),
                                                                         ],
                                                                       ),
-                                                                    ),
-                                                                  ],
+                                                                    ],
+                                                                  ),
                                                                 ),
                                                               ),
                                                             );
