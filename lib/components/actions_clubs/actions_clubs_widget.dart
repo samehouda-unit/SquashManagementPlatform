@@ -44,10 +44,10 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
 
     return Container(
       width: double.infinity,
-      height: 260.0,
+      height: 200.0,
       constraints: BoxConstraints(
         minHeight: 80.0,
-        maxHeight: 335.0,
+        maxHeight: 200.0,
       ),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -135,51 +135,6 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                       ),
                     ],
                   ),
-                ),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 60.0,
-              decoration: BoxDecoration(),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      elevation: 0.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.insert_link,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 20.0,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Link players to club',
-                              style: FlutterFlowTheme.of(context).labelMedium,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
             ),

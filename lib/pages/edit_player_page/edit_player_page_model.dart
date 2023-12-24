@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
-import 'dart:async';
 import 'edit_player_page_widget.dart' show EditPlayerPageWidget;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
@@ -44,7 +43,7 @@ class EditPlayerPageModel extends FlutterFlowModel<EditPlayerPageWidget> {
   // State field(s) for txtDateOfBirth widget.
   FocusNode? txtDateOfBirthFocusNode;
   TextEditingController? txtDateOfBirthController;
-  final txtDateOfBirthMask = MaskTextInputFormatter(mask: '##/##/####');
+  final txtDateOfBirthMask = MaskTextInputFormatter(mask: '####-##-##');
   String? Function(BuildContext, String?)? txtDateOfBirthControllerValidator;
   String? _txtDateOfBirthControllerValidator(
       BuildContext context, String? val) {
@@ -56,6 +55,9 @@ class EditPlayerPageModel extends FlutterFlowModel<EditPlayerPageWidget> {
   }
 
   DateTime? datePicked;
+  // State field(s) for lstClubs widget.
+  int? lstClubsValue;
+  FormFieldController<int>? lstClubsValueController;
   // State field(s) for lsGender widget.
   String? lsGenderValue;
   FormFieldController<String>? lsGenderValueController;

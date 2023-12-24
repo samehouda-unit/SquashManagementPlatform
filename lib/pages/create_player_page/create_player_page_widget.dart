@@ -357,14 +357,13 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                       Duration(milliseconds: 2000),
                                       () => setState(() {}),
                                     ),
-                                    textCapitalization:
-                                        TextCapitalization.words,
+                                    textCapitalization: TextCapitalization.none,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelText: 'Date of birth',
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
-                                      hintText: 'DD/MM/YYYY',
+                                      hintText: 'yyyy-MM-dd',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       enabledBorder: OutlineInputBorder(
@@ -527,6 +526,82 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 5.0),
+                            child: FutureBuilder<ApiCallResponse>(
+                              future: SquashManagementAPIGroupGroup
+                                  .populateClubAsLocationsCall
+                                  .call(),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                }
+                                final lstClubsPopulateClubAsLocationsResponse =
+                                    snapshot.data!;
+                                return FlutterFlowDropDown<int>(
+                                  controller: _model.lstClubsValueController ??=
+                                      FormFieldController<int>(
+                                    _model.lstClubsValue ??= -1,
+                                  ),
+                                  options: List<int>.from(
+                                      SquashManagementAPIGroupGroup
+                                          .populateClubAsLocationsCall
+                                          .id(
+                                    lstClubsPopulateClubAsLocationsResponse
+                                        .jsonBody,
+                                  )!),
+                                  optionLabels: (SquashManagementAPIGroupGroup
+                                          .populateClubAsLocationsCall
+                                          .name(
+                                    lstClubsPopulateClubAsLocationsResponse
+                                        .jsonBody,
+                                  ) as List)
+                                      .map<String>((s) => s.toString())
+                                      .toList()!,
+                                  onChanged: (val) => setState(
+                                      () => _model.lstClubsValue = val),
+                                  width: double.infinity,
+                                  height: 56.0,
+                                  searchHintTextStyle: TextStyle(),
+                                  textStyle:
+                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  hintText: 'Club/Academy',
+                                  searchHintText: '',
+                                  icon: Icon(
+                                    Icons.sports_tennis_sharp,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 15.0,
+                                  ),
+                                  fillColor: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  elevation: 2.0,
+                                  borderColor:
+                                      FlutterFlowTheme.of(context).alternate,
+                                  borderWidth: 2.0,
+                                  borderRadius: 8.0,
+                                  margin: EdgeInsetsDirectional.fromSTEB(
+                                      20.0, 4.0, 12.0, 4.0),
+                                  hidesUnderline: true,
+                                  isSearchable: true,
+                                  isMultiSelect: false,
+                                );
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 0.0, 20.0, 5.0),
                             child: FlutterFlowDropDown<String>(
                               controller: _model.lsGenderValueController ??=
                                   FormFieldController<String>(null),
@@ -587,9 +662,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                 return FlutterFlowDropDown<int>(
                                   controller:
                                       _model.lstStagesValueController ??=
-                                          FormFieldController<int>(
-                                    _model.lstStagesValue ??= -1,
-                                  ),
+                                          FormFieldController<int>(null),
                                   options: List<int>.from(
                                       SquashManagementAPIGroupGroup
                                           .populatePlayerStagesCall
@@ -663,9 +736,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                     snapshot.data!;
                                 return FlutterFlowDropDown<int>(
                                   controller: _model.lstRanksValueController ??=
-                                      FormFieldController<int>(
-                                    _model.lstRanksValue ??= -1,
-                                  ),
+                                      FormFieldController<int>(null),
                                   options: List<int>.from(
                                       SquashManagementAPIGroupGroup
                                           .populatePlayerRanksCall
@@ -809,9 +880,6 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                   if (_model.lstStagesValue == null) {
                                     return;
                                   }
-                                  if (_model.lstRanksValue == null) {
-                                    return;
-                                  }
                                   _model.apiResultp5y =
                                       await SquashManagementAPIGroupGroup
                                           .createPlayerAPICall
@@ -826,6 +894,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                     playerBio:
                                         _model.txtPlayerBioController.text,
                                     photoUrl: _model.uploadedFileUrl,
+                                    clubId: _model.lstClubsValue,
                                   );
                                   if ((_model.apiResultp5y?.succeeded ??
                                       true)) {
@@ -838,7 +907,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                                 .primaryText,
                                           ),
                                         ),
-                                        duration: Duration(milliseconds: 3000),
+                                        duration: Duration(milliseconds: 4000),
                                         backgroundColor:
                                             FlutterFlowTheme.of(context)
                                                 .secondary,
@@ -856,6 +925,7 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                       _model.lstStagesValueController?.reset();
                                       _model.lstRanksValueController?.reset();
                                     });
+                                    context.safePop();
                                   } else {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(

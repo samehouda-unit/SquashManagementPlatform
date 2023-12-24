@@ -720,10 +720,10 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                         if (_model.actionsClubHeight == 80) {
                                           // set to 335
                                           setState(() {
-                                            _model.actionsClubHeight = 260;
+                                            _model.actionsClubHeight = 200;
                                           });
                                         } else if (_model.actionsClubHeight ==
-                                            260) {
+                                            200) {
                                           // set to 80
                                           setState(() {
                                             _model.actionsClubHeight = 80;
@@ -742,7 +742,7 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                             _model.actionsClubHeight.toDouble(),
                                             80.0,
                                           ),
-                                          maxHeight: 335.0,
+                                          maxHeight: 200.0,
                                         ),
                                         decoration: BoxDecoration(
                                           boxShadow: [

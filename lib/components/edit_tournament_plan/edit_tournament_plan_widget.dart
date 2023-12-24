@@ -582,7 +582,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .labelMedium,
-                                                    hintText: 'DD/MM/YYYY',
+                                                    hintText: 'yyyy-MM-dd',
                                                     hintStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -827,7 +827,7 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .labelMedium,
-                                                  hintText: 'DD/MM/YYYY',
+                                                  hintText: 'yyyy-MM-dd',
                                                   hintStyle:
                                                       FlutterFlowTheme.of(
                                                               context)

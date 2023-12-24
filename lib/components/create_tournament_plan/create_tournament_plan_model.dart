@@ -50,7 +50,7 @@ class CreateTournamentPlanModel
   // State field(s) for txtFromDate widget.
   FocusNode? txtFromDateFocusNode;
   TextEditingController? txtFromDateController;
-  final txtFromDateMask = MaskTextInputFormatter(mask: '##/##/####');
+  final txtFromDateMask = MaskTextInputFormatter(mask: '####-##-##');
   String? Function(BuildContext, String?)? txtFromDateControllerValidator;
   String? _txtFromDateControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
@@ -64,7 +64,7 @@ class CreateTournamentPlanModel
   // State field(s) for txtToDate widget.
   FocusNode? txtToDateFocusNode;
   TextEditingController? txtToDateController;
-  final txtToDateMask = MaskTextInputFormatter(mask: '##/##/####');
+  final txtToDateMask = MaskTextInputFormatter(mask: '####-##-##');
   String? Function(BuildContext, String?)? txtToDateControllerValidator;
   String? _txtToDateControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {

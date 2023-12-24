@@ -43,7 +43,7 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   // State field(s) for txtDateOfBirth widget.
   FocusNode? txtDateOfBirthFocusNode;
   TextEditingController? txtDateOfBirthController;
-  final txtDateOfBirthMask = MaskTextInputFormatter(mask: '##/##/####');
+  final txtDateOfBirthMask = MaskTextInputFormatter(mask: '####-##-##');
   String? Function(BuildContext, String?)? txtDateOfBirthControllerValidator;
   String? _txtDateOfBirthControllerValidator(
       BuildContext context, String? val) {
@@ -55,6 +55,9 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   }
 
   DateTime? datePicked;
+  // State field(s) for lstClubs widget.
+  int? lstClubsValue;
+  FormFieldController<int>? lstClubsValueController;
   // State field(s) for lsGender widget.
   String? lsGenderValue;
   FormFieldController<String>? lsGenderValueController;

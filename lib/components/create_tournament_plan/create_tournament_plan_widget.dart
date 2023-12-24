@@ -524,7 +524,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                     () => setState(() {}),
                                                   ),
                                                   textCapitalization:
-                                                      TextCapitalization.words,
+                                                      TextCapitalization.none,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     labelText: 'From',
@@ -532,7 +532,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .labelMedium,
-                                                    hintText: 'DD/MM/YYYY',
+                                                    hintText: 'yyyy-MM-dd',
                                                     hintStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -777,7 +777,7 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .labelMedium,
-                                                  hintText: 'DD/MM/YYYY',
+                                                  hintText: 'yyyy-MM-dd',
                                                   hintStyle:
                                                       FlutterFlowTheme.of(
                                                               context)

@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -450,10 +451,15 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 FutureBuilder<ApiCallResponse>(
-                                                  future:
-                                                      SquashManagementAPIGroupGroup
-                                                          .populateClubsCall
-                                                          .call(),
+                                                  future: (_model
+                                                              .apiRequestCompleter ??=
+                                                          Completer<
+                                                              ApiCallResponse>()
+                                                            ..complete(
+                                                                SquashManagementAPIGroupGroup
+                                                                    .populateClubsCall
+                                                                    .call()))
+                                                      .future,
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
                                                     if (!snapshot.hasData) {
@@ -829,8 +835,50 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                                 color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 size: 24.0,
                                                                               ),
-                                                                              onPressed: () {
-                                                                                print('IconButton pressed ...');
+                                                                              onPressed: () async {
+                                                                                _model.deleClubResponse = await SquashManagementAPIGroupGroup.deleteClubAPICall.call(
+                                                                                  uuid: 'eq.${getJsonField(
+                                                                                    clubsItem,
+                                                                                    r'''$.uuid''',
+                                                                                  ).toString()}',
+                                                                                );
+                                                                                if ((_model.deleClubResponse?.succeeded ?? true)) {
+                                                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                                                    SnackBar(
+                                                                                      content: Text(
+                                                                                        '${getJsonField(
+                                                                                          clubsItem,
+                                                                                          r'''$.name''',
+                                                                                        ).toString()} is removed successfully',
+                                                                                        style: TextStyle(
+                                                                                          color: FlutterFlowTheme.of(context).primaryText,
+                                                                                        ),
+                                                                                      ),
+                                                                                      duration: Duration(milliseconds: 4000),
+                                                                                      backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                    ),
+                                                                                  );
+                                                                                  setState(() => _model.apiRequestCompleter = null);
+                                                                                  await _model.waitForApiRequestCompleted();
+                                                                                } else {
+                                                                                  ScaffoldMessenger.of(context).showSnackBar(
+                                                                                    SnackBar(
+                                                                                      content: Text(
+                                                                                        '${getJsonField(
+                                                                                          clubsItem,
+                                                                                          r'''$.name''',
+                                                                                        ).toString()}couldn\'t be removed due to an error',
+                                                                                        style: TextStyle(
+                                                                                          color: FlutterFlowTheme.of(context).primaryText,
+                                                                                        ),
+                                                                                      ),
+                                                                                      duration: Duration(milliseconds: 4000),
+                                                                                      backgroundColor: FlutterFlowTheme.of(context).error,
+                                                                                    ),
+                                                                                  );
+                                                                                }
+
+                                                                                setState(() {});
                                                                               },
                                                                             ),
                                                                           ),

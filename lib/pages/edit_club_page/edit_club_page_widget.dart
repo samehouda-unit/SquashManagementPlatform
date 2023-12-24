@@ -720,26 +720,37 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                             .text,
                                         contactEmail: _model
                                             .txtClubContactEmailController.text,
-                                        photoUrl: _model.uploadedFileUrl,
+                                        photoUrl:
+                                            _model.uploadedFileUrl != null &&
+                                                    _model.uploadedFileUrl != ''
+                                                ? _model.uploadedFileUrl
+                                                : SquashManagementAPIGroupGroup
+                                                    .populateClubByUuidCall
+                                                    .photo(
+                                                      editClubPagePopulateClubByUuidResponse
+                                                          .jsonBody,
+                                                    )
+                                                    .toString(),
                                       );
                                       if ((_model.apiResultp5y?.succeeded ??
                                           true)) {
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              content: Text(
-                                                  'Club has been updated successfully'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
-                                                      Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('Ok'),
-                                                ),
-                                              ],
-                                            );
-                                          },
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Club has been updated successfully',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 3000),
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondary,
+                                          ),
                                         );
                                         // resetText
                                         setState(() {
@@ -783,22 +794,23 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
 
                                         context.pushNamed('ListClubsPage');
                                       } else {
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              content: Text(
-                                                  'Error while updating Club'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
-                                                      Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('Ok'),
-                                                ),
-                                              ],
-                                            );
-                                          },
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Error while updating Club',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 3000),
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .error,
+                                          ),
                                         );
                                       }
 

@@ -39,6 +39,8 @@ class SquashManagementAPIGroupGroup {
       DeletePlanPlayerAPICall();
   static DeleteTournamentAPICall deleteTournamentAPICall =
       DeleteTournamentAPICall();
+  static DeletePlayerAPICall deletePlayerAPICall = DeletePlayerAPICall();
+  static DeleteClubAPICall deleteClubAPICall = DeleteClubAPICall();
   static DeleteTournamentPlanAPICall deleteTournamentPlanAPICall =
       DeleteTournamentPlanAPICall();
   static PopulatePlayerStagesCall populatePlayerStagesCall =
@@ -366,6 +368,7 @@ class CreatePlayerAPICall {
     String? gender = '',
     String? playerBio = '',
     String? photoUrl = '',
+    int? clubId,
   }) async {
     final ffApiRequestBody = '''
 {
@@ -375,7 +378,8 @@ class CreatePlayerAPICall {
   "stage": ${stage},
   "gender": "${gender}",
   "player_bio": "${playerBio}",
-  "photo_url": "${photoUrl}"
+  "photo_url": "${photoUrl}",
+  "club_id": ${clubId}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'createPlayerAPI',
@@ -420,6 +424,7 @@ class EditPlayerAPICall {
     String? playerBio = '',
     String? photoUrl = '',
     String? uuid = '',
+    int? clubId,
   }) async {
     final ffApiRequestBody = '''
 {
@@ -429,7 +434,8 @@ class EditPlayerAPICall {
   "stage": ${stage},
   "gender": "${gender}",
   "player_bio": "${playerBio}",
-  "photo_url": "${photoUrl}"
+  "photo_url": "${photoUrl}",
+  "club_id": ${clubId}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'editPlayerAPI',
@@ -646,6 +652,90 @@ class DeleteTournamentAPICall {
         r'''$[0].name''',
       ));
   List? planPlayers(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+}
+
+class DeletePlayerAPICall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'deletePlayerAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}player',
+      callType: ApiCallType.DELETE,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {
+        'uuid': uuid,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+  List? planPlayers(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+}
+
+class DeleteClubAPICall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'deleteClubAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}club',
+      callType: ApiCallType.DELETE,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {
+        'uuid': uuid,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+  List? clubs(dynamic response) => getJsonField(
         response,
         r'''$''',
         true,
@@ -1133,6 +1223,10 @@ class PopulatePlayerByUuidCall {
   String? photo(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].photo_url''',
+      ));
+  int? club(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].club_id''',
       ));
 }
 

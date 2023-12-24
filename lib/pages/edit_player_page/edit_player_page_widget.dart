@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
-import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -451,14 +450,14 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           () => setState(() {}),
                                         ),
                                         textCapitalization:
-                                            TextCapitalization.words,
+                                            TextCapitalization.none,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: 'Date of birth',
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
-                                          hintText: 'DD/MM/YYYY',
+                                          hintText: 'yyyy-MM-dd',
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
@@ -627,6 +626,91 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                     ),
                                   ),
                                 ],
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    20.0, 0.0, 20.0, 5.0),
+                                child: FutureBuilder<ApiCallResponse>(
+                                  future: SquashManagementAPIGroupGroup
+                                      .populateClubAsLocationsCall
+                                      .call(),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    final lstClubsPopulateClubAsLocationsResponse =
+                                        snapshot.data!;
+                                    return FlutterFlowDropDown<int>(
+                                      controller:
+                                          _model.lstClubsValueController ??=
+                                              FormFieldController<int>(
+                                        _model.lstClubsValue ??=
+                                            SquashManagementAPIGroupGroup
+                                                .populatePlayerByUuidCall
+                                                .club(
+                                          editPlayerPagePopulatePlayerByUuidResponse
+                                              .jsonBody,
+                                        ),
+                                      ),
+                                      options: List<int>.from(
+                                          SquashManagementAPIGroupGroup
+                                              .populateClubAsLocationsCall
+                                              .id(
+                                        lstClubsPopulateClubAsLocationsResponse
+                                            .jsonBody,
+                                      )!),
+                                      optionLabels:
+                                          (SquashManagementAPIGroupGroup
+                                                  .populateClubAsLocationsCall
+                                                  .name(
+                                        lstClubsPopulateClubAsLocationsResponse
+                                            .jsonBody,
+                                      ) as List)
+                                              .map<String>((s) => s.toString())
+                                              .toList()!,
+                                      onChanged: (val) => setState(
+                                          () => _model.lstClubsValue = val),
+                                      width: double.infinity,
+                                      height: 56.0,
+                                      searchHintTextStyle: TextStyle(),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                      hintText: 'Club/Academy',
+                                      searchHintText: '',
+                                      icon: Icon(
+                                        Icons.sports_tennis_sharp,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        size: 15.0,
+                                      ),
+                                      fillColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      elevation: 2.0,
+                                      borderColor: FlutterFlowTheme.of(context)
+                                          .alternate,
+                                      borderWidth: 2.0,
+                                      borderRadius: 8.0,
+                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                          20.0, 4.0, 12.0, 4.0),
+                                      hidesUnderline: true,
+                                      isSearchable: true,
+                                      isMultiSelect: false,
+                                    );
+                                  },
+                                ),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -973,30 +1057,38 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                         playerBio:
                                             _model.txtPlayerBioController.text,
                                         uuid: widget.playerUuid,
-                                        photoUrl: _model.uploadedFileUrl,
+                                        photoUrl:
+                                            _model.uploadedFileUrl != null &&
+                                                    _model.uploadedFileUrl != ''
+                                                ? _model.uploadedFileUrl
+                                                : SquashManagementAPIGroupGroup
+                                                    .populatePlayerByUuidCall
+                                                    .photo(
+                                                      editPlayerPagePopulatePlayerByUuidResponse
+                                                          .jsonBody,
+                                                    )
+                                                    .toString(),
+                                        clubId: _model.lstClubsValue,
                                       );
                                       if ((_model.apiResultp5y?.succeeded ??
                                           true)) {
-                                        unawaited(
-                                          () async {
-                                            await showDialog(
-                                              context: context,
-                                              builder: (alertDialogContext) {
-                                                return AlertDialog(
-                                                  content: Text(
-                                                      'Club has been updated successfully'),
-                                                  actions: [
-                                                    TextButton(
-                                                      onPressed: () =>
-                                                          Navigator.pop(
-                                                              alertDialogContext),
-                                                      child: Text('Ok'),
-                                                    ),
-                                                  ],
-                                                );
-                                              },
-                                            );
-                                          }(),
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Player has been updated successfully',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 4000),
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondary,
+                                          ),
                                         );
                                         // resetText
                                         setState(() {
@@ -1035,24 +1127,25 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           _model.lstRanksValueController
                                               ?.reset();
                                         });
-                                        Navigator.pop(context);
+                                        context.safePop();
                                       } else {
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              content: Text(
-                                                  'Error while updating Player'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
-                                                      Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('Ok'),
-                                                ),
-                                              ],
-                                            );
-                                          },
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Error while updating Player',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 4000),
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondary,
+                                          ),
                                         );
                                       }
 
