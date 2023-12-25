@@ -859,12 +859,12 @@ class _LinkPlayersToTournament4thWidgetState
                                                                               .deletePlanPlayerAPICall
                                                                               .call(
                                                                             tournamentPlanId:
-                                                                                'eq.${widget.paramTournamentPlanId?.toString()}',
+                                                                                widget.paramTournamentPlanId?.toString(),
                                                                             playerId:
-                                                                                'eq.${getJsonField(
+                                                                                getJsonField(
                                                                               planPlayersItem,
                                                                               r'''$.id''',
-                                                                            ).toString()}',
+                                                                            ).toString(),
                                                                           );
                                                                           if ((_model.addTournamentPlayerResponse?.succeeded ??
                                                                               true)) {

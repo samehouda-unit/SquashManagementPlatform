@@ -39,3 +39,17 @@ export '/pages/link_players_to_tournament2nd/link_players_to_tournament2nd_widge
     show LinkPlayersToTournament2ndWidget;
 export '/pages/link_players_to_tournament4th/link_players_to_tournament4th_widget.dart'
     show LinkPlayersToTournament4thWidget;
+export '/pages/create_tournament_event1st/create_tournament_event1st_widget.dart'
+    show CreateTournamentEvent1stWidget;
+export '/pages/create_tournament_event2nd/create_tournament_event2nd_widget.dart'
+    show CreateTournamentEvent2ndWidget;
+export '/pages/create_tournament_event3rd/create_tournament_event3rd_widget.dart'
+    show CreateTournamentEvent3rdWidget;
+export '/pages/edit_tournament_event1st/edit_tournament_event1st_widget.dart'
+    show EditTournamentEvent1stWidget;
+export '/pages/edit_tournament_event2nd/edit_tournament_event2nd_widget.dart'
+    show EditTournamentEvent2ndWidget;
+export '/pages/edit_tournament_event3rd/edit_tournament_event3rd_widget.dart'
+    show EditTournamentEvent3rdWidget;
+export '/pages/edit_tournament_event4th/edit_tournament_event4th_widget.dart'
+    show EditTournamentEvent4thWidget;

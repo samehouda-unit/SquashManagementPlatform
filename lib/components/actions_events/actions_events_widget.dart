@@ -96,7 +96,7 @@ class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('CreateTournamentPage');
+                    context.pushNamed('CreateTournamentEvent1st');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
@@ -150,7 +150,7 @@ class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('ListTournamentsPage');
+                    context.pushNamed('EditTournamentEvent1st');
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
