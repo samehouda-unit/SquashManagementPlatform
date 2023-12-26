@@ -78,7 +78,10 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: _locale,
-      supportedLocales: const [Locale('en', '')],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ar'),
+      ],
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: ScrollbarThemeData(
@@ -179,7 +182,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.notifications_rounded,
               size: 24.0,
             ),
-            label: '--',
+            label: FFLocalizations.of(context).getText(
+              'jdnz8183' /* -- */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -187,7 +192,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.space_dashboard,
               size: 24.0,
             ),
-            label: '__',
+            label: FFLocalizations.of(context).getText(
+              'osiia7ri' /* __ */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -195,7 +202,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.groups_sharp,
               size: 24.0,
             ),
-            label: '__',
+            label: FFLocalizations.of(context).getText(
+              'mhl64e3r' /* __ */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -203,7 +212,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.receipt_outlined,
               size: 24.0,
             ),
-            label: '__',
+            label: FFLocalizations.of(context).getText(
+              'kxcnn9zl' /* __ */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -211,7 +222,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.account_circle_outlined,
               size: 24.0,
             ),
-            label: '__',
+            label: FFLocalizations.of(context).getText(
+              '14q8qgvj' /* __ */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -223,7 +236,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.admin_panel_settings_outlined,
               size: 24.0,
             ),
-            label: '__',
+            label: FFLocalizations.of(context).getText(
+              'j8ed85qz' /* __ */,
+            ),
             tooltip: '',
           )
         ],

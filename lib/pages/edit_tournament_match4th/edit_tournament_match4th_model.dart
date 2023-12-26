@@ -35,7 +35,9 @@ class EditTournamentMatch4thModel
   String? Function(BuildContext, String?)? txtMatchTimeControllerValidator;
   String? _txtMatchTimeControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'h89pbn8j' /* Field is required */,
+      );
     }
 
     return null;

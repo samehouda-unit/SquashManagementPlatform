@@ -71,14 +71,18 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Players',
+                    FFLocalizations.of(context).getText(
+                      'a7mnf0u0' /* Players */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Tap to select the needed action for Players',
+                    FFLocalizations.of(context).getText(
+                      'rdjl6xt8' /* Tap to select the needed actio... */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -133,7 +137,9 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Add new player',
+                                    FFLocalizations.of(context).getText(
+                                      'rpriwyov' /* Add new player */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                   ),
@@ -192,7 +198,9 @@ class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Edit/Delete player information',
+                                    FFLocalizations.of(context).getText(
+                                      'qsoojlph' /* Edit/Delete player information */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                   ),

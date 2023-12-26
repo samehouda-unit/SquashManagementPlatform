@@ -78,7 +78,9 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                   },
                 ),
                 title: Text(
-                  'Order Details',
+                  FFLocalizations.of(context).getText(
+                    '0zpr6lj3' /* Order Details */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyLarge,
                 ),
                 actions: [],
@@ -190,7 +192,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                     .fromSTEB(
                                                         12.0, 4.0, 12.0, 4.0),
                                                 child: Text(
-                                                  'Order Details',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'zn28birx' /* Order Details */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -214,7 +219,9 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Order #49224222',
+                                    FFLocalizations.of(context).getText(
+                                      'ksg6hoy0' /* Order #49224222 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineSmall,
                                   ),
@@ -223,7 +230,9 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 4.0, 0.0, 0.0),
                                   child: Text(
-                                    'Below are the details of your order.',
+                                    FFLocalizations.of(context).getText(
+                                      'au5ng71j' /* Below are the details of your ... */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                   ),
@@ -262,7 +271,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Payment Details',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '8wav2yxp' /* Payment Details */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -277,13 +289,19 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Transaction ID',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '9l8ooi5x' /* Transaction ID */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
                                                   ),
                                                   Text(
-                                                    'TXN123456789',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'xww3iba5' /* TXN123456789 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -301,7 +319,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Date',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '7vslc6r2' /* Date */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -313,7 +334,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    'Fri, Jun 23 - 4:30pm',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'uwvx977j' /* Fri, Jun 23 - 4:30pm */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -331,7 +355,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Amount',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '55rubwcl' /* Amount */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -343,7 +370,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    '\$500.00',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '07jsutc6' /* $500.00 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -361,7 +391,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Status',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '9oku2zyv' /* Status */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -373,7 +406,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    'Completed',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '0nfhh7h6' /* Completed */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -391,7 +427,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Payment Method',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'wykg0nbq' /* Payment Method */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -403,7 +442,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    'Visa ****1234',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'qmkk7nwo' /* Visa ****1234 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -427,7 +469,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 12.0),
                                               child: Text(
-                                                'Transaction Breakdown',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'f2dtix4b' /* Transaction Breakdown */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -443,7 +488,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Subtotal',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '4oteco28' /* Subtotal */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -455,7 +503,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    '\$480.00',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'sgi363jc' /* $480.00 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -473,7 +524,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Tax',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'fp5rxlk6' /* Tax */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -485,7 +539,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         ),
                                                   ),
                                                   Text(
-                                                    '\$20.00',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'wglm7c5i' /* $20.00 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,
@@ -503,13 +560,19 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                         .spaceBetween,
                                                 children: [
                                                   Text(
-                                                    'Total',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'q14r0ry9' /* Total */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelLarge,
                                                   ),
                                                   Text(
-                                                    '\$500.00',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'cgqy7apu' /* $500.00 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .headlineSmall,
@@ -529,7 +592,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                               ),
                                             ),
                                             Text(
-                                              'Notes',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'c2xwa3ac' /* Notes */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium,
@@ -538,7 +604,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'Transaction for monthly subscription.',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'qaaa3s0m' /* Transaction for monthly subscr... */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -570,7 +639,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                   0.0,
                                                                   12.0),
                                                       child: Text(
-                                                        'Customer Details',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          's70ps81o' /* Customer Details */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -683,7 +756,9 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Haily Brown',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'nxajnugl' /* Haily Brown */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyLarge,
                                                                           ),
@@ -695,7 +770,9 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              '@brownisthenewblack',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'g9zh4mzu' /* @brownisthenewblack */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -717,7 +794,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                             0.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  'Address',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'ytp6ujv4' /* Address */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall,
@@ -732,7 +813,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                             0.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '123 West Hollywood Blvd. San Mateo, CA. 90294',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '3veifkev' /* 123 West Hollywood Blvd. San M... */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium,
@@ -765,8 +850,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                 print(
                                                                     'Button pressed ...');
                                                               },
-                                                              text:
-                                                                  'Report Now',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'fgpc40vg' /* Report Now */,
+                                                              ),
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 48.0,
@@ -820,7 +908,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                 print(
                                                                     'Button pressed ...');
                                                               },
-                                                              text: 'Message',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                '74clqgs5' /* Message */,
+                                                              ),
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 48.0,
@@ -885,7 +977,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 12.0),
                                                 child: Text(
-                                                  'Customer Details',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'o2ox1ae8' /* Customer Details */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -995,7 +1090,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                           .start,
                                                                   children: [
                                                                     Text(
-                                                                      'Haily Brown',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'kbq8cq8k' /* Haily Brown */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyLarge,
@@ -1008,7 +1107,10 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                           0.0),
                                                                       child:
                                                                           Text(
-                                                                        '@brownisthenewblack',
+                                                                        FFLocalizations.of(context)
+                                                                            .getText(
+                                                                          'cffx8qfg' /* @brownisthenewblack */,
+                                                                        ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .labelSmall
                                                                             .override(
@@ -1032,7 +1134,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Address',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'sqccl0tb' /* Address */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -1047,7 +1153,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            '123 West Hollywood Blvd. San Mateo, CA. 90294',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '1j7otk8r' /* 123 West Hollywood Blvd. San M... */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -1070,7 +1180,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                       print(
                                                           'Button pressed ...');
                                                     },
-                                                    text: 'Message Customer',
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      '2la9n6hr' /* Message Customer */,
+                                                    ),
                                                     options: FFButtonOptions(
                                                       width: double.infinity,
                                                       height: 48.0,
@@ -1116,7 +1230,11 @@ class _TransactionHistoryWidgetState extends State<TransactionHistoryWidget> {
                                                       print(
                                                           'Button pressed ...');
                                                     },
-                                                    text: 'Report Now',
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      '7ah6g0t6' /* Report Now */,
+                                                    ),
                                                     options: FFButtonOptions(
                                                       width: double.infinity,
                                                       height: 48.0,

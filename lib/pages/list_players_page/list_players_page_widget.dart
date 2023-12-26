@@ -102,7 +102,9 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      'List players',
+                      FFLocalizations.of(context).getText(
+                        'hq3t49t4' /* List players */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -183,7 +185,10 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'Players',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'hqpxkxp8' /* Players */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -202,7 +207,10 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all players...',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'bfdhjrp2' /* Search all players... */,
+                                                ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -324,7 +332,11 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Name',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '1crwkgzh' /* Name */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -343,7 +355,11 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
-                                                          'Last Active',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'fb24ujps' /* Last Active */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -362,7 +378,11 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
-                                                          'Title',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'x4dyujna' /* Title */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -391,7 +411,11 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                 AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Text(
-                                                              'Edit',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'm6ah04jp' /* Edit */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -426,7 +450,11 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                 AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Text(
-                                                              'Delete',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'm2bigo7u' /* Delete */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -691,7 +719,9 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Rank:',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      '8rlt3kcm' /* Rank: */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primaryText,
@@ -735,7 +765,9 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            '5 mins ago',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'fj1uk7a9' /* 5 mins ago */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -758,7 +790,9 @@ class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Head of Design',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              '2v1d7xgd' /* Head of Design */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),

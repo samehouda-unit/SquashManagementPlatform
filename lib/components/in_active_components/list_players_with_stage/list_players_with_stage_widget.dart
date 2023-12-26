@@ -68,14 +68,18 @@ class _ListPlayersWithStageWidgetState
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
           child: Text(
-            'Players',
+            FFLocalizations.of(context).getText(
+              'q8sjphgb' /* Players */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
         ),
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
           child: Text(
-            'Select players to join selected tournament',
+            FFLocalizations.of(context).getText(
+              'gs2xhhr3' /* Select players to join selecte... */,
+            ),
             style: FlutterFlowTheme.of(context).labelSmall,
           ),
         ),
@@ -87,7 +91,9 @@ class _ListPlayersWithStageWidgetState
             textCapitalization: TextCapitalization.words,
             obscureText: false,
             decoration: InputDecoration(
-              labelText: 'Search all players...',
+              labelText: FFLocalizations.of(context).getText(
+                '08c04gve' /* Search all players... */,
+              ),
               labelStyle: FlutterFlowTheme.of(context).labelMedium,
               hintStyle: FlutterFlowTheme.of(context).labelMedium,
               enabledBorder: OutlineInputBorder(
@@ -160,12 +166,24 @@ class _ListPlayersWithStageWidgetState
                         snapshot.data!;
                     return FlutterFlowChoiceChips(
                       options: [
-                        ChipData('All'),
-                        ChipData('Under 10'),
-                        ChipData('Under 12'),
-                        ChipData('Under 14'),
-                        ChipData('Under 16'),
-                        ChipData('Under 18')
+                        ChipData(FFLocalizations.of(context).getText(
+                          'spzwdo7d' /* All */,
+                        )),
+                        ChipData(FFLocalizations.of(context).getText(
+                          'nkb6xbe3' /* Under 10 */,
+                        )),
+                        ChipData(FFLocalizations.of(context).getText(
+                          'breq2sue' /* Under 12 */,
+                        )),
+                        ChipData(FFLocalizations.of(context).getText(
+                          'yk9aaku2' /* Under 14 */,
+                        )),
+                        ChipData(FFLocalizations.of(context).getText(
+                          'lzqabli4' /* Under 16 */,
+                        )),
+                        ChipData(FFLocalizations.of(context).getText(
+                          '4k8enayf' /* Under 18 */,
+                        ))
                       ],
                       onChanged: (val) =>
                           setState(() => _model.choiceChipsValues = val),
@@ -206,7 +224,11 @@ class _ListPlayersWithStageWidgetState
                       alignment: WrapAlignment.start,
                       controller: _model.choiceChipsValueController ??=
                           FormFieldController<List<String>>(
-                        ['All'],
+                        [
+                          FFLocalizations.of(context).getText(
+                            '0vlzbiz7' /* All */,
+                          )
+                        ],
                       ),
                       wrapped: true,
                     );
@@ -244,7 +266,9 @@ class _ListPlayersWithStageWidgetState
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                'Name',
+                                FFLocalizations.of(context).getText(
+                                  '6vxbfnt5' /* Name */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelSmall,
                               ),
                             ),
@@ -260,7 +284,9 @@ class _ListPlayersWithStageWidgetState
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                'Status',
+                                FFLocalizations.of(context).getText(
+                                  '4k4kwhpj' /* Status */,
+                                ),
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context).labelSmall,
                               ),
@@ -357,7 +383,9 @@ class _ListPlayersWithStageWidgetState
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Randy Rodriguez',
+                                          FFLocalizations.of(context).getText(
+                                            'cqucac5y' /* Randy Rodriguez */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge,
                                         ),
@@ -366,7 +394,9 @@ class _ListPlayersWithStageWidgetState
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 12.0, 0.0),
                                           child: Text(
-                                            'randy@domainname.com',
+                                            FFLocalizations.of(context).getText(
+                                              'jwoqu34g' /* randy@domainname.com */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall
                                                 .override(

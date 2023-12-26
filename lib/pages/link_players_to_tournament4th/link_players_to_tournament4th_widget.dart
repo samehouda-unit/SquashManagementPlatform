@@ -113,7 +113,9 @@ class _LinkPlayersToTournament4thWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      '4. Players list in tournament',
+                      FFLocalizations.of(context).getText(
+                        'z0nrcs3w' /* 4. Players list in tournament */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -215,7 +217,9 @@ class _LinkPlayersToTournament4thWidgetState
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        text: 'Print PDF',
+                        text: FFLocalizations.of(context).getText(
+                          'mj05tmh8' /* Print PDF */,
+                        ),
                         icon: Icon(
                           Icons.print_rounded,
                           size: 15.0,
@@ -281,7 +285,9 @@ class _LinkPlayersToTournament4thWidgetState
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 5.0, 0.0, 0.0),
                                       child: Text(
-                                        'Players',
+                                        FFLocalizations.of(context).getText(
+                                          'idizrz07' /* Players */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium,
                                       ),
@@ -296,7 +302,10 @@ class _LinkPlayersToTournament4thWidgetState
                                             TextCapitalization.words,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          labelText: 'Search all players...',
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            'mgokigza' /* Search all players... */,
+                                          ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
@@ -401,7 +410,10 @@ class _LinkPlayersToTournament4thWidgetState
                                                       .fromSTEB(
                                                           16.0, 0.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Player Information',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      're3fe4q8' /* Player Information */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -420,7 +432,10 @@ class _LinkPlayersToTournament4thWidgetState
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
-                                                    'Last Active',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'vrf4cvuo' /* Last Active */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -439,7 +454,10 @@ class _LinkPlayersToTournament4thWidgetState
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
-                                                    'Title',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '2sw8bg8j' /* Title */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -458,7 +476,11 @@ class _LinkPlayersToTournament4thWidgetState
                                                         AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Text(
-                                                      'Remove',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '2nfsnyin' /* Remove */,
+                                                      ),
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -512,7 +534,7 @@ class _LinkPlayersToTournament4thWidgetState
                                                   ),
                                                 );
                                               }
-                                              final planPlayersListViewPopulatePlanPlayersAPIResponse =
+                                              final planRegPlayersListViewPopulatePlanPlayersAPIResponse =
                                                   snapshot.data!;
                                               return Builder(
                                                 builder: (context) {
@@ -520,7 +542,7 @@ class _LinkPlayersToTournament4thWidgetState
                                                       SquashManagementAPIGroupGroup
                                                               .populatePlanPlayersAPICall
                                                               .planPlayers(
-                                                                planPlayersListViewPopulatePlanPlayersAPIResponse
+                                                                planRegPlayersListViewPopulatePlanPlayersAPIResponse
                                                                     .jsonBody,
                                                               )
                                                               ?.map((e) => e)
@@ -741,7 +763,9 @@ class _LinkPlayersToTournament4thWidgetState
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Rank:',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '5qlki30m' /* Rank: */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -791,7 +815,11 @@ class _LinkPlayersToTournament4thWidgetState
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '5 mins ago',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'mv46jfrq' /* 5 mins ago */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -812,7 +840,11 @@ class _LinkPlayersToTournament4thWidgetState
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Head of Design',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'eqfughv8' /* Head of Design */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -859,12 +891,12 @@ class _LinkPlayersToTournament4thWidgetState
                                                                               .deletePlanPlayerAPICall
                                                                               .call(
                                                                             tournamentPlanId:
-                                                                                widget.paramTournamentPlanId?.toString(),
+                                                                                'eq.${widget.paramTournamentPlanId?.toString()}',
                                                                             playerId:
-                                                                                getJsonField(
+                                                                                'eq.${getJsonField(
                                                                               planPlayersItem,
                                                                               r'''$.id''',
-                                                                            ).toString(),
+                                                                            ).toString()}',
                                                                           );
                                                                           if ((_model.addTournamentPlayerResponse?.succeeded ??
                                                                               true)) {

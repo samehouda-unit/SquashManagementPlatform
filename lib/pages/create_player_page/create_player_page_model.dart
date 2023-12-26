@@ -34,7 +34,9 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   String? Function(BuildContext, String?)? txtPlayerNameControllerValidator;
   String? _txtPlayerNameControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'xtbv7j9u' /* Field is required */,
+      );
     }
 
     return null;
@@ -48,7 +50,9 @@ class CreatePlayerPageModel extends FlutterFlowModel<CreatePlayerPageWidget> {
   String? _txtDateOfBirthControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        '2sn8d8ax' /* Field is required */,
+      );
     }
 
     return null;

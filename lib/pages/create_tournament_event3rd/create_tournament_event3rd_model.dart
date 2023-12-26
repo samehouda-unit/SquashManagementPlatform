@@ -35,7 +35,9 @@ class CreateTournamentEvent3rdModel
   String? Function(BuildContext, String?)? txtFromDateControllerValidator;
   String? _txtFromDateControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        '5i4kzmgg' /* Field is required */,
+      );
     }
 
     return null;
@@ -49,7 +51,9 @@ class CreateTournamentEvent3rdModel
   String? Function(BuildContext, String?)? txtToDateControllerValidator;
   String? _txtToDateControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'zdyvjavw' /* Field is required */,
+      );
     }
 
     return null;

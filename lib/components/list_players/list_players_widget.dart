@@ -64,14 +64,18 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
           child: Text(
-            'Players',
+            FFLocalizations.of(context).getText(
+              'qsgvyv7j' /* Players */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
         ),
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
           child: Text(
-            'Select players to join selected tournament',
+            FFLocalizations.of(context).getText(
+              'hyhq8aaq' /* Select players to join selecte... */,
+            ),
             style: FlutterFlowTheme.of(context).labelSmall,
           ),
         ),
@@ -83,7 +87,9 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
             textCapitalization: TextCapitalization.words,
             obscureText: false,
             decoration: InputDecoration(
-              labelText: 'Search all players...',
+              labelText: FFLocalizations.of(context).getText(
+                '9wgibxlo' /* Search all players... */,
+              ),
               labelStyle: FlutterFlowTheme.of(context).labelMedium,
               hintStyle: FlutterFlowTheme.of(context).labelMedium,
               enabledBorder: OutlineInputBorder(
@@ -154,7 +160,9 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                'Name',
+                                FFLocalizations.of(context).getText(
+                                  '9x1frc0x' /* Name */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelSmall,
                               ),
                             ),
@@ -170,7 +178,9 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                'Status',
+                                FFLocalizations.of(context).getText(
+                                  '0gi2ah3t' /* Status */,
+                                ),
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context).labelSmall,
                               ),
@@ -336,7 +346,11 @@ class _ListPlayersWidgetState extends State<ListPlayersWidget> {
                                                                   2.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Rank:',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'k6t7lmoz' /* Rank: */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)

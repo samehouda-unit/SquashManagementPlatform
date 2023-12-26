@@ -102,7 +102,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 4.0),
                             child: Text(
-                              'Members',
+                              FFLocalizations.of(context).getText(
+                                'ye2ifdlo' /* Members */,
+                              ),
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
@@ -111,7 +113,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Below are a list of members of your team.',
+                              FFLocalizations.of(context).getText(
+                                'v37nankn' /* Below are a list of members of... */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
@@ -124,7 +128,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                               textCapitalization: TextCapitalization.words,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Search all users...',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'v5eln8p6' /* Search all users... */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -182,10 +188,22 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                       0.0, 8.0, 0.0, 8.0),
                                   child: FlutterFlowChoiceChips(
                                     options: [
-                                      ChipData('All'),
-                                      ChipData('Owners'),
-                                      ChipData('Editors'),
-                                      ChipData('Viewers')
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        'pbdznq09' /* All */,
+                                      )),
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        '3qe54s33' /* Owners */,
+                                      )),
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        'mkbmodj8' /* Editors */,
+                                      )),
+                                      ChipData(
+                                          FFLocalizations.of(context).getText(
+                                        'chndgesn' /* Viewers */,
+                                      ))
                                     ],
                                     onChanged: (val) => setState(
                                         () => _model.choiceChipsValues = val),
@@ -237,7 +255,11 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                     controller:
                                         _model.choiceChipsValueController ??=
                                             FormFieldController<List<String>>(
-                                      ['All'],
+                                      [
+                                        FFLocalizations.of(context).getText(
+                                          'f2g5mx74' /* All */,
+                                        )
+                                      ],
                                     ),
                                     wrapped: true,
                                   ),
@@ -280,7 +302,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 0.0, 0.0),
                                         child: Text(
-                                          'Name',
+                                          FFLocalizations.of(context).getText(
+                                            'rcrz45mw' /* Name */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -297,7 +321,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         alignment:
                                             AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          'Last Active',
+                                          FFLocalizations.of(context).getText(
+                                            'xc3ajner' /* Last Active */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -314,7 +340,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                         alignment:
                                             AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          'Title',
+                                          FFLocalizations.of(context).getText(
+                                            'ztrby41z' /* Title */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall,
                                         ),
@@ -331,7 +359,9 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                           alignment:
                                               AlignmentDirectional(1.0, 0.0),
                                           child: Text(
-                                            'Status',
+                                            FFLocalizations.of(context).getText(
+                                              'uqpb0ixa' /* Status */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelSmall,
                                           ),
@@ -416,7 +446,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Randy Rodriguez',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '3bzcdgrg' /* Randy Rodriguez */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -426,7 +459,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'randy@domainname.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '68tic8wo' /* randy@domainname.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -455,7 +491,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '5 mins ago',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'fq58v68t' /* 5 mins ago */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -473,7 +512,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                             alignment:
                                                 AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Head of Design',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'lnsllh1h' /* Head of Design */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -506,7 +548,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Viewer',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '20gsxm4y' /* Viewer */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -583,7 +628,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Randy Rodriguez',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '262kpfr1' /* Randy Rodriguez */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -593,7 +641,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'randy@domainname.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'wzkuur7e' /* randy@domainname.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -622,7 +673,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '5 mins ago',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '4z5oo0q9' /* 5 mins ago */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -640,7 +694,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                             alignment:
                                                 AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Head of Design',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'rp34xxu9' /* Head of Design */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -673,7 +730,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Viewer',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '0dht92jk' /* Viewer */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -750,7 +810,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Randy Rodriguez',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'bfli15gf' /* Randy Rodriguez */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -760,7 +823,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'randy@domainname.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ilqoqpaz' /* randy@domainname.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -789,7 +855,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '5 mins ago',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'ld2yovjo' /* 5 mins ago */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -807,7 +876,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                             alignment:
                                                 AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Head of Design',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'unhn8bze' /* Head of Design */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -840,7 +912,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Viewer',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '94oadi1n' /* Viewer */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -917,7 +992,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Randy Rodriguez',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'rot8f5ro' /* Randy Rodriguez */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -927,7 +1005,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'randy@domainname.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'w3due873' /* randy@domainname.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -956,7 +1037,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '5 mins ago',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'v4jt9m29' /* 5 mins ago */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -974,7 +1058,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                             alignment:
                                                 AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Head of Design',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'i1bf2bvd' /* Head of Design */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1007,7 +1094,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Viewer',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'wgvd0m7v' /* Viewer */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,
@@ -1084,7 +1174,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Randy Rodriguez',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '0rhu594q' /* Randy Rodriguez */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -1094,7 +1187,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 12.0, 0.0),
                                                 child: Text(
-                                                  'randy@domainname.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'xdqmxi1h' /* randy@domainname.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall
@@ -1123,7 +1219,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 12.0, 0.0),
                                             child: Text(
-                                              '5 mins ago',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'r8yktrce' /* 5 mins ago */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1141,7 +1240,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                             alignment:
                                                 AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
-                                              'Head of Design',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '5vfny9p6' /* Head of Design */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1174,7 +1276,10 @@ class _MainUsersWidgetState extends State<MainUsersWidget> {
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    'Owner',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '9z1e88pz' /* Owner */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodySmall,

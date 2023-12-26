@@ -105,7 +105,9 @@ class _CreateTournamentPageWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Create Tournament ',
+                    FFLocalizations.of(context).getText(
+                      'ben1uy9a' /* Create Tournament  */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Outfit',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -160,7 +162,9 @@ class _CreateTournamentPageWidgetState
                               readOnly: _model.tournamentCreated!,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Tournament Name',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'j6sj0c15' /* Tournament Name */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -245,11 +249,17 @@ class _CreateTournamentPageWidgetState
                                             TextCapitalization.words,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          labelText: 'Tournament Year',
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            'm2axwgyd' /* Tournament Year */,
+                                          ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
-                                          hintText: 'Example: 2023',
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'xj42t1xl' /* Example: 2023 */,
+                                          ),
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
@@ -412,7 +422,12 @@ class _CreateTournamentPageWidgetState
                                           setState(() {
                                             _model.txtYearController?.text =
                                                 dateTimeFormat(
-                                                    'yyyy', _model.datePicked);
+                                              'yyyy',
+                                              _model.datePicked,
+                                              locale:
+                                                  FFLocalizations.of(context)
+                                                      .languageCode,
+                                            );
                                           });
                                         },
                                       ),
@@ -439,7 +454,9 @@ class _CreateTournamentPageWidgetState
                                 decoration: InputDecoration(
                                   labelStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
-                                  hintText: 'Sponsors : Vodafone , Nike , ... ',
+                                  hintText: FFLocalizations.of(context).getText(
+                                    '0zayxubq' /* Sponsors : Vodafone , Nike , .... */,
+                                  ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   enabledBorder: OutlineInputBorder(
@@ -569,7 +586,9 @@ class _CreateTournamentPageWidgetState
 
                                 setState(() {});
                               },
-                              text: 'Submit',
+                              text: FFLocalizations.of(context).getText(
+                                'wjyk4dmp' /* Submit */,
+                              ),
                               icon: Icon(
                                 Icons.add_moderator,
                                 size: 15.0,

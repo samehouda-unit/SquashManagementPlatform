@@ -120,7 +120,9 @@ class _LinkPlayersToTournament3rdWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      '3. Link player(s) to tournament',
+                      FFLocalizations.of(context).getText(
+                        '3tbr6otk' /* 3. Link player(s) to tournamen... */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -326,7 +328,9 @@ class _LinkPlayersToTournament3rdWidgetState
                               }.withoutNulls,
                             );
                           },
-                          text: 'Registered Players',
+                          text: FFLocalizations.of(context).getText(
+                            'tecbppsn' /* Registered Players */,
+                          ),
                           icon: Icon(
                             Icons.arrow_forward_ios_sharp,
                             size: 15.0,
@@ -394,7 +398,9 @@ class _LinkPlayersToTournament3rdWidgetState
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 0.0, 0.0),
                                       child: Text(
-                                        'Players',
+                                        FFLocalizations.of(context).getText(
+                                          '3phx2021' /* Players */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium,
                                       ),
@@ -409,7 +415,10 @@ class _LinkPlayersToTournament3rdWidgetState
                                             TextCapitalization.words,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          labelText: 'Search all players...',
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            'uj41ge8w' /* Search all players... */,
+                                          ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
@@ -514,7 +523,10 @@ class _LinkPlayersToTournament3rdWidgetState
                                                       .fromSTEB(
                                                           16.0, 0.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Player Information',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'fgplwuyf' /* Player Information */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -533,7 +545,10 @@ class _LinkPlayersToTournament3rdWidgetState
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
-                                                    'Last Active',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'fbr8prc5' /* Last Active */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -552,7 +567,10 @@ class _LinkPlayersToTournament3rdWidgetState
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
-                                                    'Title',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'hquur2ji' /* Title */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -576,7 +594,11 @@ class _LinkPlayersToTournament3rdWidgetState
                                                           AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Text(
-                                                        'Add',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'ahm2d0st' /* Add */,
+                                                        ),
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
@@ -855,7 +877,9 @@ class _LinkPlayersToTournament3rdWidgetState
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Rank:',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'mkl0vbpu' /* Rank: */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -905,7 +929,11 @@ class _LinkPlayersToTournament3rdWidgetState
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '5 mins ago',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        '1zime9bq' /* 5 mins ago */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -926,7 +954,11 @@ class _LinkPlayersToTournament3rdWidgetState
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Head of Design',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'uhdqqvk1' /* Head of Design */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,

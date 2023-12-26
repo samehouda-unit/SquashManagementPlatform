@@ -71,14 +71,18 @@ class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Tournament Events',
+                    FFLocalizations.of(context).getText(
+                      '6jr3t8p3' /* Tournament Events */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Tap to select the needed action for Tournament Event',
+                    FFLocalizations.of(context).getText(
+                      'q9t52oln' /* Tap to select the needed actio... */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -126,7 +130,9 @@ class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Add new tournament event',
+                                FFLocalizations.of(context).getText(
+                                  'r7jjl9ji' /* Add new tournament event */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -180,7 +186,9 @@ class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Edit/Delete tournament event',
+                                FFLocalizations.of(context).getText(
+                                  '0s9zymq0' /* Edit/Delete tournament event */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],

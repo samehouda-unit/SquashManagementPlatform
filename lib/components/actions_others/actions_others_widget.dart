@@ -74,14 +74,18 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Others',
+                    FFLocalizations.of(context).getText(
+                      '99jnjz89' /* Others */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Select the required action',
+                    FFLocalizations.of(context).getText(
+                      'nh30sneb' /* Select the required action */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -158,7 +162,9 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Print PDF reports',
+                                    FFLocalizations.of(context).getText(
+                                      'cn12hrg1' /* Print PDF reports */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                   ),
@@ -207,7 +213,9 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Create tournament draw',
+                              FFLocalizations.of(context).getText(
+                                'xfi56ob0' /* Create tournament draw */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ],

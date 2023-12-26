@@ -99,7 +99,9 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 0.0),
                             child: Text(
-                              'Notifications',
+                              FFLocalizations.of(context).getText(
+                                '8ewqy5xl' /* Notifications */,
+                              ),
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
@@ -108,7 +110,9 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              'Below are your notifications',
+                              FFLocalizations.of(context).getText(
+                                'awo14bjo' /* Below are your notifications */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
@@ -198,8 +202,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                       text: TextSpan(
                                                         children: [
                                                           TextSpan(
-                                                            text:
-                                                                'FlutterFlow CRM App:',
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              'wyglogyk' /* FlutterFlow CRM App: */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -215,7 +222,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                 ),
                                                           ),
                                                           TextSpan(
-                                                            text: ' Begin Work',
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              'a9cx9kgq' /*  Begin Work */,
+                                                            ),
                                                             style: TextStyle(),
                                                           )
                                                         ],
@@ -268,7 +279,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'SOW Change Order',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '9uqw60ac' /* SOW Change Order */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -293,7 +308,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'FlutterFlow CRM App',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'wpmrva4n' /* FlutterFlow CRM App */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyLarge,
@@ -308,7 +327,10 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Jul 8, at 4:31pm',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'i5cwme4h' /* Jul 8, at 4:31pm */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -403,8 +425,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                       text: TextSpan(
                                                         children: [
                                                           TextSpan(
-                                                            text:
-                                                                'Jeremiah Goldsten ',
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              '446140md' /* Jeremiah Goldsten  */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge
@@ -420,8 +445,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                 ),
                                                           ),
                                                           TextSpan(
-                                                            text:
-                                                                'accepted a request',
+                                                            text: FFLocalizations
+                                                                    .of(context)
+                                                                .getText(
+                                                              'z96oqe9i' /* accepted a request */,
+                                                            ),
                                                             style: TextStyle(),
                                                           )
                                                         ],
@@ -471,7 +499,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'SOW Change Order',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '9hkn5wbk' /* SOW Change Order */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -496,7 +528,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'FlutterFlow CRM App',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'z9uvnsar' /* FlutterFlow CRM App */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyLarge,
@@ -511,7 +547,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '\"Notifications and reminders informing users about upcoming classes and training schedules will be sent to them via email, SMS or notifications within the application.\"',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '433l5p9f' /* "Notifications and reminders i... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -526,7 +566,10 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Jul 8, at 4:30pm',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '229rrfjz' /* Jul 8, at 4:30pm */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -623,8 +666,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                         text: TextSpan(
                                                           children: [
                                                             TextSpan(
-                                                              text:
-                                                                  'Randy Rudolph ',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'n1rh9g7k' /* Randy Rudolph  */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyLarge
@@ -640,14 +686,20 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                   ),
                                                             ),
                                                             TextSpan(
-                                                              text:
-                                                                  'sent a SOW Change Order for ',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'szxyfwog' /* sent a SOW Change Order for  */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text:
-                                                                  'FlutterFlow CRM APP',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'y7txnevq' /* FlutterFlow CRM APP */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyLarge
@@ -695,7 +747,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'SOW Change Order',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'i1ybibdu' /* SOW Change Order */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -720,7 +776,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'FlutterFlow CRM App',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '3kcgepl3' /* FlutterFlow CRM App */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyLarge,
@@ -735,7 +795,11 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '\"Please review the updates to this document and get back with me.\"',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'lt0ukpoj' /* "Please review the updates to ... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -750,7 +814,10 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Jul 8, at 2:20pm',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'pq19162b' /* Jul 8, at 2:20pm */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,

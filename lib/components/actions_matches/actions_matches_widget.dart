@@ -71,14 +71,18 @@ class _ActionsMatchesWidgetState extends State<ActionsMatchesWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Tournament Matches',
+                    FFLocalizations.of(context).getText(
+                      'nu262vzy' /* Tournament Matches */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Tap to select the needed action for Tournament Match',
+                    FFLocalizations.of(context).getText(
+                      '5lug6e0t' /* Tap to select the needed actio... */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -126,7 +130,9 @@ class _ActionsMatchesWidgetState extends State<ActionsMatchesWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Add new tournament match',
+                                FFLocalizations.of(context).getText(
+                                  'j3htyqkl' /* Add new tournament match */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -180,7 +186,9 @@ class _ActionsMatchesWidgetState extends State<ActionsMatchesWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Edit/Delete tournament match',
+                                FFLocalizations.of(context).getText(
+                                  'lg42x56s' /* Edit/Delete tournament match */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],

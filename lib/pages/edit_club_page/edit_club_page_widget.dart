@@ -150,7 +150,9 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                       padding:
                           EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                       child: Text(
-                        'Edit Club',
+                        FFLocalizations.of(context).getText(
+                          'nb02yuyr' /* Edit Club */,
+                        ),
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
@@ -346,7 +348,10 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                   textCapitalization: TextCapitalization.words,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Name',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      '5t8h70m4' /* Name */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -436,7 +441,10 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                   textCapitalization: TextCapitalization.words,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Location',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      '7l7iwdtr' /* Location */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -529,7 +537,10 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                   textCapitalization: TextCapitalization.words,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Contact person',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'zo801dbw' /* Contact person */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -623,7 +634,10 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                   textCapitalization: TextCapitalization.words,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Email',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'b73i8l5p' /* Email */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -816,7 +830,9 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
 
                                       setState(() {});
                                     },
-                                    text: 'Update',
+                                    text: FFLocalizations.of(context).getText(
+                                      'zwkpscdv' /* Update */,
+                                    ),
                                     icon: Icon(
                                       Icons.add_moderator,
                                       size: 15.0,

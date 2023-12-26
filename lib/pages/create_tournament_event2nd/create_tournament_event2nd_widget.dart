@@ -140,7 +140,9 @@ class _CreateTournamentEvent2ndWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          '2. Select Tournament Plan',
+                          FFLocalizations.of(context).getText(
+                            '1dkpo63j' /* 2. Select Tournament Plan */,
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -191,7 +193,10 @@ class _CreateTournamentEvent2ndWidgetState
                                     readOnly: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Tournament Name',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        '1xgjkdn4' /* Tournament Name */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -294,7 +299,10 @@ class _CreateTournamentEvent2ndWidgetState
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 0.0, 0.0),
                                             child: Text(
-                                              'Tournament plans',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'zgfc21l4' /* Tournament plans */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -314,7 +322,10 @@ class _CreateTournamentEvent2ndWidgetState
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all tournament plans...',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'rhqhadiu' /* Search all tournament plans... */,
+                                                ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -431,7 +442,11 @@ class _CreateTournamentEvent2ndWidgetState
                                                     Expanded(
                                                       flex: 4,
                                                       child: AutoSizeText(
-                                                        'Tournament Plan Info',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'dqagd2ev' /* Tournament Plan Info */,
+                                                        ),
                                                         textAlign:
                                                             TextAlign.center,
                                                         style:
@@ -451,7 +466,11 @@ class _CreateTournamentEvent2ndWidgetState
                                                               AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Text(
-                                                            'Last Active',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'c36hx6pw' /* Last Active */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -470,7 +489,11 @@ class _CreateTournamentEvent2ndWidgetState
                                                               AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Text(
-                                                            'Title',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'hcgig14z' /* Title */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -809,7 +832,9 @@ class _CreateTournamentEvent2ndWidgetState
                                                                                 AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Head of Design',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'lucsdyys' /* Head of Design */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
                                                                           ),
@@ -832,7 +857,9 @@ class _CreateTournamentEvent2ndWidgetState
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              '5 mins ago',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '2nf92nnl' /* 5 mins ago */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
                                                                           ),

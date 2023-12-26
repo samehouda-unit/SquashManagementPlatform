@@ -152,7 +152,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                       padding:
                           EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                       child: Text(
-                        'Edit Player Profile',
+                        FFLocalizations.of(context).getText(
+                          'l2nf3yu4' /* Edit Player Profile */,
+                        ),
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
@@ -356,7 +358,10 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                   textCapitalization: TextCapitalization.words,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Player Name',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'z2e54z8c' /* Player Name */,
+                                    ),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -453,11 +458,17 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                             TextCapitalization.none,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          labelText: 'Date of birth',
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            'c6q0i1py' /* Date of birth */,
+                                          ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
-                                          hintText: 'yyyy-MM-dd',
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'i8rtpql0' /* yyyy-MM-dd */,
+                                          ),
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
@@ -617,9 +628,13 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           }
                                           setState(() {
                                             _model.txtDateOfBirthController
-                                                    ?.text =
-                                                dateTimeFormat('yyyy-MM-dd',
-                                                    _model.datePicked);
+                                                ?.text = dateTimeFormat(
+                                              'yyyy-MM-dd',
+                                              _model.datePicked,
+                                              locale:
+                                                  FFLocalizations.of(context)
+                                                      .languageCode,
+                                            );
                                           });
                                         },
                                       ),
@@ -688,7 +703,10 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       searchHintTextStyle: TextStyle(),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
-                                      hintText: 'Club/Academy',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'mb9fnizf' /* Club/Academy */,
+                                      ),
                                       searchHintText: '',
                                       icon: Icon(
                                         Icons.sports_tennis_sharp,
@@ -729,14 +747,23 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                   ),
                                   options:
                                       List<String>.from(['Male', 'Female']),
-                                  optionLabels: ['Male', 'Female'],
+                                  optionLabels: [
+                                    FFLocalizations.of(context).getText(
+                                      'ayudxgd7' /* Male */,
+                                    ),
+                                    FFLocalizations.of(context).getText(
+                                      'o5n9g0iv' /* Female */,
+                                    )
+                                  ],
                                   onChanged: (val) => setState(
                                       () => _model.lsGenderValue = val),
                                   width: double.infinity,
                                   height: 56.0,
                                   textStyle:
                                       FlutterFlowTheme.of(context).bodyMedium,
-                                  hintText: '      Gender',
+                                  hintText: FFLocalizations.of(context).getText(
+                                    '9o1i58pp' /*       Gender */,
+                                  ),
                                   icon: Icon(
                                     Icons.keyboard_arrow_down_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -818,8 +845,14 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       searchHintTextStyle: TextStyle(),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
-                                      hintText: 'Player Stage',
-                                      searchHintText: 'Select player stage',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'yjk21bfw' /* Player Stage */,
+                                      ),
+                                      searchHintText:
+                                          FFLocalizations.of(context).getText(
+                                        '8s545lga' /* Select player stage */,
+                                      ),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -906,8 +939,14 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       searchHintTextStyle: TextStyle(),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
-                                      hintText: 'Player Rank',
-                                      searchHintText: 'Select player rank',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        '3a1u01eu' /* Player Rank */,
+                                      ),
+                                      searchHintText:
+                                          FFLocalizations.of(context).getText(
+                                        '1d38b92b' /* Select player rank */,
+                                      ),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -956,7 +995,10 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
-                                    hintText: 'Player bio',
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'pskkrfhx' /* Player bio */,
+                                    ),
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
                                     enabledBorder: OutlineInputBorder(
@@ -1151,7 +1193,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
 
                                       setState(() {});
                                     },
-                                    text: 'Update',
+                                    text: FFLocalizations.of(context).getText(
+                                      'whypbf6r' /* Update */,
+                                    ),
                                     icon: Icon(
                                       Icons.add_moderator,
                                       size: 15.0,

@@ -72,14 +72,18 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Tournaments',
+                    FFLocalizations.of(context).getText(
+                      '4b1m6rip' /* Tournaments */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Tap to select the needed action for Tournament',
+                    FFLocalizations.of(context).getText(
+                      'e556wavj' /* Tap to select the needed actio... */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -127,7 +131,9 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Add new tournament/plan',
+                                FFLocalizations.of(context).getText(
+                                  '3ts5psql' /* Add new tournament/plan */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -181,7 +187,9 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Link players to tournament',
+                                FFLocalizations.of(context).getText(
+                                  '4ew1ngix' /* Link players to tournament */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -235,7 +243,9 @@ class _ActionsTournamentsWidgetState extends State<ActionsTournamentsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Edit/Delete tournament information',
+                                FFLocalizations.of(context).getText(
+                                  'jyvacx25' /* Edit/Delete tournament informa... */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],

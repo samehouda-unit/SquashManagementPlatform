@@ -366,7 +366,10 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 hintText:
-                                                    'Tournament Plan Name',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  '25vflj29' /* Tournament Plan Name */,
+                                                ),
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineMedium,
@@ -520,7 +523,11 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
-                                              hintText: 'Location',
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'ba9z92qz' /* Location */,
+                                              ),
                                               searchHintText: '',
                                               icon: Icon(
                                                 Icons.sports_tennis_sharp,
@@ -577,12 +584,22 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                       TextCapitalization.words,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
-                                                    labelText: 'From',
+                                                    labelText:
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      'oaf5yrqc' /* From */,
+                                                    ),
                                                     labelStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
                                                             .labelMedium,
-                                                    hintText: 'yyyy-MM-dd',
+                                                    hintText:
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                      'h1r01gqp' /* yyyy-MM-dd */,
+                                                    ),
                                                     hintStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -783,12 +800,16 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                       });
                                                     }
                                                     setState(() {
-                                                      _model.txtFromDateController
-                                                              ?.text =
-                                                          dateTimeFormat(
-                                                              'yyyy-MM-dd',
-                                                              _model
-                                                                  .datePicked1);
+                                                      _model
+                                                          .txtFromDateController
+                                                          ?.text = dateTimeFormat(
+                                                        'yyyy-MM-dd',
+                                                        _model.datePicked1,
+                                                        locale:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode,
+                                                      );
                                                     });
                                                   },
                                                 ),
@@ -822,12 +843,20 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                     TextCapitalization.words,
                                                 obscureText: false,
                                                 decoration: InputDecoration(
-                                                  labelText: 'To',
+                                                  labelText: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    '3ddjzdsd' /* To */,
+                                                  ),
                                                   labelStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .labelMedium,
-                                                  hintText: 'yyyy-MM-dd',
+                                                  hintText: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    '7ijo0ecf' /* yyyy-MM-dd */,
+                                                  ),
                                                   hintStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -1023,10 +1052,14 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                                   }
                                                   setState(() {
                                                     _model.txtToDateController
-                                                            ?.text =
-                                                        dateTimeFormat(
-                                                            'yyyy-MM-dd',
-                                                            _model.datePicked2);
+                                                        ?.text = dateTimeFormat(
+                                                      'yyyy-MM-dd',
+                                                      _model.datePicked2,
+                                                      locale:
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .languageCode,
+                                                    );
                                                   });
                                                 },
                                               ),
@@ -1046,7 +1079,14 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                           ),
                                           options: List<String>.from(
                                               ['Male', 'Female']),
-                                          optionLabels: ['Male', 'Female'],
+                                          optionLabels: [
+                                            FFLocalizations.of(context).getText(
+                                              '6rnjglih' /* Male */,
+                                            ),
+                                            FFLocalizations.of(context).getText(
+                                              'ednv9ond' /* Female */,
+                                            )
+                                          ],
                                           onChanged: (val) => setState(
                                               () => _model.lsGenderValue = val),
                                           width: double.infinity,
@@ -1054,7 +1094,10 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium,
-                                          hintText: '      Gender',
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'td8ctzo7' /*       Gender */,
+                                          ),
                                           icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: FlutterFlowTheme.of(context)
@@ -1139,9 +1182,16 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
-                                              hintText: 'Player Stage',
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'x9v2h7zj' /* Player Stage */,
+                                              ),
                                               searchHintText:
-                                                  'Select player stage',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '2vnjxpas' /* Select player stage */,
+                                              ),
                                               icon: Icon(
                                                 Icons
                                                     .keyboard_arrow_down_rounded,
@@ -1297,7 +1347,10 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
 
                                               setState(() {});
                                             },
-                                            text: 'Update',
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              '4o0ruus0' /* Update */,
+                                            ),
                                             icon: Icon(
                                               Icons.add_moderator,
                                               size: 15.0,
@@ -1334,7 +1387,10 @@ class _EditTournamentPlanWidgetState extends State<EditTournamentPlanWidget>
                                           onPressed: () async {
                                             Navigator.pop(context);
                                           },
-                                          text: 'Later',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            't7bq9kgl' /* Later */,
+                                          ),
                                           icon: Icon(
                                             Icons.no_sim,
                                             size: 15.0,

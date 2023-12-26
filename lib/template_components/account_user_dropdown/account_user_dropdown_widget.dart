@@ -136,7 +136,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Account Options',
+                            FFLocalizations.of(context).getText(
+                              '1wx59lmh' /* Account Options */,
+                            ),
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context).labelMedium,
                           ),
@@ -206,14 +208,18 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Casper Ghost',
+                                FFLocalizations.of(context).getText(
+                                  '81lw4sy6' /* Casper Ghost */,
+                                ),
                                 style: FlutterFlowTheme.of(context).bodyLarge,
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'ghost@domain.com',
+                                  FFLocalizations.of(context).getText(
+                                    '5qpho5hi' /* ghost@domain.com */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -271,7 +277,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'My Account',
+                                    FFLocalizations.of(context).getText(
+                                      '7rcvt4fw' /* My Account */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),
@@ -327,7 +335,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Settings',
+                                    FFLocalizations.of(context).getText(
+                                      'rnl5f2u7' /* Settings */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),
@@ -383,7 +393,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Billing Details',
+                                    FFLocalizations.of(context).getText(
+                                      'zzpx6v19' /* Billing Details */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),
@@ -478,7 +490,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   4.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            'Light Mode',
+                                            FFLocalizations.of(context).getText(
+                                              'pkb9deac' /* Light Mode */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -551,7 +565,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   4.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            'Dark Mode',
+                                            FFLocalizations.of(context).getText(
+                                              'scdt8a81' /* Dark Mode */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -625,7 +641,9 @@ class _AccountUserDropdownWidgetState extends State<AccountUserDropdownWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Log out',
+                                    FFLocalizations.of(context).getText(
+                                      '3nz2s9p4' /* Log out */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),

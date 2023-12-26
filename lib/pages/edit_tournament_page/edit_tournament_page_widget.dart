@@ -143,7 +143,9 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Edit tournament',
+                          FFLocalizations.of(context).getText(
+                            'kpup48v1' /* Edit tournament */,
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -207,7 +209,10 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                         TextCapitalization.words,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Tournament Name',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'cxrw0dyb' /* Tournament Name */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -319,11 +324,19 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                   TextCapitalization.words,
                                               obscureText: false,
                                               decoration: InputDecoration(
-                                                labelText: 'Tournament Year',
+                                                labelText:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'ho540bfa' /* Tournament Year */,
+                                                ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
-                                                hintText: 'Example: 2023',
+                                                hintText:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  '9i1d2gko' /* Example: 2023 */,
+                                                ),
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -515,9 +528,13 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                 }
                                                 setState(() {
                                                   _model.txtYearController
-                                                          ?.text =
-                                                      dateTimeFormat('yyyy',
-                                                          _model.datePicked);
+                                                      ?.text = dateTimeFormat(
+                                                    'yyyy',
+                                                    _model.datePicked,
+                                                    locale: FFLocalizations.of(
+                                                            context)
+                                                        .languageCode,
+                                                  );
                                                 });
                                               },
                                             ),
@@ -556,7 +573,9 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         hintText:
-                                            'Sponsors : Vodafone , Nike , ... ',
+                                            FFLocalizations.of(context).getText(
+                                          'z70q2cza' /* Sponsors : Vodafone , Nike , .... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         enabledBorder: OutlineInputBorder(
@@ -688,7 +707,9 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
 
                                   setState(() {});
                                 },
-                                text: 'Update',
+                                text: FFLocalizations.of(context).getText(
+                                  'l5lxa6ey' /* Update */,
+                                ),
                                 icon: Icon(
                                   Icons.edit_note,
                                   size: 15.0,
@@ -768,7 +789,10 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'Tournament plans',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'pa7m8lxm' /* Tournament plans */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -788,7 +812,10 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all tournament plans...',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'ptnn4oq5' /* Search all tournament plans... */,
+                                                ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -905,7 +932,11 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Name',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'wpho1kc1' /* Name */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -938,7 +969,11 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                         0.0,
                                                                         0.0),
                                                                 child: Text(
-                                                                  'Edit',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'q2iqyr9w' /* Edit */,
+                                                                  ),
                                                                   textAlign:
                                                                       TextAlign
                                                                           .start,
@@ -977,7 +1012,11 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                         0.0,
                                                                         0.0),
                                                                 child: Text(
-                                                                  'Delete',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'f12ef294' /* Delete */,
+                                                                  ),
                                                                   textAlign:
                                                                       TextAlign
                                                                           .start,
@@ -1419,7 +1458,11 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                         true;
                                                   });
                                                 },
-                                                text: 'Add Plan',
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  '6pe12orc' /* Add Plan */,
+                                                ),
                                                 icon: Icon(
                                                   Icons.add_box,
                                                   size: 15.0,

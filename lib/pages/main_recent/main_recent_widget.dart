@@ -98,7 +98,9 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 0.0, 0.0),
                             child: Text(
-                              'Recent Orders',
+                              FFLocalizations.of(context).getText(
+                                'nnxzq7b8' /* Recent Orders */,
+                              ),
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
@@ -107,7 +109,9 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              'Below are your most recent orders',
+                              FFLocalizations.of(context).getText(
+                                'h8m2expt' /* Below are your most recent ord... */,
+                              ),
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
@@ -140,7 +144,9 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                     Expanded(
                                       flex: 4,
                                       child: Text(
-                                        'Order Number',
+                                        FFLocalizations.of(context).getText(
+                                          '25ykxb8z' /* Order Number */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -162,7 +168,9 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                       Expanded(
                                         flex: 1,
                                         child: Text(
-                                          'Weight',
+                                          FFLocalizations.of(context).getText(
+                                            'a2n2swno' /* Weight */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
@@ -182,7 +190,9 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                       Expanded(
                                         flex: 2,
                                         child: Text(
-                                          'Status',
+                                          FFLocalizations.of(context).getText(
+                                            'm6ps74bp' /* Status */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -197,7 +207,9 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                       ),
                                     Expanded(
                                       child: Text(
-                                        'Amount',
+                                        FFLocalizations.of(context).getText(
+                                          '5mdw1wqn' /* Amount */,
+                                        ),
                                         textAlign: TextAlign.end,
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium,
@@ -283,11 +295,19 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                     text: TextSpan(
                                                       children: [
                                                         TextSpan(
-                                                          text: 'Order #: ',
+                                                          text: FFLocalizations
+                                                                  .of(context)
+                                                              .getText(
+                                                            'fozuqwnu' /* Order #:  */,
+                                                          ),
                                                           style: TextStyle(),
                                                         ),
                                                         TextSpan(
-                                                          text: '429242424',
+                                                          text: FFLocalizations
+                                                                  .of(context)
+                                                              .getText(
+                                                            'tniwb89f' /* 429242424 */,
+                                                          ),
                                                           style: TextStyle(
                                                             color: FlutterFlowTheme
                                                                     .of(context)
@@ -309,7 +329,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'Mon. July 3rd',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'r8pvrt3f' /* Mon. July 3rd */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -361,7 +385,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                     7.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '2.5 lbs',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '99g9qmb7' /* 2.5 lbs */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -412,7 +440,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                     12.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Shipped',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'l35o0yx5' /* Shipped */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium
@@ -437,7 +469,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                   CrossAxisAlignment.end,
                                               children: [
                                                 Text(
-                                                  '\$1.50',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'qjqkx4fw' /* $1.50 */,
+                                                  ),
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -498,11 +533,21 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                   text: TextSpan(
                                                     children: [
                                                       TextSpan(
-                                                        text: 'Order #: ',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'ic6bzbtl' /* Order #:  */,
+                                                        ),
                                                         style: TextStyle(),
                                                       ),
                                                       TextSpan(
-                                                        text: '429242424',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'iu1soeko' /* 429242424 */,
+                                                        ),
                                                         style: TextStyle(
                                                           color: FlutterFlowTheme
                                                                   .of(context)
@@ -522,7 +567,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Mon. July 3rd',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'ei4a1fg3' /* Mon. July 3rd */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -573,7 +621,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                   7.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '2.5 lbs',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'gycrte9d' /* 2.5 lbs */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -624,7 +676,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                   12.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Shipped',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '8ebxgh66' /* Shipped */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -650,7 +706,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                 CrossAxisAlignment.end,
                                             children: [
                                               Text(
-                                                '\$11.42',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'sz5xw26v' /* $11.42 */,
+                                                ),
                                                 textAlign: TextAlign.end,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -710,11 +769,21 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                   text: TextSpan(
                                                     children: [
                                                       TextSpan(
-                                                        text: 'Order #: ',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'vh7mgf87' /* Order #:  */,
+                                                        ),
                                                         style: TextStyle(),
                                                       ),
                                                       TextSpan(
-                                                        text: '429242424',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          '5x67l042' /* 429242424 */,
+                                                        ),
                                                         style: TextStyle(
                                                           color: FlutterFlowTheme
                                                                   .of(context)
@@ -734,7 +803,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Mon. July 3rd',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'z1529oxc' /* Mon. July 3rd */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -785,7 +857,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                   7.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '2.5 lbs',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'drhlzufq' /* 2.5 lbs */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -836,7 +912,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                   12.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Accepted',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'gotyn6o0' /* Accepted */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -862,7 +942,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                 CrossAxisAlignment.end,
                                             children: [
                                               Text(
-                                                '\$56.89',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'fk1mrxkd' /* $56.89 */,
+                                                ),
                                                 textAlign: TextAlign.end,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -922,11 +1005,21 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                   text: TextSpan(
                                                     children: [
                                                       TextSpan(
-                                                        text: 'Order #: ',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'pmpf7ymi' /* Order #:  */,
+                                                        ),
                                                         style: TextStyle(),
                                                       ),
                                                       TextSpan(
-                                                        text: '429242424',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'sy4pjn7d' /* 429242424 */,
+                                                        ),
                                                         style: TextStyle(
                                                           color: FlutterFlowTheme
                                                                   .of(context)
@@ -946,7 +1039,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Mon. July 3rd',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'qbt9iu6e' /* Mon. July 3rd */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -997,7 +1093,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                   7.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '2.5 lbs',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'wpc1dv5h' /* 2.5 lbs */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1048,7 +1148,11 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                                   12.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Accepted',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'ussgq885' /* Accepted */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1074,7 +1178,10 @@ class _MainRecentWidgetState extends State<MainRecentWidget> {
                                                 CrossAxisAlignment.end,
                                             children: [
                                               Text(
-                                                '\$15.12',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'sd9jnpf9' /* $15.12 */,
+                                                ),
                                                 textAlign: TextAlign.end,
                                                 style:
                                                     FlutterFlowTheme.of(context)

@@ -28,7 +28,9 @@ class CreateTournamentPageModel
   String? _txtTournamentNameControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        '0hmd3bai' /* Field is required */,
+      );
     }
 
     return null;
@@ -40,7 +42,9 @@ class CreateTournamentPageModel
   String? Function(BuildContext, String?)? txtYearControllerValidator;
   String? _txtYearControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'z00ll44r' /* Field is required */,
+      );
     }
 
     return null;

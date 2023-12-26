@@ -193,7 +193,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
               backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
               automaticallyImplyLeading: false,
               title: Text(
-                'My Profile',
+                FFLocalizations.of(context).getText(
+                  '7cj0svql' /* My Profile */,
+                ),
                 style: FlutterFlowTheme.of(context).headlineMedium,
               ),
               actions: [],
@@ -263,7 +265,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        'check.io',
+                                        FFLocalizations.of(context).getText(
+                                          '9hk86nbf' /* check.io */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium
                                             .override(
@@ -326,7 +330,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              'Andrew D.',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'knvlj4pz' /* Andrew D. */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge
@@ -343,7 +350,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 4.0, 0.0, 0.0),
                                               child: Text(
-                                                'admin@gmail.com',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'tko0q2fz' /* admin@gmail.com */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -433,7 +443,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      'Dashboard',
+                                      FFLocalizations.of(context).getText(
+                                        'ncjl1cn8' /* Dashboard */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -488,7 +500,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Chats',
+                                    FFLocalizations.of(context).getText(
+                                      '64o50drf' /* Chats */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -542,7 +556,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Projects',
+                                    FFLocalizations.of(context).getText(
+                                      '05niyn0v' /* Projects */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -596,7 +612,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Explore',
+                                    FFLocalizations.of(context).getText(
+                                      'og24kcbh' /* Explore */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -772,7 +790,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Overview',
+                                      FFLocalizations.of(context).getText(
+                                        '4h0layh9' /* Overview */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .headlineLarge,
                                     ),
@@ -780,7 +800,9 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
-                                        'Below is a company overview',
+                                        FFLocalizations.of(context).getText(
+                                          'fvyq5gfw' /* Below is a company overview */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                       ),
@@ -870,13 +892,19 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Andrew D.',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'y81nnyza' /* Andrew D. */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge,
                                                 ),
                                                 Text(
-                                                  'admin@gmail.com',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'np93qs9a' /* admin@gmail.com */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -966,7 +994,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Income this Month',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'exmys9dm' /* Income this Month */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -984,7 +1015,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                   4.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '\$567k',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'g72ts8fn' /* $567k */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1037,7 +1072,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Income YTD',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'd724cq9u' /* Income YTD */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -1051,7 +1089,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                             .fromSTEB(0.0, 8.0,
                                                                 4.0, 0.0),
                                                     child: Text(
-                                                      '5.7m',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'c12m4mxo' /* 5.7m */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1103,7 +1145,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'New Customers',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'w2e1sz8u' /* New Customers */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -1117,7 +1162,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                             .fromSTEB(0.0, 8.0,
                                                                 4.0, 0.0),
                                                     child: Text(
-                                                      '2.5k',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'jjlv3hty' /* 2.5k */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1169,7 +1218,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Total Orders',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'wsmbheur' /* Total Orders */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -1183,7 +1235,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                             .fromSTEB(0.0, 4.0,
                                                                 4.0, 0.0),
                                                     child: Text(
-                                                      '6.4k',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'zvlxq3gm' /* 6.4k */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1257,7 +1313,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Outstanding Balance',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '32dllrl0' /* Outstanding Balance */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -1275,7 +1334,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                     4.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '\$529,204',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '5ohmi16x' /* $529,204 */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .displaySmall,
@@ -1299,7 +1362,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .accent1,
                                               center: Text(
-                                                '55%',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'gp0ayrge' /* 55% */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineMedium,
@@ -1342,7 +1408,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Outstanding Balance',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'tu4tdh1u' /* Outstanding Balance */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -1360,7 +1429,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                     4.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '\$529,204',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'nd3uax4y' /* $529,204 */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .displaySmall,
@@ -1384,7 +1457,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .accent1,
                                               center: Text(
-                                                '55%',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'vxl9veie' /* 55% */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineMedium,
@@ -1495,7 +1571,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Network Requests',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'jhwthbwa' /* Network Requests */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge,
@@ -1509,7 +1589,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'You’re using 80% of available requests.',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'j189de8x' /* You’re using 80% of available ... */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -1544,7 +1628,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 center: Text(
-                                                  '562k',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ozkgbnkm' /* 562k */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall,
@@ -1557,7 +1644,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 16.0, 0.0),
                                             child: Text(
-                                              'You’ve almost reached your limit',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '4tfie1rj' /* You’ve almost reached your lim... */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge,
@@ -1568,7 +1658,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 4.0, 16.0, 8.0),
                                             child: Text(
-                                              'You have used 80% of your available requests. Upgrade plan to make more network requests.',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '7dvixroj' /* You have used 80% of your avai... */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .labelSmall,
@@ -1677,7 +1770,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Completed Requests',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '84wyou4d' /* Completed Requests */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge,
@@ -1691,7 +1788,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'You’re averaging 62% completed requests',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '2rhpcsaw' /* You’re averaging 62% completed... */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -1726,7 +1827,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 center: Text(
-                                                  '262k',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ecbpx3pu' /* 262k */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .displaySmall,
@@ -1739,7 +1843,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 16.0, 0.0),
                                             child: Text(
-                                              'You’ve almost reached your limit',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '7rgt6pjw' /* You’ve almost reached your lim... */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge,
@@ -1750,7 +1857,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 4.0, 16.0, 8.0),
                                             child: Text(
-                                              'You have used 80% of your available requests. Upgrade plan to make more network requests.',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'lqu1an3o' /* You have used 80% of your avai... */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .labelSmall,
@@ -1821,7 +1931,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Outstanding Balance',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'e1bolhzq' /* Outstanding Balance */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -1839,7 +1952,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                   4.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '\$529,204',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'ch8796do' /* $529,204 */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1864,7 +1981,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 FlutterFlowTheme.of(context)
                                                     .accent1,
                                             center: Text(
-                                              '55%',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'mwzhetu9' /* 55% */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -1929,7 +2049,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Outstanding Balance',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'zzlm1zyg' /* Outstanding Balance */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -1947,7 +2070,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                     4.0,
                                                                     0.0),
                                                         child: Text(
-                                                          '\$529,204',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '5xps5hi5' /* $529,204 */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .displaySmall,
@@ -1971,7 +2098,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .accent1,
                                               center: Text(
-                                                '55%',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '9t2yg7e5' /* 55% */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineMedium,
@@ -2095,7 +2225,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Network Requests',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '8zviy32v' /* Network Requests */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge,
@@ -2109,7 +2243,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'You’re using 80% of available requests.',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'apm1faec' /* You’re using 80% of available ... */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -2144,7 +2282,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 center: Text(
-                                                  '562k',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ghgd07uk' /* 562k */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .headlineLarge,
@@ -2157,7 +2298,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 16.0, 0.0),
                                             child: Text(
-                                              'You’ve almost reached your limit',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '6foj6zmz' /* You’ve almost reached your lim... */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyLarge,
@@ -2168,7 +2312,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 4.0, 16.0, 8.0),
                                             child: Text(
-                                              'You have used 80% of your available requests. Upgrade plan to make more network requests.',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'd11kz44h' /* You have used 80% of your avai... */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .labelSmall,
@@ -2286,7 +2433,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                     .start,
                                                             children: [
                                                               Text(
-                                                                'Completed Requests',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'icrztdfc' /* Completed Requests */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -2300,7 +2451,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                             0.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  'You’re averaging 62% completed requests',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'd0vznui2' /* You’re averaging 62% completed... */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMedium,
@@ -2337,7 +2492,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                               context)
                                                           .accent2,
                                                   center: Text(
-                                                    '262k',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'y2z83bai' /* 262k */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .headlineLarge,
@@ -2350,7 +2508,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   .fromSTEB(
                                                       16.0, 16.0, 16.0, 0.0),
                                               child: Text(
-                                                'You’ve almost reached your limit',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'lwlnfz56' /* You’ve almost reached your lim... */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -2361,7 +2522,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 8.0),
                                               child: Text(
-                                                'You have used 80% of your available requests. Upgrade plan to make more network requests.',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'pw4262y4' /* You have used 80% of your avai... */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall,
@@ -2411,7 +2575,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
                                               child: Text(
-                                                'Recent Invoices',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '1tx154uy' /* Recent Invoices */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineMedium,
@@ -2422,7 +2589,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   .fromSTEB(
                                                       0.0, 4.0, 12.0, 0.0),
                                               child: Text(
-                                                'Below is a list of recent invoices.',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'l5fmh6jy' /* Below is a list of recent invo... */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -2435,7 +2605,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                         onPressed: () {
                                           print('Button pressed ...');
                                         },
-                                        text: 'Add New',
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'wm5vopd5' /* Add New */,
+                                        ),
                                         icon: Icon(
                                           Icons.add_rounded,
                                           color:
@@ -2501,7 +2674,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                               Expanded(
                                                 flex: 2,
                                                 child: Text(
-                                                  'Work Type',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'ga8x4qpw' /* Work Type */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall,
@@ -2510,7 +2686,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                             Expanded(
                                               flex: 4,
                                               child: Text(
-                                                'Assigned User',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'x1bmmiir' /* Assigned User */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall,
@@ -2523,7 +2702,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                               Expanded(
                                                 flex: 2,
                                                 child: Text(
-                                                  'Contract Amount',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'z4e3gkh2' /* Contract Amount */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelSmall,
@@ -2532,7 +2714,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                             Expanded(
                                               flex: 2,
                                               child: Text(
-                                                'Status',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'jtlfuvjv' /* Status */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall,
@@ -2541,7 +2726,10 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                             Expanded(
                                               flex: 1,
                                               child: Text(
-                                                'Actions',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'xyvh96pi' /* Actions */,
+                                                ),
                                                 textAlign: TextAlign.end,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -2591,7 +2779,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'jpbv123r' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2652,7 +2844,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'sezmurs2' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -2671,7 +2867,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'wiio7oiz' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -2698,7 +2898,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'v5n3phlb' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2740,7 +2944,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Paid',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'mw6uxzka' /* Paid */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -2817,7 +3025,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'cp8g6cgy' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2878,7 +3090,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'epehcvyu' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -2897,7 +3113,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      't85vf4fg' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -2924,7 +3144,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '4d87ab26' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2966,7 +3190,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Paid',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'igtftux5' /* Paid */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -3043,7 +3271,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'miqecohu' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3104,7 +3336,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'm9ma08so' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -3123,7 +3359,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      '9l7mmw84' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -3150,7 +3390,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '37sh129p' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3192,7 +3436,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Paid',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '3ps75ftn' /* Paid */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -3269,7 +3517,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'w8ds0kfc' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3330,7 +3582,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'yuoaysr1' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -3349,7 +3605,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'ot0c6tg7' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -3376,7 +3636,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '07ecm9bo' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3418,7 +3682,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Paid',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '22861l3s' /* Paid */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -3495,7 +3763,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'xwlq3ah1' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3556,7 +3828,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '9tsf9m9i' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -3575,7 +3851,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      '0pese1m9' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -3602,7 +3882,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'wq1ds1aq' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3639,7 +3923,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Pending',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '0g3ukvq6' /* Pending */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -3716,7 +4004,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '5zh36j91' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3777,7 +4069,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'o6tni5yb' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -3796,7 +4092,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'nbouez0c' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -3823,7 +4123,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '2aato8fk' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3860,7 +4164,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Pending',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'nu5huljh' /* Pending */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,
@@ -3937,7 +4245,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      'Design Work',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '9za27hjc' /* Design Work */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -3998,7 +4310,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       .start,
                                                               children: [
                                                                 Text(
-                                                                  'Randy Peterson',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'do5l9rav' /* Randy Peterson */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -4017,7 +4333,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    'Business Name',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      '0qxnfksn' /* Business Name */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodySmall
@@ -4044,7 +4364,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                   Expanded(
                                                     flex: 2,
                                                     child: Text(
-                                                      '\$2,100',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'v0ibm30m' /* $2,100 */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -4081,7 +4405,11 @@ class _ResponsiveProfileWidgetState extends State<ResponsiveProfileWidget>
                                                                       12.0,
                                                                       0.0),
                                                           child: Text(
-                                                            'Pending',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'e6lo99pu' /* Pending */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyMedium,

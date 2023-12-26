@@ -111,7 +111,9 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Hello, ',
+                                    FFLocalizations.of(context).getText(
+                                      'tf6ke78b' /* Hello,  */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium,
                                   ),
@@ -120,7 +122,9 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       2.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Administrator',
+                                    FFLocalizations.of(context).getText(
+                                      'moq0wnp0' /* Administrator */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
@@ -137,7 +141,9 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              'Below is an overview of your Squash platform',
+                              FFLocalizations.of(context).getText(
+                                'jndpx07r' /* Below is an overview of your S... */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
@@ -214,7 +220,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Total Number of Players',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '0y6h5n3v' /* Total Number of Players */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -233,7 +243,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                           4.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    '230',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'fpxjn6xs' /* 230 */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .displaySmall,
@@ -309,7 +323,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Total Number fof Clubs',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '5gpf0rse' /* Total Number fof Clubs */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -328,7 +346,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '140',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'wq6fqzln' /* 140 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displaySmall,
@@ -403,7 +425,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Total Number of Tournaments',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '4nzg6m28' /* Total Number of Tournaments */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -422,7 +448,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '1000',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'czzhtzw0' /* 1000 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displaySmall,
@@ -498,7 +528,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Added by Me',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '4wh6we2c' /* Added by Me */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -517,7 +551,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '806',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '1pt9nzgq' /* 806 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displaySmall,
@@ -600,7 +638,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'Players in Tournaments',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'xjtv1ood' /* Players in Tournaments */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -619,7 +661,11 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                                       4.0,
                                                                       0.0),
                                                           child: Text(
-                                                            '1900',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'zj93znt7' /* 1900 */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .displayMedium,
@@ -643,7 +689,10 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent1,
                                                 center: Text(
-                                                  '55%',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '8dr3hn7o' /* 55% */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .headlineMedium,

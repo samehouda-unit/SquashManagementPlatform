@@ -103,7 +103,9 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      'List clubs',
+                      FFLocalizations.of(context).getText(
+                        'hx9gwium' /* List clubs */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -184,7 +186,10 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'Clubs',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '4rutfk4p' /* Clubs */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -203,7 +208,10 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all clubs...',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'wc2od4bw' /* Search all clubs... */,
+                                                ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -325,7 +333,11 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Name',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            's2eapcdn' /* Name */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -344,7 +356,11 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
-                                                          'Last Active',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'e9bxoskb' /* Last Active */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -363,7 +379,11 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
-                                                          'Title',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'sces91ou' /* Title */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -392,7 +412,11 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                 AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Text(
-                                                              'Edit',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '5f7vntxo' /* Edit */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -427,7 +451,11 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                 AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Text(
-                                                              'Delete',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'pj49g00m' /* Delete */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -737,7 +765,9 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            '5 mins ago',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'bynislfp' /* 5 mins ago */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -760,7 +790,9 @@ class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Head of Design',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'ri0ykhif' /* Head of Design */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),

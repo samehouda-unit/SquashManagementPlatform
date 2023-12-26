@@ -117,7 +117,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                         padding:
                             EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Squash Platform',
+                          FFLocalizations.of(context).getText(
+                            'e57ec01n' /* Squash Platform */,
+                          ),
                           style: FlutterFlowTheme.of(context).headlineMedium,
                         ),
                       ),
@@ -219,7 +221,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Casper Ghost',
+                                        FFLocalizations.of(context).getText(
+                                          'v6oy234t' /* Casper Ghost */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge,
                                       ),
@@ -227,7 +231,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
-                                          'ghost@domain.com',
+                                          FFLocalizations.of(context).getText(
+                                            'z7oxdz80' /* ghost@domain.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelSmall
                                               .override(
@@ -258,7 +264,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                   child: Text(
-                    'Platform Navigation',
+                    FFLocalizations.of(context).getText(
+                      '4at42qaa' /* Platform Navigation */,
+                    ),
                     style: FlutterFlowTheme.of(context).labelMedium,
                   ),
                 ),
@@ -337,7 +345,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                   if (FFAppState().navOpen == true)
                                     Expanded(
                                       child: Text(
-                                        'Dashboard',
+                                        FFLocalizations.of(context).getText(
+                                          'rjsznqni' /* Dashboard */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -424,7 +434,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                   if (FFAppState().navOpen == true)
                                     Expanded(
                                       child: Text(
-                                        'Users',
+                                        FFLocalizations.of(context).getText(
+                                          'fj4n65x2' /* Users */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -506,7 +518,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                   if (FFAppState().navOpen == true)
                                     Expanded(
                                       child: Text(
-                                        'Notifications',
+                                        FFLocalizations.of(context).getText(
+                                          '59tq5jvc' /* Notifications */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -531,7 +545,10 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 4.0, 8.0, 4.0),
                                             child: Text(
-                                              '12',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'vowflysf' /* 12 */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -630,7 +647,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                   if (FFAppState().navOpen == true)
                                     Expanded(
                                       child: Text(
-                                        'Recent Orders',
+                                        FFLocalizations.of(context).getText(
+                                          'pyys0t2q' /* Recent Orders */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -653,7 +672,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                         padding:
                             EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Platform Settings',
+                          FFLocalizations.of(context).getText(
+                            '5xfx892x' /* Platform Settings */,
+                          ),
                           style: FlutterFlowTheme.of(context).labelMedium,
                         ),
                       ),
@@ -721,7 +742,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                   if (FFAppState().navOpen == true)
                                     Expanded(
                                       child: Text(
-                                        'Account',
+                                        FFLocalizations.of(context).getText(
+                                          'c9k341is' /* Account */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -803,7 +826,9 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                   if (FFAppState().navOpen == true)
                                     Expanded(
                                       child: Text(
-                                        'Administrator',
+                                        FFLocalizations.of(context).getText(
+                                          'f8rn8avu' /* Administrator */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -921,7 +946,10 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                                       .fromSTEB(
                                                           4.0, 0.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Light Mode',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'zilxqp4y' /* Light Mode */,
+                                                    ),
                                                     style:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -1010,7 +1038,10 @@ class _SideNavWidgetState extends State<SideNavWidget>
                                                       .fromSTEB(
                                                           4.0, 0.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Dark Mode',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '8s8yoond' /* Dark Mode */,
+                                                    ),
                                                     style:
                                                         FlutterFlowTheme.of(
                                                                 context)

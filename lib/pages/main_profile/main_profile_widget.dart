@@ -219,7 +219,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'Sameh Ouda',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'ka1t8srq' /* Sameh Ouda */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -234,7 +238,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'samehoudaunit@gmail.com',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'nccav291' /* samehoudaunit@gmail.com */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -306,7 +314,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                                       0.0,
                                                                       4.0),
                                                           child: Text(
-                                                            '2,200',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'h01xzsvj' /* 2,200 */,
+                                                            ),
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style: FlutterFlowTheme
@@ -315,7 +327,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                           ),
                                                         ),
                                                         Text(
-                                                          'Orders Placed',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'hg5gtyg3' /* Orders Placed */,
+                                                          ),
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: FlutterFlowTheme
@@ -376,7 +392,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                                       0.0,
                                                                       4.0),
                                                           child: Text(
-                                                            '\$212.4k',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'c09eu4in' /* $212.4k */,
+                                                            ),
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style: FlutterFlowTheme
@@ -385,7 +405,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                           ),
                                                         ),
                                                         Text(
-                                                          'Money Earned',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '1ogcuuy0' /* Money Earned */,
+                                                          ),
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: FlutterFlowTheme
@@ -433,7 +457,9 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 12.0, 0.0, 12.0),
                                           child: Text(
-                                            'My Account Information',
+                                            FFLocalizations.of(context).getText(
+                                              'ni3gco4m' /* My Account Information */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium,
                                           ),
@@ -473,7 +499,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       MainAxisSize.max,
                                                   children: [
                                                     Text(
-                                                      'Change Password',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'ts700fft' /* Change Password */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -535,7 +565,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       MainAxisSize.max,
                                                   children: [
                                                     Text(
-                                                      'Edit Profile',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '8jcqrokd' /* Edit Profile */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -591,7 +625,10 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 12.0, 0.0, 12.0),
                                             child: Text(
-                                              'Support',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'ihi4u446' /* Support */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium,
@@ -633,7 +670,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       MainAxisSize.max,
                                                   children: [
                                                     Text(
-                                                      'Tutorial',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'qqsqal1p' /* Tutorial */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -702,7 +743,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       MainAxisSize.max,
                                                   children: [
                                                     Text(
-                                                      'Submit a Bug',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'bs1dbn1y' /* Submit a Bug */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -771,7 +816,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                       MainAxisSize.max,
                                                   children: [
                                                     Text(
-                                                      'Submit a Feature Request',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '92nwrwe6' /* Submit a Feature Request */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -917,7 +966,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'Light ',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'nmgf4ui0' /* Light  */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -1019,7 +1072,11 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                                                           0.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'Dark',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'ewqq6eg1' /* Dark */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
@@ -1058,7 +1115,10 @@ class _MainProfileWidgetState extends State<MainProfileWidget>
                                             onPressed: () {
                                               print('Button pressed ...');
                                             },
-                                            text: 'Log Out',
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'fjatx62f' /* Log Out */,
+                                            ),
                                             options: FFButtonOptions(
                                               width: 130.0,
                                               height: 50.0,

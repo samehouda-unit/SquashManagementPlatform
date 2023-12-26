@@ -38,7 +38,9 @@ class EditTournamentPlanModel
   String? _txtTournamentPlanNameControllerValidator(
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'rf6sh44d' /* Field is required */,
+      );
     }
 
     return null;
@@ -54,7 +56,9 @@ class EditTournamentPlanModel
   String? Function(BuildContext, String?)? txtFromDateControllerValidator;
   String? _txtFromDateControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        '67qr6o81' /* Field is required */,
+      );
     }
 
     return null;
@@ -68,7 +72,9 @@ class EditTournamentPlanModel
   String? Function(BuildContext, String?)? txtToDateControllerValidator;
   String? _txtToDateControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'si9w9y8c' /* Field is required */,
+      );
     }
 
     return null;

@@ -101,7 +101,9 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      'List tournaments',
+                      FFLocalizations.of(context).getText(
+                        '2v8qo17x' /* List tournaments */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -182,7 +184,10 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 16.0, 0.0, 0.0),
                                             child: Text(
-                                              'Tournaments',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '8dr5sd63' /* Tournaments */,
+                                              ),
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium,
@@ -201,7 +206,10 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelText:
-                                                    'Search all tournaments...',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'p1brsnud' /* Search all tournaments... */,
+                                                ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium,
@@ -323,7 +331,11 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Name',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '1phbmbxm' /* Name */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -342,7 +354,11 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
-                                                          'Last Active',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'fshwortv' /* Last Active */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -361,7 +377,11 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
-                                                          'Title',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'kyjyv428' /* Title */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -382,7 +402,11 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                               AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
-                                                            'Edit',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'lefn8kzt' /* Edit */,
+                                                            ),
                                                             textAlign:
                                                                 TextAlign.start,
                                                             style: FlutterFlowTheme
@@ -411,7 +435,11 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                 AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Text(
-                                                              'Delete',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'tn2jcozc' /* Delete */,
+                                                              ),
                                                               textAlign:
                                                                   TextAlign
                                                                       .start,
@@ -621,7 +649,9 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            '5 mins ago',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'q286tovb' /* 5 mins ago */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -644,7 +674,9 @@ class _ListTournamentsPageWidgetState extends State<ListTournamentsPageWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Head of Design',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              '19kwyp1i' /* Head of Design */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),

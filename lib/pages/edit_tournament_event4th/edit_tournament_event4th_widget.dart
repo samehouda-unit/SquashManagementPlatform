@@ -145,7 +145,9 @@ class _EditTournamentEvent4thWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          '4. Edit Tournament Event',
+                          FFLocalizations.of(context).getText(
+                            'xznzlljo' /* 4. Edit Tournament Event */,
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -454,7 +456,11 @@ class _EditTournamentEvent4thWidgetState
                                                                           context)
                                                                       .bodyMedium,
                                                               hintText:
-                                                                  'Location',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                'cycouyo4' /* Location */,
+                                                              ),
                                                               searchHintText:
                                                                   '',
                                                               icon: Icon(
@@ -547,13 +553,19 @@ class _EditTournamentEvent4thWidgetState
                                                                       false,
                                                                   decoration:
                                                                       InputDecoration(
-                                                                    labelText:
-                                                                        'From',
+                                                                    labelText: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'rok728c2' /* From */,
+                                                                    ),
                                                                     labelStyle:
                                                                         FlutterFlowTheme.of(context)
                                                                             .labelMedium,
-                                                                    hintText:
-                                                                        'yyyy-MM-dd',
+                                                                    hintText: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      '5sq10sde' /* yyyy-MM-dd */,
+                                                                    ),
                                                                     hintStyle: FlutterFlowTheme.of(
                                                                             context)
                                                                         .labelMedium,
@@ -753,10 +765,15 @@ class _EditTournamentEvent4thWidgetState
                                                                     }
                                                                     setState(
                                                                         () {
-                                                                      _model.txtFromDateController?.text = dateTimeFormat(
-                                                                          'yyyy-MM-dd',
-                                                                          _model
-                                                                              .datePicked1);
+                                                                      _model.txtFromDateController
+                                                                              ?.text =
+                                                                          dateTimeFormat(
+                                                                        'yyyy-MM-dd',
+                                                                        _model
+                                                                            .datePicked1,
+                                                                        locale:
+                                                                            FFLocalizations.of(context).languageCode,
+                                                                      );
                                                                     });
                                                                   },
                                                                 ),
@@ -813,13 +830,19 @@ class _EditTournamentEvent4thWidgetState
                                                                     false,
                                                                 decoration:
                                                                     InputDecoration(
-                                                                  labelText:
-                                                                      'To',
+                                                                  labelText: FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'flqque6n' /* To */,
+                                                                  ),
                                                                   labelStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMedium,
-                                                                  hintText:
-                                                                      'yyyy-MM-dd',
+                                                                  hintText: FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '3z7ofrat' /* yyyy-MM-dd */,
+                                                                  ),
                                                                   hintStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMedium,
@@ -1028,8 +1051,13 @@ class _EditTournamentEvent4thWidgetState
                                                                     _model.txtToDateController
                                                                             ?.text =
                                                                         dateTimeFormat(
-                                                                            'yyyy-MM-dd',
-                                                                            _model.datePicked2);
+                                                                      'yyyy-MM-dd',
+                                                                      _model
+                                                                          .datePicked2,
+                                                                      locale: FFLocalizations.of(
+                                                                              context)
+                                                                          .languageCode,
+                                                                    );
                                                                   });
                                                                 },
                                                               ),
@@ -1189,7 +1217,11 @@ class _EditTournamentEvent4thWidgetState
 
                                                                 setState(() {});
                                                               },
-                                                              text: 'Update',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                '2nztgmb9' /* Update */,
+                                                              ),
                                                               icon: Icon(
                                                                 Icons.save_as,
                                                                 size: 15.0,

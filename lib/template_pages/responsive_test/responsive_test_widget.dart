@@ -131,7 +131,9 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'check.io',
+                                    FFLocalizations.of(context).getText(
+                                      'yxx72sto' /* check.io */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium,
                                   ),
@@ -205,7 +207,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                     .fromSTEB(
                                                         12.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Dashboard',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'evpqpwyj' /* Dashboard */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium,
@@ -249,7 +254,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                'Chats',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'iotp9eg9' /* Chats */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
@@ -303,7 +311,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                     .fromSTEB(
                                                         12.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Projects',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'hbt8se4h' /* Projects */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium,
@@ -348,7 +359,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                     .fromSTEB(
                                                         12.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'My Feed',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'vvee90k6' /* My Feed */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium,
@@ -373,7 +387,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                       .fromSTEB(
                                                           8.0, 4.0, 8.0, 4.0),
                                                   child: Text(
-                                                    '12',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'mte5k593' /* 12 */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -491,7 +508,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                             .fromSTEB(4.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'Light Mode',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '5wkc58bj' /* Light Mode */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -583,7 +604,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                             .fromSTEB(4.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      'Dark Mode',
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'b298ljcu' /* Dark Mode */,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -671,12 +696,16 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Casper Ghost',
+                                          FFLocalizations.of(context).getText(
+                                            'd1ob6aeq' /* Casper Ghost */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge,
                                         ),
                                         Text(
-                                          'admin@gmail.com',
+                                          FFLocalizations.of(context).getText(
+                                            'k1avq9ly' /* admin@gmail.com */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium,
                                         ),
@@ -768,7 +797,9 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 24.0, 0.0, 0.0),
                             child: Text(
-                              'My Feed',
+                              FFLocalizations.of(context).getText(
+                                '27wkn8ja' /* My Feed */,
+                              ),
                               style:
                                   FlutterFlowTheme.of(context).headlineMedium,
                             ),
@@ -777,7 +808,9 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 16.0),
                             child: Text(
-                              'Review the recent posts.',
+                              FFLocalizations.of(context).getText(
+                                'n8sz1fro' /* Review the recent posts. */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
@@ -870,7 +903,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Andrew Daniels',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'fxn93zsb' /* Andrew Daniels */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyLarge,
@@ -883,19 +920,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                               text: TextSpan(
                                                                 children: [
                                                                   TextSpan(
-                                                                    text:
-                                                                        '@username',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'yaxuq4ij' /* @username */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text: ' • ',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'pmpojad2' /*  •  */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text:
-                                                                        '4 mins ago',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'qwtho6p0' /* 4 mins ago */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   )
@@ -931,7 +978,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                     4.0,
                                                                     12.0),
                                                         child: Text(
-                                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'lnypf8yw' /* Lorem ipsum dolor sit amet, co... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -1001,7 +1052,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'v3q13bhy' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -1048,7 +1103,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'vnast4pf' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -1197,7 +1256,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Andrew Daniels',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '4ix0fndn' /* Andrew Daniels */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyLarge,
@@ -1210,19 +1273,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                               text: TextSpan(
                                                                 children: [
                                                                   TextSpan(
-                                                                    text:
-                                                                        '@username',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'o982h35z' /* @username */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text: ' • ',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'pi6rqh7n' /*  •  */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text:
-                                                                        '4 mins ago',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'bm7tr23d' /* 4 mins ago */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   )
@@ -1258,7 +1331,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                     4.0,
                                                                     12.0),
                                                         child: Text(
-                                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'z3myszmx' /* Lorem ipsum dolor sit amet, co... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -1329,7 +1406,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'zq0hc57r' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -1376,7 +1457,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'vaa3a82s' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -1525,7 +1610,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Andrew Daniels',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '1f9et5q1' /* Andrew Daniels */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyLarge,
@@ -1538,19 +1627,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                               text: TextSpan(
                                                                 children: [
                                                                   TextSpan(
-                                                                    text:
-                                                                        '@username',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'c3mtwdsl' /* @username */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text: ' • ',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'd33x3vgz' /*  •  */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text:
-                                                                        '4 mins ago',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'qmiuh6m8' /* 4 mins ago */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   )
@@ -1586,7 +1685,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                     4.0,
                                                                     12.0),
                                                         child: Text(
-                                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'nl3uppqp' /* Lorem ipsum dolor sit amet, co... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -1657,7 +1760,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'j9uogpcx' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -1704,7 +1811,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'fj39k0dc' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -1853,7 +1964,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                   .start,
                                                           children: [
                                                             Text(
-                                                              'Andrew Daniels',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '2zefq6xk' /* Andrew Daniels */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyLarge,
@@ -1866,19 +1981,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                               text: TextSpan(
                                                                 children: [
                                                                   TextSpan(
-                                                                    text:
-                                                                        '@username',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'oev9ah5g' /* @username */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text: ' • ',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'oxm47k2m' /*  •  */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   ),
                                                                   TextSpan(
-                                                                    text:
-                                                                        '4 mins ago',
+                                                                    text: FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'u05rlfff' /* 4 mins ago */,
+                                                                    ),
                                                                     style:
                                                                         TextStyle(),
                                                                   )
@@ -1914,7 +2039,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                     4.0,
                                                                     12.0),
                                                         child: Text(
-                                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '066edjmk' /* Lorem ipsum dolor sit amet, co... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -1985,7 +2114,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        '0hoaocqm' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -2032,7 +2165,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '4',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'kro2oq9q' /* 4 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .labelMedium,
@@ -2192,7 +2329,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'Andrew Daniels',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'xzdgeb0q' /* Andrew Daniels */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -2206,18 +2347,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                         text: TextSpan(
                                                           children: [
                                                             TextSpan(
-                                                              text: '@username',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'smsegtpy' /* @username */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text: ' • ',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'ycuby8h1' /*  •  */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text:
-                                                                  '4 mins ago',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'petmmn0u' /* 4 mins ago */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             )
@@ -2247,7 +2399,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 4.0, 12.0),
                                                   child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'jwmg2bue' /* Lorem ipsum dolor sit amet, co... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -2312,7 +2467,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '3sea6bz6' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -2359,7 +2518,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'zb1t5zaz' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -2495,7 +2658,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'Andrew Daniels',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'e3c072zp' /* Andrew Daniels */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -2509,18 +2676,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                         text: TextSpan(
                                                           children: [
                                                             TextSpan(
-                                                              text: '@username',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'osp9yb0y' /* @username */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text: ' • ',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                '18zmgf9m' /*  •  */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text:
-                                                                  '4 mins ago',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'drih7aft' /* 4 mins ago */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             )
@@ -2550,7 +2728,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 4.0, 12.0),
                                                   child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'tnpr92m7' /* Lorem ipsum dolor sit amet, co... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -2616,7 +2797,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'i5808bao' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -2663,7 +2848,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'sq00xryu' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -2799,7 +2988,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'Andrew Daniels',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'pm7btsb2' /* Andrew Daniels */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -2813,18 +3006,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                         text: TextSpan(
                                                           children: [
                                                             TextSpan(
-                                                              text: '@username',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'e31bvy6l' /* @username */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text: ' • ',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'yp0nmc4n' /*  •  */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text:
-                                                                  '4 mins ago',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                's3pax414' /* 4 mins ago */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             )
@@ -2854,7 +3058,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 4.0, 12.0),
                                                   child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'mga53nq9' /* Lorem ipsum dolor sit amet, co... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -2920,7 +3127,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  's13qdfwm' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -2967,7 +3178,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '67bzuueg' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -3103,7 +3318,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        'Andrew Daniels',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '0z6s6qjm' /* Andrew Daniels */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -3117,18 +3336,29 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                         text: TextSpan(
                                                           children: [
                                                             TextSpan(
-                                                              text: '@username',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                't30vrzku' /* @username */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text: ' • ',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'k05lgf0x' /*  •  */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             ),
                                                             TextSpan(
-                                                              text:
-                                                                  '4 mins ago',
+                                                              text: FFLocalizations
+                                                                      .of(context)
+                                                                  .getText(
+                                                                'viriojp3' /* 4 mins ago */,
+                                                              ),
                                                               style:
                                                                   TextStyle(),
                                                             )
@@ -3158,7 +3388,10 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 4.0, 12.0),
                                                   child: Text(
-                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '3f6em019' /* Lorem ipsum dolor sit amet, co... */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium,
@@ -3224,7 +3457,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'a24tyh3u' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -3271,7 +3508,11 @@ class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '4',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'm4bdl27a' /* 4 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,

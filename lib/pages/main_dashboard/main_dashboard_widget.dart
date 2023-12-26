@@ -104,7 +104,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Hello, ',
+                                    FFLocalizations.of(context).getText(
+                                      's0sdwnuy' /* Hello,  */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium,
                                   ),
@@ -113,7 +115,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       2.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Sameh Ouda',
+                                    FFLocalizations.of(context).getText(
+                                      'bfw86c1w' /* Sameh Ouda */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
@@ -130,7 +134,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              'Below is an overview of your results',
+                              FFLocalizations.of(context).getText(
+                                'ig5fdm1q' /* Below is an overview of your r... */,
+                              ),
                               style: FlutterFlowTheme.of(context).labelMedium,
                             ),
                           ),
@@ -208,7 +214,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Current ranking',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '7yp42q40' /* Current ranking */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -227,7 +237,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           4.0,
                                                                           0.0),
                                                                   child: Text(
-                                                                    '8',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'tdaza1fe' /* 8 */,
+                                                                    ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .displaySmall,
@@ -303,7 +317,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Number of Tournaments',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'tf6dr43n' /* Number of Tournaments */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -322,7 +340,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '40',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'am8w4u7x' /* 40 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displaySmall,
@@ -397,7 +419,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Total points',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'zoagrr0s' /* Total points */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -416,7 +442,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '1402',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'mih07tv9' /* 1402 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displaySmall,
@@ -491,7 +521,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Total number of matches',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '64qtzm5o' /* Total number of matches */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -510,7 +544,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '806',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'ckb31hhn' /* 806 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displaySmall,
@@ -603,7 +641,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Performance | Won Challenges',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '5021a9z8' /* Performance | Won Challenges */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelMedium,
@@ -622,7 +664,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             4.0,
                                                                             0.0),
                                                                 child: Text(
-                                                                  '400',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'fhm75c8k' /* 400 */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .displayMedium,
@@ -649,7 +695,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   context)
                                                               .accent1,
                                                       center: Text(
-                                                        '55%',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '9ifa12i9' /* 55% */,
+                                                        ),
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -809,7 +859,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Sameh Ouda',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'cogf7e7t' /* Sameh Ouda */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .headlineMedium
@@ -845,7 +899,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           .end,
                                                                   children: [
                                                                     Text(
-                                                                      '18-578-897',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        '9gm44du0' /* 18-578-897 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .headlineMedium
@@ -876,7 +934,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                               ),
                                                             ),
                                                             Text(
-                                                              'Rank  8th',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                '6qju4tmn' /* Rank  8th */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -961,7 +1023,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           12.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'Recent Orders',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'ae4gw1ug' /* Recent Orders */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .headlineMedium,
@@ -976,7 +1042,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                           12.0,
                                                                           0.0),
                                                               child: Text(
-                                                                'Create tables and ui elements that work below.',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'ee4ho8kv' /* Create tables and ui elements ... */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -990,7 +1060,12 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                           print(
                                                               'Button pressed ...');
                                                         },
-                                                        text: 'Add New',
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'qgtf675e' /* Add New */,
+                                                        ),
                                                         icon: Icon(
                                                           Icons.add_rounded,
                                                           color: FlutterFlowTheme
@@ -1091,7 +1166,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                               Expanded(
                                                                 flex: 2,
                                                                 child: Text(
-                                                                  'Work Type',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '6xl8bgxg' /* Work Type */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall,
@@ -1100,7 +1179,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 4,
                                                               child: Text(
-                                                                'Assigned User',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '0h7859j5' /* Assigned User */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelSmall,
@@ -1113,7 +1196,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                               Expanded(
                                                                 flex: 2,
                                                                 child: Text(
-                                                                  'Contract Amount',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '4zu8w6zf' /* Contract Amount */,
+                                                                  ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelSmall,
@@ -1122,7 +1209,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Status',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'bhho0z4o' /* Status */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelSmall,
@@ -1131,7 +1222,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 1,
                                                               child: Text(
-                                                                'Actions',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'nwjxux3q' /* Actions */,
+                                                                ),
                                                                 textAlign:
                                                                     TextAlign
                                                                         .end,
@@ -1199,7 +1294,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        't3zke9q8' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -1254,7 +1353,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'nqlxoqx4' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -1263,7 +1364,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      '1uw5wrn2' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -1286,7 +1389,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'ij2un4rs' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -1326,7 +1433,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Paid',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'iv1ovl11' /* Paid */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -1425,7 +1534,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'g6asa6z8' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -1480,7 +1593,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    's9k0362v' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -1489,7 +1604,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      'y81l8n58' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -1512,7 +1629,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'b1pxjxyh' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -1552,7 +1673,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Paid',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'y1t858ky' /* Paid */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -1651,7 +1774,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        '5y11ooii' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -1706,7 +1833,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'y7s7uoxf' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -1715,7 +1844,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      'x0yimyju' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -1738,7 +1869,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        't28og9hw' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -1778,7 +1913,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Paid',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'jsn0w95e' /* Paid */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -1877,7 +2014,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'siyzj9x8' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -1932,7 +2073,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'wlcwtvae' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -1941,7 +2084,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      '6cgg8jwd' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -1964,7 +2109,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'hc0hzqzi' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -2004,7 +2153,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Paid',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'x8vgpoqa' /* Paid */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -2103,7 +2254,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'p5ne6utc' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -2158,7 +2313,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    's0wou6z6' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -2167,7 +2324,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      'vxwnumjk' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -2190,7 +2349,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'qwmyvbgf' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -2225,7 +2388,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Pending',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'ifiymxnn' /* Pending */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -2324,7 +2489,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'qy0ze18k' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -2379,7 +2548,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    '1rw2mhdx' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -2388,7 +2559,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      'aalj9spp' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -2411,7 +2584,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'iazwfrfg' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -2446,7 +2623,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Pending',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'd52mu2hd' /* Pending */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -2545,7 +2724,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      'Design Work',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'ab2a6bo8' /* Design Work */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -2600,7 +2783,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Text(
-                                                                                  'Randy Peterson',
+                                                                                  FFLocalizations.of(context).getText(
+                                                                                    'u1n4tqbg' /* Randy Peterson */,
+                                                                                  ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Plus Jakarta Sans',
                                                                                         fontWeight: FontWeight.bold,
@@ -2609,7 +2794,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 Padding(
                                                                                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                   child: Text(
-                                                                                    'Business Name',
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      'ajwmuuoz' /* Business Name */,
+                                                                                    ),
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
                                                                                           color: FlutterFlowTheme.of(context).primary,
@@ -2632,7 +2819,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                   Expanded(
                                                                     flex: 2,
                                                                     child: Text(
-                                                                      '\$2,100',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'xny7vafi' /* $2,100 */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .titleLarge,
@@ -2667,7 +2858,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            'Pending',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'p7y6ltd5' /* Pending */,
+                                                                            ),
                                                                             style:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                           ),
@@ -2781,7 +2974,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                     12.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Coming Challenges',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'r7rl67pq' /* Coming Challenges */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .headlineMedium,
@@ -2796,7 +2993,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                     12.0,
                                                                     0.0),
                                                         child: Text(
-                                                          'Here you can find you next challenges',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'brpoz53c' /* Here you can find you next cha... */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelMedium,
@@ -2846,7 +3047,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                         Expanded(
                                                           flex: 2,
                                                           child: Text(
-                                                            'Work Type',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '18aiet66' /* Work Type */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -2855,7 +3060,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                       Expanded(
                                                         flex: 4,
                                                         child: Text(
-                                                          'Assigned Player',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '9b5attli' /* Assigned Player */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -2868,7 +3077,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                         Expanded(
                                                           flex: 2,
                                                           child: Text(
-                                                            'Contract Amount',
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              '3id7eq21' /* Contract Amount */,
+                                                            ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .labelSmall,
@@ -2877,7 +3090,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                       Expanded(
                                                         flex: 2,
                                                         child: Text(
-                                                          'Rank',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'ryeyh516' /* Rank */,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .labelSmall,
@@ -2886,7 +3103,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                       Expanded(
                                                         flex: 1,
                                                         child: Text(
-                                                          'Action',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            '7wizwyxu' /* Action */,
+                                                          ),
                                                           textAlign:
                                                               TextAlign.end,
                                                           style: FlutterFlowTheme
@@ -2945,7 +3166,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'tg7dwlnn' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -3008,7 +3233,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'gl9ozqqu' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -3022,7 +3249,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'klguk48h' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -3044,7 +3273,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '8rveyjrn' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -3088,7 +3321,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Paid',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'r0rxmezw' /* Paid */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -3181,7 +3418,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '5bwzm8bv' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -3244,7 +3485,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'zao0bphw' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -3258,7 +3501,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'esfunb8y' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -3280,7 +3525,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'jith65u0' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -3324,7 +3573,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Paid',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'egcxixuw' /* Paid */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -3417,7 +3670,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'm4l4ccy9' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -3480,7 +3737,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              '65xuqzmg' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -3494,7 +3753,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'edr2vbo3' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -3516,7 +3777,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '7119sowl' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -3560,7 +3825,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Paid',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'ylks6ryy' /* Paid */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -3653,7 +3922,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'ragn48ub' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -3716,7 +3989,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              '88wtepip' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -3730,7 +4005,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '855t0o9p' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -3752,7 +4029,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'vanb5fo2' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -3796,7 +4077,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Paid',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'z5ucyp6k' /* Paid */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -3889,7 +4174,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'xga8boie' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -3952,7 +4241,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'utsiuua5' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -3966,7 +4257,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '55q75j9q' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -3988,7 +4281,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '0yrv1mfb' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -4025,7 +4322,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Pending',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'wh57glnw' /* Pending */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -4118,7 +4419,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '0s7t4qw8' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -4181,7 +4486,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'v1xn1muo' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -4195,7 +4502,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'lmqnn8um' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -4217,7 +4526,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'nzs1ops4' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -4254,7 +4567,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Pending',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'qjvdrl4j' /* Pending */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -4347,7 +4664,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                'Design Work',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '3dud5v1c' /* Design Work */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium,
@@ -4410,7 +4731,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
-                                                                            'Randy Peterson',
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'y4m01235' /* Randy Peterson */,
+                                                                            ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
                                                                                   fontWeight: FontWeight.bold,
@@ -4424,7 +4747,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                                 0.0),
                                                                             child:
                                                                                 Text(
-                                                                              'Business Name',
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'q9oiv80x' /* Business Name */,
+                                                                              ),
                                                                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                     fontFamily: 'Plus Jakarta Sans',
                                                                                     color: FlutterFlowTheme.of(context).primary,
@@ -4446,7 +4771,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                             Expanded(
                                                               flex: 2,
                                                               child: Text(
-                                                                '\$2,100',
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'lcbqvajq' /* $2,100 */,
+                                                                ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .titleLarge,
@@ -4483,7 +4812,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Pending',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'yx6s49sd' /* Pending */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -4548,7 +4881,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         10.0, 14.0, 10.0, 0.0),
                                     child: Text(
-                                      'News',
+                                      FFLocalizations.of(context).getText(
+                                        'jzdu1fte' /* News */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .displayMedium,
@@ -4634,7 +4969,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'World News',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'gudj390a' /* World News */,
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -4730,7 +5069,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 0.0, 0.0),
                                           child: Text(
-                                            'Cairo Tournament',
+                                            FFLocalizations.of(context).getText(
+                                              '5tob1gt8' /* Cairo Tournament */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge
                                                 .override(
@@ -4746,7 +5087,9 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 4.0, 16.0, 0.0),
                                           child: Text(
-                                            'Squash Cairo Tournament starts on January 2024',
+                                            FFLocalizations.of(context).getText(
+                                              'g4lmpng3' /* Squash Cairo Tournament starts... */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
@@ -4838,7 +5181,10 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                                 ),
                                               ),
                                               Text(
-                                                '16 friends played',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'kh0fgu10' /* 16 friends played */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
@@ -4854,7 +5200,10 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
                                               ),
                                               Expanded(
                                                 child: Text(
-                                                  'View related topics',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '8prhugv2' /* View related topics */,
+                                                  ),
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)

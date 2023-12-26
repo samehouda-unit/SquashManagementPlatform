@@ -144,7 +144,9 @@ class _EditTournamentMatch4thWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          '4. Edit Tournament Match',
+                          FFLocalizations.of(context).getText(
+                            'der2wr6m' /* 4. Edit Tournament Match */,
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -494,8 +496,11 @@ class _EditTournamentMatch4thWidgetState
                                                                   textStyle: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium,
-                                                                  hintText:
-                                                                      'Tournament Event',
+                                                                  hintText: FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '7l04vibq' /* Tournament Event */,
+                                                                  ),
                                                                   searchHintText:
                                                                       '',
                                                                   icon: Icon(
@@ -593,11 +598,15 @@ class _EditTournamentMatch4thWidgetState
                                                                       decoration:
                                                                           InputDecoration(
                                                                         labelText:
-                                                                            'Match Time',
+                                                                            FFLocalizations.of(context).getText(
+                                                                          'zcirpfur' /* Match Time */,
+                                                                        ),
                                                                         labelStyle:
                                                                             FlutterFlowTheme.of(context).labelMedium,
                                                                         hintText:
-                                                                            'yyyy-MM-dd hh:mm',
+                                                                            FFLocalizations.of(context).getText(
+                                                                          '39j3lxbp' /* yyyy-MM-dd hh:mm */,
+                                                                        ),
                                                                         hintStyle:
                                                                             FlutterFlowTheme.of(context).labelMedium,
                                                                         enabledBorder:
@@ -809,9 +818,14 @@ class _EditTournamentMatch4thWidgetState
                                                                         }
                                                                         setState(
                                                                             () {
-                                                                          _model.txtMatchTimeController?.text = dateTimeFormat(
-                                                                              'yyyy-MM-dd hh:mm',
-                                                                              _model.datePicked);
+                                                                          _model
+                                                                              .txtMatchTimeController
+                                                                              ?.text = dateTimeFormat(
+                                                                            'yyyy-MM-dd hh:mm',
+                                                                            _model.datePicked,
+                                                                            locale:
+                                                                                FFLocalizations.of(context).languageCode,
+                                                                          );
                                                                         });
                                                                       },
                                                                     ),
@@ -959,7 +973,9 @@ class _EditTournamentMatch4thWidgetState
                                                                             textStyle:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                             hintText:
-                                                                                'Player I',
+                                                                                FFLocalizations.of(context).getText(
+                                                                              'uvzvcklf' /* Player I */,
+                                                                            ),
                                                                             searchHintText:
                                                                                 '',
                                                                             fillColor:
@@ -1097,7 +1113,9 @@ class _EditTournamentMatch4thWidgetState
                                                                             textStyle:
                                                                                 FlutterFlowTheme.of(context).bodyMedium,
                                                                             hintText:
-                                                                                'Player II',
+                                                                                FFLocalizations.of(context).getText(
+                                                                              'n6sk17uj' /* Player II */,
+                                                                            ),
                                                                             searchHintText:
                                                                                 '',
                                                                             fillColor:
@@ -1347,7 +1365,11 @@ class _EditTournamentMatch4thWidgetState
 
                                                       setState(() {});
                                                     },
-                                                    text: 'Update',
+                                                    text: FFLocalizations.of(
+                                                            context)
+                                                        .getText(
+                                                      't0fg7ypl' /* Update */,
+                                                    ),
                                                     icon: Icon(
                                                       Icons.save_as_rounded,
                                                       size: 15.0,

@@ -125,7 +125,9 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Create Club',
+                    FFLocalizations.of(context).getText(
+                      'egd6lc9a' /* Create Club */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Outfit',
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -280,7 +282,9 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                               textCapitalization: TextCapitalization.words,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Name',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'j6eq5d12' /* Name */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -353,7 +357,9 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                               textCapitalization: TextCapitalization.words,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Location',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '3ip7b2pe' /* Location */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -428,7 +434,9 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                               textCapitalization: TextCapitalization.words,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Contact person',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'lkxncotj' /* Contact person */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -505,7 +513,9 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
                               textCapitalization: TextCapitalization.words,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Email',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '2dcxq9pv' /* Email */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintStyle:
@@ -639,7 +649,9 @@ class _CreateClubPageWidgetState extends State<CreateClubPageWidget>
 
                                   setState(() {});
                                 },
-                                text: 'Submit',
+                                text: FFLocalizations.of(context).getText(
+                                  '1sbffjyw' /* Submit */,
+                                ),
                                 icon: Icon(
                                   Icons.add_moderator,
                                   size: 15.0,

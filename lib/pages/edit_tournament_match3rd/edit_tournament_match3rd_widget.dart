@@ -113,7 +113,9 @@ class _EditTournamentMatch3rdWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      '3. Edit/Delete Tournament Matches',
+                      FFLocalizations.of(context).getText(
+                        'd5qai84s' /* 3. Edit/Delete Tournament Matc... */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -328,7 +330,9 @@ class _EditTournamentMatch3rdWidgetState
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 0.0, 0.0),
                                       child: Text(
-                                        'Matches',
+                                        FFLocalizations.of(context).getText(
+                                          'nm5idbd7' /* Matches */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium,
                                       ),
@@ -343,7 +347,10 @@ class _EditTournamentMatch3rdWidgetState
                                             TextCapitalization.words,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          labelText: 'Search all events...',
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            'mmw1e9cj' /* Search all events... */,
+                                          ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
@@ -448,7 +455,10 @@ class _EditTournamentMatch3rdWidgetState
                                                       .fromSTEB(
                                                           16.0, 0.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'Match Information',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'zufuzc4m' /* Match Information */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -467,7 +477,10 @@ class _EditTournamentMatch3rdWidgetState
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
-                                                    'Last Active',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'gxr6c1td' /* Last Active */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -486,7 +499,10 @@ class _EditTournamentMatch3rdWidgetState
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
-                                                    'Title',
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'sgnal70m' /* Title */,
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall,
@@ -512,7 +528,11 @@ class _EditTournamentMatch3rdWidgetState
                                                             AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
-                                                          'Edit',
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            's6rpduqg' /* Edit */,
+                                                          ),
                                                           textAlign:
                                                               TextAlign.start,
                                                           style: FlutterFlowTheme
@@ -539,7 +559,11 @@ class _EditTournamentMatch3rdWidgetState
                                                           AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Text(
-                                                        'Remove',
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'nsn4e3sv' /* Remove */,
+                                                        ),
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
@@ -824,7 +848,11 @@ class _EditTournamentMatch3rdWidgetState
                                                                             12.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '5 mins ago',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'r8qd3845' /* 5 mins ago */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -845,7 +873,11 @@ class _EditTournamentMatch3rdWidgetState
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Head of Design',
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'e9jdy85l' /* Head of Design */,
+                                                                      ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium,
@@ -1036,7 +1068,10 @@ class _EditTournamentMatch3rdWidgetState
                                           onPressed: () {
                                             print('Button pressed ...');
                                           },
-                                          text: 'Print PDF',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'upnmwd1b' /* Print PDF */,
+                                          ),
                                           icon: Icon(
                                             Icons.print_rounded,
                                             size: 15.0,

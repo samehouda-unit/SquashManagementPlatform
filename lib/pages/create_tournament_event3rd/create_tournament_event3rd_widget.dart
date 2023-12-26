@@ -120,7 +120,9 @@ class _CreateTournamentEvent3rdWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      '3. Create Tournament Event',
+                      FFLocalizations.of(context).getText(
+                        'lyyec8us' /* 3. Create Tournament Event */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -411,7 +413,12 @@ class _CreateTournamentEvent3rdWidgetState
                                                               FlutterFlowTheme.of(
                                                                       context)
                                                                   .bodyMedium,
-                                                          hintText: 'Location',
+                                                          hintText:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            'npxvrlba' /* Location */,
+                                                          ),
                                                           searchHintText: '',
                                                           icon: Icon(
                                                             Icons.location_on,
@@ -489,12 +496,20 @@ class _CreateTournamentEvent3rdWidgetState
                                                               decoration:
                                                                   InputDecoration(
                                                                 labelText:
-                                                                    'From',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  'hppgesz6' /* From */,
+                                                                ),
                                                                 labelStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
                                                                 hintText:
-                                                                    'yyyy-MM-dd',
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                  '4cyb21a1' /* yyyy-MM-dd */,
+                                                                ),
                                                                 hintStyle: FlutterFlowTheme.of(
                                                                         context)
                                                                     .labelMedium,
@@ -717,9 +732,13 @@ class _CreateTournamentEvent3rdWidgetState
                                                                   _model.txtFromDateController
                                                                           ?.text =
                                                                       dateTimeFormat(
-                                                                          'yyyy-MM-dd',
-                                                                          _model
-                                                                              .datePicked1);
+                                                                    'yyyy-MM-dd',
+                                                                    _model
+                                                                        .datePicked1,
+                                                                    locale: FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode,
+                                                                  );
                                                                 });
                                                               },
                                                             ),
@@ -764,13 +783,22 @@ class _CreateTournamentEvent3rdWidgetState
                                                             obscureText: false,
                                                             decoration:
                                                                 InputDecoration(
-                                                              labelText: 'To',
+                                                              labelText:
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                'oeqb6kw2' /* To */,
+                                                              ),
                                                               labelStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMedium,
                                                               hintText:
-                                                                  'yyyy-MM-dd',
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                'u73nrwl1' /* yyyy-MM-dd */,
+                                                              ),
                                                               hintStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -993,9 +1021,13 @@ class _CreateTournamentEvent3rdWidgetState
                                                                 _model.txtToDateController
                                                                         ?.text =
                                                                     dateTimeFormat(
-                                                                        'yyyy-MM-dd',
-                                                                        _model
-                                                                            .datePicked2);
+                                                                  'yyyy-MM-dd',
+                                                                  _model
+                                                                      .datePicked2,
+                                                                  locale: FFLocalizations.of(
+                                                                          context)
+                                                                      .languageCode,
+                                                                );
                                                               });
                                                             },
                                                           ),
@@ -1144,7 +1176,11 @@ class _CreateTournamentEvent3rdWidgetState
 
                                                             setState(() {});
                                                           },
-                                                          text: 'Submit',
+                                                          text: FFLocalizations
+                                                                  .of(context)
+                                                              .getText(
+                                                            '7jhmqy5y' /* Submit */,
+                                                          ),
                                                           icon: Icon(
                                                             Icons.add_moderator,
                                                             size: 15.0,

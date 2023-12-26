@@ -71,14 +71,18 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'Clubs',
+                    FFLocalizations.of(context).getText(
+                      '82uvs0xm' /* Clubs / Academy */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                   child: Text(
-                    'Tap to select the needed action for Clubs',
+                    FFLocalizations.of(context).getText(
+                      '3c6g96pn' /* Tap to select the needed actio... */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ),
@@ -126,7 +130,9 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Add new club',
+                                FFLocalizations.of(context).getText(
+                                  'z4jh38lq' /* Add new club */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
@@ -180,7 +186,9 @@ class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Edit/Delete club information',
+                                FFLocalizations.of(context).getText(
+                                  '2zooh9ig' /* Edit/Delete club information */,
+                                ),
                                 style: FlutterFlowTheme.of(context).labelMedium,
                               ),
                             ],
