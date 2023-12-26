@@ -53,3 +53,17 @@ export '/pages/edit_tournament_event3rd/edit_tournament_event3rd_widget.dart'
     show EditTournamentEvent3rdWidget;
 export '/pages/edit_tournament_event4th/edit_tournament_event4th_widget.dart'
     show EditTournamentEvent4thWidget;
+export '/pages/create_tournament_match1st/create_tournament_match1st_widget.dart'
+    show CreateTournamentMatch1stWidget;
+export '/pages/create_tournament_match2nd/create_tournament_match2nd_widget.dart'
+    show CreateTournamentMatch2ndWidget;
+export '/pages/create_tournament_match3rd/create_tournament_match3rd_widget.dart'
+    show CreateTournamentMatch3rdWidget;
+export '/pages/edit_tournament_match1st/edit_tournament_match1st_widget.dart'
+    show EditTournamentMatch1stWidget;
+export '/pages/edit_tournament_match2nd/edit_tournament_match2nd_widget.dart'
+    show EditTournamentMatch2ndWidget;
+export '/pages/edit_tournament_match3rd/edit_tournament_match3rd_widget.dart'
+    show EditTournamentMatch3rdWidget;
+export '/pages/edit_tournament_match4th/edit_tournament_match4th_widget.dart'
+    show EditTournamentMatch4thWidget;

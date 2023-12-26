@@ -288,6 +288,75 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 params.getParam('paramTournamentPlanId', ParamType.int),
             paramEventUuid: params.getParam('paramEventUuid', ParamType.String),
           ),
+        ),
+        FFRoute(
+          name: 'CreateTournamentMatch1st',
+          path: '/CreateTournamentMatch1st',
+          builder: (context, params) => CreateTournamentMatch1stWidget(),
+        ),
+        FFRoute(
+          name: 'CreateTournamentMatch2nd',
+          path: '/CreateTournamentMatch2nd',
+          builder: (context, params) => CreateTournamentMatch2ndWidget(
+            tournamentUuid: params.getParam('tournamentUuid', ParamType.String),
+            tournamentName: params.getParam('tournamentName', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'CreateTournamentMatch3rd',
+          path: '/CreateTournamentMatch3rd',
+          builder: (context, params) => CreateTournamentMatch3rdWidget(
+            paramTournamentName:
+                params.getParam('paramTournamentName', ParamType.String),
+            paramTournamentPlanName:
+                params.getParam('paramTournamentPlanName', ParamType.String),
+            paramTournamentPlanPhoto:
+                params.getParam('paramTournamentPlanPhoto', ParamType.String),
+            paramTournamentPlanId:
+                params.getParam('paramTournamentPlanId', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'EditTournamentMatch1st',
+          path: '/EditTournamentMatch1st',
+          builder: (context, params) => EditTournamentMatch1stWidget(),
+        ),
+        FFRoute(
+          name: 'EditTournamentMatch2nd',
+          path: '/EditTournamentMatch2nd',
+          builder: (context, params) => EditTournamentMatch2ndWidget(
+            tournamentUuid: params.getParam('tournamentUuid', ParamType.String),
+            tournamentName: params.getParam('tournamentName', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'EditTournamentMatch3rd',
+          path: '/EditTournamentMatch3rd',
+          builder: (context, params) => EditTournamentMatch3rdWidget(
+            paramTournamentName:
+                params.getParam('paramTournamentName', ParamType.String),
+            paramTournamentPlanName:
+                params.getParam('paramTournamentPlanName', ParamType.String),
+            paramTournamentPlanPhoto:
+                params.getParam('paramTournamentPlanPhoto', ParamType.String),
+            paramTournamentPlanId:
+                params.getParam('paramTournamentPlanId', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'EditTournamentMatch4th',
+          path: '/EditTournamentMatch4th',
+          builder: (context, params) => EditTournamentMatch4thWidget(
+            paramTournamentName:
+                params.getParam('paramTournamentName', ParamType.String),
+            paramTournamentPlanName:
+                params.getParam('paramTournamentPlanName', ParamType.String),
+            paramTournamentPlanPhoto:
+                params.getParam('paramTournamentPlanPhoto', ParamType.String),
+            paramTournamentPlanId:
+                params.getParam('paramTournamentPlanId', ParamType.int),
+            paramMatchUuid: params.getParam('paramMatchUuid', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

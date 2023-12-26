@@ -1,5 +1,6 @@
 import '/components/actions_clubs/actions_clubs_widget.dart';
 import '/components/actions_events/actions_events_widget.dart';
+import '/components/actions_matches/actions_matches_widget.dart';
 import '/components/actions_others/actions_others_widget.dart';
 import '/components/actions_player/actions_player_widget.dart';
 import '/components/actions_tournaments/actions_tournaments_widget.dart';
@@ -26,6 +27,8 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
 
   int? actionsEventsHeight = 80;
 
+  int? actionsMatchesHeight = 80;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -39,6 +42,8 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
   late ActionsTournamentsModel actionsTournamentsModel;
   // Model for ActionsEvents component.
   late ActionsEventsModel actionsEventsModel;
+  // Model for ActionsMatches component.
+  late ActionsMatchesModel actionsMatchesModel;
   // Model for ActionsOthers component.
   late ActionsOthersModel actionsOthersModel;
 
@@ -51,6 +56,7 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
     actionsTournamentsModel =
         createModel(context, () => ActionsTournamentsModel());
     actionsEventsModel = createModel(context, () => ActionsEventsModel());
+    actionsMatchesModel = createModel(context, () => ActionsMatchesModel());
     actionsOthersModel = createModel(context, () => ActionsOthersModel());
   }
 
@@ -61,6 +67,7 @@ class MainAdminModel extends FlutterFlowModel<MainAdminWidget> {
     actionsClubsModel.dispose();
     actionsTournamentsModel.dispose();
     actionsEventsModel.dispose();
+    actionsMatchesModel.dispose();
     actionsOthersModel.dispose();
   }
 

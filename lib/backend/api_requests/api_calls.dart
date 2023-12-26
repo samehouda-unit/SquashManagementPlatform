@@ -26,6 +26,7 @@ class SquashManagementAPIGroupGroup {
   static EditTournamentPlanAPICall editTournamentPlanAPICall =
       EditTournamentPlanAPICall();
   static EditPlanEventAPICall editPlanEventAPICall = EditPlanEventAPICall();
+  static EditPlanMatchAPICall editPlanMatchAPICall = EditPlanMatchAPICall();
   static CreateTournamentAPICall createTournamentAPICall =
       CreateTournamentAPICall();
   static CreateTournamentPlayerAPICall createTournamentPlayerAPICall =
@@ -36,12 +37,18 @@ class SquashManagementAPIGroupGroup {
       CreateTournamentPlanAPICall();
   static CreateTournamentPlanEventAPICall createTournamentPlanEventAPICall =
       CreateTournamentPlanEventAPICall();
+  static CreateTournamentPlanMatchAPICall createTournamentPlanMatchAPICall =
+      CreateTournamentPlanMatchAPICall();
   static PopulatePlanPlayersAPICall populatePlanPlayersAPICall =
       PopulatePlanPlayersAPICall();
   static PopulatePlanEventsAPICall populatePlanEventsAPICall =
       PopulatePlanEventsAPICall();
+  static PopulatePlanMatchesAPICall populatePlanMatchesAPICall =
+      PopulatePlanMatchesAPICall();
   static DeletePlanEventAPICall deletePlanEventAPICall =
       DeletePlanEventAPICall();
+  static DeletePlanEventMatchAPICall deletePlanEventMatchAPICall =
+      DeletePlanEventMatchAPICall();
   static DeletePlanPlayerAPICall deletePlanPlayerAPICall =
       DeletePlanPlayerAPICall();
   static DeleteTournamentAPICall deleteTournamentAPICall =
@@ -61,12 +68,16 @@ class SquashManagementAPIGroupGroup {
       PopulateClubByUuidCall();
   static PopulatePlanEventByUuidCall populatePlanEventByUuidCall =
       PopulatePlanEventByUuidCall();
+  static PopulatePlanMatchByUuidCall populatePlanMatchByUuidCall =
+      PopulatePlanMatchByUuidCall();
   static PopulateTournamentByUuidCall populateTournamentByUuidCall =
       PopulateTournamentByUuidCall();
   static PopulateTournamentPlanByUuidCall populateTournamentPlanByUuidCall =
       PopulateTournamentPlanByUuidCall();
   static PopulateTournamentEventsByIdCall populateTournamentEventsByIdCall =
       PopulateTournamentEventsByIdCall();
+  static PopulateTournamentMatchByIdCall populateTournamentMatchByIdCall =
+      PopulateTournamentMatchByIdCall();
   static PopulatePlayerByStageAndGenderCall populatePlayerByStageAndGenderCall =
       PopulatePlayerByStageAndGenderCall();
   static PopulatePlayerByUuidCall populatePlayerByUuidCall =
@@ -299,6 +310,55 @@ class EditPlanEventAPICall {
       callName: 'editPlanEventAPI',
       apiUrl:
           '${SquashManagementAPIGroupGroup.baseUrl}tournament_plan_event?uuid=eq.${uuid}',
+      callType: ApiCallType.PATCH,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+}
+
+class EditPlanMatchAPICall {
+  Future<ApiCallResponse> call({
+    int? eventId,
+    String? matchTime = '',
+    int? player1Id,
+    int? player2Id,
+    String? uuid = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "event_id": ${eventId},
+  "match_time": "${matchTime}",
+  "player1_id": ${player1Id},
+  "player2_id": ${player2Id},
+  "uuid": "${uuid}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'editPlanMatchAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}match?uuid=eq.${uuid}',
       callType: ApiCallType.PATCH,
       headers: {
         'Content-Type': 'application/json',
@@ -630,6 +690,55 @@ class CreateTournamentPlanEventAPICall {
       ));
 }
 
+class CreateTournamentPlanMatchAPICall {
+  Future<ApiCallResponse> call({
+    int? tournamentPlanId,
+    String? matchTime = '',
+    int? eventId,
+    int? player1Id,
+    int? player2Id,
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "tournament_plan_id": ${tournamentPlanId},
+  "match_time": "${matchTime}:00.00000+00",
+  "event_id": ${eventId},
+  "player1_id": ${player1Id},
+  "player2_id": ${player2Id}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'createTournamentPlanMatchAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}match',
+      callType: ApiCallType.POST,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+}
+
 class PopulatePlanPlayersAPICall {
   Future<ApiCallResponse> call({
     int? inputid,
@@ -675,6 +784,24 @@ class PopulatePlanPlayersAPICall {
         r'''$''',
         true,
       ) as List?;
+  List<int>? idList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? nameList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class PopulatePlanEventsAPICall {
@@ -722,6 +849,89 @@ class PopulatePlanEventsAPICall {
         r'''$''',
         true,
       ) as List?;
+  List<int>? idList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? nameList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+}
+
+class PopulatePlanMatchesAPICall {
+  Future<ApiCallResponse> call({
+    int? inputid,
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "inputid": ${inputid}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'populatePlanMatchesAPI',
+      apiUrl:
+          '${SquashManagementAPIGroupGroup.baseUrl}rpc/populatetournamentplanmatches',
+      callType: ApiCallType.POST,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+  List? planMatches(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+  List<int>? idList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? nameList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class DeletePlanEventAPICall {
@@ -731,6 +941,43 @@ class DeletePlanEventAPICall {
     return ApiManager.instance.makeApiCall(
       callName: 'deletePlanEventAPI',
       apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}tournament_plan_event',
+      callType: ApiCallType.DELETE,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {
+        'uuid': uuid,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+}
+
+class DeletePlanEventMatchAPICall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'deletePlanEventMatchAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}match',
       callType: ApiCallType.DELETE,
       headers: {
         'Content-Type': 'application/json',
@@ -1233,6 +1480,54 @@ class PopulatePlanEventByUuidCall {
       ));
 }
 
+class PopulatePlanMatchByUuidCall {
+  Future<ApiCallResponse> call({
+    String? uuid = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populatePlanMatchByUuid',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}match?select=*',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {
+        'uuid': uuid,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  String? uuid(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].uuid''',
+      ));
+  int? eventId(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].event_id''',
+      ));
+  String? matchTime(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].match_time''',
+      ));
+  int? player1Id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].player1_id''',
+      ));
+  int? player2Id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].player2_id''',
+      ));
+}
+
 class PopulateTournamentByUuidCall {
   Future<ApiCallResponse> call({
     String? uuid = '',
@@ -1408,6 +1703,64 @@ class PopulateTournamentEventsByIdCall {
         r'''$''',
         true,
       ) as List?;
+}
+
+class PopulateTournamentMatchByIdCall {
+  Future<ApiCallResponse> call({
+    String? tournamentPlanId = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'populateTournamentMatchById',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}match?select=*',
+      callType: ApiCallType.GET,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+      },
+      params: {
+        'tournament_plan_id': tournamentPlanId,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  List<int>? eventid(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List? torunamentMatches(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+  int? eventId(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].event_id''',
+      ));
+  String? matchTime(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[:].match_time''',
+      ));
+  int? player1Id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].player1_id''',
+      ));
+  int? player2Id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[:].player2_id''',
+      ));
 }
 
 class PopulatePlayerByStageAndGenderCall {

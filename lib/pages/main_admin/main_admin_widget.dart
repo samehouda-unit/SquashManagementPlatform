@@ -1,5 +1,6 @@
 import '/components/actions_clubs/actions_clubs_widget.dart';
 import '/components/actions_events/actions_events_widget.dart';
+import '/components/actions_matches/actions_matches_widget.dart';
 import '/components/actions_others/actions_others_widget.dart';
 import '/components/actions_player/actions_player_widget.dart';
 import '/components/actions_tournaments/actions_tournaments_widget.dart';
@@ -862,6 +863,58 @@ class _MainAdminWidgetState extends State<MainAdminWidget> {
                                           model: _model.actionsEventsModel,
                                           updateCallback: () => setState(() {}),
                                           child: ActionsEventsWidget(),
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        if (_model.actionsMatchesHeight == 80) {
+                                          // set Event to 200
+                                          setState(() {
+                                            _model.actionsMatchesHeight = 200;
+                                          });
+                                        } else if (_model
+                                                .actionsMatchesHeight ==
+                                            200) {
+                                          // set Event to 80
+                                          setState(() {
+                                            _model.actionsMatchesHeight = 80;
+                                          });
+                                        }
+                                      },
+                                      child: AnimatedContainer(
+                                        duration: Duration(milliseconds: 200),
+                                        curve: Curves.easeInOut,
+                                        height: valueOrDefault<double>(
+                                          _model.actionsMatchesHeight
+                                              ?.toDouble(),
+                                          80.0,
+                                        ),
+                                        constraints: BoxConstraints(
+                                          minHeight: valueOrDefault<double>(
+                                            _model.actionsMatchesHeight
+                                                ?.toDouble(),
+                                            80.0,
+                                          ),
+                                          maxHeight: 200.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.actionsMatchesModel,
+                                          updateCallback: () => setState(() {}),
+                                          child: ActionsMatchesWidget(),
                                         ),
                                       ),
                                     ),
