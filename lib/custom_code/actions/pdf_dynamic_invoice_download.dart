@@ -146,7 +146,5 @@ Future pdfDynamicInvoiceDownload(
     build: (format) => pdf.save(),
     allowSharing: true,
     allowPrinting: true,
-    initialPageFormat: PdfPageFormat.a4,
-    pdfFileName: "test.pdf",
   );
 }
