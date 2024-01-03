@@ -1054,7 +1054,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                   'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
                                                                         editTournamentPagePopulateTournamentByUuidResponse
                                                                             .jsonBody,
-                                                                      ).toString()?.toString()}',
+                                                                      ).toString()}',
                                                             )))
                                                       .future,
                                                   builder: (context, snapshot) {

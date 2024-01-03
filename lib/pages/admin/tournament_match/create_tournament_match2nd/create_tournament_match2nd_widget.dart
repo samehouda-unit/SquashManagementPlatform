@@ -10,11 +10,11 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'link_players_to_tournament2nd_model.dart';
-export 'link_players_to_tournament2nd_model.dart';
+import 'create_tournament_match2nd_model.dart';
+export 'create_tournament_match2nd_model.dart';
 
-class LinkPlayersToTournament2ndWidget extends StatefulWidget {
-  const LinkPlayersToTournament2ndWidget({
+class CreateTournamentMatch2ndWidget extends StatefulWidget {
+  const CreateTournamentMatch2ndWidget({
     Key? key,
     required this.tournamentUuid,
     required this.tournamentName,
@@ -24,20 +24,20 @@ class LinkPlayersToTournament2ndWidget extends StatefulWidget {
   final String? tournamentName;
 
   @override
-  _LinkPlayersToTournament2ndWidgetState createState() =>
-      _LinkPlayersToTournament2ndWidgetState();
+  _CreateTournamentMatch2ndWidgetState createState() =>
+      _CreateTournamentMatch2ndWidgetState();
 }
 
-class _LinkPlayersToTournament2ndWidgetState
-    extends State<LinkPlayersToTournament2ndWidget> {
-  late LinkPlayersToTournament2ndModel _model;
+class _CreateTournamentMatch2ndWidgetState
+    extends State<CreateTournamentMatch2ndWidget> {
+  late CreateTournamentMatch2ndModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LinkPlayersToTournament2ndModel());
+    _model = createModel(context, () => CreateTournamentMatch2ndModel());
 
     _model.txtTournamentNameController ??=
         TextEditingController(text: widget.tournamentName);
@@ -91,7 +91,7 @@ class _LinkPlayersToTournament2ndWidgetState
             ),
           );
         }
-        final linkPlayersToTournament2ndPopulateTournamentByUuidResponse =
+        final createTournamentMatch2ndPopulateTournamentByUuidResponse =
             snapshot.data!;
         return GestureDetector(
           onTap: () => _model.unfocusNode.canRequestFocus
@@ -141,7 +141,7 @@ class _LinkPlayersToTournament2ndWidgetState
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'x2zqr6u7' /* 2. Select Tournament Plan */,
+                            '7zyl12xw' /* 2. Select Tournament Plan */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -195,7 +195,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'hcnjqfk9' /* Tournament Name */,
+                                        'dxj7otge' /* Tournament Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -301,7 +301,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '15dv5041' /* Tournament plans */,
+                                                'wjbzrp8f' /* Tournament plans */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -324,7 +324,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                 labelText:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  'wa6i8f7c' /* Search all tournament plans... */,
+                                                  'uomw4tg6' /* Search all tournament plans... */,
                                                 ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
@@ -445,7 +445,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          'q8t3geqr' /* Tournament Plan Info */,
+                                                          'ta88kx9z' /* Tournament Plan Info */,
                                                         ),
                                                         textAlign:
                                                             TextAlign.center,
@@ -469,7 +469,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'sbxgkkz2' /* Last Active */,
+                                                              'oru5uj7b' /* Last Active */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -492,7 +492,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'gji4x5zh' /* Title */,
+                                                              'jxx5h5uj' /* Title */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -517,9 +517,9 @@ class _LinkPlayersToTournament2ndWidgetState
                                                       .call(
                                                     tournamentId:
                                                         'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
-                                                              linkPlayersToTournament2ndPopulateTournamentByUuidResponse
+                                                              createTournamentMatch2ndPopulateTournamentByUuidResponse
                                                                   .jsonBody,
-                                                            ).toString()?.toString()}',
+                                                            ).toString()}',
                                                   ),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
@@ -595,18 +595,9 @@ class _LinkPlayersToTournament2ndWidgetState
                                                               onTap: () async {
                                                                 context
                                                                     .pushNamed(
-                                                                  'LinkPlayersToTournament3rd',
+                                                                  'CreateTournamentMatch3rd',
                                                                   queryParameters:
                                                                       {
-                                                                    'paramTournamentPlanUuid':
-                                                                        serializeParam(
-                                                                      getJsonField(
-                                                                        tournamentPlansItem,
-                                                                        r'''$.uuid''',
-                                                                      ).toString(),
-                                                                      ParamType
-                                                                          .String,
-                                                                    ),
                                                                     'paramTournamentName':
                                                                         serializeParam(
                                                                       widget
@@ -628,24 +619,6 @@ class _LinkPlayersToTournament2ndWidgetState
                                                                       getJsonField(
                                                                         tournamentPlansItem,
                                                                         r'''$.photo_url''',
-                                                                      ).toString(),
-                                                                      ParamType
-                                                                          .String,
-                                                                    ),
-                                                                    'paramTournamentPlanStage':
-                                                                        serializeParam(
-                                                                      getJsonField(
-                                                                        tournamentPlansItem,
-                                                                        r'''$.plan_stage''',
-                                                                      ),
-                                                                      ParamType
-                                                                          .int,
-                                                                    ),
-                                                                    'paramTournamentPlanGender':
-                                                                        serializeParam(
-                                                                      getJsonField(
-                                                                        tournamentPlansItem,
-                                                                        r'''$.gender''',
                                                                       ).toString(),
                                                                       ParamType
                                                                           .String,
@@ -860,7 +833,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
-                                                                                'kxk3wvgl' /* Head of Design */,
+                                                                                '5t4ea7k0' /* Head of Design */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
@@ -885,7 +858,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
-                                                                                'skucpm6d' /* 5 mins ago */,
+                                                                                '5xce43kf' /* 5 mins ago */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),

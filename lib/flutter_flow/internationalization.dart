@@ -3976,33 +3976,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
-  // ListPlayers
-  {
-    'qsgvyv7j': {
-      'en': 'Players',
-      'ar': '',
-    },
-    'hyhq8aaq': {
-      'en': 'Select players to join selected tournament',
-      'ar': '',
-    },
-    '9wgibxlo': {
-      'en': 'Search all players...',
-      'ar': '',
-    },
-    '9x1frc0x': {
-      'en': 'Name',
-      'ar': '',
-    },
-    '0gi2ah3t': {
-      'en': 'Status',
-      'ar': '',
-    },
-    'k6t7lmoz': {
-      'en': 'Rank:',
-      'ar': '',
-    },
-  },
   // EditTournamentPlan
   {
     '25vflj29': {

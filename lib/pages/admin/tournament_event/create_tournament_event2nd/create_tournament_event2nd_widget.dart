@@ -10,11 +10,11 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'edit_tournament_match2nd_model.dart';
-export 'edit_tournament_match2nd_model.dart';
+import 'create_tournament_event2nd_model.dart';
+export 'create_tournament_event2nd_model.dart';
 
-class EditTournamentMatch2ndWidget extends StatefulWidget {
-  const EditTournamentMatch2ndWidget({
+class CreateTournamentEvent2ndWidget extends StatefulWidget {
+  const CreateTournamentEvent2ndWidget({
     Key? key,
     required this.tournamentUuid,
     required this.tournamentName,
@@ -24,20 +24,20 @@ class EditTournamentMatch2ndWidget extends StatefulWidget {
   final String? tournamentName;
 
   @override
-  _EditTournamentMatch2ndWidgetState createState() =>
-      _EditTournamentMatch2ndWidgetState();
+  _CreateTournamentEvent2ndWidgetState createState() =>
+      _CreateTournamentEvent2ndWidgetState();
 }
 
-class _EditTournamentMatch2ndWidgetState
-    extends State<EditTournamentMatch2ndWidget> {
-  late EditTournamentMatch2ndModel _model;
+class _CreateTournamentEvent2ndWidgetState
+    extends State<CreateTournamentEvent2ndWidget> {
+  late CreateTournamentEvent2ndModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => EditTournamentMatch2ndModel());
+    _model = createModel(context, () => CreateTournamentEvent2ndModel());
 
     _model.txtTournamentNameController ??=
         TextEditingController(text: widget.tournamentName);
@@ -91,7 +91,7 @@ class _EditTournamentMatch2ndWidgetState
             ),
           );
         }
-        final editTournamentMatch2ndPopulateTournamentByUuidResponse =
+        final createTournamentEvent2ndPopulateTournamentByUuidResponse =
             snapshot.data!;
         return GestureDetector(
           onTap: () => _model.unfocusNode.canRequestFocus
@@ -141,7 +141,7 @@ class _EditTournamentMatch2ndWidgetState
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'drbxeyxc' /* 2. Select Tournament Plan */,
+                            '1dkpo63j' /* 2. Select Tournament Plan */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -195,7 +195,7 @@ class _EditTournamentMatch2ndWidgetState
                                     decoration: InputDecoration(
                                       labelText:
                                           FFLocalizations.of(context).getText(
-                                        'aft1orjf' /* Tournament Name */,
+                                        '1xgjkdn4' /* Tournament Name */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -301,7 +301,7 @@ class _EditTournamentMatch2ndWidgetState
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'e0y4njs5' /* Tournament plans */,
+                                                'zgfc21l4' /* Tournament plans */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -324,7 +324,7 @@ class _EditTournamentMatch2ndWidgetState
                                                 labelText:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  'wr69bfhw' /* Search all tournament plans... */,
+                                                  'rhqhadiu' /* Search all tournament plans... */,
                                                 ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
@@ -445,7 +445,7 @@ class _EditTournamentMatch2ndWidgetState
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          '2zosp29x' /* Tournament Plan Info */,
+                                                          'dqagd2ev' /* Tournament Plan Info */,
                                                         ),
                                                         textAlign:
                                                             TextAlign.center,
@@ -469,7 +469,7 @@ class _EditTournamentMatch2ndWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '8eanlax7' /* Last Active */,
+                                                              'c36hx6pw' /* Last Active */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -492,7 +492,7 @@ class _EditTournamentMatch2ndWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'h1xg3rwu' /* Title */,
+                                                              'hcgig14z' /* Title */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -517,9 +517,9 @@ class _EditTournamentMatch2ndWidgetState
                                                       .call(
                                                     tournamentId:
                                                         'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
-                                                              editTournamentMatch2ndPopulateTournamentByUuidResponse
+                                                              createTournamentEvent2ndPopulateTournamentByUuidResponse
                                                                   .jsonBody,
-                                                            ).toString()?.toString()}',
+                                                            ).toString()}',
                                                   ),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.
@@ -595,7 +595,7 @@ class _EditTournamentMatch2ndWidgetState
                                                               onTap: () async {
                                                                 context
                                                                     .pushNamed(
-                                                                  'EditTournamentMatch3rd',
+                                                                  'CreateTournamentEvent3rd',
                                                                   queryParameters:
                                                                       {
                                                                     'paramTournamentName':
@@ -833,7 +833,7 @@ class _EditTournamentMatch2ndWidgetState
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
-                                                                                '7x5ix59p' /* Head of Design */,
+                                                                                'lucsdyys' /* Head of Design */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
@@ -858,7 +858,7 @@ class _EditTournamentMatch2ndWidgetState
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
-                                                                                '26q0169s' /* 5 mins ago */,
+                                                                                '2nf92nnl' /* 5 mins ago */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
