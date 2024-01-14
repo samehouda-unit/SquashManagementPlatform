@@ -215,8 +215,6 @@ dynamic deserializeParam<T>(
       case ParamType.SupabaseRow:
         final data = json.decode(param) as Map<String, dynamic>;
         switch (T) {
-          case PlayerUserRow:
-            return PlayerUserRow(data);
           case TournamentRow:
             return TournamentRow(data);
           case TournamentPlanLocationRow:

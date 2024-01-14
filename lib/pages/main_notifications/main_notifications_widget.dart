@@ -205,7 +205,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                             text: FFLocalizations
                                                                     .of(context)
                                                                 .getText(
-                                                              'wyglogyk' /* FlutterFlow CRM App: */,
+                                                              'wyglogyk' /* FlutterFlow Squash App: */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -311,7 +311,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'wpmrva4n' /* FlutterFlow CRM App */,
+                                                            'wpmrva4n' /* FlutterFlow Squash App */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -531,7 +531,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'z9uvnsar' /* FlutterFlow CRM App */,
+                                                            'z9uvnsar' /* FlutterFlow Squash App */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -689,7 +689,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'szxyfwog' /* sent a SOW Change Order for  */,
+                                                                'szxyfwog' /* sent a Change Event for  */,
                                                               ),
                                                               style:
                                                                   TextStyle(),
@@ -698,7 +698,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'y7txnevq' /* FlutterFlow CRM APP */,
+                                                                'y7txnevq' /* FlutterFlow Squash APP */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -750,7 +750,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          'i1ybibdu' /* SOW Change Order */,
+                                                          'i1ybibdu' /* Squash Change Event */,
                                                         ),
                                                         style:
                                                             FlutterFlowTheme.of(
@@ -779,7 +779,7 @@ class _MainNotificationsWidgetState extends State<MainNotificationsWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '3kcgepl3' /* FlutterFlow CRM App */,
+                                                            '3kcgepl3' /* FlutterFlow Squash App */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)

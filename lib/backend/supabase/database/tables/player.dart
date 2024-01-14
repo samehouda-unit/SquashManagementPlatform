@@ -36,8 +36,8 @@ class PlayerRow extends SupabaseDataRow {
   String? get playerBio => getField<String>('player_bio');
   set playerBio(String? value) => setField<String>('player_bio', value);
 
-  String get uuid => getField<String>('uuid')!;
-  set uuid(String value) => setField<String>('uuid', value);
+  String? get uuid => getField<String>('uuid');
+  set uuid(String? value) => setField<String>('uuid', value);
 
   String get gender => getField<String>('gender')!;
   set gender(String value) => setField<String>('gender', value);
@@ -50,4 +50,7 @@ class PlayerRow extends SupabaseDataRow {
 
   int? get clubId => getField<int>('club_id');
   set clubId(int? value) => setField<int>('club_id', value);
+
+  String? get userId => getField<String>('user_id');
+  set userId(String? value) => setField<String>('user_id', value);
 }

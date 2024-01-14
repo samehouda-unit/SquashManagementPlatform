@@ -242,7 +242,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                               labelText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '9f1taz0v' /* Email */,
+                                                'dsnr4q1d' /* Email */,
                                               ),
                                               labelStyle:
                                                   FlutterFlowTheme.of(context)
@@ -325,7 +325,7 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
                                               labelText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'mec7ncx2' /* Password */,
+                                                'sgf53qdn' /* Password */,
                                               ),
                                               labelStyle:
                                                   FlutterFlowTheme.of(context)

@@ -329,7 +329,7 @@ class _Auth3LoginWidgetState extends State<Auth3LoginWidget>
                                                 labelText:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  'kldbmmdr' /* Email */,
+                                                  '0yjdlhpq' /* Email */,
                                                 ),
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)

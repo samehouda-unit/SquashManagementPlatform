@@ -116,7 +116,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'wyglogyk': {
-      'en': 'FlutterFlow CRM App:',
+      'en': 'FlutterFlow Squash App:',
       'ar': 'تطبيق FlutterFlow لإدارة علاقات العملاء:',
     },
     'a9cx9kgq': {
@@ -128,7 +128,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'SOW تغيير الطلب',
     },
     'wpmrva4n': {
-      'en': 'FlutterFlow CRM App',
+      'en': 'FlutterFlow Squash App',
       'ar': 'تطبيق FlutterFlow لإدارة علاقات العملاء',
     },
     'i5cwme4h': {
@@ -148,7 +148,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'SOW تغيير الطلب',
     },
     'z9uvnsar': {
-      'en': 'FlutterFlow CRM App',
+      'en': 'FlutterFlow Squash App',
       'ar': 'تطبيق FlutterFlow لإدارة علاقات العملاء',
     },
     '433l5p9f': {
@@ -166,19 +166,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'راندي رودولف',
     },
     'szxyfwog': {
-      'en': 'sent a SOW Change Order for ',
+      'en': 'sent a Change Event for ',
       'ar': 'أرسل أمر تغيير SOW لـ',
     },
     'y7txnevq': {
-      'en': 'FlutterFlow CRM APP',
+      'en': 'FlutterFlow Squash APP',
       'ar': 'تطبيق FlutterFlow لإدارة علاقات العملاء',
     },
     'i1ybibdu': {
-      'en': 'SOW Change Order',
+      'en': 'Squash Change Event',
       'ar': 'SOW تغيير الطلب',
     },
     '3kcgepl3': {
-      'en': 'FlutterFlow CRM App',
+      'en': 'FlutterFlow Squash App',
       'ar': 'تطبيق FlutterFlow لإدارة علاقات العملاء',
     },
     'lt0ukpoj': {
@@ -3542,11 +3542,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Let\'s get started by filling out the form below.',
       'ar': '',
     },
-    '9f1taz0v': {
+    'dsnr4q1d': {
       'en': 'Email',
       'ar': '',
     },
-    'mec7ncx2': {
+    'sgf53qdn': {
       'en': 'Password',
       'ar': '',
     },
@@ -3574,7 +3574,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Continue with Phone',
       'ar': '',
     },
-    'f1uzw46w': {
+    'a9wqfvbh': {
       'en': 'Home',
       'ar': '',
     },
@@ -3593,7 +3593,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Let\'s get started !',
       'ar': '',
     },
-    'kldbmmdr': {
+    '0yjdlhpq': {
       'en': 'Email',
       'ar': '',
     },
