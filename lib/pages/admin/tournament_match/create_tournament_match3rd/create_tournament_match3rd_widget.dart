@@ -396,11 +396,10 @@ class _CreateTournamentMatch3rdWidgetState
                                                                                 lstEventsPopulatePlanEventsAPIResponse.jsonBody,
                                                                               ) !=
                                                                               null &&
-                                                                          SquashManagementAPIGroupGroup
-                                                                              .populatePlanEventsAPICall
-                                                                              .idList(
-                                                                                lstEventsPopulatePlanEventsAPIResponse.jsonBody,
-                                                                              )!
+                                                                          (SquashManagementAPIGroupGroup.populatePlanEventsAPICall
+                                                                                  .idList(
+                                                                            lstEventsPopulatePlanEventsAPIResponse.jsonBody,
+                                                                          ))!
                                                                               .isNotEmpty) ==
                                                                       true
                                                                   ? SquashManagementAPIGroupGroup
@@ -423,32 +422,31 @@ class _CreateTournamentMatch3rdWidgetState
                                                                                 lstEventsPopulatePlanEventsAPIResponse.jsonBody,
                                                                               ) !=
                                                                               null &&
-                                                                          SquashManagementAPIGroupGroup
-                                                                              .populatePlanEventsAPICall
-                                                                              .nameList(
-                                                                                lstEventsPopulatePlanEventsAPIResponse.jsonBody,
-                                                                              )!
+                                                                          (SquashManagementAPIGroupGroup.populatePlanEventsAPICall
+                                                                                  .nameList(
+                                                                            lstEventsPopulatePlanEventsAPIResponse.jsonBody,
+                                                                          ))!
                                                                               .isNotEmpty) ==
                                                                       true
-                                                                  ? (SquashManagementAPIGroupGroup
-                                                                          .populatePlanEventsAPICall
-                                                                          .nameList(
+                                                                  ? SquashManagementAPIGroupGroup
+                                                                      .populatePlanEventsAPICall
+                                                                      .nameList(
                                                                       lstEventsPopulatePlanEventsAPIResponse
                                                                           .jsonBody,
-                                                                    ) as List)
-                                                                      .map<String>(
-                                                                          (s) =>
-                                                                              s.toString())
-                                                                      .toList()!
-                                                                  : List.generate(
-                                                                      random_data.randomInteger(0, 0),
-                                                                      (index) => random_data.randomString(
-                                                                            0,
-                                                                            0,
-                                                                            true,
-                                                                            false,
-                                                                            false,
-                                                                          )),
+                                                                    )!
+                                                                  : List
+                                                                      .generate(
+                                                                          random_data.randomInteger(
+                                                                              0,
+                                                                              0),
+                                                                          (index) =>
+                                                                              random_data.randomString(
+                                                                                0,
+                                                                                0,
+                                                                                true,
+                                                                                false,
+                                                                                false,
+                                                                              )),
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.lstEventsValue =
@@ -458,6 +456,10 @@ class _CreateTournamentMatch3rdWidgetState
                                                               height: 56.0,
                                                               searchHintTextStyle:
                                                                   TextStyle(),
+                                                              searchTextStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -928,10 +930,9 @@ class _CreateTournamentMatch3rdWidgetState
                                                                                           lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
                                                                                         ) !=
                                                                                         null &&
-                                                                                    SquashManagementAPIGroupGroup.populatePlanPlayersAPICall
-                                                                                        .idList(
-                                                                                          lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
-                                                                                        )!
+                                                                                    (SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.idList(
+                                                                                      lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
+                                                                                    ))!
                                                                                         .isNotEmpty) ==
                                                                                 true
                                                                             ? SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.idList(
@@ -942,17 +943,14 @@ class _CreateTournamentMatch3rdWidgetState
                                                                                           lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
                                                                                         ) !=
                                                                                         null &&
-                                                                                    SquashManagementAPIGroupGroup.populatePlanPlayersAPICall
-                                                                                        .nameList(
-                                                                                          lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
-                                                                                        )!
+                                                                                    (SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.nameList(
+                                                                                      lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
+                                                                                    ))!
                                                                                         .isNotEmpty) ==
                                                                                 true
-                                                                            ? (SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.nameList(
+                                                                            ? SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.nameList(
                                                                                 lstPlayer1PopulatePlanPlayersAPIResponse.jsonBody,
-                                                                              ) as List)
-                                                                                .map<String>((s) => s.toString())
-                                                                                .toList()!
+                                                                              )!
                                                                             : List.generate(
                                                                                 random_data.randomInteger(0, 0),
                                                                                 (index) => random_data.randomString(
@@ -971,6 +969,8 @@ class _CreateTournamentMatch3rdWidgetState
                                                                             56.0,
                                                                         searchHintTextStyle:
                                                                             TextStyle(),
+                                                                        searchTextStyle:
+                                                                            FlutterFlowTheme.of(context).bodyMedium,
                                                                         textStyle:
                                                                             FlutterFlowTheme.of(context).bodyMedium,
                                                                         hintText:
@@ -1074,10 +1074,9 @@ class _CreateTournamentMatch3rdWidgetState
                                                                                           lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
                                                                                         ) !=
                                                                                         null &&
-                                                                                    SquashManagementAPIGroupGroup.populatePlanPlayersAPICall
-                                                                                        .idList(
-                                                                                          lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
-                                                                                        )!
+                                                                                    (SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.idList(
+                                                                                      lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
+                                                                                    ))!
                                                                                         .isNotEmpty) ==
                                                                                 true
                                                                             ? SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.idList(
@@ -1088,17 +1087,14 @@ class _CreateTournamentMatch3rdWidgetState
                                                                                           lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
                                                                                         ) !=
                                                                                         null &&
-                                                                                    SquashManagementAPIGroupGroup.populatePlanPlayersAPICall
-                                                                                        .nameList(
-                                                                                          lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
-                                                                                        )!
+                                                                                    (SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.nameList(
+                                                                                      lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
+                                                                                    ))!
                                                                                         .isNotEmpty) ==
                                                                                 true
-                                                                            ? (SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.nameList(
+                                                                            ? SquashManagementAPIGroupGroup.populatePlanPlayersAPICall.nameList(
                                                                                 lstPlayer2PopulatePlanPlayersAPIResponse.jsonBody,
-                                                                              ) as List)
-                                                                                .map<String>((s) => s.toString())
-                                                                                .toList()!
+                                                                              )!
                                                                             : List.generate(
                                                                                 random_data.randomInteger(0, 0),
                                                                                 (index) => random_data.randomString(
@@ -1117,6 +1113,8 @@ class _CreateTournamentMatch3rdWidgetState
                                                                             56.0,
                                                                         searchHintTextStyle:
                                                                             TextStyle(),
+                                                                        searchTextStyle:
+                                                                            FlutterFlowTheme.of(context).bodyMedium,
                                                                         textStyle:
                                                                             FlutterFlowTheme.of(context).bodyMedium,
                                                                         hintText:

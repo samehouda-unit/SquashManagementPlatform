@@ -67,3 +67,13 @@ export '/pages/admin/tournament_match/edit_tournament_match3rd/edit_tournament_m
     show EditTournamentMatch3rdWidget;
 export '/pages/admin/tournament_match/edit_tournament_match4th/edit_tournament_match4th_widget.dart'
     show EditTournamentMatch4thWidget;
+export '/main_auth_flow/auth_3_create/auth3_create_widget.dart'
+    show Auth3CreateWidget;
+export '/main_auth_flow/auth_3_login/auth3_login_widget.dart'
+    show Auth3LoginWidget;
+export '/main_auth_flow/auth_3_phone/auth3_phone_widget.dart'
+    show Auth3PhoneWidget;
+export '/main_auth_flow/auth_3_verify_phone/auth3_verify_phone_widget.dart'
+    show Auth3VerifyPhoneWidget;
+export '/main_auth_flow/auth_3_forgot_password/auth3_forgot_password_widget.dart'
+    show Auth3ForgotPasswordWidget;

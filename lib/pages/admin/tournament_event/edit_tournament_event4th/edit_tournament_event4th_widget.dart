@@ -432,16 +432,13 @@ class _EditTournamentEvent4thWidgetState
                                                                 lsClubsLocationPopulateClubAsLocationsResponse
                                                                     .jsonBody,
                                                               )!),
-                                                              optionLabels: (SquashManagementAPIGroupGroup
+                                                              optionLabels:
+                                                                  SquashManagementAPIGroupGroup
                                                                       .populateClubAsLocationsCall
                                                                       .name(
                                                                 lsClubsLocationPopulateClubAsLocationsResponse
                                                                     .jsonBody,
-                                                              ) as List)
-                                                                  .map<String>(
-                                                                      (s) => s
-                                                                          .toString())
-                                                                  .toList()!,
+                                                              )!,
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.lsClubsLocationValue =
@@ -451,6 +448,10 @@ class _EditTournamentEvent4thWidgetState
                                                               height: 56.0,
                                                               searchHintTextStyle:
                                                                   TextStyle(),
+                                                              searchTextStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -529,10 +530,9 @@ class _EditTournamentEvent4thWidgetState
                                                                     text: SquashManagementAPIGroupGroup
                                                                         .populatePlanEventByUuidCall
                                                                         .fromDate(
-                                                                          editTournamentEvent4thPopulatePlanEventByUuidResponse
-                                                                              .jsonBody,
-                                                                        )
-                                                                        .toString(),
+                                                                      editTournamentEvent4thPopulatePlanEventByUuidResponse
+                                                                          .jsonBody,
+                                                                    ),
                                                                   ),
                                                                   focusNode: _model
                                                                       .txtFromDateFocusNode,
@@ -806,10 +806,9 @@ class _EditTournamentEvent4thWidgetState
                                                                   text: SquashManagementAPIGroupGroup
                                                                       .populatePlanEventByUuidCall
                                                                       .toDate(
-                                                                        editTournamentEvent4thPopulatePlanEventByUuidResponse
-                                                                            .jsonBody,
-                                                                      )
-                                                                      .toString(),
+                                                                    editTournamentEvent4thPopulatePlanEventByUuidResponse
+                                                                        .jsonBody,
+                                                                  ),
                                                                 ),
                                                                 focusNode: _model
                                                                     .txtToDateFocusNode,
@@ -1177,17 +1176,17 @@ class _EditTournamentEvent4thWidgetState
                                                                         SquashManagementAPIGroupGroup
                                                                             .populatePlanEventByUuidCall
                                                                             .fromDate(
-                                                                              editTournamentEvent4thPopulatePlanEventByUuidResponse.jsonBody,
-                                                                            )
-                                                                            .toString()!;
+                                                                      editTournamentEvent4thPopulatePlanEventByUuidResponse
+                                                                          .jsonBody,
+                                                                    )!;
                                                                     _model.txtToDateController
                                                                             ?.text =
                                                                         SquashManagementAPIGroupGroup
                                                                             .populatePlanEventByUuidCall
                                                                             .toDate(
-                                                                              editTournamentEvent4thPopulatePlanEventByUuidResponse.jsonBody,
-                                                                            )
-                                                                            .toString()!;
+                                                                      editTournamentEvent4thPopulatePlanEventByUuidResponse
+                                                                          .jsonBody,
+                                                                    )!;
                                                                   });
                                                                   context
                                                                       .safePop();

@@ -558,10 +558,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Hello, ',
       'ar': '',
     },
-    'bfw86c1w': {
-      'en': 'Sameh Ouda',
-      'ar': '',
-    },
     'ig5fdm1q': {
       'en': 'Below is an overview of your results',
       'ar': '',
@@ -827,7 +823,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'gl9ozqqu': {
-      'en': 'Randy Peterson',
+      'en': 'Bahaa Atef',
       'ar': '',
     },
     'klguk48h': {
@@ -839,7 +835,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'r0rxmezw': {
-      'en': 'Paid',
+      'en': '1',
       'ar': '',
     },
     '5bwzm8bv': {
@@ -847,7 +843,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'zao0bphw': {
-      'en': 'Randy Peterson',
+      'en': 'Ashraf Radwan',
       'ar': '',
     },
     'esfunb8y': {
@@ -859,67 +855,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'egcxixuw': {
-      'en': 'Paid',
-      'ar': '',
-    },
-    'm4l4ccy9': {
-      'en': 'Design Work',
-      'ar': '',
-    },
-    '65xuqzmg': {
-      'en': 'Randy Peterson',
-      'ar': '',
-    },
-    'edr2vbo3': {
-      'en': 'Business Name',
-      'ar': '',
-    },
-    '7119sowl': {
-      'en': '\$2,100',
-      'ar': '',
-    },
-    'ylks6ryy': {
-      'en': 'Paid',
-      'ar': '',
-    },
-    'ragn48ub': {
-      'en': 'Design Work',
-      'ar': '',
-    },
-    '88wtepip': {
-      'en': 'Randy Peterson',
-      'ar': '',
-    },
-    '855t0o9p': {
-      'en': 'Business Name',
-      'ar': '',
-    },
-    'vanb5fo2': {
-      'en': '\$2,100',
-      'ar': '',
-    },
-    'z5ucyp6k': {
-      'en': 'Paid',
-      'ar': '',
-    },
-    'xga8boie': {
-      'en': 'Design Work',
-      'ar': '',
-    },
-    'utsiuua5': {
-      'en': 'Randy Peterson',
-      'ar': '',
-    },
-    '55q75j9q': {
-      'en': 'Business Name',
-      'ar': '',
-    },
-    '0yrv1mfb': {
-      'en': '\$2,100',
-      'ar': '',
-    },
-    'wh57glnw': {
-      'en': 'Pending',
+      'en': '3',
       'ar': '',
     },
     '0s7t4qw8': {
@@ -927,7 +863,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'v1xn1muo': {
-      'en': 'Randy Peterson',
+      'en': 'Amin ali',
       'ar': '',
     },
     'lmqnn8um': {
@@ -939,7 +875,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'qjvdrl4j': {
-      'en': 'Pending',
+      'en': '15',
       'ar': '',
     },
     '3dud5v1c': {
@@ -947,7 +883,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'y4m01235': {
-      'en': 'Randy Peterson',
+      'en': 'Mona ElSayed',
       'ar': '',
     },
     'q9oiv80x': {
@@ -959,7 +895,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
     'yx6s49sd': {
-      'en': 'Pending',
+      'en': '18',
       'ar': '',
     },
     'jzdu1fte': {
@@ -3589,6 +3525,193 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'txt69yrb': {
       'en': '__',
+      'ar': '',
+    },
+  },
+  // auth_3_Create
+  {
+    'v4xoasxn': {
+      'en': 'Egypt Squash',
+      'ar': '',
+    },
+    '6bhd53nw': {
+      'en': 'Create an account',
+      'ar': '',
+    },
+    '7ts6qpp5': {
+      'en': 'Let\'s get started by filling out the form below.',
+      'ar': '',
+    },
+    '9f1taz0v': {
+      'en': 'Email',
+      'ar': '',
+    },
+    'mec7ncx2': {
+      'en': 'Password',
+      'ar': '',
+    },
+    'ys4cia9v': {
+      'en': 'Confirm Password',
+      'ar': '',
+    },
+    'd0ktntuc': {
+      'en': 'Create Account',
+      'ar': '',
+    },
+    'zjakv0xd': {
+      'en': 'Already have an account? ',
+      'ar': '',
+    },
+    'v5xio0x8': {
+      'en': 'Sign In here',
+      'ar': '',
+    },
+    'ekzst4o0': {
+      'en': 'Additional options:',
+      'ar': '',
+    },
+    'pvodnff0': {
+      'en': 'Continue with Phone',
+      'ar': '',
+    },
+    'f1uzw46w': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
+  // auth_3_Login
+  {
+    'b7uvuwme': {
+      'en': 'Egypt Squash',
+      'ar': '',
+    },
+    '6jwph8hz': {
+      'en': 'Login',
+      'ar': '',
+    },
+    '7omnbwp1': {
+      'en': 'Let\'s get started !',
+      'ar': '',
+    },
+    'kldbmmdr': {
+      'en': 'Email',
+      'ar': '',
+    },
+    'fohhe107': {
+      'en': 'Password',
+      'ar': '',
+    },
+    'fvu2grei': {
+      'en': 'Login',
+      'ar': '',
+    },
+    'dloyr83m': {
+      'en': 'Don\'t have an account? ',
+      'ar': '',
+    },
+    'uptny39u': {
+      'en': 'Sign Up here',
+      'ar': '',
+    },
+    'ug8bfihl': {
+      'en': 'Additional options:',
+      'ar': '',
+    },
+    'p5p0t38n': {
+      'en': 'Continue with Phone',
+      'ar': '',
+    },
+    'fzu745gq': {
+      'en': 'Forgot Password? ',
+      'ar': '',
+    },
+    'h560vsq5': {
+      'en': 'Reset It Now',
+      'ar': '',
+    },
+    'ws01dflr': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
+  // auth_3_phone
+  {
+    'bcqxr25b': {
+      'en': 'Egypt Squash',
+      'ar': '',
+    },
+    'yhners46': {
+      'en': 'Login with Phone',
+      'ar': '',
+    },
+    'uge35df8': {
+      'en': 'Input your number below in order to login.',
+      'ar': '',
+    },
+    'e95rawvv': {
+      'en': 'Your phone number...',
+      'ar': '',
+    },
+    '4s7byld0': {
+      'en': 'Continue',
+      'ar': '',
+    },
+    'b0nw609v': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
+  // auth_3_verifyPhone
+  {
+    'a9tbj1jl': {
+      'en': 'Egypt Squash',
+      'ar': '',
+    },
+    'l318a6tb': {
+      'en': 'Verification Code',
+      'ar': '',
+    },
+    'il828a74': {
+      'en': 'Enter the 6 digit code that you received at: ',
+      'ar': '',
+    },
+    '0vv6lf9s': {
+      'en': ' change number?',
+      'ar': '',
+    },
+    'bddi3azh': {
+      'en': 'Verify Code',
+      'ar': '',
+    },
+    'dltk13uc': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
+  // auth_3_ForgotPassword
+  {
+    '2z3fi7ph': {
+      'en': 'Egypt Squash',
+      'ar': '',
+    },
+    '42rnnhwd': {
+      'en': 'Forgot Password',
+      'ar': '',
+    },
+    '5zhfujqo': {
+      'en': 'Enter your email below in order be sent a reset password link.',
+      'ar': '',
+    },
+    'l765ee60': {
+      'en': 'Your email address...',
+      'ar': '',
+    },
+    'wor3v4yy': {
+      'en': 'Send Reset Link',
+      'ar': '',
+    },
+    '389waqbn': {
+      'en': 'Home',
       'ar': '',
     },
   },

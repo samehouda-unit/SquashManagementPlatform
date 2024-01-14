@@ -519,7 +519,7 @@ class _CreateTournamentMatch2ndWidgetState
                                                         'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
                                                               createTournamentMatch2ndPopulateTournamentByUuidResponse
                                                                   .jsonBody,
-                                                            ).toString()}',
+                                                            )?.toString()}',
                                                   ),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.

@@ -519,7 +519,7 @@ class _LinkPlayersToTournament2ndWidgetState
                                                         'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
                                                               linkPlayersToTournament2ndPopulateTournamentByUuidResponse
                                                                   .jsonBody,
-                                                            ).toString()}',
+                                                            )?.toString()}',
                                                   ),
                                                   builder: (context, snapshot) {
                                                     // Customize what your widget looks like when it's loading.

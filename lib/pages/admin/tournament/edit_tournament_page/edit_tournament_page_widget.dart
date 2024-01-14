@@ -193,10 +193,9 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                       text: SquashManagementAPIGroupGroup
                                           .populateTournamentByUuidCall
                                           .name(
-                                            editTournamentPagePopulateTournamentByUuidResponse
-                                                .jsonBody,
-                                          )
-                                          .toString(),
+                                        editTournamentPagePopulateTournamentByUuidResponse
+                                            .jsonBody,
+                                      ),
                                     ),
                                     focusNode:
                                         _model.txtTournamentNameFocusNode,
@@ -307,10 +306,9 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                 text: SquashManagementAPIGroupGroup
                                                     .populateTournamentByUuidCall
                                                     .year(
-                                                      editTournamentPagePopulateTournamentByUuidResponse
-                                                          .jsonBody,
-                                                    )
-                                                    .toString(),
+                                                  editTournamentPagePopulateTournamentByUuidResponse
+                                                      .jsonBody,
+                                                ),
                                               ),
                                               focusNode:
                                                   _model.txtYearFocusNode,
@@ -555,10 +553,9 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                         text: SquashManagementAPIGroupGroup
                                             .populateTournamentByUuidCall
                                             .sponsors(
-                                              editTournamentPagePopulateTournamentByUuidResponse
-                                                  .jsonBody,
-                                            )
-                                            .toString(),
+                                          editTournamentPagePopulateTournamentByUuidResponse
+                                              .jsonBody,
+                                        ),
                                       ),
                                       focusNode: _model.txtSponsorsFocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
@@ -1054,7 +1051,7 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                                                   'eq.${SquashManagementAPIGroupGroup.populateTournamentByUuidCall.tournamentId(
                                                                         editTournamentPagePopulateTournamentByUuidResponse
                                                                             .jsonBody,
-                                                                      ).toString()}',
+                                                                      )?.toString()}',
                                                             )))
                                                       .future,
                                                   builder: (context, snapshot) {
@@ -1540,10 +1537,8 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                 paramPlanUuid: SquashManagementAPIGroupGroup
                                     .populateTournamentPlanByUuidCall
                                     .selectedPlanUuid(
-                                      (_model.tournamentPlanByUuid?.jsonBody ??
-                                          ''),
-                                    )
-                                    .toString()!,
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
+                                )!,
                                 paramPlanPhoto: valueOrDefault<String>(
                                   _model.selectedTournamentPlanPhoto,
                                   'Plan Photo',
@@ -1556,10 +1551,8 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                 paramPlanGender: SquashManagementAPIGroupGroup
                                     .populateTournamentPlanByUuidCall
                                     .tournamentPlanGender(
-                                      (_model.tournamentPlanByUuid?.jsonBody ??
-                                          ''),
-                                    )
-                                    .toString()!,
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
+                                )!,
                                 paramPlanStage: SquashManagementAPIGroupGroup
                                     .populateTournamentPlanByUuidCall
                                     .tournamentPlanStage(
@@ -1569,38 +1562,26 @@ class _EditTournamentPageWidgetState extends State<EditTournamentPageWidget> {
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanPhoto(
-                                          (_model.tournamentPlanByUuid
-                                                  ?.jsonBody ??
-                                              ''),
-                                        )
-                                        .toString()!,
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
+                                )!,
                                 paramTournamentPlanName:
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanName(
-                                          (_model.tournamentPlanByUuid
-                                                  ?.jsonBody ??
-                                              ''),
-                                        )
-                                        .toString()!,
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
+                                )!,
                                 paramTournamentPlanFrom:
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanFrom(
-                                          (_model.tournamentPlanByUuid
-                                                  ?.jsonBody ??
-                                              ''),
-                                        )
-                                        .toString()!,
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
+                                )!,
                                 paramTournamentPlanTo:
                                     SquashManagementAPIGroupGroup
                                         .populateTournamentPlanByUuidCall
                                         .tournamentPlanTo(
-                                          (_model.tournamentPlanByUuid
-                                                  ?.jsonBody ??
-                                              ''),
-                                        )
-                                        .toString()!,
+                                  (_model.tournamentPlanByUuid?.jsonBody ?? ''),
+                                )!,
                               ),
                             ),
                           ),

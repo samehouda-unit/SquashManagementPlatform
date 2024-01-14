@@ -282,18 +282,16 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                         } else if (SquashManagementAPIGroupGroup
                                                     .populatePlayerByUuidCall
                                                     .photo(
-                                                      editPlayerPagePopulatePlayerByUuidResponse
-                                                          .jsonBody,
-                                                    )
-                                                    .toString() !=
+                                                  editPlayerPagePopulatePlayerByUuidResponse
+                                                      .jsonBody,
+                                                ) !=
                                                 null &&
                                             SquashManagementAPIGroupGroup
                                                     .populatePlayerByUuidCall
                                                     .photo(
-                                                      editPlayerPagePopulatePlayerByUuidResponse
-                                                          .jsonBody,
-                                                    )
-                                                    .toString() !=
+                                                  editPlayerPagePopulatePlayerByUuidResponse
+                                                      .jsonBody,
+                                                ) !=
                                                 '') {
                                           return SquashManagementAPIGroupGroup
                                               .populatePlayerByUuidCall
@@ -344,10 +342,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                     text: SquashManagementAPIGroupGroup
                                         .populatePlayerByUuidCall
                                         .name(
-                                          editPlayerPagePopulatePlayerByUuidResponse
-                                              .jsonBody,
-                                        )
-                                        .toString(),
+                                      editPlayerPagePopulatePlayerByUuidResponse
+                                          .jsonBody,
+                                    ),
                                   ),
                                   focusNode: _model.txtPlayerNameFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
@@ -442,10 +439,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                           text: SquashManagementAPIGroupGroup
                                               .populatePlayerByUuidCall
                                               .birthDate(
-                                                editPlayerPagePopulatePlayerByUuidResponse
-                                                    .jsonBody,
-                                              )
-                                              .toString(),
+                                            editPlayerPagePopulatePlayerByUuidResponse
+                                                .jsonBody,
+                                          ),
                                         ),
                                         focusNode:
                                             _model.txtDateOfBirthFocusNode,
@@ -688,19 +684,20 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                             .jsonBody,
                                       )!),
                                       optionLabels:
-                                          (SquashManagementAPIGroupGroup
-                                                  .populateClubAsLocationsCall
-                                                  .name(
+                                          SquashManagementAPIGroupGroup
+                                              .populateClubAsLocationsCall
+                                              .name(
                                         lstClubsPopulateClubAsLocationsResponse
                                             .jsonBody,
-                                      ) as List)
-                                              .map<String>((s) => s.toString())
-                                              .toList()!,
+                                      )!,
                                       onChanged: (val) => setState(
                                           () => _model.lstClubsValue = val),
                                       width: double.infinity,
                                       height: 56.0,
                                       searchHintTextStyle: TextStyle(),
+                                      searchTextStyle:
+                                          FlutterFlowTheme.of(context)
+                                              .bodyMedium,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       hintText:
@@ -740,10 +737,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                         SquashManagementAPIGroupGroup
                                             .populatePlayerByUuidCall
                                             .gender(
-                                              editPlayerPagePopulatePlayerByUuidResponse
-                                                  .jsonBody,
-                                            )
-                                            .toString(),
+                                      editPlayerPagePopulatePlayerByUuidResponse
+                                          .jsonBody,
+                                    ),
                                   ),
                                   options:
                                       List<String>.from(['Male', 'Female']),
@@ -830,19 +826,20 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                             .jsonBody,
                                       )!),
                                       optionLabels:
-                                          (SquashManagementAPIGroupGroup
-                                                  .populatePlayerStagesCall
-                                                  .name(
+                                          SquashManagementAPIGroupGroup
+                                              .populatePlayerStagesCall
+                                              .name(
                                         lstStagesPopulatePlayerStagesResponse
                                             .jsonBody,
-                                      ) as List)
-                                              .map<String>((s) => s.toString())
-                                              .toList()!,
+                                      )!,
                                       onChanged: (val) => setState(
                                           () => _model.lstStagesValue = val),
                                       width: double.infinity,
                                       height: 56.0,
                                       searchHintTextStyle: TextStyle(),
+                                      searchTextStyle:
+                                          FlutterFlowTheme.of(context)
+                                              .bodyMedium,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       hintText:
@@ -922,14 +919,12 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                               )!
                                               .cast<int>()),
                                       optionLabels:
-                                          (SquashManagementAPIGroupGroup
-                                                  .populatePlayerRanksCall
-                                                  .name(
-                                        lstRanksPopulatePlayerRanksResponse
-                                            .jsonBody,
-                                      ) as List)
-                                              .map<String>((s) => s.toString())
-                                              .toList()!
+                                          SquashManagementAPIGroupGroup
+                                              .populatePlayerRanksCall
+                                              .name(
+                                                lstRanksPopulatePlayerRanksResponse
+                                                    .jsonBody,
+                                              )!
                                               .map((e) => e.toString())
                                               .toList(),
                                       onChanged: (val) => setState(
@@ -937,6 +932,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                       width: double.infinity,
                                       height: 56.0,
                                       searchHintTextStyle: TextStyle(),
+                                      searchTextStyle:
+                                          FlutterFlowTheme.of(context)
+                                              .bodyMedium,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                       hintText:
@@ -978,10 +976,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                     text: SquashManagementAPIGroupGroup
                                         .populatePlayerByUuidCall
                                         .bio(
-                                          editPlayerPagePopulatePlayerByUuidResponse
-                                              .jsonBody,
-                                        )
-                                        .toString(),
+                                      editPlayerPagePopulatePlayerByUuidResponse
+                                          .jsonBody,
+                                    ),
                                   ),
                                   focusNode: _model.txtPlayerBioFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
@@ -1106,10 +1103,9 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                                 : SquashManagementAPIGroupGroup
                                                     .populatePlayerByUuidCall
                                                     .photo(
-                                                      editPlayerPagePopulatePlayerByUuidResponse
-                                                          .jsonBody,
-                                                    )
-                                                    .toString(),
+                                                    editPlayerPagePopulatePlayerByUuidResponse
+                                                        .jsonBody,
+                                                  ),
                                         clubId: _model.lstClubsValue,
                                       );
                                       if ((_model.apiResultp5y?.succeeded ??
@@ -1138,27 +1134,24 @@ class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>
                                               SquashManagementAPIGroupGroup
                                                   .populatePlayerByUuidCall
                                                   .name(
-                                                    editPlayerPagePopulatePlayerByUuidResponse
-                                                        .jsonBody,
-                                                  )
-                                                  .toString()!;
+                                            editPlayerPagePopulatePlayerByUuidResponse
+                                                .jsonBody,
+                                          )!;
                                           _model.txtDateOfBirthController
                                                   ?.text =
                                               SquashManagementAPIGroupGroup
                                                   .populatePlayerByUuidCall
                                                   .birthDate(
-                                                    editPlayerPagePopulatePlayerByUuidResponse
-                                                        .jsonBody,
-                                                  )
-                                                  .toString()!;
+                                            editPlayerPagePopulatePlayerByUuidResponse
+                                                .jsonBody,
+                                          )!;
                                           _model.txtPlayerBioController?.text =
                                               SquashManagementAPIGroupGroup
                                                   .populatePlayerByUuidCall
                                                   .bio(
-                                                    editPlayerPagePopulatePlayerByUuidResponse
-                                                        .jsonBody,
-                                                  )
-                                                  .toString()!;
+                                            editPlayerPagePopulatePlayerByUuidResponse
+                                                .jsonBody,
+                                          )!;
                                         });
                                         // resetDropdowns
                                         setState(() {

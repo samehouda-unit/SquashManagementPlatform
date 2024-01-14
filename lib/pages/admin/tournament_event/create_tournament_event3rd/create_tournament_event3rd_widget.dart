@@ -390,16 +390,12 @@ class _CreateTournamentEvent3rdWidgetState
                                                                 .jsonBody,
                                                           )!),
                                                           optionLabels:
-                                                              (SquashManagementAPIGroupGroup
-                                                                      .populateClubAsLocationsCall
-                                                                      .name(
+                                                              SquashManagementAPIGroupGroup
+                                                                  .populateClubAsLocationsCall
+                                                                  .name(
                                                             lsClubsLocationPopulateClubAsLocationsResponse
                                                                 .jsonBody,
-                                                          ) as List)
-                                                                  .map<String>(
-                                                                      (s) => s
-                                                                          .toString())
-                                                                  .toList()!,
+                                                          )!,
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.lsClubsLocationValue =
@@ -409,6 +405,10 @@ class _CreateTournamentEvent3rdWidgetState
                                                           height: 56.0,
                                                           searchHintTextStyle:
                                                               TextStyle(),
+                                                          searchTextStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium,
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)

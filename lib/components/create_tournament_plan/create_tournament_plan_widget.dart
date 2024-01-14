@@ -455,21 +455,21 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                     .jsonBody,
                                               )!),
                                               optionLabels:
-                                                  (SquashManagementAPIGroupGroup
-                                                          .populateClubAsLocationsCall
-                                                          .name(
+                                                  SquashManagementAPIGroupGroup
+                                                      .populateClubAsLocationsCall
+                                                      .name(
                                                 lsClubsLocationPopulateClubAsLocationsResponse
                                                     .jsonBody,
-                                              ) as List)
-                                                      .map<String>(
-                                                          (s) => s.toString())
-                                                      .toList()!,
+                                              )!,
                                               onChanged: (val) => setState(() =>
                                                   _model.lsClubsLocationValue =
                                                       val),
                                               width: double.infinity,
                                               height: 56.0,
                                               searchHintTextStyle: TextStyle(),
+                                              searchTextStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -1111,20 +1111,20 @@ class _CreateTournamentPlanWidgetState extends State<CreateTournamentPlanWidget>
                                                     .jsonBody,
                                               )!),
                                               optionLabels:
-                                                  (SquashManagementAPIGroupGroup
-                                                          .populatePlayerStagesCall
-                                                          .name(
+                                                  SquashManagementAPIGroupGroup
+                                                      .populatePlayerStagesCall
+                                                      .name(
                                                 lstStagesPopulatePlayerStagesResponse
                                                     .jsonBody,
-                                              ) as List)
-                                                      .map<String>(
-                                                          (s) => s.toString())
-                                                      .toList()!,
+                                              )!,
                                               onChanged: (val) => setState(() =>
                                                   _model.lstStagesValue = val),
                                               width: double.infinity,
                                               height: 56.0,
                                               searchHintTextStyle: TextStyle(),
+                                              searchTextStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,

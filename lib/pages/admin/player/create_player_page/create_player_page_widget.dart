@@ -574,19 +574,19 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                     lstClubsPopulateClubAsLocationsResponse
                                         .jsonBody,
                                   )!),
-                                  optionLabels: (SquashManagementAPIGroupGroup
-                                          .populateClubAsLocationsCall
-                                          .name(
+                                  optionLabels: SquashManagementAPIGroupGroup
+                                      .populateClubAsLocationsCall
+                                      .name(
                                     lstClubsPopulateClubAsLocationsResponse
                                         .jsonBody,
-                                  ) as List)
-                                      .map<String>((s) => s.toString())
-                                      .toList()!,
+                                  )!,
                                   onChanged: (val) => setState(
                                       () => _model.lstClubsValue = val),
                                   width: double.infinity,
                                   height: 56.0,
                                   searchHintTextStyle: TextStyle(),
+                                  searchTextStyle:
+                                      FlutterFlowTheme.of(context).bodyMedium,
                                   textStyle:
                                       FlutterFlowTheme.of(context).bodyMedium,
                                   hintText: FFLocalizations.of(context).getText(
@@ -695,19 +695,19 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                     lstStagesPopulatePlayerStagesResponse
                                         .jsonBody,
                                   )!),
-                                  optionLabels: (SquashManagementAPIGroupGroup
-                                          .populatePlayerStagesCall
-                                          .name(
+                                  optionLabels: SquashManagementAPIGroupGroup
+                                      .populatePlayerStagesCall
+                                      .name(
                                     lstStagesPopulatePlayerStagesResponse
                                         .jsonBody,
-                                  ) as List)
-                                      .map<String>((s) => s.toString())
-                                      .toList()!,
+                                  )!,
                                   onChanged: (val) => setState(
                                       () => _model.lstStagesValue = val),
                                   width: double.infinity,
                                   height: 56.0,
                                   searchHintTextStyle: TextStyle(),
+                                  searchTextStyle:
+                                      FlutterFlowTheme.of(context).bodyMedium,
                                   textStyle:
                                       FlutterFlowTheme.of(context).bodyMedium,
                                   hintText: FFLocalizations.of(context).getText(
@@ -775,14 +775,12 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                                 .jsonBody,
                                           )!
                                           .cast<int>()),
-                                  optionLabels: (SquashManagementAPIGroupGroup
-                                          .populatePlayerRanksCall
-                                          .name(
-                                    lstRanksPopulatePlayerRanksResponse
-                                        .jsonBody,
-                                  ) as List)
-                                      .map<String>((s) => s.toString())
-                                      .toList()!
+                                  optionLabels: SquashManagementAPIGroupGroup
+                                      .populatePlayerRanksCall
+                                      .name(
+                                        lstRanksPopulatePlayerRanksResponse
+                                            .jsonBody,
+                                      )!
                                       .map((e) => e.toString())
                                       .toList(),
                                   onChanged: (val) => setState(
@@ -790,6 +788,8 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                   width: double.infinity,
                                   height: 56.0,
                                   searchHintTextStyle: TextStyle(),
+                                  searchTextStyle:
+                                      FlutterFlowTheme.of(context).bodyMedium,
                                   textStyle:
                                       FlutterFlowTheme.of(context).bodyMedium,
                                   hintText: FFLocalizations.of(context).getText(

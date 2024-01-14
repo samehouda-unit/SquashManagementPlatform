@@ -32,4 +32,22 @@ class PlayerRow extends SupabaseDataRow {
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String? get playerBio => getField<String>('player_bio');
+  set playerBio(String? value) => setField<String>('player_bio', value);
+
+  String get uuid => getField<String>('uuid')!;
+  set uuid(String value) => setField<String>('uuid', value);
+
+  String get gender => getField<String>('gender')!;
+  set gender(String value) => setField<String>('gender', value);
+
+  String? get photoUrl => getField<String>('photo_url');
+  set photoUrl(String? value) => setField<String>('photo_url', value);
+
+  String? get email => getField<String>('email');
+  set email(String? value) => setField<String>('email', value);
+
+  int? get clubId => getField<int>('club_id');
+  set clubId(int? value) => setField<int>('club_id', value);
 }

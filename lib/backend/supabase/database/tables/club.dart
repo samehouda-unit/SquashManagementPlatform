@@ -25,4 +25,16 @@ class ClubRow extends SupabaseDataRow {
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String? get location => getField<String>('location');
+  set location(String? value) => setField<String>('location', value);
+
+  String? get contactPerson => getField<String>('contact_person');
+  set contactPerson(String? value) => setField<String>('contact_person', value);
+
+  String? get contactEmail => getField<String>('contact_email');
+  set contactEmail(String? value) => setField<String>('contact_email', value);
+
+  String? get photoUrl => getField<String>('photo_url');
+  set photoUrl(String? value) => setField<String>('photo_url', value);
 }

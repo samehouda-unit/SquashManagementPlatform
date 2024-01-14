@@ -21,9 +21,6 @@ class TournamentPlayerRow extends SupabaseDataRow {
   int get playerId => getField<int>('player_id')!;
   set playerId(int value) => setField<int>('player_id', value);
 
-  int get clubId => getField<int>('club_id')!;
-  set clubId(int value) => setField<int>('club_id', value);
-
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
 }

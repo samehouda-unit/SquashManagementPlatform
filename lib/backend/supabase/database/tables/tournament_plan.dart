@@ -32,4 +32,20 @@ class TournamentPlanRow extends SupabaseDataRow {
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String get tournamentPlanName => getField<String>('tournament_plan_name')!;
+  set tournamentPlanName(String value) =>
+      setField<String>('tournament_plan_name', value);
+
+  int get clubId => getField<int>('club_id')!;
+  set clubId(int value) => setField<int>('club_id', value);
+
+  String? get photoUrl => getField<String>('photo_url');
+  set photoUrl(String? value) => setField<String>('photo_url', value);
+
+  int get planStage => getField<int>('plan_stage')!;
+  set planStage(int value) => setField<int>('plan_stage', value);
+
+  String get gender => getField<String>('gender')!;
+  set gender(String value) => setField<String>('gender', value);
 }

@@ -41,6 +41,7 @@ class SquashManagementAPIGroupGroup {
       CreateTournamentPlanMatchAPICall();
   static PopulatePlanPlayersAPICall populatePlanPlayersAPICall =
       PopulatePlanPlayersAPICall();
+  static CreateUserAPICall createUserAPICall = CreateUserAPICall();
   static PopulatePlanEventsAPICall populatePlanEventsAPICall =
       PopulatePlanEventsAPICall();
   static PopulatePlanMatchesAPICall populatePlanMatchesAPICall =
@@ -751,6 +752,74 @@ class PopulatePlanPlayersAPICall {
       callName: 'populatePlanPlayersAPI',
       apiUrl:
           '${SquashManagementAPIGroupGroup.baseUrl}rpc/populatetournamentplayers',
+      callType: ApiCallType.POST,
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Authorization':
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhob2hzZ2d0cWNxYXpxdm9rdWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEzODIyMTcsImV4cCI6MjAwNjk1ODIxN30.sD6yRxkNRB9-lRw3s5KzY8zKe6GbqiTH77Dr4xCEh9I',
+        'Prefer': 'return=representation',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  int? id(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
+  String? name(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$[0].name''',
+      ));
+  List? planPlayers(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+        true,
+      ) as List?;
+  List<int>? idList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].id''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? nameList(dynamic response) => (getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+}
+
+class CreateUserAPICall {
+  Future<ApiCallResponse> call({
+    String? username = '',
+    String? password = '',
+    String? email = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "username": "${username}",
+  "password": "${password}",
+  "email": "${email}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'createUserAPI',
+      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}rpc/create_user',
       callType: ApiCallType.POST,
       headers: {
         'Content-Type': 'application/json',

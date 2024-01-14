@@ -25,4 +25,10 @@ class TournamentRow extends SupabaseDataRow {
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String? get year => getField<String>('year');
+  set year(String? value) => setField<String>('year', value);
+
+  String? get sponsors => getField<String>('sponsors');
+  set sponsors(String? value) => setField<String>('sponsors', value);
 }

@@ -334,10 +334,9 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                     text: SquashManagementAPIGroupGroup
                                         .populateClubByUuidCall
                                         .name(
-                                          editClubPagePopulateClubByUuidResponse
-                                              .jsonBody,
-                                        )
-                                        .toString(),
+                                      editClubPagePopulateClubByUuidResponse
+                                          .jsonBody,
+                                    ),
                                   ),
                                   focusNode: _model.txtClubNameFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
@@ -772,10 +771,9 @@ class _EditClubPageWidgetState extends State<EditClubPageWidget>
                                               SquashManagementAPIGroupGroup
                                                   .populateClubByUuidCall
                                                   .name(
-                                                    editClubPagePopulateClubByUuidResponse
-                                                        .jsonBody,
-                                                  )
-                                                  .toString()!;
+                                            editClubPagePopulateClubByUuidResponse
+                                                .jsonBody,
+                                          )!;
                                           _model.txtClubLocationController
                                                   ?.text =
                                               SquashManagementAPIGroupGroup
