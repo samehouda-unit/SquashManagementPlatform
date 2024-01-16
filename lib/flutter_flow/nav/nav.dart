@@ -406,6 +406,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'auth_3_ForgotPassword',
           path: '/auth3ForgotPassword',
           builder: (context, params) => Auth3ForgotPasswordWidget(),
+        ),
+        FFRoute(
+          name: 'PDFViewer',
+          path: '/pDFViewer',
+          builder: (context, params) => PDFViewerWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

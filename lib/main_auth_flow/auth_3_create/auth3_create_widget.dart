@@ -105,33 +105,6 @@ class _Auth3CreateWidgetState extends State<Auth3CreateWidget>
           child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              if (responsiveVisibility(
-                context: context,
-                phone: false,
-                tablet: false,
-              ))
-                Expanded(
-                  flex: 5,
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            FlutterFlowTheme.of(context).primaryBackground,
-                            FlutterFlowTheme.of(context).accent1
-                          ],
-                          stops: [0.0, 1.0],
-                          begin: AlignmentDirectional(1.0, 0.0),
-                          end: AlignmentDirectional(-1.0, 0),
-                        ),
-                        borderRadius: BorderRadius.circular(0.0),
-                      ),
-                    ),
-                  ),
-                ),
               Expanded(
                 flex: 5,
                 child: Align(

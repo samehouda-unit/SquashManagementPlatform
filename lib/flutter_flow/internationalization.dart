@@ -3715,6 +3715,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
+  // PDFViewer
+  {
+    'ryc70j2a': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
   // sideNav
   {
     'e57ec01n': {

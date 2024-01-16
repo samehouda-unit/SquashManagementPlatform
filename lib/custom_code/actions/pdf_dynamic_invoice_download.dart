@@ -142,9 +142,9 @@ Future pdfDynamicInvoiceDownload(
   // PRINT IT
   //await Printing.layoutPdf(onLayout: (PdfPageFormat format) async => pdfSaved);
   //await Printing.sharePdf(bytes: await pdfSaved, filename: 'test-document.pdf');
-  PdfPreview(
-    build: (format) => pdf.save(),
-    allowSharing: true,
-    allowPrinting: true,
-  );
+  //PdfPreview(
+  //  build: (format) => pdf.save(),
+  //  allowSharing: true,
+  //  allowPrinting: true,
+  //);
 }

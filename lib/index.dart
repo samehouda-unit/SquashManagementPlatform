@@ -77,3 +77,4 @@ export '/main_auth_flow/auth_3_verify_phone/auth3_verify_phone_widget.dart'
     show Auth3VerifyPhoneWidget;
 export '/main_auth_flow/auth_3_forgot_password/auth3_forgot_password_widget.dart'
     show Auth3ForgotPasswordWidget;
+export '/pages/p_d_f_viewer/p_d_f_viewer_widget.dart' show PDFViewerWidget;
