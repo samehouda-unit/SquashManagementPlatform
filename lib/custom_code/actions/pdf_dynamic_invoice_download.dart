@@ -28,11 +28,128 @@ Future pdfDynamicInvoiceDownload(
   final font = await PdfGoogleFonts.iBMPlexSansArabicRegular();
   //final font2 = await PdfGoogleFonts.notoNaskhArabicRegular();
 
-  pdf.addPage(
-    pw.Page(
+  pdf.addPage(pw.MultiPage(
+      margin: pw.EdgeInsets.all(10),
       pageFormat: PdfPageFormat.a4,
       build: (pw.Context context) {
-        return pw.Column(
+        return <pw.Widget>[
+          pw.Column(
+              crossAxisAlignment: pw.CrossAxisAlignment.center,
+              mainAxisSize: pw.MainAxisSize.min,
+              children: [
+                pw.SizedBox(height: 20),
+                pw.Text('Date: 05-12-2023'),
+                pw.SizedBox(height: 20),
+                pw.SizedBox(height: 20),
+                pw.Container(
+                  child: pw.Table(
+                    children: [
+                      pw.TableRow(
+                        children: [
+                          pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.center,
+                              mainAxisAlignment: pw.MainAxisAlignment.center,
+                              children: [
+                                pw.Text('Player Name',
+                                    textDirection: pw.TextDirection.ltr,
+                                    style:
+                                        pw.TextStyle(font: font, fontSize: 12)),
+                                pw.Divider(thickness: 1)
+                              ]),
+                          pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.center,
+                              mainAxisAlignment: pw.MainAxisAlignment.center,
+                              children: [
+                                pw.Text('Club Name',
+                                    textDirection: pw.TextDirection.rtl,
+                                    style:
+                                        pw.TextStyle(font: font, fontSize: 12)),
+                                pw.Divider(thickness: 1)
+                              ]),
+                          pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.center,
+                              mainAxisAlignment: pw.MainAxisAlignment.center,
+                              children: [
+                                pw.Text('Player Rank',
+                                    textDirection: pw.TextDirection.rtl,
+                                    style:
+                                        pw.TextStyle(font: font, fontSize: 12)),
+                                pw.Divider(thickness: 1)
+                              ]),
+                          pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.center,
+                              mainAxisAlignment: pw.MainAxisAlignment.center,
+                              children: [
+                                pw.Text('Player Stage',
+                                    textDirection: pw.TextDirection.rtl,
+                                    style:
+                                        pw.TextStyle(font: font, fontSize: 12)),
+                                pw.Divider(thickness: 1)
+                              ]),
+                        ],
+                      ),
+                      for (var record in records)
+                        pw.TableRow(
+                          children: [
+                            pw.Column(
+                                crossAxisAlignment:
+                                    pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text(record['player_name'],
+                                      textDirection: pw.TextDirection.rtl,
+                                      style: pw.TextStyle(
+                                          font: font, fontSize: 12)),
+                                  pw.Divider(thickness: 1)
+                                ]),
+                            pw.Column(
+                                crossAxisAlignment:
+                                    pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text(record['club_name'],
+                                      textDirection: pw.TextDirection.rtl,
+                                      style: pw.TextStyle(
+                                          font: font, fontSize: 12)),
+                                  pw.Divider(thickness: 1)
+                                ]),
+                            pw.Column(
+                                crossAxisAlignment:
+                                    pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text(record['player_rank'],
+                                      textDirection: pw.TextDirection.rtl,
+                                      style: pw.TextStyle(
+                                          font: font, fontSize: 12)),
+                                  pw.Divider(thickness: 1)
+                                ]),
+                            pw.Column(
+                                crossAxisAlignment:
+                                    pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text(record['player_stage'],
+                                      textDirection: pw.TextDirection.rtl,
+                                      style: pw.TextStyle(
+                                          font: font, fontSize: 12)),
+                                  pw.Divider(thickness: 1)
+                                ]),
+                          ],
+                        ),
+                    ],
+                  ),
+                ),
+                pw.SizedBox(height: 20),
+              ]),
+        ];
+      }));
+
+  /*pdf.addPage(
+    pw.addPage(
+      pageFormat: PdfPageFormat.a4,
+      build: (context) => {
+          return pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
             pw.SizedBox(height: 20),
@@ -135,12 +252,12 @@ Future pdfDynamicInvoiceDownload(
         );
       },
     ),
-  );
+  );*/
 
   final pdfSaved = await pdf.save();
 
   // PRINT IT
-  //await Printing.layoutPdf(onLayout: (PdfPageFormat format) async => pdfSaved);
+  await Printing.layoutPdf(onLayout: (PdfPageFormat format) async => pdfSaved);
   //await Printing.sharePdf(bytes: await pdfSaved, filename: 'test-document.pdf');
   //PdfPreview(
   //  build: (format) => pdf.save(),
