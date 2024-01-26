@@ -17,10 +17,10 @@ import 'responsive_profile_model.dart';
 export 'responsive_profile_model.dart';
 
 class ResponsiveProfileWidget extends StatefulWidget {
-  const ResponsiveProfileWidget({Key? key}) : super(key: key);
+  const ResponsiveProfileWidget({super.key});
 
   @override
-  _ResponsiveProfileWidgetState createState() =>
+  State<ResponsiveProfileWidget> createState() =>
       _ResponsiveProfileWidgetState();
 }
 

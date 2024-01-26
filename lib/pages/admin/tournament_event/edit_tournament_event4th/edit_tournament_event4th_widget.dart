@@ -17,13 +17,13 @@ export 'edit_tournament_event4th_model.dart';
 
 class EditTournamentEvent4thWidget extends StatefulWidget {
   const EditTournamentEvent4thWidget({
-    Key? key,
+    super.key,
     required this.paramTournamentName,
     required this.paramTournamentPlanName,
     required this.paramTournamentPlanPhoto,
     required this.paramTournamentPlanId,
     required this.paramEventUuid,
-  }) : super(key: key);
+  });
 
   final String? paramTournamentName;
   final String? paramTournamentPlanName;
@@ -32,7 +32,7 @@ class EditTournamentEvent4thWidget extends StatefulWidget {
   final String? paramEventUuid;
 
   @override
-  _EditTournamentEvent4thWidgetState createState() =>
+  State<EditTournamentEvent4thWidget> createState() =>
       _EditTournamentEvent4thWidgetState();
 }
 

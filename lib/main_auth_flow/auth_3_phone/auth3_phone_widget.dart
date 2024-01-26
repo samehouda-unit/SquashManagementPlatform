@@ -14,10 +14,10 @@ import 'auth3_phone_model.dart';
 export 'auth3_phone_model.dart';
 
 class Auth3PhoneWidget extends StatefulWidget {
-  const Auth3PhoneWidget({Key? key}) : super(key: key);
+  const Auth3PhoneWidget({super.key});
 
   @override
-  _Auth3PhoneWidgetState createState() => _Auth3PhoneWidgetState();
+  State<Auth3PhoneWidget> createState() => _Auth3PhoneWidgetState();
 }
 
 class _Auth3PhoneWidgetState extends State<Auth3PhoneWidget>

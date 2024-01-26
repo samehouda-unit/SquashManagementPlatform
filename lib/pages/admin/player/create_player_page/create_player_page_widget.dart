@@ -21,10 +21,10 @@ import 'create_player_page_model.dart';
 export 'create_player_page_model.dart';
 
 class CreatePlayerPageWidget extends StatefulWidget {
-  const CreatePlayerPageWidget({Key? key}) : super(key: key);
+  const CreatePlayerPageWidget({super.key});
 
   @override
-  _CreatePlayerPageWidgetState createState() => _CreatePlayerPageWidgetState();
+  State<CreatePlayerPageWidget> createState() => _CreatePlayerPageWidgetState();
 }
 
 class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
@@ -239,11 +239,8 @@ class _CreatePlayerPageWidgetState extends State<CreatePlayerPageWidget>
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.network(
-                                  valueOrDefault<String>(
-                                    _model.uploadedFileUrl,
-                                    'https://xhohsggtqcqazqvokuat.supabase.co/storage/v1/object/public/SquashManagementPlatformBucket/PlayerPhoto/Default-Master.jpeg',
-                                  ),
+                                child: Image.asset(
+                                  'assets/images/pngwing.com.png',
                                   fit: BoxFit.fitWidth,
                                 ),
                               ).animateOnPageLoad(animationsMap[

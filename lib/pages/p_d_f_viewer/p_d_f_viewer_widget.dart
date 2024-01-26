@@ -10,10 +10,10 @@ import 'p_d_f_viewer_model.dart';
 export 'p_d_f_viewer_model.dart';
 
 class PDFViewerWidget extends StatefulWidget {
-  const PDFViewerWidget({Key? key}) : super(key: key);
+  const PDFViewerWidget({super.key});
 
   @override
-  _PDFViewerWidgetState createState() => _PDFViewerWidgetState();
+  State<PDFViewerWidget> createState() => _PDFViewerWidgetState();
 }
 
 class _PDFViewerWidgetState extends State<PDFViewerWidget> {

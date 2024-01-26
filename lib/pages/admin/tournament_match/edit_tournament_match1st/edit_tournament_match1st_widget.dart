@@ -11,10 +11,10 @@ import 'edit_tournament_match1st_model.dart';
 export 'edit_tournament_match1st_model.dart';
 
 class EditTournamentMatch1stWidget extends StatefulWidget {
-  const EditTournamentMatch1stWidget({Key? key}) : super(key: key);
+  const EditTournamentMatch1stWidget({super.key});
 
   @override
-  _EditTournamentMatch1stWidgetState createState() =>
+  State<EditTournamentMatch1stWidget> createState() =>
       _EditTournamentMatch1stWidgetState();
 }
 

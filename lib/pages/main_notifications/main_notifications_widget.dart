@@ -11,10 +11,10 @@ import 'main_notifications_model.dart';
 export 'main_notifications_model.dart';
 
 class MainNotificationsWidget extends StatefulWidget {
-  const MainNotificationsWidget({Key? key}) : super(key: key);
+  const MainNotificationsWidget({super.key});
 
   @override
-  _MainNotificationsWidgetState createState() =>
+  State<MainNotificationsWidget> createState() =>
       _MainNotificationsWidgetState();
 }
 

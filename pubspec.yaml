@@ -30,6 +30,7 @@ dependencies:
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
   carousel_slider: 4.2.1
+  collection: 1.17.2
   device_info_plus: 9.1.0
   device_info_plus_platform_interface: 7.0.0
   dropdown_button2: 2.3.9

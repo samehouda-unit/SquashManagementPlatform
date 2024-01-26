@@ -14,10 +14,10 @@ import 'auth3_forgot_password_model.dart';
 export 'auth3_forgot_password_model.dart';
 
 class Auth3ForgotPasswordWidget extends StatefulWidget {
-  const Auth3ForgotPasswordWidget({Key? key}) : super(key: key);
+  const Auth3ForgotPasswordWidget({super.key});
 
   @override
-  _Auth3ForgotPasswordWidgetState createState() =>
+  State<Auth3ForgotPasswordWidget> createState() =>
       _Auth3ForgotPasswordWidgetState();
 }
 

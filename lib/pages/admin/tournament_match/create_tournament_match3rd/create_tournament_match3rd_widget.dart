@@ -18,12 +18,12 @@ export 'create_tournament_match3rd_model.dart';
 
 class CreateTournamentMatch3rdWidget extends StatefulWidget {
   const CreateTournamentMatch3rdWidget({
-    Key? key,
+    super.key,
     required this.paramTournamentName,
     required this.paramTournamentPlanName,
     required this.paramTournamentPlanPhoto,
     required this.paramTournamentPlanId,
-  }) : super(key: key);
+  });
 
   final String? paramTournamentName;
   final String? paramTournamentPlanName;
@@ -31,7 +31,7 @@ class CreateTournamentMatch3rdWidget extends StatefulWidget {
   final int? paramTournamentPlanId;
 
   @override
-  _CreateTournamentMatch3rdWidgetState createState() =>
+  State<CreateTournamentMatch3rdWidget> createState() =>
       _CreateTournamentMatch3rdWidgetState();
 }
 

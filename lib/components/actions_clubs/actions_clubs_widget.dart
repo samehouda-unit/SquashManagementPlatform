@@ -8,10 +8,10 @@ import 'actions_clubs_model.dart';
 export 'actions_clubs_model.dart';
 
 class ActionsClubsWidget extends StatefulWidget {
-  const ActionsClubsWidget({Key? key}) : super(key: key);
+  const ActionsClubsWidget({super.key});
 
   @override
-  _ActionsClubsWidgetState createState() => _ActionsClubsWidgetState();
+  State<ActionsClubsWidget> createState() => _ActionsClubsWidgetState();
 }
 
 class _ActionsClubsWidgetState extends State<ActionsClubsWidget> {

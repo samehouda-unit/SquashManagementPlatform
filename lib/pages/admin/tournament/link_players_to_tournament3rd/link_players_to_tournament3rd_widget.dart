@@ -14,7 +14,7 @@ export 'link_players_to_tournament3rd_model.dart';
 
 class LinkPlayersToTournament3rdWidget extends StatefulWidget {
   const LinkPlayersToTournament3rdWidget({
-    Key? key,
+    super.key,
     required this.paramTournamentPlanUuid,
     required this.paramTournamentName,
     required this.paramTournamentPlanName,
@@ -22,7 +22,7 @@ class LinkPlayersToTournament3rdWidget extends StatefulWidget {
     required this.paramTournamentPlanStage,
     required this.paramTournamentPlanGender,
     required this.paramTournamentPlanId,
-  }) : super(key: key);
+  });
 
   final String? paramTournamentPlanUuid;
   final String? paramTournamentName;
@@ -33,7 +33,7 @@ class LinkPlayersToTournament3rdWidget extends StatefulWidget {
   final int? paramTournamentPlanId;
 
   @override
-  _LinkPlayersToTournament3rdWidgetState createState() =>
+  State<LinkPlayersToTournament3rdWidget> createState() =>
       _LinkPlayersToTournament3rdWidgetState();
 }
 

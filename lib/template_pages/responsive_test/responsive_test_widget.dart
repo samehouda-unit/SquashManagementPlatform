@@ -15,10 +15,10 @@ import 'responsive_test_model.dart';
 export 'responsive_test_model.dart';
 
 class ResponsiveTestWidget extends StatefulWidget {
-  const ResponsiveTestWidget({Key? key}) : super(key: key);
+  const ResponsiveTestWidget({super.key});
 
   @override
-  _ResponsiveTestWidgetState createState() => _ResponsiveTestWidgetState();
+  State<ResponsiveTestWidget> createState() => _ResponsiveTestWidgetState();
 }
 
 class _ResponsiveTestWidgetState extends State<ResponsiveTestWidget>

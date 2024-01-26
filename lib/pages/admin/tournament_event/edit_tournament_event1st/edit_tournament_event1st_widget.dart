@@ -11,10 +11,10 @@ import 'edit_tournament_event1st_model.dart';
 export 'edit_tournament_event1st_model.dart';
 
 class EditTournamentEvent1stWidget extends StatefulWidget {
-  const EditTournamentEvent1stWidget({Key? key}) : super(key: key);
+  const EditTournamentEvent1stWidget({super.key});
 
   @override
-  _EditTournamentEvent1stWidgetState createState() =>
+  State<EditTournamentEvent1stWidget> createState() =>
       _EditTournamentEvent1stWidgetState();
 }
 

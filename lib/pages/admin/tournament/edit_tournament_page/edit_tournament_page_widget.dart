@@ -19,14 +19,14 @@ export 'edit_tournament_page_model.dart';
 
 class EditTournamentPageWidget extends StatefulWidget {
   const EditTournamentPageWidget({
-    Key? key,
+    super.key,
     required this.tournamentUuid,
-  }) : super(key: key);
+  });
 
   final String? tournamentUuid;
 
   @override
-  _EditTournamentPageWidgetState createState() =>
+  State<EditTournamentPageWidget> createState() =>
       _EditTournamentPageWidgetState();
 }
 

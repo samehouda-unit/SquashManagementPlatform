@@ -15,10 +15,10 @@ import 'main_profile_model.dart';
 export 'main_profile_model.dart';
 
 class MainProfileWidget extends StatefulWidget {
-  const MainProfileWidget({Key? key}) : super(key: key);
+  const MainProfileWidget({super.key});
 
   @override
-  _MainProfileWidgetState createState() => _MainProfileWidgetState();
+  State<MainProfileWidget> createState() => _MainProfileWidgetState();
 }
 
 class _MainProfileWidgetState extends State<MainProfileWidget>

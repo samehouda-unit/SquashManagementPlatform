@@ -8,10 +8,10 @@ import 'actions_events_model.dart';
 export 'actions_events_model.dart';
 
 class ActionsEventsWidget extends StatefulWidget {
-  const ActionsEventsWidget({Key? key}) : super(key: key);
+  const ActionsEventsWidget({super.key});
 
   @override
-  _ActionsEventsWidgetState createState() => _ActionsEventsWidgetState();
+  State<ActionsEventsWidget> createState() => _ActionsEventsWidgetState();
 }
 
 class _ActionsEventsWidgetState extends State<ActionsEventsWidget> {

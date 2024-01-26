@@ -11,10 +11,10 @@ import 'transaction_history_model.dart';
 export 'transaction_history_model.dart';
 
 class TransactionHistoryWidget extends StatefulWidget {
-  const TransactionHistoryWidget({Key? key}) : super(key: key);
+  const TransactionHistoryWidget({super.key});
 
   @override
-  _TransactionHistoryWidgetState createState() =>
+  State<TransactionHistoryWidget> createState() =>
       _TransactionHistoryWidgetState();
 }
 

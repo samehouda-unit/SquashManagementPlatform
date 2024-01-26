@@ -18,14 +18,14 @@ export 'edit_club_page_model.dart';
 
 class EditClubPageWidget extends StatefulWidget {
   const EditClubPageWidget({
-    Key? key,
+    super.key,
     required this.clubUuid,
-  }) : super(key: key);
+  });
 
   final String? clubUuid;
 
   @override
-  _EditClubPageWidgetState createState() => _EditClubPageWidgetState();
+  State<EditClubPageWidget> createState() => _EditClubPageWidgetState();
 }
 
 class _EditClubPageWidgetState extends State<EditClubPageWidget>

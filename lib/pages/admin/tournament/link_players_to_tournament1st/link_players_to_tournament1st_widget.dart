@@ -11,10 +11,10 @@ import 'link_players_to_tournament1st_model.dart';
 export 'link_players_to_tournament1st_model.dart';
 
 class LinkPlayersToTournament1stWidget extends StatefulWidget {
-  const LinkPlayersToTournament1stWidget({Key? key}) : super(key: key);
+  const LinkPlayersToTournament1stWidget({super.key});
 
   @override
-  _LinkPlayersToTournament1stWidgetState createState() =>
+  State<LinkPlayersToTournament1stWidget> createState() =>
       _LinkPlayersToTournament1stWidgetState();
 }
 

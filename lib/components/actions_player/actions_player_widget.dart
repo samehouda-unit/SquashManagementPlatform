@@ -8,10 +8,10 @@ import 'actions_player_model.dart';
 export 'actions_player_model.dart';
 
 class ActionsPlayerWidget extends StatefulWidget {
-  const ActionsPlayerWidget({Key? key}) : super(key: key);
+  const ActionsPlayerWidget({super.key});
 
   @override
-  _ActionsPlayerWidgetState createState() => _ActionsPlayerWidgetState();
+  State<ActionsPlayerWidget> createState() => _ActionsPlayerWidgetState();
 }
 
 class _ActionsPlayerWidgetState extends State<ActionsPlayerWidget> {

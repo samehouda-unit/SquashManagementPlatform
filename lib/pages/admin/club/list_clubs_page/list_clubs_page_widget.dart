@@ -15,10 +15,10 @@ import 'list_clubs_page_model.dart';
 export 'list_clubs_page_model.dart';
 
 class ListClubsPageWidget extends StatefulWidget {
-  const ListClubsPageWidget({Key? key}) : super(key: key);
+  const ListClubsPageWidget({super.key});
 
   @override
-  _ListClubsPageWidgetState createState() => _ListClubsPageWidgetState();
+  State<ListClubsPageWidget> createState() => _ListClubsPageWidgetState();
 }
 
 class _ListClubsPageWidgetState extends State<ListClubsPageWidget> {

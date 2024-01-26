@@ -16,14 +16,14 @@ export 'auth3_verify_phone_model.dart';
 
 class Auth3VerifyPhoneWidget extends StatefulWidget {
   const Auth3VerifyPhoneWidget({
-    Key? key,
+    super.key,
     this.phoneNumber,
-  }) : super(key: key);
+  });
 
   final String? phoneNumber;
 
   @override
-  _Auth3VerifyPhoneWidgetState createState() => _Auth3VerifyPhoneWidgetState();
+  State<Auth3VerifyPhoneWidget> createState() => _Auth3VerifyPhoneWidgetState();
 }
 
 class _Auth3VerifyPhoneWidgetState extends State<Auth3VerifyPhoneWidget>

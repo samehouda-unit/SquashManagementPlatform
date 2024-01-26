@@ -12,10 +12,10 @@ import 'list_players_with_stage_model.dart';
 export 'list_players_with_stage_model.dart';
 
 class ListPlayersWithStageWidget extends StatefulWidget {
-  const ListPlayersWithStageWidget({Key? key}) : super(key: key);
+  const ListPlayersWithStageWidget({super.key});
 
   @override
-  _ListPlayersWithStageWidgetState createState() =>
+  State<ListPlayersWithStageWidget> createState() =>
       _ListPlayersWithStageWidgetState();
 }
 

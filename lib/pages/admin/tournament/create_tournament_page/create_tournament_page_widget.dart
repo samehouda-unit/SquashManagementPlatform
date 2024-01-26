@@ -14,10 +14,10 @@ import 'create_tournament_page_model.dart';
 export 'create_tournament_page_model.dart';
 
 class CreateTournamentPageWidget extends StatefulWidget {
-  const CreateTournamentPageWidget({Key? key}) : super(key: key);
+  const CreateTournamentPageWidget({super.key});
 
   @override
-  _CreateTournamentPageWidgetState createState() =>
+  State<CreateTournamentPageWidget> createState() =>
       _CreateTournamentPageWidgetState();
 }
 

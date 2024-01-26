@@ -22,14 +22,14 @@ export 'edit_player_page_model.dart';
 
 class EditPlayerPageWidget extends StatefulWidget {
   const EditPlayerPageWidget({
-    Key? key,
+    super.key,
     required this.playerUuid,
-  }) : super(key: key);
+  });
 
   final String? playerUuid;
 
   @override
-  _EditPlayerPageWidgetState createState() => _EditPlayerPageWidgetState();
+  State<EditPlayerPageWidget> createState() => _EditPlayerPageWidgetState();
 }
 
 class _EditPlayerPageWidgetState extends State<EditPlayerPageWidget>

@@ -8,10 +8,10 @@ import 'actions_matches_model.dart';
 export 'actions_matches_model.dart';
 
 class ActionsMatchesWidget extends StatefulWidget {
-  const ActionsMatchesWidget({Key? key}) : super(key: key);
+  const ActionsMatchesWidget({super.key});
 
   @override
-  _ActionsMatchesWidgetState createState() => _ActionsMatchesWidgetState();
+  State<ActionsMatchesWidget> createState() => _ActionsMatchesWidgetState();
 }
 
 class _ActionsMatchesWidgetState extends State<ActionsMatchesWidget> {

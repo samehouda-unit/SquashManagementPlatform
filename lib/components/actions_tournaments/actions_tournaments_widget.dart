@@ -8,10 +8,10 @@ import 'actions_tournaments_model.dart';
 export 'actions_tournaments_model.dart';
 
 class ActionsTournamentsWidget extends StatefulWidget {
-  const ActionsTournamentsWidget({Key? key}) : super(key: key);
+  const ActionsTournamentsWidget({super.key});
 
   @override
-  _ActionsTournamentsWidgetState createState() =>
+  State<ActionsTournamentsWidget> createState() =>
       _ActionsTournamentsWidgetState();
 }
 

@@ -12,10 +12,10 @@ import 'main_users_model.dart';
 export 'main_users_model.dart';
 
 class MainUsersWidget extends StatefulWidget {
-  const MainUsersWidget({Key? key}) : super(key: key);
+  const MainUsersWidget({super.key});
 
   @override
-  _MainUsersWidgetState createState() => _MainUsersWidgetState();
+  State<MainUsersWidget> createState() => _MainUsersWidgetState();
 }
 
 class _MainUsersWidgetState extends State<MainUsersWidget> {

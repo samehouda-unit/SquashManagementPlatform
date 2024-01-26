@@ -14,10 +14,10 @@ import 'list_players_page_model.dart';
 export 'list_players_page_model.dart';
 
 class ListPlayersPageWidget extends StatefulWidget {
-  const ListPlayersPageWidget({Key? key}) : super(key: key);
+  const ListPlayersPageWidget({super.key});
 
   @override
-  _ListPlayersPageWidgetState createState() => _ListPlayersPageWidgetState();
+  State<ListPlayersPageWidget> createState() => _ListPlayersPageWidgetState();
 }
 
 class _ListPlayersPageWidgetState extends State<ListPlayersPageWidget> {

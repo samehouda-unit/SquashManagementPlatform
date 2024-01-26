@@ -23,14 +23,14 @@ export 'create_tournament_plan_model.dart';
 
 class CreateTournamentPlanWidget extends StatefulWidget {
   const CreateTournamentPlanWidget({
-    Key? key,
+    super.key,
     required this.paramTournamentId,
-  }) : super(key: key);
+  });
 
   final int? paramTournamentId;
 
   @override
-  _CreateTournamentPlanWidgetState createState() =>
+  State<CreateTournamentPlanWidget> createState() =>
       _CreateTournamentPlanWidgetState();
 }
 

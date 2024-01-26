@@ -14,10 +14,10 @@ import 'auth3_create_model.dart';
 export 'auth3_create_model.dart';
 
 class Auth3CreateWidget extends StatefulWidget {
-  const Auth3CreateWidget({Key? key}) : super(key: key);
+  const Auth3CreateWidget({super.key});
 
   @override
-  _Auth3CreateWidgetState createState() => _Auth3CreateWidgetState();
+  State<Auth3CreateWidget> createState() => _Auth3CreateWidgetState();
 }
 
 class _Auth3CreateWidgetState extends State<Auth3CreateWidget>

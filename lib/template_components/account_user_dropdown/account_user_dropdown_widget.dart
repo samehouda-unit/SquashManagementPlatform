@@ -11,10 +11,10 @@ import 'account_user_dropdown_model.dart';
 export 'account_user_dropdown_model.dart';
 
 class AccountUserDropdownWidget extends StatefulWidget {
-  const AccountUserDropdownWidget({Key? key}) : super(key: key);
+  const AccountUserDropdownWidget({super.key});
 
   @override
-  _AccountUserDropdownWidgetState createState() =>
+  State<AccountUserDropdownWidget> createState() =>
       _AccountUserDropdownWidgetState();
 }
 

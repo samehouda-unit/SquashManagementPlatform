@@ -18,10 +18,10 @@ import 'main_admin_model.dart';
 export 'main_admin_model.dart';
 
 class MainAdminWidget extends StatefulWidget {
-  const MainAdminWidget({Key? key}) : super(key: key);
+  const MainAdminWidget({super.key});
 
   @override
-  _MainAdminWidgetState createState() => _MainAdminWidgetState();
+  State<MainAdminWidget> createState() => _MainAdminWidgetState();
 }
 
 class _MainAdminWidgetState extends State<MainAdminWidget> {

@@ -15,16 +15,16 @@ export 'edit_tournament_match2nd_model.dart';
 
 class EditTournamentMatch2ndWidget extends StatefulWidget {
   const EditTournamentMatch2ndWidget({
-    Key? key,
+    super.key,
     required this.tournamentUuid,
     required this.tournamentName,
-  }) : super(key: key);
+  });
 
   final String? tournamentUuid;
   final String? tournamentName;
 
   @override
-  _EditTournamentMatch2ndWidgetState createState() =>
+  State<EditTournamentMatch2ndWidget> createState() =>
       _EditTournamentMatch2ndWidgetState();
 }
 

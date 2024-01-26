@@ -11,10 +11,10 @@ import 'main_recent_model.dart';
 export 'main_recent_model.dart';
 
 class MainRecentWidget extends StatefulWidget {
-  const MainRecentWidget({Key? key}) : super(key: key);
+  const MainRecentWidget({super.key});
 
   @override
-  _MainRecentWidgetState createState() => _MainRecentWidgetState();
+  State<MainRecentWidget> createState() => _MainRecentWidgetState();
 }
 
 class _MainRecentWidgetState extends State<MainRecentWidget> {

@@ -17,10 +17,10 @@ import 'create_club_page_model.dart';
 export 'create_club_page_model.dart';
 
 class CreateClubPageWidget extends StatefulWidget {
-  const CreateClubPageWidget({Key? key}) : super(key: key);
+  const CreateClubPageWidget({super.key});
 
   @override
-  _CreateClubPageWidgetState createState() => _CreateClubPageWidgetState();
+  State<CreateClubPageWidget> createState() => _CreateClubPageWidgetState();
 }
 
 class _CreateClubPageWidgetState extends State<CreateClubPageWidget>

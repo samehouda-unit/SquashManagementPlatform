@@ -15,16 +15,16 @@ export 'link_players_to_tournament2nd_model.dart';
 
 class LinkPlayersToTournament2ndWidget extends StatefulWidget {
   const LinkPlayersToTournament2ndWidget({
-    Key? key,
+    super.key,
     required this.tournamentUuid,
     required this.tournamentName,
-  }) : super(key: key);
+  });
 
   final String? tournamentUuid;
   final String? tournamentName;
 
   @override
-  _LinkPlayersToTournament2ndWidgetState createState() =>
+  State<LinkPlayersToTournament2ndWidget> createState() =>
       _LinkPlayersToTournament2ndWidgetState();
 }
 

@@ -11,10 +11,10 @@ import 'actions_others_model.dart';
 export 'actions_others_model.dart';
 
 class ActionsOthersWidget extends StatefulWidget {
-  const ActionsOthersWidget({Key? key}) : super(key: key);
+  const ActionsOthersWidget({super.key});
 
   @override
-  _ActionsOthersWidgetState createState() => _ActionsOthersWidgetState();
+  State<ActionsOthersWidget> createState() => _ActionsOthersWidgetState();
 }
 
 class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {

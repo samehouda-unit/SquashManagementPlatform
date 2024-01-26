@@ -15,14 +15,14 @@ export 'side_nav_model.dart';
 
 class SideNavWidget extends StatefulWidget {
   const SideNavWidget({
-    Key? key,
+    super.key,
     required this.selectedNav,
-  }) : super(key: key);
+  });
 
   final int? selectedNav;
 
   @override
-  _SideNavWidgetState createState() => _SideNavWidgetState();
+  State<SideNavWidget> createState() => _SideNavWidgetState();
 }
 
 class _SideNavWidgetState extends State<SideNavWidget>
