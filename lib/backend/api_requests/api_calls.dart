@@ -2043,7 +2043,8 @@ class PlayerPdfApiCall {
   Future<ApiCallResponse> call() async {
     return ApiManager.instance.makeApiCall(
       callName: 'playerPdfApi',
-      apiUrl: '${SquashManagementAPIGroupGroup.baseUrl}pdf_report?select=*',
+      apiUrl:
+          '${SquashManagementAPIGroupGroup.baseUrl}pdf_report?select=*&order=player_name.asc',
       callType: ApiCallType.GET,
       headers: {
         'Content-Type': 'application/json',

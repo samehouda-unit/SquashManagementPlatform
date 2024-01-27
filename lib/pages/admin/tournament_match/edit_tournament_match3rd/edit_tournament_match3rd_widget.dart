@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -1065,8 +1066,33 @@ class _EditTournamentMatch3rdWidgetState
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 15.0, 0.0, 0.0),
                                         child: FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
+                                          onPressed: () async {
+                                            _model.matchesResponse =
+                                                await SquashManagementAPIGroupGroup
+                                                    .populatePlanMatchesAPICall
+                                                    .call(
+                                              inputid:
+                                                  widget.paramTournamentPlanId,
+                                            );
+                                            if ((_model.matchesResponse
+                                                    ?.succeeded ??
+                                                true)) {
+                                              await actions.pdfMatches(
+                                                context,
+                                                SquashManagementAPIGroupGroup
+                                                    .populatePlanMatchesAPICall
+                                                    .planMatches(
+                                                      (_model.matchesResponse
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                    )!
+                                                    .toList(),
+                                                widget.paramTournamentName!,
+                                                widget.paramTournamentPlanName!,
+                                              );
+                                            }
+
+                                            setState(() {});
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(

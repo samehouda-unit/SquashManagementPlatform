@@ -115,7 +115,7 @@ class _ActionsOthersWidgetState extends State<ActionsOthersWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    await actions.pdfDynamicInvoiceDownload(
+                    await actions.pdfPlayersInTournament(
                       context,
                       SquashManagementAPIGroupGroup.playerPdfApiCall
                           .records(
